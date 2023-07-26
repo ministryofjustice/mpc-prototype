@@ -1,0 +1,110 @@
+{% extends "layout-womens-homd.html" %}
+
+{% block pageTitle %}
+Change complexity
+{% endblock %}
+
+{% block beforeContent %}
+<div class="moj-organisation-nav" aria-label="Organisation switcher">
+<div class="moj-organisation-nav__title">HMP Peterborough (Female)</div>
+
+<a href="/womens/homd_second_round/change-prison.html" class="moj-organisation-nav__link">Change prison</a>
+
+</div>
+<div class="govuk-!-margin-bottom-3"></div>
+
+<a href="/womens/homd_second_round/change-complexity" class="govuk-back-link govuk-body">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="#">
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="reason-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Why has the complexity of need level changed?
+          </h1>
+        </legend>
+        <div id="reason-hint" class="govuk-hint">
+          Select all that apply.
+        </div>
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="reason" name="reason" type="checkbox" value="restraining-order">
+            <label class="govuk-label govuk-checkboxes__label" for="reason">
+              Subject to restraining and/ or harrassment or stalking orders
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="reason-2" name="reason" type="checkbox" value="mental-health">
+            <label class="govuk-label govuk-checkboxes__label" for="reason-2">
+              Contact with mental health services in the last 6 months
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="reason-3" name="reason" type="checkbox" value="vulnerabiity">
+            <label class="govuk-label govuk-checkboxes__label" for="reason-3">
+              Current concerns about vulnerability
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="reason-3" name="reason" type="checkbox" value="acct">
+            <label class="govuk-label govuk-checkboxes__label" for="reason-3">
+              Subject to the ACCT process currently or in the last 6 months
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="reason-3" name="reason" type="checkbox" value="temper">
+            <label class="govuk-label govuk-checkboxes__label" for="reason-3">
+              Issues that need addressing with regards to temper and/ or impulsivity
+            </label>
+          </div>
+
+          <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="conditional-reason-4" name="other-reason" type="checkbox" value="other-reason" data-aria-controls="reason-4">
+
+        <label class="govuk-label govuk-checkboxes__label" for="conditional-reason-4">
+          Other
+        </label>
+      </div>
+
+
+        <div class="govuk-checkboxes__conditional" id="reason-4">
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="175">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="other-reason">
+              Provide detail here
+            </label>
+          <textarea class="govuk-textarea govuk-!-width-two-thirds" id="other-reason" name="other-reason" rows="3" aria-describedby="more-detail-hint"></textarea>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+      </fieldset>
+    </div>
+
+  <button class="govuk-button" data-module="govuk-button" formaction="/womens/homd_second_round/allocations-review-case-info" style="margin-right: 15px;">
+    Save and update
+  </button>
+
+
+
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+{% endblock %}

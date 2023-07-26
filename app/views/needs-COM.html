@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="/review-case">
+<div class="govuk-width-container">
+
+<a href="/allocations" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">
+  This case needs a Community Offender Manager
+</h1>
+
+<p>The community hold responsibility for this case but Community Offender Manager (COM) details are missing from NDelius.</p>
+
+<p>When you allocate a Prison Offender Manager (POM) an automatic email will be sent to the Local Divisional Unit in the community to request that a COM is allocated.</p>
+
+<p>A copy of the email will be sent to you and the allocated POM.</p>
+
+  <button class="govuk-button" data-module="govuk-button" formaction="/allocate-case-v1" style="margin-right: 15px;">
+    Continue
+  </button>
+
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+
+
+
+
+{% endblock %}

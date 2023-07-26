@@ -1,0 +1,143 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="/q3-team">
+  <form class="form" action="/q3-team" method="post">
+
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        Add missing information
+      </h1>
+      <p>This information can be found on nDelius.</p>
+
+      <br>
+
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="address-conditional-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h2 class="govuk-fieldset__heading">
+                    Select the service provider
+                  </h2>
+                </legend>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="address-conditional-1" name="provider" type="radio" value="nps" {{checked('provider','nps')}} data-aria-controls="conditional-address-conditional-1">
+                <label class="govuk-label govuk-radios__label" for="address-conditional-1">
+                  National Probation Service (NPS)
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="address-conditional-2" name="provider" type="radio" value="crc" {{checked('provider','crc')}} data-aria-controls="conditional-address-conditional-2">
+                <label class="govuk-label govuk-radios__label" for="address-conditional-2">
+                  Community Rehabilitation Company (CRC)
+                </label>
+              </div>
+
+
+              </div>
+
+            </fieldset>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="address-conditional-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-fieldset__heading">
+                  Select the tier
+                </h2>
+              </legend>
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="address-conditional-1" name="tier" type="radio" value="a" {{checked('tier','a')}} data-aria-controls="conditional-address-conditional-1">
+              <label class="govuk-label govuk-radios__label" for="address-conditional-1">
+                A
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="address-conditional-2" name="tier" type="radio" value="b" {{checked('tier','b')}} data-aria-controls="conditional-address-conditional-2">
+              <label class="govuk-label govuk-radios__label" for="address-conditional-2">
+              B
+            </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="address-conditional-3" name="tier" type="radio" value="c" {{checked('tier','c')}} data-aria-controls="conditional-address-conditional-3">
+              <label class="govuk-label govuk-radios__label" for="address-conditional-3">
+              C
+            </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="address-conditional-4" name="tier" type="radio" value="4" {{checked('tier','d')}} data-aria-controls="conditional-address-conditional-4">
+              <label class="govuk-label govuk-radios__label" for="address-conditional-4">
+              D
+            </label>
+            </div>
+
+
+            </div>
+
+          </fieldset>
+        </div>
+
+
+    <!-- <div class="block-space">
+      <button class="govuk-button" type="submit" formaction="search">
+        Continue
+      </button>
+    </div> -->
+
+<button class="govuk-button">Update case</button>
+
+
+          </div>
+
+
+          <div class="govuk-grid-column-one-third">
+            <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Mole, Adrian
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <p class="govuk-body govuk-!-font-weight-bold">Date of birth</p>
+            <p>01/05/1980<p>
+            </li>
+            <li>
+              <p class="govuk-body govuk-!-font-weight-bold">NOMIS number</p>
+            <p>G2911GD<p>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+                </div>
+
+              </div>
+        </form>
+
+
+
+
+
+{% endblock %}

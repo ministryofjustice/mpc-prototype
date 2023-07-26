@@ -1,0 +1,93 @@
+{% extends "layout-search-pom.html" %}
+
+
+{% block pageTitle %}
+Prisoner profile
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/allocations/final/see-allocations" class="govuk-back-link govuk-!-margin-top-6" style="margin-bottom: -20px;">Back</a>
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/jquery.hideseek.min.js"></script>
+<script>
+$('#search').hideseek({
+    highlight: true,
+    min_chars: 3,
+    nodata: "No results found",
+    hidden_mode: true,
+    ignore: '.ignore'
+});
+</script>
+{% endblock %}
+
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+               Why are you changing responsibility for this case?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                  The prisoner has less than 10 months to serve
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  Decision made for the community probation team to work with this prisoner
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                  Prisoner has been recalled
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                  Other
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Cancel</a>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+{% endblock %}

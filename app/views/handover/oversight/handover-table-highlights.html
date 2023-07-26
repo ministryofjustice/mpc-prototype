@@ -1,0 +1,53 @@
+{% extends "layout-homd-test-nav.html" %}
+​
+​
+{% block pageTitle %}
+Handover cases
+{% endblock %}
+​
+{% block beforeContent %}
+{% endblock %}
+​
+{% block content %}
+​
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--l">Handover table highlights</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Scenario</th>
+      <th scope="col" class="govuk-table__header">How cases are highlighted</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Tasks outstanding when COM takes responsibility for an NPS case (with supporting period)</th>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list govuk-list--bullet">
+          <li>14 days before COM becomes responsible: Case goes purple and the text "Handover due soon" is displayed</li>
+          <li>On the day COM becomes responsible: Case turns red and the text "Handover tasks overdue" is displayed</li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Tasks outstanding when COM takes responsibility for a CRC case (no supporting period)</th>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list govuk-list--bullet">
+          <li>14 days before COM allocation: Case turns purple and the text "Handover due soon" is displayed</li>
+          <li>One week after COM allocation: Case goes red and the text "Handover tasks overdue" is displayed</li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">COM allocation overdue</th>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Case turns red if no COM has been assigned one day after COM allocation date</li>
+          <li>It stays red until a COM is allocated</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+​
+​
+{% endblock %}

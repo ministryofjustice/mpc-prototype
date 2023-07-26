@@ -1,0 +1,103 @@
+{% extends "layout-womens-homd.html" %}
+
+
+{% block pageTitle %}
+Add complexity
+{% endblock %}
+
+{% block bodyStart %}
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="moj-organisation-nav" aria-label="Organisation switcher">
+<div class="moj-organisation-nav__title">HMP Peterborough (Female)</div>
+
+<a href="/womens/homd_second_round/change-prison.html" class="moj-organisation-nav__link">Change prison</a>
+
+</div>
+<div class="govuk-!-margin-bottom-3"></div>
+<a href="/womens/homd_second_round/missing-info-list" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="#">
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading govuk-!-padding-bottom-4">
+        Add complexity of need level
+      </h1>
+      <!-- <p>You can find the complexity of need level in classic NOMIS. You will need to check the MIS-ONR – Female Complexity Report.</p> -->
+      <p>This information can be found within 'NOMIS MIS reporting'. In the folder '085 - OASys & BCS' click on 'Female Complexity Report'.</p>
+
+      <p>If the individual is not listed in the report you will need to complete a manual assessment. See EQuiP guidance on <a class="govuk-link" href="#">how to manually reassess a person's complexity of need</a>.</p>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="record-complexity" name="record-complexity" type="radio" value="high">
+        <label class="govuk-label govuk-radios__label" for="record-complexity">
+          High
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="record-complexity-2" name="record-complexity" type="radio" value="medium">
+        <label class="govuk-label govuk-radios__label" for="record-complexity-2">
+          Medium
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="record-complexity-3" name="record-complexity" type="radio" value="low">
+        <label class="govuk-label govuk-radios__label" for="record-complexity-3">
+          Low
+        </label>
+      </div>
+
+    </div>
+
+  </fieldset>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button" formaction="/womens/homd_second_round/missing-info-list-after-adele" style="margin-right: 15px;">
+    Update
+  </button>
+
+  <a href="/womens/homd_second_round/missing-info-list" class="govuk-link govuk-link--no-visited-state">Cancel</a>
+
+
+</div>
+
+<div class="govuk-grid-column-one-third">
+
+  <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+  <aside class="app-related-items" role="complementary">
+    <h2 class="govuk-heading-m" id="subsection-title">
+      Prisoner information
+    </h2>
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li>
+        <p class="govuk-body">Name: Adele Morrison </p>
+        <p class="govuk-body">Date of birth: 15 Jan 2000 </p>
+        <p class="govuk-body">NOMIS number: G2911GD</p>
+    </ul>
+    </nav>
+  </aside>
+
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+{% endblock %}

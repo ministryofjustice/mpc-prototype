@@ -1,0 +1,194 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/jquery.hideseek.min.js"></script>
+<script>
+$('#search').hideseek({
+    highlight: true,
+    min_chars: 3,
+    nodata: "No results found",
+    hidden_mode: true,
+    ignore: '.ignore'
+});
+</script>
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="/ldu_chosen">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+<ul class="moj-sub-navigation__list">
+<li class="moj-sub-navigation__item">
+
+  <a class="moj-sub-navigation__link" href="allocations">Make allocations</a>
+</li>
+
+<li class="moj-sub-navigation__item">
+  <a class="moj-sub-navigation__link" href="missing-info">Fix missing information</a>
+</li>
+
+<li class="moj-sub-navigation__item">
+  <a class="moj-sub-navigation__link" href="newly-arrived">Newly arrived</a>
+</li>
+</ul>
+
+</nav>
+
+
+      <h1 class="govuk-heading-xl">
+        Add missing information
+      </h1>
+      <h2 class="govuk-heading-m">
+        Wilson, Ferdinand (01/01/1980)
+        <br>
+        A1234YZ
+      </h2>
+
+      <p>You can find this information in NDelius.</p>
+      <br>
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="provider-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Select the service provider
+      </h1>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="provider" name="provider" type="radio" value="NPS" aria-describedby="provider-item-hint" {{ checked( "provider", "NPS" ) }}>
+        <label class="govuk-label govuk-radios__label" for="provider">
+          National Probation Service (NPS)
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="provider-2" name="provider" type="radio" value="CRC" aria-describedby="provider-2-item-hint" {{ checked( "provider", "CRC" ) }}>
+        <label class="govuk-label govuk-radios__label" for="provider-2">
+          Community Rehabilitation Company (CRC)
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="provider-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+<h1 class="govuk-fieldset__heading">
+  Choose the prisoner's tier
+</h1>
+</legend>
+<div class="govuk-radios">
+<div class="govuk-radios__item">
+  <input class="govuk-radios__input" id="tier" name="tier" type="radio" value="a" aria-describedby="provider-item-hint" {{ checked( "tier", "a" ) }}>
+  <label class="govuk-label govuk-radios__label" for="tier">
+    A
+  </label>
+</div>
+<div class="govuk-radios__item">
+  <input class="govuk-radios__input" id="tier-2" name="tier" type="radio" value="b" aria-describedby="provider-2-item-hint" {{ checked( "tier", "b" ) }}>
+  <label class="govuk-label govuk-radios__label" for="tier-2">
+    B
+  </label>
+</div>
+<div class="govuk-radios__item">
+  <input class="govuk-radios__input" id="tier" name="tier" type="radio" value="c" aria-describedby="provider-item-hint {{ checked( "tier", "c" ) }}">
+  <label class="govuk-label govuk-radios__label" for="tier">
+    C
+  </label>
+</div>
+<div class="govuk-radios__item">
+  <input class="govuk-radios__input" id="tier" name="tier" type="radio" value="d" aria-describedby="provider-item-hint" {{ checked( "tier", "d" ) }}>
+  <label class="govuk-label govuk-radios__label" for="tier">
+    D
+  </label>
+</div>
+</div>
+</fieldset>
+</div>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-m">
+      Select the prisoner's Local Divisional Unit (LDU)
+    </h1>
+    <span class="govuk-hint">
+      Enter the full name of the LDU, for example 'NPS Croydon'
+    </span>
+
+
+    <div id="search-field" class="govuk-form-group">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <input class="govuk-input" id="search" name="search" type="text" data-list="#proceedings-list">
+          </div>
+        </div>
+
+        <div class="govuk-grid-row">
+          <div id="proceedings-list" class="govuk-grid-column-full ">
+
+          {% for proceeding in proceedings -%}
+          <div class="govuk-grid-row proceeding-list" id="offence-item-{{loop.index}}" >
+
+              <div class="govuk-grid-column-two-thirds">
+
+                  <ul class="proceeding-list">
+                    <h3 class="govuk-body proceeding-item">{{proceeding.proceedingtype | capitalize}}</h3>
+                    <!-- <li class="govuk-caption-m proceeding__list-item">{{proceeding.categoryoflaw| capitalize}}</li>
+                    <li class="govuk-caption-m proceeding__list-item"> > {{proceeding.mattertype | capitalize}}</li> -->
+                  </ul>
+              </div>
+
+              <div class="govuk-grid-column-one-third" style="text-align:right; padding-top: 25px;">
+                  <a id="offence-item-button-{{loop.index}}" class="govuk-button" role="button" href="ldu_chosen">
+                      Select
+                  </a>
+              </div>
+
+          </div>
+          {%- endfor %}
+
+      </div>
+      </div>
+    </div>
+</div>
+
+</div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      If there's no LDU on nDelius
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    This may be because the prisoner was sentenced outside the UK bit is returning to serve their sentence. See <a href="https://moic.service.justice.gov.uk/repatriated" class="govuk-link">prisoners returning to the UK</a> for more information.
+  </div>
+</details>
+
+
+    <div class="block-space">
+      <button class="govuk-button" type="submit">
+        Continue
+      </button>
+    </div>
+
+</div>
+</div>
+
+{% endblock %}

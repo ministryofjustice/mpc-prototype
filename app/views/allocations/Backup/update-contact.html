@@ -1,0 +1,85 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Confirm allocation
+{% endblock %}
+
+{% block bodyStart %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+<a href="/team-management/confirm-allocation" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <form method="post" action="/team-management/confirm-allocation-contact-added">
+
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+      <h1 class="govuk-heading-l">Update contact details</h1>
+
+
+
+        <fieldset class="govuk-fieldset moj-add-another__item">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-font-weight-bold" for="person[0][first_name]">
+              Role
+            </label>
+
+            <input class="govuk-input" id="person[0][first_name]" name="person[0][first_name]" type="text"  value="Case admin" data-name="person[%index%][first_name]" data-id="person[%index%][first_name]">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-font-weight-bold" for="person[0][last_name]">
+              Full name
+            </label>
+
+            <input class="govuk-input" id="person[0][last_name]" name="person[0][last_name]" type="text" value="Jane Bloggs" data-name="person[%index%][last_name]" data-id="person[%index%][last_name]">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-font-weight-bold" for="person[0][email_address]">
+              Email address
+            </label>
+
+            <input class="govuk-input" id="person[0][email_address]" name="person[0][email_address]" type="text" value="jane.bloggs@example.gov.uk" data-name="person[%index%][email_address]" data-id="person[%index%][email_address]">
+          </div>
+
+            </fieldset>
+
+
+        <div class="moj-button-action">
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Update
+          </button>
+
+          <button class="govuk-button govuk-button--warning govuk-!-margin-left-4" data-module="govuk-button">
+            Delete contact
+          </button>
+
+        </div>
+
+
+</div>
+</div>
+</div>
+    </form>
+
+
+
+
+{% endblock %}

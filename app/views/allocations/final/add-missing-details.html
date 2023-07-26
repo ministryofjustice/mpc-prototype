@@ -1,0 +1,274 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Cases to update – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+
+
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-xl">
+  Allocations
+</h1>
+
+<!--<div class="moj-banner">
+
+  <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+    <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+	C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
+  </svg>
+
+  <div class="moj-banner__message">
+
+    <p>James Saunders’ tier has changed from D to B. <a class="govuk-link govuk-link--no-visited-state" href="#">Consider reallocating from a prison POM to a probation POM</a></p>
+  </div>
+
+</div>-->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+  
+
+
+<div class="moj-search">
+
+<form action="#" method="post">
+
+<div class="govuk-form-group">
+  <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+    Find a case
+  </label>
+
+  <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+</div>
+
+<button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+  Search
+</button>
+
+</form>
+</div>
+
+ 
+</div>
+</div>
+
+<div class="govuk-grid-row  govuk-!-padding-top-6">
+  <div class="govuk-grid-column-full">
+  
+
+
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+  <ul class="moj-sub-navigation__list">
+
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./make-allocations">Make allocations (50)</a>
+    </li>
+  
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page">Add missing details (3)</a>
+    </li>
+
+       <!--<li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./check-tier-changes">Check tier changes (4)</a>
+    </li>-->
+  
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./newly-arrived.html">Newly arrived (3)</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./see-allocations">See allocations (10)</a>
+    </li>
+  
+
+  </ul>
+
+</nav>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width" style="margin-left: 15px">
+
+
+      <h1 class="govuk-heading-l">
+        Add missing details
+      </h1>
+
+      <p>These cases must have missing information added before they can be allocated.</p>
+
+
+      <nav class="moj-pagination govuk-!-padding-bottom-4" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+       <!-- <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>-->
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+      </nav>
+
+
+
+
+
+
+      <table class="govuk-table"  data-module="moj-sortable-table">
+
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+  
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Case</th>
+
+          <th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+  
+          <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 200px;">Working days since entering this prison</th>
+  
+          <th scope="col" class="govuk-table__header" aria-sort="none">Action</th>
+  
+          
+  
+          <!-- <th scope="col" class="govuk-table__header">
+              Action</th> -->
+  
+        </tr>
+        </thead>
+  
+        <tbody class="govuk-table__body">
+          
+
+          
+    
+    
+          <tr class="govuk-table__row">
+    
+            <td class="govuk-table__cell">
+              Allen, William  <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+              
+    
+              <td class="govuk-table__cell" data-sort-value="10">ARD:</br>21 Sept 2025</td>
+
+    
+            
+            <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2</td>
+
+              <td aria-label="action" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Add missing details</a></td>
+    
+              
+    
+          </tr>
+    
+          <tr class="govuk-table__row">
+    
+            <td class="govuk-table__cell">
+              Dixon, Yasine <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD</span></td>
+
+              <!-- <td class="govuk-table__cell" data-sort-value="B">E-5-006</td> -->
+    
+              <td class="govuk-table__cell" data-sort-value="10">ARD:</br>21 Sept 2025</td>
+
+            
+
+            <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2</td>
+    
+              <td aria-label="action" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Add missing details</a></td>
+    
+             
+
+          </tr>
+
+
+
+          
+
+
+
+
+
+
+
+          <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">
+              Morrison, Anthony  <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+    
+             
+  
+              <td class="govuk-table__cell" data-sort-value="9">PED:</br>01 May 2025</td>
+
+
+
+              <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+    
+      <td aria-label="action" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Add missing details</a></td>
+    
+
+     
+
+
+          </tr>
+
+
+  
+       
+  
+        </tbody>
+        </table>
+
+        
+
+
+        <nav class="moj-pagination govuk-!-padding-bottom-4" id="pagination-label">
+
+          <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+          <ul class="moj-pagination__list">
+         <!-- <li class="moj-pagination__item  moj-pagination__item--prev">
+            <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+          </li>
+  
+  
+          <li class="moj-pagination__item moj-pagination__item--active">1</li>
+  
+  
+          <li class="moj-pagination__item  moj-pagination__item--next">
+            <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+          </li>-->
+          </ul>
+          <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+        </nav>
+  
+  
+
+
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

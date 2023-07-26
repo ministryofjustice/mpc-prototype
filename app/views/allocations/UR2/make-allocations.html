@@ -1,0 +1,1363 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Make allocations – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+
+
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-xl">
+  Allocations
+</h1>
+
+<!--<div class="moj-banner">
+
+  <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+    <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+	C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
+  </svg>
+
+  <div class="moj-banner__message">
+
+    <p>James Saunders’ tier has changed from D to B. <a class="govuk-link govuk-link--no-visited-state" href="#">Consider reallocating from a prison POM to a probation POM</a></p>
+  </div>
+
+</div>-->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+  
+
+
+<div class="moj-search">
+
+<form action="#" method="post">
+
+<div class="govuk-form-group">
+  <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+    Find a case
+  </label>
+
+  <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+</div>
+
+<button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+  Search
+</button>
+
+</form>
+</div>
+
+ 
+</div>
+</div>
+
+<div class="govuk-grid-row  govuk-!-padding-top-6">
+  <div class="govuk-grid-column-full">
+  
+
+
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+<ul class="moj-sub-navigation__list">
+
+
+  <ul class="moj-sub-navigation__list">
+
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page">Make allocations (50)</a>
+    </li>
+  
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./add-missing-details.html">Add missing details (3)</a>
+    </li>
+  
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./check-tier-changes">Check tier changes (4)</a>
+    </li>
+  
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./newly-arrived.html">Newly arrived (3)</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./see-allocations">See allocations (10)</a>
+    </li>
+  
+  
+  </ul>
+
+</nav>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width" style="margin-left: 15px">
+
+
+      <h1 class="govuk-heading-l">
+        Make allocations
+      </h1>
+
+      <p></p>
+
+
+      <nav class="moj-pagination govuk-!-padding-bottom-4" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+       <!-- <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>-->
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>50</b> of <b>50</b> results</p>
+      </nav>
+
+
+      <table class="govuk-table" data-module="moj-sortable-table">
+
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Case</th>
+
+        <th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
+
+        <th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+
+        <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+
+        <th scope="col" class="govuk-table__header" aria-sort="none">POM role needed</th>
+
+        <th scope="col" class="govuk-table__header" aria-sort="none">Additional information</th>
+
+        <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 200px;">Working days since entering this prison</th>
+
+        <!-- <th scope="col" class="govuk-table__header">
+            Action</th> -->
+
+      </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="/allocations/UR2/step1-review-case-jack-smith.html">Smith, Jack</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G4198UW </span></td>
+
+          <td class="govuk-table__cell" data-sort-value="B">B-4-037</td>
+
+          <td class="govuk-table__cell" data-sort-value="8">CRD:</br>20 May 2022</td>
+
+          <td class="govuk-table__cell" data-sort-value="B">B</td>
+
+          <td class="govuk-table__cell" data-sort-value="Responsible">Supporting</td>
+
+          <td class="govuk-table__cell" data-sort-value="New to this prison">Returning to this prison</td>
+
+          <td class="govuk-table__cell" data-sort-value="3">3</td>
+
+          
+
+          <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="/womens/allocations-review-case-info">
+            Allocate</a> </td> -->
+
+        </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Summer, Marc</a><!--<span class="moj-badge moj-badge--grey" style="margin-left: 10px;">Recall</span>--></a>
+          <br><span class="govuk-hint govuk-!-margin-bottom-0">AE1234BX</span></p></td>
+
+        <td class="govuk-table__cell" data-sort-value="B">D-4-029</td>
+        
+        <td class="govuk-table__cell" data-sort-value="7">HDCED:</br>18 Feb 2023</td>
+
+        <td class="govuk-table__cell" data-sort-value="B">D</td>
+
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+        <td class="govuk-table__cell" data-sort-value="Recall">New to this prison</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+
+        <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td> -->
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Adams, Jerome</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="B">C-2-040</td>
+
+        <td class="govuk-table__cell" data-sort-value="1">TED:</br>21 Sept 2025</td>
+
+        <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+        <td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+
+
+        <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td> -->
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Perry, Piotr</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="B">B-4-005</td>
+
+        <td class="govuk-table__cell" data-sort-value="2">TED:</br>02 Oct 2025</td>
+
+        <td class="govuk-table__cell" data-sort-value="B">B</td>
+        
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+        <td class="govuk-table__cell" data-sort-value="Returning to this prison">New to custody</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+        <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td> -->
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Hall, Hugh</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="B">C-2-022</td>
+        
+        <td class="govuk-table__cell" data-sort-value="4">PED:</br>15 Dec 2026</td>
+
+        <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+        <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+        <td class="govuk-table__cell" data-sort-value="Returning to this prison">Returning to this prison</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="1">1</td>
+
+
+        <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td> -->
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Morrison, Keith</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="B">A-2-016</td>
+
+        <td class="govuk-table__cell" data-sort-value="6">TED:</br>05 Apr 2027</td>
+
+        <td class="govuk-table__cell" data-sort-value="C">C</td>
+
+        <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+        <td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="4">4</td>
+
+
+        <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td> -->
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Saunders, James<!--<span class="moj-badge moj-badge--black" style="margin-left: 10px;">Short term sentence</span>--></a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="B">F-4-044</td>
+
+        <td class="govuk-table__cell" data-sort-value="9">PED:</br>01 May 2028</td>
+
+        <td class="govuk-table__cell" data-sort-value="B">B</td>
+
+        <!--<td class="govuk-table__cell due-date" data-sort-value="2021.05.03">
+          <span class="date overdue">B</span>
+          <span class="secondary overdue">Tier changed</br>
+            <a href="#" class="govuk-link govuk-link--no-visited-state">Reallocate</a> or <a href="#" class="govuk-link govuk-link--no-visited-state">dismiss this</a>
+          </span>
+          
+        </td>-->
+
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+        <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="0">0</td>
+
+
+        <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td> -->
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Patel, Naeem</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="B">B-3-032</td>
+
+        <td class="govuk-table__cell" data-sort-value="8">ARD:</br>05 Dec 2031</td>
+
+        <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+        <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="7">7</td>
+
+<!--
+        <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td> -->
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Morris, Otto</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="B">E-5-006</td>
+
+        <td class="govuk-table__cell" data-sort-value="10">ARD:</br>21 Sept 2035</td>
+
+        <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+        <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="4">4</td>
+
+
+        <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td> -->
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Hunt, John</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="B">C-4-019</td>
+
+        <td class="govuk-table__cell" data-sort-value="5">PED:</br>01 Mar 2031</td>
+
+        <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+        <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+        <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+<!--
+        <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td> -->
+
+      </tr>
+
+
+
+
+
+      <!--20 cases-->
+
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Davies, Marc</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G4198UW </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="B">B-4-037</td>
+
+        <td class="govuk-table__cell" data-sort-value="8">CRD:</br>21 Feb 2033</td>
+
+        <td class="govuk-table__cell" data-sort-value="B">B</td>
+
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+        <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+        <td class="govuk-table__cell" data-sort-value="3">3</td>
+
+        
+
+        <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="/womens/allocations-review-case-info">
+          Allocate</a> </td> -->
+
+      </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Riley, Simon<!--<span class="moj-badge moj-badge--grey" style="margin-left: 10px;">Recall</span>--></a>
+        <br><span class="govuk-hint govuk-!-margin-bottom-0">AE1234BX</span></p></td>
+
+      <td class="govuk-table__cell" data-sort-value="B">D-4-029</td>
+      
+      <td class="govuk-table__cell" data-sort-value="7">CRD:</br>01 Aug 2031</td>
+
+      <td class="govuk-table__cell" data-sort-value="B">B</td>
+
+      <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+      <td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+      <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+
+      <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+        Allocate</a> </td> -->
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Adams, Jerome</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+      <td class="govuk-table__cell" data-sort-value="B">C-2-040</td>
+
+      <td class="govuk-table__cell" data-sort-value="1">TED:</br>21 Sept 2030</td>
+
+      <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+      <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+      <td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+      <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+
+
+      <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+        Allocate</a> </td> -->
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Perry, Piotr</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+      <td class="govuk-table__cell" data-sort-value="B">B-4-005</td>
+
+      <td class="govuk-table__cell" data-sort-value="2">TED:</br>02 Oct 2030</td>
+
+      <td class="govuk-table__cell" data-sort-value="B">B</td>
+      
+      <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+      <td class="govuk-table__cell" data-sort-value="Returning to this prison">New to custody</td>
+
+      <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+      <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+        Allocate</a> </td> -->
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Hall, Hugh</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+      <td class="govuk-table__cell" data-sort-value="B">C-2-022</td>
+      
+      <td class="govuk-table__cell" data-sort-value="4">PED:</br>15 Dec 2030</td>
+
+      <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+      <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+      <td class="govuk-table__cell" data-sort-value="Returning to this prison">Returning to this prison</td>
+
+      <td class="govuk-table__cell govuk-table__cell" data-sort-value="1">1</td>
+
+
+      <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+        Allocate</a> </td> -->
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Morrison, Keith</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+      <td class="govuk-table__cell" data-sort-value="B">A-2-016</td>
+
+      <td class="govuk-table__cell" data-sort-value="6">TED:</br>05 Apr 2031</td>
+
+      <td class="govuk-table__cell" data-sort-value="C">C</td>
+
+      <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+      <td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+      <td class="govuk-table__cell govuk-table__cell" data-sort-value="4">4</td>
+
+
+      <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+        Allocate</a> </td> -->
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Saunders, James<!--<span class="moj-badge moj-badge--black" style="margin-left: 10px;">Short term sentence</span>--></a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+      <td class="govuk-table__cell" data-sort-value="B">F-4-044</td>
+
+      <td class="govuk-table__cell" data-sort-value="9">PED:</br>01 May 2035</td>
+
+      <td class="govuk-table__cell" data-sort-value="B">B</td>
+
+      <!--<td class="govuk-table__cell due-date" data-sort-value="2021.05.03">
+        <span class="date overdue">B</span>
+        <span class="secondary overdue">Tier changed</br>
+          <a href="#" class="govuk-link govuk-link--no-visited-state">Reallocate</a> or <a href="#" class="govuk-link govuk-link--no-visited-state">dismiss this</a>
+        </span>
+        
+      </td>-->
+
+      <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+      <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+      <td class="govuk-table__cell govuk-table__cell" data-sort-value="0">0</td>
+
+
+      <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+        Allocate</a> </td> -->
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Patel, Naeem</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+      <td class="govuk-table__cell" data-sort-value="B">B-3-032</td>
+
+      <td class="govuk-table__cell" data-sort-value="8">ARD:</br>05 Dec 2031</td>
+
+      <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+      <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+      <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+      <td class="govuk-table__cell govuk-table__cell" data-sort-value="7">7</td>
+
+<!--
+      <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+        Allocate</a> </td> -->
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Morris, Otto</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+      <td class="govuk-table__cell" data-sort-value="B">E-5-006</td>
+
+      <td class="govuk-table__cell" data-sort-value="10">ARD:</br>21 Sept 2035</td>
+
+      <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+      <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+      <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+      <td class="govuk-table__cell govuk-table__cell" data-sort-value="4">4</td>
+
+
+      <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+        Allocate</a> </td> -->
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Hunt, John</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+      <td class="govuk-table__cell" data-sort-value="B">C-4-019</td>
+
+      <td class="govuk-table__cell" data-sort-value="5">PED:</br>01 Mar 2031</td>
+
+      <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+      <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+      <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+      <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+<!--
+      <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+        Allocate</a> </td> -->
+
+    </tr>
+
+
+    <!--30 cases-->
+
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Brown, Lanrey</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G4198UW </span></td>
+
+      <td class="govuk-table__cell" data-sort-value="B">B-4-037</td>
+
+      <td class="govuk-table__cell" data-sort-value="8">CRD:</br>21 Feb 2033</td>
+
+      <td class="govuk-table__cell" data-sort-value="B">B</td>
+
+      <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+      <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+      <td class="govuk-table__cell" data-sort-value="3">3</td>
+
+      
+
+      <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="/womens/allocations-review-case-info">
+        Allocate</a> </td> -->
+
+    </tr>
+
+  <tr class="govuk-table__row">
+
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Riley, Simon<!--<span class="moj-badge moj-badge--grey" style="margin-left: 10px;">Recall</span>--></a>
+      <br><span class="govuk-hint govuk-!-margin-bottom-0">AE1234BX</span></p></td>
+
+    <td class="govuk-table__cell" data-sort-value="B">D-4-029</td>
+    
+    <td class="govuk-table__cell" data-sort-value="7">CRD:</br>01 Aug 2031</td>
+
+    <td class="govuk-table__cell" data-sort-value="B">B</td>
+
+    <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+    <td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+    <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+
+    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+      Allocate</a> </td> -->
+
+  </tr>
+
+  <tr class="govuk-table__row">
+
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Adams, Jerome</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+    <td class="govuk-table__cell" data-sort-value="B">C-2-040</td>
+
+    <td class="govuk-table__cell" data-sort-value="1">TED:</br>21 Sept 2030</td>
+
+    <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+    <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+    <td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+    <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+
+
+    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+      Allocate</a> </td> -->
+
+  </tr>
+
+  <tr class="govuk-table__row">
+
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Perry, Piotr</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+    <td class="govuk-table__cell" data-sort-value="B">B-4-005</td>
+
+    <td class="govuk-table__cell" data-sort-value="2">TED:</br>02 Oct 2030</td>
+
+    <td class="govuk-table__cell" data-sort-value="B">B</td>
+    
+    <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+    <td class="govuk-table__cell" data-sort-value="Returning to this prison">Returning to this prison</td>
+
+    <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+      Allocate</a> </td> -->
+
+  </tr>
+
+  <tr class="govuk-table__row">
+
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Hall, Hugh</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+    <td class="govuk-table__cell" data-sort-value="B">C-2-022</td>
+    
+    <td class="govuk-table__cell" data-sort-value="4">PED:</br>15 Dec 2030</td>
+
+    <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+    <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+    <td class="govuk-table__cell" data-sort-value="Returning to this prison">Returning to this prison</td>
+
+    <td class="govuk-table__cell govuk-table__cell" data-sort-value="1">1</td>
+
+
+    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+      Allocate</a> </td> -->
+
+  </tr>
+
+  <tr class="govuk-table__row">
+
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Morrison, Keith</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+    <td class="govuk-table__cell" data-sort-value="B">A-2-016</td>
+
+    <td class="govuk-table__cell" data-sort-value="6">TED:</br>05 Apr 2031</td>
+
+    <td class="govuk-table__cell" data-sort-value="C">C</td>
+
+    <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+    <td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+    <td class="govuk-table__cell govuk-table__cell" data-sort-value="4">4</td>
+
+
+    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+      Allocate</a> </td> -->
+
+  </tr>
+
+  <tr class="govuk-table__row">
+
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Saunders, James<!--<span class="moj-badge moj-badge--black" style="margin-left: 10px;">Short term sentence</span>--></a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+    <td class="govuk-table__cell" data-sort-value="B">F-4-044</td>
+
+    <td class="govuk-table__cell" data-sort-value="9">PED:</br>01 May 2035</td>
+
+    <td class="govuk-table__cell" data-sort-value="B">B</td>
+
+    <!--<td class="govuk-table__cell due-date" data-sort-value="2021.05.03">
+      <span class="date overdue">B</span>
+      <span class="secondary overdue">Tier changed</br>
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Reallocate</a> or <a href="#" class="govuk-link govuk-link--no-visited-state">dismiss this</a>
+      </span>
+      
+    </td>-->
+
+    <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+    <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+    <td class="govuk-table__cell govuk-table__cell" data-sort-value="0">0</td>
+
+
+    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+      Allocate</a> </td> -->
+
+  </tr>
+
+  <tr class="govuk-table__row">
+
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Patel, Naeem</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+    <td class="govuk-table__cell" data-sort-value="B">B-3-032</td>
+
+    <td class="govuk-table__cell" data-sort-value="8">ARD:</br>05 Dec 2031</td>
+
+    <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+    <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+    <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+    <td class="govuk-table__cell govuk-table__cell" data-sort-value="7">7</td>
+
+<!--
+    <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+      Allocate</a> </td> -->
+
+  </tr>
+
+  <tr class="govuk-table__row">
+
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Morris, Otto</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+    <td class="govuk-table__cell" data-sort-value="B">E-5-006</td>
+
+    <td class="govuk-table__cell" data-sort-value="10">ARD:</br>21 Sept 2035</td>
+
+    <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+    <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+    <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+    <td class="govuk-table__cell govuk-table__cell" data-sort-value="4">4</td>
+
+
+    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+      Allocate</a> </td> -->
+
+  </tr>
+
+  <tr class="govuk-table__row">
+
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Hunt, John</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+    <td class="govuk-table__cell" data-sort-value="B">C-4-019</td>
+
+    <td class="govuk-table__cell" data-sort-value="5">PED:</br>01 Mar 2031</td>
+
+    <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+    <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+    <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+    <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+<!--
+    <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+      Allocate</a> </td> -->
+
+  </tr>
+
+
+  <!--40 cases-->
+
+  <tr class="govuk-table__row">
+
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Johnson, Christian</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G4198UW </span></td>
+
+    <td class="govuk-table__cell" data-sort-value="B">B-4-037</td>
+
+    <td class="govuk-table__cell" data-sort-value="8">CRD:</br>21 Feb 2033</td>
+
+    <td class="govuk-table__cell" data-sort-value="B">B</td>
+
+    <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+    <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+    <td class="govuk-table__cell" data-sort-value="3">3</td>
+
+    
+
+    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="/womens/allocations-review-case-info">
+      Allocate</a> </td> -->
+
+  </tr>
+
+<tr class="govuk-table__row">
+
+  <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Riley, Simon<!--<span class="moj-badge moj-badge--grey" style="margin-left: 10px;">Recall</span>--></a>
+    <br><span class="govuk-hint govuk-!-margin-bottom-0">AE1234BX</span></p></td>
+
+  <td class="govuk-table__cell" data-sort-value="B">D-4-029</td>
+  
+  <td class="govuk-table__cell" data-sort-value="7">CRD:</br>01 Aug 2031</td>
+
+  <td class="govuk-table__cell" data-sort-value="B">B</td>
+
+  <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+  <td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+  <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+
+  <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+    Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+  <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Adams, Jerome</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+  <td class="govuk-table__cell" data-sort-value="B">C-2-040</td>
+
+  <td class="govuk-table__cell" data-sort-value="1">TED:</br>21 Sept 2030</td>
+
+  <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+  <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+  <td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+  <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+
+
+  <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+    Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+  <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Perry, Piotr</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+  <td class="govuk-table__cell" data-sort-value="B">B-4-005</td>
+
+  <td class="govuk-table__cell" data-sort-value="2">TED:</br>02 Oct 2030</td>
+
+  <td class="govuk-table__cell" data-sort-value="B">B</td>
+  
+  <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+  <td class="govuk-table__cell" data-sort-value="Returning to this prison">Returning to this prison</td>
+
+  <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+  <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+    Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+  <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Hall, Hugh</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+  <td class="govuk-table__cell" data-sort-value="B">C-2-022</td>
+  
+  <td class="govuk-table__cell" data-sort-value="4">PED:</br>15 Dec 2030</td>
+
+  <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+  <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+  <td class="govuk-table__cell" data-sort-value="Returning to this prison">Returning to this prison</td>
+
+  <td class="govuk-table__cell govuk-table__cell" data-sort-value="1">1</td>
+
+
+  <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+    Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+  <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Morrison, Keith</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+  <td class="govuk-table__cell" data-sort-value="B">A-2-016</td>
+
+  <td class="govuk-table__cell" data-sort-value="6">TED:</br>05 Apr 2031</td>
+
+  <td class="govuk-table__cell" data-sort-value="C">C</td>
+
+  <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+  <td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+  <td class="govuk-table__cell govuk-table__cell" data-sort-value="4">4</td>
+
+
+  <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+    Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+  <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Saunders, James<!--<span class="moj-badge moj-badge--black" style="margin-left: 10px;">Short term sentence</span>--></a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+  <td class="govuk-table__cell" data-sort-value="B">F-4-044</td>
+
+  <td class="govuk-table__cell" data-sort-value="9">PED:</br>01 May 2035</td>
+
+  <td class="govuk-table__cell" data-sort-value="B">B</td>
+
+  <!--<td class="govuk-table__cell due-date" data-sort-value="2021.05.03">
+    <span class="date overdue">B</span>
+    <span class="secondary overdue">Tier changed</br>
+      <a href="#" class="govuk-link govuk-link--no-visited-state">Reallocate</a> or <a href="#" class="govuk-link govuk-link--no-visited-state">dismiss this</a>
+    </span>
+    
+  </td>-->
+
+  <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+  <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+  <td class="govuk-table__cell govuk-table__cell" data-sort-value="0">0</td>
+
+
+  <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+    Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+  <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Patel, Naeem</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+  <td class="govuk-table__cell" data-sort-value="B">B-3-032</td>
+
+  <td class="govuk-table__cell" data-sort-value="8">ARD:</br>05 Dec 2031</td>
+
+  <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+  <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+  <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+  <td class="govuk-table__cell govuk-table__cell" data-sort-value="7">7</td>
+
+<!--
+  <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+    Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+  <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Morris, Otto</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+  <td class="govuk-table__cell" data-sort-value="B">E-5-006</td>
+
+  <td class="govuk-table__cell" data-sort-value="10">ARD:</br>21 Sept 2035</td>
+
+  <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+  <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+  <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+  <td class="govuk-table__cell govuk-table__cell" data-sort-value="4">4</td>
+
+
+  <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+    Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+  <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Hunt, John</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+  <td class="govuk-table__cell" data-sort-value="B">C-4-019</td>
+
+  <td class="govuk-table__cell" data-sort-value="5">PED:</br>01 Mar 2031</td>
+
+  <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+  <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+  <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+  <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+<!--
+  <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+    Allocate</a> </td> -->
+
+</tr>
+
+<!--50 cases-->
+
+<tr class="govuk-table__row">
+
+  <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Williams, Hendrick</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G4198UW </span></td>
+
+  <td class="govuk-table__cell" data-sort-value="B">B-4-037</td>
+
+  <td class="govuk-table__cell" data-sort-value="8">CRD:</br>21 Feb 2033</td>
+
+  <td class="govuk-table__cell" data-sort-value="B">B</td>
+
+  <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+  <td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+  <td class="govuk-table__cell" data-sort-value="3">3</td>
+
+  
+
+  <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="/womens/allocations-review-case-info">
+    Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Riley, Simon<!--<span class="moj-badge moj-badge--grey" style="margin-left: 10px;">Recall</span>--></a>
+  <br><span class="govuk-hint govuk-!-margin-bottom-0">AE1234BX</span></p></td>
+
+<td class="govuk-table__cell" data-sort-value="B">D-4-029</td>
+
+<td class="govuk-table__cell" data-sort-value="7">CRD:</br>01 Aug 2031</td>
+
+<td class="govuk-table__cell" data-sort-value="B">B</td>
+
+<td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+<td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+<td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+
+<!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+  Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Adams, Jerome</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+<td class="govuk-table__cell" data-sort-value="B">C-2-040</td>
+
+<td class="govuk-table__cell" data-sort-value="1">TED:</br>21 Sept 2030</td>
+
+<td class="govuk-table__cell" data-sort-value="A">A</td>
+
+<td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+<td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+<td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+
+
+<!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+  Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Perry, Piotr</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+<td class="govuk-table__cell" data-sort-value="B">B-4-005</td>
+
+<td class="govuk-table__cell" data-sort-value="2">TED:</br>02 Oct 2030</td>
+
+<td class="govuk-table__cell" data-sort-value="B">B</td>
+
+<td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+<td class="govuk-table__cell" data-sort-value="Returning to this prison">Returning to this prison</td>
+
+<td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+<!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+  Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Hall, Hugh</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+<td class="govuk-table__cell" data-sort-value="B">C-2-022</td>
+
+<td class="govuk-table__cell" data-sort-value="4">PED:</br>15 Dec 2030</td>
+
+<td class="govuk-table__cell" data-sort-value="D">D</td>
+
+<td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+<td class="govuk-table__cell" data-sort-value="Returning to this prison">Returning to this prison</td>
+
+<td class="govuk-table__cell govuk-table__cell" data-sort-value="1">1</td>
+
+
+<!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+  Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Morrison, Keith</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+<td class="govuk-table__cell" data-sort-value="B">A-2-016</td>
+
+<td class="govuk-table__cell" data-sort-value="6">TED:</br>05 Apr 2031</td>
+
+<td class="govuk-table__cell" data-sort-value="C">C</td>
+
+<td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+<td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+<td class="govuk-table__cell govuk-table__cell" data-sort-value="4">4</td>
+
+
+<!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+  Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Saunders, James<!--<span class="moj-badge moj-badge--black" style="margin-left: 10px;">Short term sentence</span>--></a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+<td class="govuk-table__cell" data-sort-value="B">F-4-044</td>
+
+<td class="govuk-table__cell" data-sort-value="9">PED:</br>01 May 2035</td>
+
+<td class="govuk-table__cell" data-sort-value="B">B</td>
+
+<!--<td class="govuk-table__cell due-date" data-sort-value="2021.05.03">
+  <span class="date overdue">B</span>
+  <span class="secondary overdue">Tier changed</br>
+    <a href="#" class="govuk-link govuk-link--no-visited-state">Reallocate</a> or <a href="#" class="govuk-link govuk-link--no-visited-state">dismiss this</a>
+  </span>
+  
+</td>-->
+
+<td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+<td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+<td class="govuk-table__cell govuk-table__cell" data-sort-value="0">0</td>
+
+
+<!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+  Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Patel, Naeem</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+<td class="govuk-table__cell" data-sort-value="B">B-3-032</td>
+
+<td class="govuk-table__cell" data-sort-value="8">ARD:</br>05 Dec 2031</td>
+
+<td class="govuk-table__cell" data-sort-value="D">D</td>
+
+<td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+<td class="govuk-table__cell" data-sort-value="Recall">Recall</td>
+
+<td class="govuk-table__cell govuk-table__cell" data-sort-value="7">7</td>
+
+<!--
+<td class="govuk-table__cell"> <a class="govuk-link" href="#">
+  Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Morris, Otto</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+<td class="govuk-table__cell" data-sort-value="B">E-5-006</td>
+
+<td class="govuk-table__cell" data-sort-value="10">ARD:</br>21 Sept 2035</td>
+
+<td class="govuk-table__cell" data-sort-value="A">A</td>
+
+<td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+
+<td class="govuk-table__cell" data-sort-value="New to this prison">New to this prison</td>
+
+<td class="govuk-table__cell govuk-table__cell" data-sort-value="4">4</td>
+
+
+<!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+  Allocate</a> </td> -->
+
+</tr>
+
+<tr class="govuk-table__row">
+
+<td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Hunt, John</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+<td class="govuk-table__cell" data-sort-value="B">C-4-019</td>
+
+<td class="govuk-table__cell" data-sort-value="5">PED:</br>01 Mar 2031</td>
+
+<td class="govuk-table__cell" data-sort-value="D">D</td>
+
+<td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+
+<td class="govuk-table__cell" data-sort-value="Returning to this prison">Returning to this prison</td>
+
+<td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+<!--
+<td class="govuk-table__cell"> <a class="govuk-link" href="#">
+  Allocate</a> </td> -->
+
+</tr>
+
+
+
+
+      </tbody>
+      </table>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+         <!-- <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li> -->
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>50</b> of <b>50</b> results</p>
+      </nav>
+
+          </div>
+      </div>
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

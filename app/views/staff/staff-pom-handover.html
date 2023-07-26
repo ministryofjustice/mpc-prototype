@@ -1,0 +1,647 @@
+{% extends "layout-staff-homd.html" %}
+
+
+{% block pageTitle %}
+Sarah Bailey
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+
+<a href="./staff" class="govuk-back-link govuk-body" style="margin-left: -10px;">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+      <span class="govuk-caption-xl">Probation Officer POM</span>
+
+      Sarah Bailey
+    </h1>
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-overview.html">Overview</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-caseload.html">Caseload (14)</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page">Handover cases (4)</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-parole">Parole cases (8)</a>
+      </li>
+
+        </ul>
+          </nav>
+
+          <h2 class="govuk-heading-l">
+            Handover cases
+          </h2>
+          
+        
+<!--tab 1-->
+
+          <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+              Contents
+            </h2>
+            <ul class="govuk-tabs__list">
+              <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#upcoming-handovers">
+                  Upcoming handovers (3)
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#handovers-progress">
+                  Handovers in progress (4)
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#overdue-tasks">
+                  Overdue tasks (3)
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#allocation-overdue">
+                  COM allocation overdue (3)
+                </a>
+              </li>
+            </ul>
+
+<!--tab 1-->
+
+
+            <div class="govuk-tabs__panel" id="upcoming-handovers">
+              <h2 class="govuk-heading-m">Upcoming handovers</h2>
+
+
+              <p>A COM will be allocated in the next 8 weeks. The POM should start getting ready to hand the case over to the community.</p>
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list" style="padding-top: 15px; padding-bottom: 15px;">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+      </li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">1</a></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active">2</li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">3</a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+      </li>
+    </ul>
+    <p class="moj-pagination__results" style="padding-top: 15px; padding-bottom: 15px;">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+  </nav>
+  
+
+
+        <table class="govuk-table" data-module="moj-sortable-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header" aria-sort="none">Prisoner details</th>
+              <th scope="col" class="govuk-table__header" aria-sort="ascending">COM responsible</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+              <th scope="col" class="govuk-table__header" style="padding-left: 20px;">Handover progress</th>
+
+
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Nguyễn" href="#">Nguyễn, Bảo</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+             
+              <td class="govuk-table__cell due-date" data-sort-value="2021.07.28">
+                <span class="date highlight"data-sort-value="2021.07.28">COM responsible: <br>28 Jul 2021</span>
+                <span class="secondary highlight">Handover due soon</span>
+              </td>
+              
+              <td class="govuk-table__cell" data-sort-value="2021.03.28">TED: <br>28 Mar 2022</td>
+              <td class="govuk-table__cell" data-sort-value="B"><strong>B</strong></td>
+              <td class="govuk-table__cell">
+                <h2 class="govuk-heading-s" style="margin-left: 20px; margin-bottom: 10px;">Enhanced handover</h2>
+                <ul class="govuk-list govuk-body-s task-summary-checklist">
+                  <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Review OASys</li>
+                  <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Have contact from COM</li>
+                  <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Attend handover meeting</a></li>
+                </ul>
+               </td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Dalton" href="#">Dalton, Shane</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell" data-sort-value="2021.09.11">COM responsible: <br>11 Sep 2021</td>
+              <td class="govuk-table__cell" data-sort-value="2021.12.11">HDCED: <br>11 Dec 2021</td>
+              <td class="govuk-table__cell" data-sort-value="D"><strong>D</strong></td>
+              <td class="govuk-table__cell">
+                <h2 class="govuk-heading-s" style="margin-left: 20px; margin-bottom: 10px;">Standard handover</h2>
+                <ul class="govuk-list govuk-body-s task-summary-checklist">
+                  <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task complete"/>Have contact from COM</li>
+                  <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Send handover report</li>
+                </ul>
+               </td>
+              </tr>
+            
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Robinson" href="#">Robinson, Jack</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+          <td class="govuk-table__cell" data-sort-value="2021.12.06"><!--COM allocated: <br>06 Sep 2021<br>--><p style="padding-top: 0px;">COM responsible: <br>06 Dec 2021</p></td>
+          <td class="govuk-table__cell" data-sort-value="2021.04.23">CRD: <br>23 Apr 2022</td>
+          <td class="govuk-table__cell" data-sort-value="A"><strong>A</strong></td>
+          <td class="govuk-table__cell">
+            
+            <h2 class="govuk-heading-s" style="margin-left: 20px; margin-bottom: 10px;">Enhanced handover</h2>
+            <ul class="govuk-list govuk-body-s task-summary-checklist">
+              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Review OASys</li>
+              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Have contact from COM</li>
+              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Attend handover meeting</a></li>
+            </ul>
+            
+            </td>
+        </tr>
+
+   
+    </tbody>
+  </table>
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+      </li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">1</a></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active">2</li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">3</a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+      </li>
+    </ul>
+    <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+  </nav>
+
+</div>
+
+
+     
+
+<!--tab 2-->
+
+
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="handovers-progress">
+              <h2 class="govuk-heading-m">Handovers in progress</h2>
+              
+<p>The POM should start sharing information about the case with the COM, highlighting any pre-release or pre-parole needs they have identified.</p>
+
+              <nav class="moj-pagination" id="pagination-label">
+
+                <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+              
+                <ul class="moj-pagination__list" style="padding-top: 15px; padding-bottom: 15px;">
+                  <li class="moj-pagination__item  moj-pagination__item--prev">
+                    <a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+                  </li>
+              
+                  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">1</a></li>
+              
+                  <li class="moj-pagination__item moj-pagination__item--active">2</li>
+              
+                  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">3</a></li>
+              
+                  <li class="moj-pagination__item  moj-pagination__item--next">
+                    <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+                  </li>
+                </ul>
+                <p class="moj-pagination__results" style="padding-top: 15px; padding-bottom: 15px;">Showing <b>1</b> to <b>4</b> of <b>4</b> results</p>
+              </nav>
+              
+        
+        
+        
+                    <table class="govuk-table" data-module="moj-sortable-table">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header" aria-sort="none">Prisoner details</th>
+                          <th scope="col" class="govuk-table__header" aria-sort="none">COM details</th>
+                          <th scope="col" class="govuk-table__header" aria-sort="ascending">COM responsible</th>
+                          <th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+                          <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+                          <th scope="col" class="govuk-table__header" style="padding-left: 20px;">Handover progress</th>
+        
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+        
+        
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Jameson" href="#">Jameson, Pharrell</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+                          <td class="govuk-table__cell" data-sort-value="Oliver">Michaela Oliver<br>michaela.oliver@justice.gov.uk</td>
+                          <td class="govuk-table__cell" data-sort-value="2021.03.02"><!--COM allocated:<br>02 Dec 2020</br>--><p style="padding-top: 0px;">COM responsible: <br>02 Mar 2021</p></td>
+                          <td class="govuk-table__cell" data-sort-value="2021.07.16">CRD: <br>16 Jul 2021</td>
+                          <td class="govuk-table__cell" data-sort-value="C"><strong>C</strong></td>
+                          
+                          <td class="govuk-table__cell">
+                            <h2 class="govuk-heading-s" style="margin-left: 20px; margin-bottom: 10px;">Enhanced handover</h2>
+                            <ul class="govuk-list govuk-body-s task-summary-checklist">
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Review OASys</li>
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Have contact from COM</li>
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Attend handover meeting</li>
+                            </ul>
+                        </td> 
+                        </tr>
+        
+        
+        
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Patel" href="#">Patel, Kirit</a><br> <span class="govuk-!-margin-bottom-0"> G2911GD </span></td>
+                          <td class="govuk-table__cell" data-sort-value="Bailey">Sarah Bailey<br>sarah.bailey.gov.uk</td>
+                          <td class="govuk-table__cell" data-sort-value="2021.05.01"><!--COM allocated:<br>01 Feb 2021</br>-->
+                            <p style="padding-top: 0px;">COM responsible: <br>01 May 2021</p></td>
+                          <td class="govuk-table__cell" data-sort-value="2021.09.14">CRD:<br> 14 Sep 2021</td>
+                          <td class="govuk-table__cell" data-sort-value="B"><strong>B</strong></td>
+                          <td class="govuk-table__cell">
+                            
+                            <h2 class="govuk-heading-s" style="margin-left: 20px; margin-bottom: 10px;">Enhanced handover</h2>
+                            <ul class="govuk-list govuk-body-s task-summary-checklist">
+                    
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Review OASys</li>
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Have contact from COM</li>
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Attend handover meeting</li>
+                            </ul>
+                          </td>
+                        </tr>
+        
+        
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Adams" href="#">Adams, Damien</a><br> <span class="govuk-!-margin-bottom-0"> G2911GD </span></td>
+                          <td class="govuk-table__cell due-date" data-sort-value="Unknown">
+                            <span class="date overdue">Unknown</span>
+                            <span class="secondary overdue">Allocation overdue</span>
+                          </td>
+        
+                          <td class="govuk-table__cell due-date" data-sort-value="2021.06.30">
+                            <span class="date overdue">COM responsible:</br> 30 Jun 2021</span>
+                            <span class="secondary overdue">Handover tasks overdue</span>
+                          </td>
+        
+                          <td class="govuk-table__cell" data-sort-value="2021.02.28">PRD: <br>28 Feb 2022</td>
+                          <td class="govuk-table__cell" data-sort-value="B"><strong>B</strong></td>
+                          
+                          <td class="govuk-table__cell">
+                            <h2 class="govuk-heading-s" style="margin-left: 20px; margin-bottom: 10px;">Enhanced handover</h2>
+                            <ul class="govuk-list govuk-body-s task-summary-checklist">
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Review OASys</li>
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task complete"/>Have contact from COM</li>
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task complete"/>Attend handover meeting</li>
+                            </ul>
+                           </td>
+                        </tr>
+        
+        
+        
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Coggins" href="#">Coggins, Jerry</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+                          <td class="govuk-table__cell due-date" data-sort-value="Unknown">
+                            <span class="date overdue">Unknown</span>
+                            <span class="secondary overdue">Allocation overdue</span>
+                          </td>
+        
+                          <td class="govuk-table__cell due-date" data-sort-value="2021.07.20">
+                            <span class="date overdue"><!--COM allocated:<br>20 Apr 2021</br>-->COM responsible: <br>20 Jul 2021</span>
+                            <span class="secondary overdue">Handover tasks overdue</span>
+                          </td>
+        
+        
+          
+                          <td class="govuk-table__cell" data-sort-value="2021.12.03">CRD: <br>03 Dec 2021</td>
+                          <td class="govuk-table__cell" data-sort-value="B"><strong>B</strong></td>
+                          
+                          <td class="govuk-table__cell">
+                            <h2 class="govuk-heading-s" style="margin-left: 20px; margin-bottom: 10px;">Enhanced handover</h2>
+                            <ul class="govuk-list govuk-body-s task-summary-checklist">
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Review OASys</li>
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task complete"/>Have contact from COM</li>
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Attend handover meeting</li>
+                            </ul>
+                        </td>
+        
+                        </tr>
+        
+                      </tbody>
+                    </table>
+        
+                    <nav class="moj-pagination" id="pagination-label">
+        
+                      <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+                    
+                      <ul class="moj-pagination__list">
+                        <li class="moj-pagination__item  moj-pagination__item--prev">
+                          <a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+                        </li>
+                    
+                        <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">1</a></li>
+                    
+                        <li class="moj-pagination__item moj-pagination__item--active">2</li>
+                    
+                        <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">3</a></li>
+                    
+                        <li class="moj-pagination__item  moj-pagination__item--next">
+                          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+                        </li>
+                      </ul>
+                      <p class="moj-pagination__results">Showing <b>1</b> to <b>4</b> of <b>4</b> results</p>
+                    </nav>
+                    
+                  
+
+            </div>
+            
+<!--tab 3-->
+
+
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="overdue-tasks">
+              <h2 class="govuk-heading-m">Overdue tasks</h2>
+
+              <p>Responsibility for these cases has transferred to the community, but some handover tasks are still recorded as incomplete.</p>
+               
+              <nav class="moj-pagination" id="pagination-label">
+
+                <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+              
+                <ul class="moj-pagination__list" style="padding-top: 15px; padding-bottom: 15px;">
+                  <li class="moj-pagination__item  moj-pagination__item--prev">
+                    <a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+                  </li>
+              
+                  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">1</a></li>
+              
+                  <li class="moj-pagination__item moj-pagination__item--active">2</li>
+              
+                  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">3</a></li>
+              
+                  <li class="moj-pagination__item  moj-pagination__item--next">
+                    <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+                  </li>
+                </ul>
+                <p class="moj-pagination__results" style="padding-top: 15px; padding-bottom: 15px;">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+              </nav>
+        
+        
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header" aria-sort="none">Prisoner details</th>
+                          <th scope="col" class="govuk-table__header" aria-sort="none">COM details</th>
+                          <th scope="col" class="govuk-table__header" aria-sort="ascending">COM responsible</th>
+                          <th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+                          <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+                          <th scope="col" class="govuk-table__header" style="padding-left: 20px;">Handover progress</th>
+        
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+        
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Udin, Amit</a><br> <span class="govuk-!-margin-bottom-0"> G2911GD </span></td>
+                          <td class="govuk-table__cell due-date">
+                            <span class="date overdue">Unknown</span>
+                            <span class="secondary overdue">Allocation overdue</span>
+                          </td>
+                          <td class="govuk-table__cell due-date">
+                            <span class="date overdue">COM responsible: </br>03 May 2021</span>
+                            <span class="secondary overdue">Handover tasks overdue</span>
+                          </td>
+                          <td class="govuk-table__cell">CRD: </br>26 Jul 2021</td>
+                          <td class="govuk-table__cell"><strong>D</strong></td>
+                          <td class="govuk-table__cell">
+                            <h2 class="govuk-heading-s" style="margin-left: 20px; margin-bottom: 10px;">Standard handover</h2>
+                            <ul class="govuk-list govuk-body-s task-summary-checklist">
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not complete"/>Have contact from COM</li>
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not complete"/>Send handover report</li>
+                            </ul>
+                          </td>
+                        </tr>
+        
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Afolayan, Imani</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+                          <td class="govuk-table__cell">Antonia Capello<br>antonia.capello@justice.gov.uk</td>
+                          <td class="govuk-table__cell due-date">
+                            <span class="date overdue"><!--COM allocated:</br>13 Feb 2021</br>-->COM responsible:</br> 13 May 2021</span>
+                            <span class="secondary overdue">Handover tasks overdue</span>
+                          </td>
+                          <td class="govuk-table__cell">ARD: </br>30 Sep 2021</td>
+                          <td class="govuk-table__cell"><strong>C</strong></td>
+                          
+                          <td class="govuk-table__cell">
+                            <h2 class="govuk-heading-s" style="margin-left: 20px; margin-bottom: 10px;">Enhanced handover</h2>
+                            <ul class="govuk-list govuk-body-s task-summary-checklist">
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not complete"/>Review OASys</li>
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not complete"/>Have contact from COM</li>
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not complete"/>Attend handover meeting</li>
+                            </ul>
+                        </td> 
+                        </tr>
+        
+        
+        
+        
+        
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Parker, Harrison</a><br> <span class="govuk-!-margin-bottom-0"> G2911GD </span></td>
+                          <td class="govuk-table__cell">Liam Jones<br>liam.jones@justice.gov.uk</td>
+                          <td class="govuk-table__cell due-date">
+                            <span class="date overdue">COM responsible: </br>23 May 2021</span>
+                            <span class="secondary overdue">Handover tasks overdue</span>
+                          </td>
+                          <td class="govuk-table__cell">HDCED: </br>15 Aug 2021</td>
+                          <td class="govuk-table__cell"><strong>D</strong></td>
+                          
+                          <td class="govuk-table__cell">
+                            <h2 class="govuk-heading-s" style="margin-left: 20px; margin-bottom: 10px;">Standard handover</h2>
+                            <ul class="govuk-list govuk-body-s task-summary-checklist">
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Have contact from COM</li>
+                              <li class="none"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not complete"/>Send handover report</li>
+                            </ul>
+                           </td>
+                        </tr>
+        
+                        
+                        
+        
+                      </tbody>
+                    </table>
+        
+        
+                    <nav class="moj-pagination" id="pagination-label">
+        
+                      <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+                    
+                      <ul class="moj-pagination__list">
+                        <li class="moj-pagination__item  moj-pagination__item--prev">
+                          <a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+                        </li>
+                    
+                        <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">1</a></li>
+                    
+                        <li class="moj-pagination__item moj-pagination__item--active">2</li>
+                    
+                        <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">3</a></li>
+                    
+                        <li class="moj-pagination__item  moj-pagination__item--next">
+                          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+                        </li>
+                      </ul>
+                      <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+                    </nav>
+
+
+            </div>
+
+<!--tab 4-->
+
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="allocation-overdue">
+              <h2 class="govuk-heading-m">COM allocation overdue</h2>
+
+              <p>These cases have passed their handover date and are missing COM details on NDelius.</p>
+             
+              <nav class="moj-pagination" id="pagination-label">
+
+                <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+              
+                <ul class="moj-pagination__list" style="padding-top: 15px; margin-bottom: -15px;">
+                  <li class="moj-pagination__item  moj-pagination__item--prev">
+                    <a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+                  </li>
+              
+                  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">1</a></li>
+              
+                  <li class="moj-pagination__item moj-pagination__item--active">2</li>
+              
+                  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">3</a></li>
+              
+                  <li class="moj-pagination__item  moj-pagination__item--next">
+                    <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+                  </li>
+                </ul>
+                <p class="moj-pagination__results" style="padding-top: 15px; margin-bottom: -15px;">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+              </nav>
+              
+              
+              
+                <table class="govuk-table govuk-!-margin-top-6">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header" aria-sort="none">Prisoner details</th>
+                      <th scope="col" class="govuk-table__header" aria-sort="none">COM responsible</th>
+                      <th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+                      <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+                      <th scope="col" class="govuk-table__header" aria-sort="descending">Days </br>overdue</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">LDU details</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+              
+              
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Udin, Amit</a><br> <span class="govuk-!-margin-bottom-0"> G2911GD </span></td>
+                      <td class="govuk-table__cell">COM responsible:</br>03 May 2021</td>
+                      <td class="govuk-table__cell">CRD:</br>26 Jul 2021</td>
+                      <td class="govuk-table__cell"><strong>D</strong></td>
+                      <td class="govuk-table__cell due-date">
+                        <span class="date overdue">28</span>
+                      </td>
+                      <td class="govuk-table__cell"><p>Cornwall and Isles of Scilly</p><p style="margin-top: -10px;">PlymouthCornwallandIslesofScilly-omic@justice.gov.uk</p></td>
+                    </tr>
+              
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Adams, Damien</a><br> <span class="govuk-!-margin-bottom-0"> G2911GD </span></td>
+                      <td class="govuk-table__cell">COM responsible: </br>30 Jun 2021</td>
+                      <td class="govuk-table__cell">PRD: </br>28 Feb 2022</td>
+                      <td class="govuk-table__cell"><strong>B</strong></td>
+                      <td class="govuk-table__cell due-date">
+                        <span class="date overdue">16</span>
+                      </td>
+                      <td class="govuk-table__cell"><p>Check how to contact Swansea, Neath Port-Talbot LDU. We do not have an email address recorded for it.</p></td>
+                    </tr>
+              
+              
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Coggins, Jerry</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+                      <td class="govuk-table__cell">COM allocated:</br>20 Apr 2021</br><p style="padding-top: 10px;">COM responsible: </br>20 Jul 2021</p></td>
+                      <td class="govuk-table__cell">CRD:</br> 03 Dec 2021</td>
+                      <td class="govuk-table__cell"><strong>B</strong></td>
+                      <td class="govuk-table__cell due-date">
+                        <span class="date overdue">5</span>
+                      </td>
+                      <td class="govuk-table__cell">We don’t have this information.
+                        <a class="govuk-link govuk-link--no-visited-state" href="#">Check DPS to find where this person was sentenced</a> and then try contacting the LDU for that area.</td>
+                    </tr>
+              
+              
+                  </tbody>
+                </table>
+              
+               
+                <nav class="moj-pagination" id="pagination-label">
+              
+                  <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+                
+                  <ul class="moj-pagination__list">
+                    <li class="moj-pagination__item  moj-pagination__item--prev">
+                      <a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+                    </li>
+                
+                    <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">1</a></li>
+                
+                    <li class="moj-pagination__item moj-pagination__item--active">2</li>
+                
+                    <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">3</a></li>
+                
+                    <li class="moj-pagination__item  moj-pagination__item--next">
+                      <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+                    </li>
+                  </ul>
+                  <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+                </nav>
+              
+
+            </div>
+          </div>
+
+
+</div>
+  </div>
+        
+        
+
+
+
+
+{% endblock %}

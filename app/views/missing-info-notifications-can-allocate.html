@@ -1,0 +1,217 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width">
+
+<div class="moj-banner moj-banner--success">
+
+<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+
+<div class="moj-banner__message">
+<span class="moj-banner__assistive">Success</span>You have successfully updated the case for Samuel Botham (NOMIS ID G2911GD). The case is ready to allocate.</div>
+
+</div>
+
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+<ul class="moj-sub-navigation__list">
+
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" href="#">Make allocations</a>
+  </li>
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" aria-current="page" href="missing-info-unallocated">Fix missing information</a>
+  </li>
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" href="#">See allocations</a>
+  </li>
+
+<li class="moj-sub-navigation__item">
+  <a class="moj-sub-navigation__link" href="#">Newly arrived</a>
+</li>
+</ul>
+
+</nav>
+
+
+
+      <h1 class="govuk-heading-l">
+        Fix missing information (4)
+      </h1>
+
+      <p>These cases are blocked from allocation.</p>
+
+      <p>You need to update information for prisoners when they could not be matched automatically with a record in NDelius.</p>
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>4</b> of <b>4</b> results</p>
+      </nav>
+
+
+      <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+
+        <th scope="col" class="govuk-table__header" aria-sort="none">
+          <button type="button" data-index="0">
+            Prisoner
+        </button>
+      </th>
+
+      <th scope="col" class="govuk-table__header">
+          Status
+    </th>
+
+    <!-- <th scope="col" class="govuk-table__header" aria-sort="none">
+      <button type="button" data-index="0">
+        Reason for matching failure
+    </button>
+  </th> -->
+
+    <th scope="col" class="govuk-table__header" aria-sort="none">
+      <button type="button" data-index="0">
+        Waiting to be allocated
+    </button>
+    </th>
+
+      </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="q1-address">
+            Mole, Adrian </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+          <td class="govuk-table__cell">Allocation blocked</td>
+
+          <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3 days</td>
+
+
+        </tr>
+
+      <!-- <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="#">
+          Houston, Graham </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="">No active POM</td>
+
+        <td class="govuk-table__cell" data-sort-value="">Check allocated POM status</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">Stephen Dicks</td>
+
+
+      </tr> -->
+
+      <!-- <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="#">
+          Higgins, Desmond </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="">No active POM</td>
+
+        <td class="govuk-table__cell" data-sort-value="">Check allocated POM status</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="11">Stephen Dicks</td>
+
+
+      </tr> -->
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="#">
+          Martin, Robert </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell">Allocation blocked</td>
+
+        <!-- <td class="govuk-table__cell" data-sort-value="">Information from NDelius</td> -->
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2 days</td>
+
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="#">
+          Alfiya, Leo</a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD</span></td>
+
+        <td class="govuk-table__cell">Allocation blocked</td>
+
+        <!-- <td class="govuk-table__cell" data-sort-value="">Information from NDelius</td> -->
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2 days</td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="#">
+          McDonald, James </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell">Allocation blocked</td>
+
+        <!-- <td class="govuk-table__cell" data-sort-value="">Information from NDelius</td> -->
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="11">11 days</td>
+
+
+
+      </tr>
+
+      </tbody>
+      </table>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>4</b> of <b>4</b> results</p>
+      </nav>
+
+          </div>
+      </div>
+
+{% endblock %}

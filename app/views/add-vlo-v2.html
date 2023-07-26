@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- <section class="key-details-bar" aria-label="Key details">
+  <div class="key-details-bar__key-details">
+    <div class="prisoner-photo">
+      <img style="width:100%" src="/public/images/NoPhoto.png" alt="no photo" />
+    </div>
+
+  <div class="prisoner-info">
+  <div class="key-details-bar__top-block">
+    <span class="key-details-bar__name">Davey, Paul</span>
+    <span class="key-details-bar__status govuk-!-margin-right-2">Determinate</span>
+    <span class="key-details-bar__status govuk-!-margin-right-2">Recall</span>
+  </div>
+  <div class="key-details-bar__bottom-block"><span class="govuk-body">NOMS number: G4198UW</span>
+    <p class="govuk-body govuk-!-margin-0 app-!-float-right"><a class="govuk-link govuk-link--no-visited-state govuk-link--text-colour" href="/case-activity">View case activity</a></p>
+  </br>
+  <span class="govuk-body">Date of birth: 11/08/1987</span>
+    </div>
+  </div>
+</div>
+</section> -->
+
+<div class="govuk-width-container">
+
+  <main id="main-content" role="main" class="govuk-main-wrapper govuk-!-padding-top-6">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+    <a href="pom-v2-prisoner-profile-contacts-tab" class="govuk-back-link">Back</a>
+    <div class="govuk-!-padding-bottom-3"></div>
+
+<form method="post" action="/pom-v2-prisoner-profile-contacts-tab">
+
+
+  <h1 class="govuk-heading-l">Add Victim Liaison Officer (VLO) contact details</h1>
+
+  <form method="post">
+
+    <fieldset class="govuk-fieldset moj-add-another__item">
+
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Victim Liaison Officer</legend>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="person[0][first_name]">
+          First name
+        </label>
+
+        <input class="govuk-input" id="person[0][first_name]" name="person[0][first_name]" type="text" data-name="person[%index%][first_name]" data-id="person[%index%][first_name]">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="person[0][last_name]">
+          Last name
+        </label>
+
+        <input class="govuk-input" id="person[0][last_name]" name="person[0][last_name]" type="text" data-name="person[%index%][last_name]" data-id="person[%index%][last_name]">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="person[0][email_address]">
+          Email address
+        </label>
+
+        <input class="govuk-input" id="person[0][email_address]" name="person[0][email_address]" type="text" data-name="person[%index%][email_address]" data-id="person[%index%][email_address]">
+      </div>
+
+        </fieldset>
+
+
+    <div class="moj-button-action">
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Submit
+      </button>
+
+    </div>
+
+  </form>
+
+
+
+        </form>
+      </div>
+    </div>
+
+      </main>
+    </div>
+  </div>
+
+
+
+
+
+{% endblock %}

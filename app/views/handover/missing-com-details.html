@@ -1,0 +1,154 @@
+{% extends "layout-pom-blank-nav.html" %}
+
+
+{% block pageTitle %}
+Handover cases
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+      Your handover cases
+    </h1>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <aside class="app-related-items" role="complementary">
+      <h3 class="govuk-heading-m">
+              More on handovers
+            </h3>
+            <ul class="govuk-list">
+              <li>
+                <a class="govuk-link govuk-link--no-visited-state" href="#">View handover guidance on EQuiP</a>
+              </li>
+              <li>
+                <a class="govuk-link govuk-link--no-visited-state" href="/handover/manage-email-reminders-form">Choose how often we send you emails to remind you about handovers</a>
+              </li>
+            </ul>
+    </aside>
+    </div>
+  </div>
+
+      <div class="govuk-grid-row">
+
+
+    <div class="govuk-grid-column-full">
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state"  href="/handover/prepare-for-handover-list">Upcoming handovers (3)</a>
+        </li>
+    
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state"  href="/handover/share-case-information-list">Handovers in progress (4)</a>
+        </li>
+    
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/handover/tasks-overdue">Overdue tasks (3)</a>
+        </li>
+    
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page">COM allocation overdue (2)</a>
+        </li>
+  
+      </ul>
+  
+
+
+</nav>
+</div>
+</div>
+
+
+  <div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+  <h2 class="govuk-heading-m">
+    COM allocation overdue
+  </h2>
+  <p>These cases have an upcoming or overdue handover date and are missing COM details on NDelius. You could:</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>notify the local divisional unit (LDU) that COM allocation is overdue, or</li>
+  <li>if there's no response, discuss the allocation with your manager</li>
+</ul>
+
+
+<nav class="moj-pagination" id="pagination-label">
+  <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  <ul class="moj-pagination__list">
+  <li class="moj-pagination__item moj-pagination__item--active"></li>
+  </ul>
+  <p class="moj-pagination__results">Showing <b>1</b> to <b>2</b> of <b>2</b> results</p>
+</nav>
+
+
+
+  <table class="govuk-table govuk-!-margin-top-6">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Prisoner details</th>
+        <th scope="col" class="govuk-table__header">COM responsible</th>
+        <th scope="col" class="govuk-table__header">Earliest release date</th>
+        <th scope="col" class="govuk-table__header">Tier</th>
+        <th scope="col" class="govuk-table__header">Days </br>overdue</th>
+        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Local divisional unit (LDU) details</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Adams, Damien</a><br> <span class="govuk-!-margin-bottom-0"> G2911GD </span></td>
+        <td class="govuk-table__cell">COM responsible: </br>30 Jun 2021</td>
+        <td class="govuk-table__cell">PRD: </br>28 Feb 2022</td>
+        <td class="govuk-table__cell"><strong>B</strong><br>NPS (Legacy)</td>
+        <td class="govuk-table__cell due-date">
+          <span class="date overdue">16</span>
+        </td>
+        <td class="govuk-table__cell"><p>kent-omic@justice.gov.uk</p></td>
+      </tr>
+
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Coggins, Jerry</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+        <td class="govuk-table__cell">COM supporting: </br>20 Apr 2021</br><p style="padding-top: 10px;">COM responsible: </br>20 Jul 2021</p></td>
+        <td class="govuk-table__cell">CRD:</br> 03 Dec 2021</td>
+        <td class="govuk-table__cell"><strong>B</strong><br>NPS (Legacy)</td>
+        <td class="govuk-table__cell due-date">
+          <span class="date overdue">5</span>
+        </td>
+        <td class="govuk-table__cell">We don’t have this information.
+          <a class="govuk-link govuk-link--no-visited-state" href="#">Check DPS to find where this person was sentenced</a> and then try contacting the LDU for that area.</td>
+      </tr>
+
+
+    </tbody>
+  </table>
+
+  <nav class="moj-pagination" id="pagination-label">
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+    <ul class="moj-pagination__list">
+    <li class="moj-pagination__item moj-pagination__item--active"></li>
+    </ul>
+    <p class="moj-pagination__results">Showing <b>1</b> to <b>2</b> of <b>2</b> results</p>
+  </nav>
+
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+
+{% endblock %}
+
+{% block pageScripts %}
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="missing-info-notifications-can-allocate-email-sent">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        Add missing community team information
+      </h1>
+
+      <p class="govuk-body">This information can be found on NDelius.</p>
+      <p class="govuk-body">Recording the community probation team will allow the POM to contact the correct LDU when it’s time to hand this case over from custody to the community.</p>
+      <br>
+
+  <div class="govuk-form-group">
+    <h3 class="govuk-heading-m">
+      Name of the prisoner's community probation team
+    </h3>
+    <span class="govuk-hint">
+      Start typing the full name of the team, for example 'OMIC KNT-Mid Kent'
+    </span>
+
+    <select id="q3-team" name="q3-team" class="team-autocomplete">
+      <option><!-- default to blank --></option>
+      {% for team in teams -%}
+        <option value="team-{{loop.index}}">{{ team }}</option>
+      {%- endfor %}
+    </select>
+  </div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      If there's no team on nDelius
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    This may be because the prisoner was sentenced outside the UK but is returning to serve their sentence. See <a href="https://moic.service.justice.gov.uk/repatriated" class="govuk-link">prisoners returning to the UK</a> for more information.
+  </div>
+</details>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      If you cannot find the team in this list
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    This may be because there is a problem with the list of community teams. You can skip this question and come back to it later. You will still be able to allocate the case and any existing allocation will not be affected.
+  </div>
+</details>
+
+
+<h4 class="govuk-heading-s">What happens next</h4>
+
+<p class="govuk-body">
+          If information is missing or incorrect on nDelius, the LDU will be emailed automatically when you update the case and asked to amend the record. This will prevent problems with handover.
+        </p>
+
+
+    <div class="block-space">
+      <button class="govuk-button govuk-!-margin-right-1" type="submit">
+        Update case
+      </button>
+
+      <button class="govuk-button govuk-button--secondary" formaction="/missing-info-notifications-can-allocate-nps-skip">
+      Skip this question
+        </button>
+        </div>
+
+</div>
+
+
+<div class="govuk-grid-column-one-third">
+  <aside class="app-related-items" role="complementary">
+<h2 class="govuk-heading-m" id="subsection-title">
+Mole, Adrian
+</h2>
+<nav role="navigation" aria-labelledby="subsection-title">
+<ul class="govuk-list govuk-!-font-size-16">
+  <li>
+    <p class="govuk-body govuk-!-font-weight-bold">Date of birth</p>
+  <p>01/05/1980<p>
+  </li>
+  <li>
+    <p class="govuk-body govuk-!-font-weight-bold">NOMIS number</p>
+  <p>G2911GD<p>
+  </li>
+</ul>
+</nav>
+</aside>
+      </div>
+
+</div>
+
+{% endblock %}

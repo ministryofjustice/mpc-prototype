@@ -1,0 +1,118 @@
+{% extends "layout-pom-blank-nav.html" %}
+
+
+{% block pageTitle %}
+Handover cases
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+      Your handover cases
+    </h1>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <aside class="app-related-items" role="complementary">
+      <h3 class="govuk-heading-m">
+              Guidance
+            </h3>
+            <ul class="govuk-list">
+              <li>
+                <a class="govuk-link govuk-link--no-visited-state" href="#">View OMiC handover on EQuiP</a>
+              </li>
+    </div>
+  </div>
+
+      <div class="govuk-grid-row">
+
+
+    <div class="govuk-grid-column-full">
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page" href="#">Overview</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/handover/prepare-for-handover-list">Handover case list</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/handover/missing-com-details">Cases missing COM details</a>
+      </li>
+
+      </ul>
+
+</nav>
+</div>
+</div>
+
+
+  <div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+  <!-- <h2 class="govuk-heading-l govuk-!-margin-bottom-4">
+    My handover cases
+  </h2> -->
+
+</div>
+</div>
+
+    <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <div class="overview overview-label">
+              <p>Prepare for handover</p>
+              <div class="overview-total">
+              <a href="/handover/prepare-for-handover-list" class="govuk-link--no-visited-state"><span class="card__heading">2</span></a>
+            </div>
+          </div>
+        </div>
+
+
+      <div class="govuk-grid-column-one-quarter">
+        <div class="overview overview-label">
+          <p>Share case information with COM</p>
+          <div class="overview-total">
+          <a href="/handover/prepare-for-handover-list" class="govuk-link--no-visited-state"><span class="card__heading">4</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-quarter">
+      <div class="overview overview-label">
+        <p>COM allocation overdue</p>
+        <div class="overview-total">
+        <a href="/handover/missing-com-details" class="govuk-link--no-visited-state"><span class="card__heading">1</span></a>
+      </div>
+    </div>
+    </div>
+
+
+
+        </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h3 class="govuk-heading-s govuk-!-margin-top-7">Handover reminder emails</h2>
+        <p class="govuk-!-margin-top-6">We will notify you of handover events, such as when someone enters the handover window. <a class="govuk-link govuk-link--no-visited-state" href="/handover/manage-email-reminders-form">Change which emails you receive.</a></p></p>
+      </div>
+    </div>
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}

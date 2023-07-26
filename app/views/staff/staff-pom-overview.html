@@ -1,0 +1,227 @@
+{% extends "layout-staff-homd.html" %}
+
+
+{% block pageTitle %}
+Sarah Bailey
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+
+<a href="./staff" class="govuk-back-link govuk-body" style="margin-left: -10px;">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+      <span class="govuk-caption-xl">Probation Officer POM</span>
+      Sarah Bailey
+    </h1>
+
+    <div class="govuk-grid-row">
+
+
+      <div class="govuk-grid-column-full">
+      <nav class="moj-sub-navigation" aria-label="Sub navigation">
+    
+        <ul class="moj-sub-navigation__list">
+    
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page">Overview</a>
+          </li>
+    
+    
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-caseload">Caseload (14)</a>
+          </li>
+
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-handover">Handover cases (4)</a>
+          </li>
+    
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-parole">Parole cases (8)</a>
+          </li>
+    
+        </ul>
+    
+    </nav>
+    </div>
+    </div>
+    
+    
+    
+      <h2 class="govuk-heading-l">
+        Overview
+      </h2>
+      
+    
+      <div class="govuk-grid-column-two-thirds" style="margin-left: -15px;">
+    
+    
+        <h3 class="govuk-heading-m govuk-!-margin-top-2">
+          Current workload</h3>
+      
+        <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third">
+                <div class="card card-total">
+                  <a href="./staff-pom-caseload.html" class="govuk-link--no-visited-state"><span class="card__heading">14</span>
+                  <p>total cases</p></a>
+                </div>
+              </div>
+        
+              <div class="govuk-grid-column-one-third">
+                <div class="card card-total">
+                  <a href="#" class="govuk-link--no-visited-state"><span class="card__heading">4</span>
+                    <p>handovers in progress
+                    </p></a>
+                </div>
+              </div>
+        
+              <div class="govuk-grid-column-one-third">
+                <div class="card card-total">
+                  <a href="./staff-pom-parole.html" class="govuk-link--no-visited-state"><span class="card__heading">8</span>
+                    <p>parole cases
+                    </p></a>
+                </div>
+              </div>
+        
+              
+            </div>
+        
+        
+        
+        
+        <h3 class="govuk-heading-m govuk-!-margin-top-8">Allocations summary</h3>
+        
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Last case allocated
+            </dt>
+            <dd class="govuk-summary-list__value">
+              15 Aug 2021
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Allocations in last 7 days
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-caseload-allocations.html">View</a>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Releases in next 4 weeks
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-caseload-releases.html">View</a>
+            </dd>
+          </div>
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Working pattern
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Part time 0.8
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link govuk-link--no-visited-state" href="#">
+                        Change<span class="govuk-visually-hidden">working pattern</span>
+                      </a>
+                    </dd>
+                  </div>
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Status
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Active: available for new allocations
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link govuk-link--no-visited-state" href="#">
+                        Change<span class="govuk-visually-hidden">status</span>
+                      </a>
+                    </dd>
+                  </div>
+
+
+
+                </dl>
+        
+        </div>
+        
+        
+        
+        
+        
+        
+          <div class="govuk-grid-column-one-third govuk-!-margin-top-4">
+            <h3 class="govuk-heading-m">
+              Case mix by tier
+            </h3>
+        
+            <div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:40%"><p style="govuk-colour("white")">5</p></div>
+              <div class="workforce-progress-bar tier_b" style="width:55%"><p>8</p></div>
+              <div class="workforce-progress-bar tier_c" style="width:5%"><p style="govuk-colour("white")">1</p></div>
+            </div>
+        
+            <ul class="govuk-list">
+              <li><span class="caseload-swatch tier_a"></span>Tier A: 5</li>
+              <li><span class="caseload-swatch tier_b"></span>Tier B: 8</li>
+              <li><span class="caseload-swatch tier_c"></span>Tier C: 1</li>
+              <li><span class="caseload-swatch tier_d"></span>Tier D: 0</li>
+              <li><span class="caseload-swatch tier_other"></span>Tier N/A: 0</li>
+            </ul>
+        
+        
+            <h3 class="govuk-heading-m govuk-!-margin-top-6">
+              Case mix by POM role
+            </h3>
+        
+            <div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:50%"><p style="govuk-colour("white")">7</p></div>
+              <div class="workforce-progress-bar tier_d" style="width:45%"><p>6</p></div>
+              <div class="workforce-progress-bar tier_other" style="width:5%"><p>1</p></div>
+            </div>
+        
+            <ul class="govuk-list">
+              <li><span class="caseload-swatch tier_a"></span>Responsible: 7</li>
+              <li><span class="caseload-swatch tier_d"></span>Supporting: 6</li>
+              <li><span class="caseload-swatch tier_other"></span>Co-working: 1</li>
+            </ul>
+        
+          </div>
+        </div>
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,149 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Confirm allocation
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/service-user-banner-v2.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+<a href="/team-management/allocations-select-pom" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="/team-management/make-allocations-male-success">
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-l">Step 3 of 3</span>
+<h1 class="govuk-heading-l">
+  Confirm allocation
+</h1>
+
+<p>You are allocating Jack Smith to Probation Officer POM <strong>Stephen Dicks</strong>.</p>
+
+<p>We will send a confirmation email to stephen.dicks@justice.gov.uk</p>
+
+<div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="allocation-note">
+      Add a note to the email
+    </label>
+  </h2>
+  <div id="allocation-note-hint" class="govuk-hint">
+    For example you can tell the POM about any special requirements.
+  </div>
+  <textarea class="govuk-textarea" id="allocation-note" name="allocation-note" rows="3" aria-describedby="allocation-note-hint"></textarea>
+</div>
+
+<h2 class="govuk-heading-m">
+  Send copies of this email (optional)</h2>
+  <div id="email-recipients-hint" class="govuk-hint govuk-!-margin-top-2">
+    For example, you may want to send copies to the case admin, POM line manager or Community Offender Manager (COM).
+  </div>
+
+  <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell">
+      <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="admin">
+        <label class="govuk-label govuk-checkboxes__label" for="contact">
+          <strong>Case admin</strong>
+        </label>
+      </div>
+      </td>
+    <td class="govuk-table__cell">Jane Bloggs</td>
+    <td class="govuk-table__cell">jane.bloggs@example.gov.uk</td>
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="/team-management/update-contact">Update details</a></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell">
+      <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="healthcare">
+        <label class="govuk-label govuk-checkboxes__label" for="contact">
+          <strong>Healthcare</strong>
+        </label>
+      </div>
+      </td>
+    <td class="govuk-table__cell">Sarah Jones</td>
+    <td class="govuk-table__cell">sarah.jones@example.gov.uk</td>
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Update details</a></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell">
+      <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="hub manager">
+        <label class="govuk-label govuk-checkboxes__label" for="contact">
+          <strong>Hub manager</strong>
+        </label>
+      </div>
+      </td>
+    <td class="govuk-table__cell">Sandra Derry</td>
+    <td class="govuk-table__cell">sandra.derry@example.gov.uk</td>
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Update details</a></td>
+  </tr>
+
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell">
+      <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="psychology">
+        <label class="govuk-label govuk-checkboxes__label" for="contact">
+          <strong>Psychology team</strong>
+        </label>
+      </div>
+      </td>
+    <td class="govuk-table__cell">Jeffrey Tonks</td>
+    <td class="govuk-table__cell">jeffrey.tonks@example.gov.uk</td>
+    <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Update details</a></td>
+  </tr>
+
+</tbody>
+</table>
+
+<ul class="govuk-list">
+  <li>
+    <a class="govuk-link govuk-link--no-visited-state" href="/team-management/add-new-contact.html">+ Add another email address</a>
+  </li>
+</ul>
+
+
+
+
+
+
+  <button class="govuk-button govuk-!-margin-top-4" data-module="govuk-button" formaction="/team-management/make-allocations-male-success" style="margin-right: 15px;">
+    Complete allocation
+  </button>
+
+  <!-- <a href="#" class="govuk-link">Cancel</a> -->
+
+
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "layout-search-pom.html" %}
+
+{% block pageTitle %}
+  Enter this person's next target hearing date – Digital Prison Services
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="#" class="govuk-back-link govuk-!-margin-bottom-6">Back</a>
+
+
+  <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+           
+            
+            <form action="/parole/pom/manual-entry-v3/prisoner-profile-success" method="post">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-4">
+                    Enter James Saunders’ next target hearing date
+                  </h1>
+                </legend>
+                <div id="passport-issued-hint" class="govuk-hint">
+                  <p class="govuk-hint">This is the date the Parole Board aims to <strong>next</strong> hear James’ case.</p>
+                  <p class="govuk-hint">To find it, look for either:</p>
+                  <ul class="govuk-hint">
+                    <li>the second date towards the bottom of the 'outcome of Parole Board decision' letter – it is called the target month for consideration by the Parole Board</li>
+                    <li>the target hearing date in PPUD</li>
+                  </ul>  
+
+
+                  <p class="govuk-hint"><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/manual-entry-v3/outcome-of-parole">You can get more help with this here.</a></p>
+
+
+
+                <p class="govuk-hint">For example, enter 9 2022.</p>
+
+
+                </div>
+                <div class="govuk-date-input" id="passport-issued">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                  </div>
+                </div>
+
+                
+              </fieldset>
+            </div>
+           
+            <button class="govuk-button" data-module="govuk-button">
+              Save
+            </button>
+
+
+            </form>
+           
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+{% endblock %}

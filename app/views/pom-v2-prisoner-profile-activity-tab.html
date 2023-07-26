@@ -1,0 +1,166 @@
+{% extends "layout-pom.html" %}
+
+
+{% block pageTitle %}
+Case summary
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/service-user-banner.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="#" class="govuk-back-link">Back to my cases</a>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- <main class="govuk-main-wrapper"> -->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+            href="pom-v2-prisoner-profile-info-tab">Case summary</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+            href="pom-v2-prisoner-profile-contacts-tab">Contacts</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page"
+            href="pom-v2-prisoner-profile-activity-tab">Case activity</a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case activity</h1>
+
+      <h2 class="govuk-heading-m">HMP Bristol</h1>
+
+        <div class="moj-timeline">
+
+          <div class="moj-timeline__item">
+          <div class="moj-timeline__header">
+            <h2 class="moj-timeline__title">Reminder sent for supporting COM allocation</h2>
+            <p class="moj-timeline__byline">email sent automatically</p>
+          </div>
+          <p class="moj-timeline__date">
+            <time datetime="2019-06-14T14:01:00.000Z">18 April 2021 at 2:01pm</time>
+          </p>
+          <div class="moj-timeline__description">
+            <p>The LDU for Central Birmingham Team 1 - <a href="#" class="govuk-link">ldu.example@justice.gov.uk</a> - was reminded to allocate a supporting COM by 01/05/21</p>
+          </div>
+        </div>
+
+          <div class="moj-timeline__item">
+          <div class="moj-timeline__header">
+            <h2 class="moj-timeline__title">Supporting COM allocation requested</h2>
+            <p class="moj-timeline__byline">email sent automatically</p>
+          </div>
+          <p class="moj-timeline__date">
+            <time datetime="2019-06-14T14:01:00.000Z">14 March 2021 at 9:00am</time>
+          </p>
+          <div class="moj-timeline__description">
+            <p>The LDU for Central Birmingham Team 1 - <a href="#" class="govuk-link">ldu.example@justice.gov.uk</a> - was asked to allocate a supporting COM by 01/05/21</p>
+          </div>
+          </div>
+
+
+
+        <div class="moj-timeline__item">
+        <div class="moj-timeline__header">
+          <h2 class="moj-timeline__title">Prison Offender Manager (POM) allocated</h2>
+          <p class="moj-timeline__byline">by Berridge, Mark</p>
+        </div>
+        <p class="moj-timeline__date">
+          <time datetime="2019-06-14T14:01:00.000Z">01 March 2020 at 2:01pm</time>
+        </p>
+        <div class="moj-timeline__description">
+          <p>Hardy, Sue (Probation staff POM) <a href="#" class="govuk-link">susan.hardy@justice.gov.uk</a> allocated</p>
+        </div>
+        </div>
+
+      </div>
+
+      <h2 class="govuk-heading-m">HMP Leeds</h1>
+
+        <div class="moj-timeline">
+
+
+          <div class="moj-timeline__item">
+          <div class="moj-timeline__header">
+            <h2 class="moj-timeline__title">Prisoner unallocated (transfer)</h2>
+            <p class="moj-timeline__byline">automatic system action</p>
+          </div>
+          <p class="moj-timeline__date">
+            <time datetime="2019-06-14T14:01:00.000Z">28 February 2020 at 9:00am</time>
+          </p>
+          </div>
+
+        <div class="moj-timeline__item">
+        <div class="moj-timeline__header">
+          <h2 class="moj-timeline__title">Prison Offender Manager (POM) allocated</h2>
+          <p class="moj-timeline__byline">by Baron, Lauren</p>
+        </div>
+        <p class="moj-timeline__date">
+          <time datetime="2019-06-14T14:01:00.000Z">02 January 2019 at 2:01pm</time>
+        </p>
+        <div class="moj-timeline__description">
+          <p>Richardson, Ben (Probation staff POM) <a href="#" class="govuk-link">ben.richardson@justice.gov.uk</a> allocated</p>
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  <div class="govuk-grid-column-one-third">
+      <ul class="govuk-list">
+        <!-- <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="appointment">Change POM allocation</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="appointment">Allocate co-working POM</a>
+        </li> -->
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="#">View case on DPS</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="#">Add a case note</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="ea-start-page">Assess early allocation referral</a>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+</div>
+
+  </main>
+
+
+
+
+{% endblock %}

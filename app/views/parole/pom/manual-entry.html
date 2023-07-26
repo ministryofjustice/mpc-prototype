@@ -1,0 +1,76 @@
+{% extends "layout-search-pom.html" %}
+
+{% block pageTitle %}
+  Parole manual entry
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="#" class="govuk-back-link govuk-!-margin-bottom-6">Back</a>
+
+
+  <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+           
+            
+            <form action="/parole/pom/manual-entry/prisoner-profile-success" method="post">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-4">
+                    Enter the target date that James Saunders’ case will next be considered by the Parole Board
+                  </h1>
+                </legend>
+                <div id="passport-issued-hint" class="govuk-hint">
+                  <p class="govuk-hint">You only need to tell us this if the Parole Board decides the prisoner is not eligible for parole. It allows us to work out who should take responsibility for the case.</p>
+                  <p class="govuk-hint">This date is the:</p>
+                  <ul class="govuk-hint">
+                    <li>one after the start of the review period on the 'outcome of Parole Board decision' letter</li>
+                    <li>target hearing date in PPUD</li>
+                  </ul>  
+
+                <p class="govuk-hint">For example, 9 2022.</p>
+
+
+                </div>
+                <div class="govuk-date-input" id="passport-issued">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                  </div>
+                </div>
+
+                
+              </fieldset>
+            </div>
+           
+            <button class="govuk-button" data-module="govuk-button">
+              Save
+            </button>
+
+
+            </form>
+           
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+{% endblock %}

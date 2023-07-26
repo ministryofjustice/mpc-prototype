@@ -1,0 +1,45 @@
+{% extends "layout-homd-test-nav.html" %}
+​
+​
+{% block pageTitle %}
+Parole table rules
+{% endblock %}
+​
+{% block beforeContent %}
+{% endblock %}
+​
+{% block content %}
+​
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--l">Parole table behaviour</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Scenario</th>
+      <th scope="col" class="govuk-table__header">When it happens</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Case appears on the table</th>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list govuk-list--bullet">
+          <li>10 months before the date that someone is next eligible for parole (tariff expiry date, parole eligibility date or target hearing date)
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Case is removed</th>
+      <td class="govuk-table__cell">
+        <ul class="govuk-list govuk-list--bullet">
+          <li>If someone is unsuccessful for parole and they won’t be eligible again in the next 10 months</li>
+          <li>If someone is released</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+​
+​
+{% endblock %}

@@ -1,0 +1,232 @@
+{% extends "layout-pom.html" %}
+
+
+{% block pageTitle %}
+Case profile
+{% endblock %}
+
+{% block bodyStart %}
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="moj-organisation-nav" aria-label="Organisation switcher">
+<div class="moj-organisation-nav__title">HMP Peterborough (Female)</div>
+
+<a href="/womens/pom/change-prison.html" class="moj-organisation-nav__link">Change prison</a>
+
+</div>
+<div class="govuk-!-margin-bottom-3"></div>
+<a href="/womens/pom/caseload-as-is" class="govuk-back-link govuk-!-font-weight-bold">Back to my cases</a>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- <main class="govuk-main-wrapper"> -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <div class="prisoner-photo-header">
+
+<img style="width:70%" src="/public/images/NoPhoto.png" alt="no photo"></img>
+
+</div>
+
+<div class="prisoner-photo-header">
+
+
+    <h1 class="govuk-heading-l" style="display:inline;">Connie Hall</h1>
+    <br>
+
+    <!-- <strong class="govuk-tag govuk-tag" style="margin-right: 5px; margin-top:20px;">
+    Recall
+  </strong> -->
+  <strong class="govuk-tag govuk-tag" style="margin-right: 5px; margin-top:20px;">
+  High complexity
+</strong>
+  <strong class="govuk-tag govuk-tag govuk-!-margin-bottom-5">
+  Determinate
+  </strong>
+  <br>
+
+      <ul class="govuk-list">
+        <!-- <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="appointment">Change POM allocation</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="appointment">Allocate co-working POM</a>
+        </li> -->
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="#">View case on DPS</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="#">Add a case note</a>
+        </li>
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state govuk-!-margin-bottom-9" href="#">Assess early allocation referral</a>
+        </li>
+      </ul>
+    </div>
+</div>
+</div>
+
+<div class="govuk-!-margin-bottom-6"></div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+            href="/womens/pom/pom-profile-info">Case summary</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page"
+            href="/womens/pom/pom-profile-contacts">Contacts</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+            href="/womens/pom/pom-profile-activity">Case activity</a>
+        </li>
+      </ul>
+
+    </nav>
+</div>
+
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <h2 class="govuk-heading-m">Community probation team</h2>
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Local divisional unit (LDU)</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">Birmingham LDU</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Local divisional unit (LDU) email address</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">example@ldu.gov.uk</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Team</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">Central Birmingham Team 1</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link" href="#"></a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Community Offender Manager (COM) name</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">Unallocated</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link" href="#"></a></td>
+    </tr>
+    </tbody>
+  </table>
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">Prison OMiC staff</h2>
+
+      <!-- <table class="govuk-table app-table app-table--split-rows">
+        <tbody>
+          <tr>
+            <th style="width: 30%;">Co-working POM name</th>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <th>Keyworker</th>
+            <td>Henley, Mary</td>
+          </tr>
+        </tbody>
+      </table> -->
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header"></th>
+          <th scope="col" class="govuk-table__header"></th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-!-width-one-third">POM name</td>
+          <td class="govuk-table__cell govuk-!-width-one-third">Sue Hardy</td>
+          <td class="govuk-table__cell govuk-!-width-one-third"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell govuk-!-width-one-third">Co-working POM name</td>
+          <td class="govuk-table__cell govuk-!-width-one-third">Not allocated</td>
+          <td class="govuk-table__cell govuk-!-width-one-third"></td>
+        </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-!-width-one-third">Keyworker name</td>
+        <td class="govuk-table__cell govuk-!-width-one-third">N/A - high complexity level</td>
+        <td class="govuk-table__cell govuk-!-width-one-third"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-!-width-one-third">Previous POM email address</td>
+        <td class="govuk-table__cell govuk-!-width-one-third">michael.chambers@justice.gov.uk</td>
+        <td class="govuk-table__cell govuk-!-width-one-third"></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <!-- <h3 class="govuk-heading-s govuk-!-margin-top-6">Victim Liasion Officer (VLO)</h3> -->
+
+      <!-- <table class="govuk-table app-table app-table--split-rows">
+        <tbody>
+          <tr>
+            <th style="width: 30%;">VLO name</th>
+            <td>Higgins, Grainne</td>
+          </tr>
+          <tr>
+            <th>Email address</th>
+            <td>example.email@vlo.com</td>
+          </tr>
+        </tbody>
+      </table> -->
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-6">Victim Liaison Officer (VLO) <span class="moj-badge moj-badge--red" style="margin-left: 10px;">Non-disclosable</span></h2>
+      <!-- <p class="govuk-body"> You must not share VLO information with the offender.</p> -->
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">First contact</th>
+              <th scope="col" class="govuk-table__header"></th>
+              <td scope="col" class="govuk-table__cell"><a href="#ß" class="govuk-link" color="	#d4351c">Delete contact</a></td>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Victim Liaison Officer name</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Frances Higgins</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link" href="#">Change</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Email adress</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">frances.higgins@example.com</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link" href="#">Change</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-2" href="#">Add new VLO contact</a></p>
+
+</main>
+
+
+</div>
+
+
+{% endblock %}

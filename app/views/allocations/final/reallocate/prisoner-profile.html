@@ -1,0 +1,317 @@
+{% extends "layout-search-pom.html" %}
+
+
+{% block pageTitle %}
+Prisoner profile
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/allocations/final/see-allocations" class="govuk-back-link govuk-!-margin-top-6" style="margin-bottom: -20px;">Back</a>
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/jquery.hideseek.min.js"></script>
+<script>
+$('#search').hideseek({
+    highlight: true,
+    min_chars: 3,
+    nodata: "No results found",
+    hidden_mode: true,
+    ignore: '.ignore'
+});
+</script>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row govuk-grid-column-one-quarter">
+
+  
+  <img src="/public/images/NoPhoto.png" alt="prisoner profile picture" style="width:200px;">
+  
+
+</div>
+
+
+<div class="govuk-grid-row govuk-grid-column-two-thirds">
+
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-top-3">Simon Riley</br></h1>
+    <p><span class="moj-badge moj-badge--blue" style="margin-right: 5px;">Determinate</span><span class="moj-badge moj-badge--grey">Parole eligible</span></p>
+  </div>
+
+<div class="govuk-grid-row govuk-grid-column-full">
+
+  <div class="govuk-grid-column-one-quarter">
+    <p>Prisoner number</br><strong>A2407UH</strong></p>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p>CRN number</br><strong>N/A</strong></p>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p>Date of birth</br><strong>27 April 1989</strong></p>
+  </div>
+
+</div>
+
+<div class="govuk-grid-row govuk-grid-column-full">
+
+  <div class="govuk-grid-column-one-quarter">
+    <p>Earliest release date</br><strong>01 Jul 2021</strong></p>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p>Category</br><strong>Cat B</strong></p>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p>Tier calculation</br><strong>B</strong></p>
+  </div>
+
+</div>
+
+
+<div class="govuk-grid-row govuk-grid-column-full">
+
+  <div class="govuk-grid-column-one-quarter">
+    <a class="govuk-link--no-visited-state" href="#">View case on DPS</a>
+  </div>
+
+</div>
+
+
+</div>
+  
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-s govuk-!-margin-top-6" style="margin-bottom: -10px;">Prisoner information</h2>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+ 
+  <tbody class="govuk-table__body">
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Current responsibility</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">Community</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="#">Change</a></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Handover start date</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">07 Aug 2020</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Responsibility handover</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">02 Oct 2020</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Last known address in Wales</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">No</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Service provider</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">NPS (Legacy)</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Location</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">B-3-011</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  </tbody>
+</table>
+
+<h2 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom: -10px;">Sentence</h2>
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+  </tr>
+</thead>
+<tbody class="govuk-table__body">
+
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell govuk-!-width-one-third">Main offence</td>
+  <td class="govuk-table__cell govuk-!-width-one-third">Possession of firearm with intent to cause fear of violence	</td>
+  <td class="govuk-table__cell govuk-!-width-one-third"></td>
+</tr>
+
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell govuk-!-width-one-third">Sentence type</td>
+  <td class="govuk-table__cell govuk-!-width-one-third">Determinate</td>
+  <td class="govuk-table__cell govuk-!-width-one-third"></td>
+</tr>
+
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell govuk-!-width-one-third">Sentence start date</td>
+  <td class="govuk-table__cell govuk-!-width-one-third">25 May 2018</td>
+  <td class="govuk-table__cell govuk-!-width-one-third"></td>
+</tr>
+
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell govuk-!-width-one-third">Sentence/licence end date</td>
+  <td class="govuk-table__cell govuk-!-width-one-third">24 May 2026</td>
+  <td class="govuk-table__cell govuk-!-width-one-third"></td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+
+
+  <h2 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom: -10px;">Prison allocation</h2>
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">POM role</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">Supporting</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">POM</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">Jessica King</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/reallocate/step1-review-case-simon-riley">Reallocate</a></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Co-working POM</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Allocation history</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">POM allocated on 06 Jun 2017</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="#">View</a></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Keyworker</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+
+    </tbody>
+  </table>
+
+
+  <h2 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom: -10px;">Community information</h2>
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Local divisional unit (LDU)</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><span style="margin-left: 30px;">Cornwall and Isles of Scilly	</span></td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Local divisional unit (LDU) email address</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><span style="margin-left: 30px;">cornwall.islesofscilly@justice.gov.uk	</span></td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Team</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><span style="margin-left: 30px;">Unknown</span></td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third due-date">
+        Community Offender Manager (COM) name
+        </td>
+
+      <td class="govuk-table__cell govuk-!-width-one-third"><span style="margin-left: 30px;">Graham Kenny</span></td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+
+    
+    </tbody>
+  </table>
+
+
+  <h2 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom: -10px;">Victim Liaison Officer (VLO) <span class="moj-badge moj-badge--red" style="margin-left: 10px;">Non-disclosable</span></h2>
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Victim Liaison Officer name</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><span style="margin-left: -5px;">N/A</span></td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="#">Add new VLO contact</a></td>
+
+
+    </tbody>
+  </table>
+
+
+  </div>
+</div>
+
+
+{% endblock %}

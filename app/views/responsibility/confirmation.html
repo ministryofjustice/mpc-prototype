@@ -1,0 +1,72 @@
+{% extends "layout-search-pom.html" %}
+
+
+{% block pageTitle %}
+Prisoner profile
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/allocations/final/see-allocations" class="govuk-back-link govuk-!-margin-top-6" style="margin-bottom: -20px;">Back</a>
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/jquery.hideseek.min.js"></script>
+<script>
+$('#search').hideseek({
+    highlight: true,
+    min_chars: 3,
+    nodata: "No results found",
+    hidden_mode: true,
+    ignore: '.ignore'
+});
+</script>
+{% endblock %}
+
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+
+        <h1 class="govuk-heading-l">Confirm change of responsibility for this case</h1>
+     
+
+        <p>The community probation team will be responsible for this case</p>
+
+         <p> We will email the community probation team at laura.jaraduncan@digital.justice.gov.uk. They will need to allocate a community offender manager if one has not yet been allocated.
+          
+          You will also receive a copy of this email for your records.</p>
+
+
+
+
+
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Confirm
+          </button>
+          <a class="govuk-link" href="#">Cancel</a>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+{% endblock %}

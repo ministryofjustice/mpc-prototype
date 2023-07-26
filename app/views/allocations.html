@@ -1,0 +1,290 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+<ul class="moj-sub-navigation__list">
+
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" aria-current="page" href="allocations">Make allocations</a>
+  </li>
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" href="missing-info-unallocated">Fix missing information</a>
+  </li>
+
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" href="#">See allocations</a>
+  </li>
+
+<li class="moj-sub-navigation__item">
+  <a class="moj-sub-navigation__link" href="newly-arrived">Newly arrived</a>
+</li>
+</ul>
+
+</nav>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width">
+
+
+      <h1 class="govuk-heading-l">
+        Make allocations (30)
+      </h1>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+
+        <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">2</a></li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>30</b> results</p>
+      </nav>
+
+
+      <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Prisoner</th>
+
+        <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+
+        <th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+
+        <th scope="col" class="govuk-table__header govuk-table__header" aria-sort="none">Case owner</th>
+
+        <th scope="col" class="govuk-table__header govuk-table__header" aria-sort="none">Waiting</th>
+
+        <th scope="col" class="govuk-table__header">
+            Action</th>
+
+      </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Stanford, Andrew <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+        <td class="govuk-table__cell">01/08/2021</td>
+
+        <td class="govuk-table__cell govuk-table__cell">Custody</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2 days</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="/allocate-case-error">
+          Allocate</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Iman, Nigel <br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+        <td class="govuk-table__cell">21/09/2020</td>
+
+        <td class="govuk-table__cell govuk-table__cell">Custody</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3 days</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="/allocate-case-error-email-fail">
+          Allocate</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Ormond, Calvin <br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="b">B</td>
+
+        <td class="govuk-table__cell">02/10/2020</td>
+
+        <td class="govuk-table__cell govuk-table__cell">Community</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3 days</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="allocate-case-responsible-com">
+          Allocate</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Funari, Anton <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+        <td class="govuk-table__cell">15/12/2019</td>
+
+        <td class="govuk-table__cell govuk-table__cell">Community</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="1">1 days</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="allocate-case-responsible-com-email-fail">
+          Allocate</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Bradshow, John <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="C">C</td>
+
+        <td class="govuk-table__cell">05/01/2020</td>
+
+        <td class="govuk-table__cell govuk-table__cell">Community</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2 days</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">West, Dominic <br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+        <td class="govuk-table__cell">01/05/2025</td>
+
+        <td class="govuk-table__cell govuk-table__cell">Custody</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="5">5 days</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Moulde, Steve <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+        <td class="govuk-table__cell">06/04/2023</td>
+
+        <td class="govuk-table__cell govuk-table__cell">Custody</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="10">10 days</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Patel, Mohammed <br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+        <td class="govuk-table__cell">05/12/2019</td>
+
+        <td class="govuk-table__cell govuk-table__cell">Community</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="7">7 days</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Dillion, Robert <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="A">A</td>
+
+        <td class="govuk-table__cell">21/09/2020</td>
+
+        <td class="govuk-table__cell govuk-table__cell">Custody</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="12">12 days</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Jones, Elliot <br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="D">D</td>
+
+        <td class="govuk-table__cell">01/15/2020</td>
+
+        <td class="govuk-table__cell govuk-table__cell">Custody</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3 days</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+          Allocate</a> </td>
+
+      </tr>
+
+
+      </tbody>
+      </table>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">1</a></li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">2</li>
+
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>30</b> results</p>
+      </nav>
+
+          </div>
+      </div>
+
+{% endblock %}

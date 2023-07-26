@@ -1,0 +1,96 @@
+{% extends "layout-main.html" %}
+
+
+{% block pageTitle %}
+Add missing information
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/womens-service-user-banner-no-complexity.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-!-padding-bottom-4"></div>
+<a href="/womens/add-complexity" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="#">
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Add missing information
+    </h1>
+    <p>This information can be found on nDelius.</p>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading govuk-!-padding-bottom-4">
+        Where is the prisoner's last known address?
+      </h2>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="last-address" name="last-address" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="last-address">
+          England
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="last-address-2" name="last-address" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="last-address-2">
+          Wales
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="last-address-3" name="last-address" type="radio" value="Scotaland">
+        <label class="govuk-label govuk-radios__label" for="last-address-3">
+          Scotland - to be manged by Scottish probation
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="last-address-4" name="last-address" type="radio" value="NI">
+        <label class="govuk-label govuk-radios__label" for="last-address-4">
+          Northern Ireland - to be manged by Northern Irish probation
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="last-address-5" name="last-address" type="radio" value="world">
+        <label class="govuk-label govuk-radios__label" for="last-address-5">
+          Rest of the world
+        </label>
+      </div>
+
+    </div>
+
+  </fieldset>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button" formaction="/womens/add-missing-ndelius-info-pg2" style="margin-right: 15px;">
+    Update
+  </button>
+
+  <a href="/womens/missing-info-list" class="govuk-link govuk-link--no-visited-state">Cancel</a>
+
+
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+{% endblock %}

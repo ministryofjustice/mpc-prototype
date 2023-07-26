@@ -1,0 +1,56 @@
+{% extends "layout-error.html" %}
+
+
+{% block pageTitle %}
+Error 401
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">You do not have permission to </br>access this</h1>
+
+
+
+        <p class="govuk-body">
+          Check you:
+        </p>
+          <ul class="govuk-body">
+          <li>are <a class="govuk-link govuk-link--no-visited-state" href="https://allocation-manager-staging.apps.live-1.cloud-platform.service.justice.gov.uk/prisons/LEI/prisons">signed into the right prison</a>, if you work in more than one
+ 
+          </li></br>
+          <li>have the right role in NOMIS and Digital Prison Services – your local system administrator can help you with this<a class="govuk-link govuk-link--no-visited-state" href="https://allocation-manager-staging.apps.live-1.cloud-platform.service.justice.gov.uk/help_step0"> using these instructions
+          </a> 
+          </li></br>
+          <li>used the right web address, for example if you copied and pasted it from an email or used a bookmark
+          </li>
+        </ul>  
+
+        <p class="govuk-body">
+          <a class="govuk-link govuk-link--no-visited-state" href="https://allocation-manager-staging.apps.live-1.cloud-platform.service.justice.gov.uk/contact_us">Contact the allocation service team</a> if you think another problem is causing this error or
+          <a class="govuk-link govuk-link--no-visited-state" href="#">go to the allocation service’s dashboard.</a>
+
+
+
+        </p>
+
+
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+{% endblock %}

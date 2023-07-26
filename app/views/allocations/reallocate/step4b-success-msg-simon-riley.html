@@ -1,0 +1,303 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Cases to update – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+
+
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-xl">
+  Allocations
+</h1>
+
+<div class="moj-banner moj-banner--success">
+
+  <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+  <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+  
+  <div class="moj-banner__message">
+  <span class="moj-banner__assistive">Success</span>Simon Riley allocated to Jessica King</br>
+</div>
+  </div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+  
+
+
+<div class="moj-search">
+
+<form action="#" method="post">
+
+<div class="govuk-form-group">
+  <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+    Find a case
+  </label>
+
+  <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+</div>
+
+<button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+  Search
+</button>
+
+</form>
+</div>
+
+ 
+</div>
+</div>
+
+<div class="govuk-grid-row  govuk-!-padding-top-6">
+  <div class="govuk-grid-column-full">
+  
+
+
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+<ul class="moj-sub-navigation__list">
+
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/allocations/make-allocations">Make allocations (50)</a>
+  </li>
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/allocations/add-missing-details.html">Add missing details (3)</a>
+  </li>
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page">Check tier changes (3)</a>
+  </li>
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/allocations/newly-arrived.html">Newly arrived (3)</a>
+  </li>
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/allocations/see-allocations">See allocations (10)</a>
+  </li>
+
+
+</ul>
+
+</nav>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width" style="margin-left: 15px">
+
+
+      <h1 class="govuk-heading-l">
+        Check tier changes
+      </h1>
+
+      <p>These cases may need reallocating to another POM after a tier change.</p>
+
+
+      <nav class="moj-pagination govuk-!-padding-bottom-4" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+       <!-- <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>-->
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+      </nav>
+
+
+
+
+
+
+      <table class="govuk-table"  data-module="moj-sortable-table">
+
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+  
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Case</th>
+  
+          <!-- <th scope="col" class="govuk-table__header" aria-sort="none">Location</th> -->
+  
+          <th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+  
+          <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+  
+          <th scope="col" class="govuk-table__header" aria-sort="none">POM role</th>
+
+          <th scope="col" class="govuk-table__header" aria-sort="none">Working days since tier change</th>
+  
+          <th scope="col" class="govuk-table__header" aria-sort="none">Action</th>
+  
+          
+  
+          <!-- <th scope="col" class="govuk-table__header">
+              Action</th> -->
+  
+        </tr>
+        </thead>
+  
+        <tbody class="govuk-table__body">
+          
+
+
+  
+        <tr class="govuk-table__row">
+  
+          <td class="govuk-table__cell">Saunders, James<!--<span class="moj-badge moj-badge--black" style="margin-left: 10px;">Short term sentence</span>--><br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+  
+          <!-- <td class="govuk-table__cell" data-sort-value="B">F-4-044</td> -->
+  
+          <td class="govuk-table__cell" data-sort-value="9">PED:</br>01 May 2025</td>
+  
+          <td class="govuk-table__cell due-date" data-sort-value="2021.05.03">
+            <span class="date overdue">New tier: B</span>    
+            <span class="date overdue" style="font-weight: 400;">Previous tier: D</span>  
+          </td>
+  
+          <td class="govuk-table__cell govuk-table__cell">
+            <span>Responsible</span><br>
+            <span>(Victoria Berry)</span>
+          </td>
+
+          <td class="govuk-table__cell govuk-table__cell" data-sort-value="0">0</td>
+  
+  
+          <td class="govuk-table__cell" data-sort-value="No">Tier change –</br> 
+            <a href="#" class="govuk-link govuk-link--no-visited-state">reallocate</a> or <a href="#" class="govuk-link govuk-link--no-visited-state">dismiss this</a></td>
+  
+          
+  
+          <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+            Allocate</a> </td> -->
+  
+        </tr>
+  
+        <tr class="govuk-table__row">
+  
+          <td class="govuk-table__cell">Tailor, Naeem<br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+  
+          <!-- <td class="govuk-table__cell" data-sort-value="B">B-3-032</td> -->
+  
+          <td class="govuk-table__cell" data-sort-value="8">ARD:</br>05 Dec 2025</td>
+  
+          <td class="govuk-table__cell due-date" data-sort-value="2021.05.03">
+            <span class="date overdue">New tier: A</span>
+            <span class="date overdue" style="font-weight: 400;">Previous tier: C</span>
+            <!--<span class="secondary overdue">Tier changed</br>
+              <a href="#" class="govuk-link govuk-link--no-visited-state">Reallocate</a> or <a href="#" class="govuk-link govuk-link--no-visited-state">dismiss this</a>
+            </span>-->
+            
+          </td>
+  
+          <td class="govuk-table__cell govuk-table__cell">
+            <span>Responsible</span><br>
+            <span>(Lou Smith)</span>
+          </td>
+
+          <td class="govuk-table__cell govuk-table__cell" data-sort-value="7">7</td>
+  
+          <td class="govuk-table__cell" data-sort-value="No">Tier change –</br> 
+            <a href="#" class="govuk-link govuk-link--no-visited-state">reallocate</a> or <a href="#" class="govuk-link govuk-link--no-visited-state">dismiss this</a></td>
+  
+          
+  
+        </tr>
+  
+        
+  
+        <tr class="govuk-table__row">
+  
+          <td class="govuk-table__cell">Wilson, John<br> <span class="govuk-hint govuk-!-margin-bottom-0"> AE1234BD </span></td>
+  
+          <!-- <td class="govuk-table__cell" data-sort-value="B">C-4-019</td> -->
+  
+          <td class="govuk-table__cell" data-sort-value="5">PED:</br>01 Mar 2026</td>
+  
+          <td class="govuk-table__cell due-date" data-sort-value="2021.05.03">
+            <span class="date overdue">New tier: B</span>
+            <span class="date overdue" style="font-weight: 400;">Previous tier: C</span>
+            <!--<span class="secondary overdue">Tier changed</br>
+              <a href="#" class="govuk-link govuk-link--no-visited-state">Reallocate</a> or <a href="#" class="govuk-link govuk-link--no-visited-state">dismiss this</a>
+            </span>-->
+            
+          </td>
+  
+          <td class="govuk-table__cell govuk-table__cell">
+            <span>Supporting</span><br>
+            <span>(Jake Jones)</span>
+          </td>
+          <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+  
+          <td class="govuk-table__cell" data-sort-value="No">Tier change –</br> 
+            <a href="#" class="govuk-link govuk-link--no-visited-state">reallocate</a> or <a href="#" class="govuk-link govuk-link--no-visited-state">dismiss this</a></td>
+  
+          
+  
+  <!--
+          <td class="govuk-table__cell"> <a class="govuk-link" href="#">
+            Allocate</a> </td> -->
+  
+        </tr>
+  
+        
+  
+  
+        </tbody>
+        </table>
+
+        
+
+
+        <nav class="moj-pagination govuk-!-padding-bottom-4" id="pagination-label">
+
+          <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+          <ul class="moj-pagination__list">
+         <!-- <li class="moj-pagination__item  moj-pagination__item--prev">
+            <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+          </li>
+  
+  
+          <li class="moj-pagination__item moj-pagination__item--active">1</li>
+  
+  
+          <li class="moj-pagination__item  moj-pagination__item--next">
+            <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+          </li>-->
+          </ul>
+          <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+        </nav>
+  
+  
+
+
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

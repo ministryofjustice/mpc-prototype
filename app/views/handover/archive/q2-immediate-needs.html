@@ -1,0 +1,103 @@
+{% extends "layout-pom-blank-nav.html" %}
+
+
+{% block pageTitle %}
+Handover cases
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+<a href="/handover/task-list-1-of-5" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+        <form action="/handover/task-list-2-of-5" method="post" novalidate>
+
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="review-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Have you identified Jack's pre-release needs?
+      </h1>
+    </legend>
+    <div id="review-hint" class="govuk-hint">
+      Highlighting support needs to the COM will help them prepare for an effective handover. Check if the person will need help with things like accommodation, education and healthcare.
+    </div>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="review" name="review" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="review">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="review-2" name="review" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="review-2">
+          No
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+
+  <div class="govuk-form-group govuk-!-margin-top-5">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="notes">
+      Record notes (optional)
+    </label>
+  </h1>
+  <!-- <div id="more-detail-hint" class="govuk-hint">
+    Do not include personal or financial information, like your National Insurance number or credit card details.
+  </div> -->
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="4" aria-describedby="more-detail-hint"></textarea>
+</div>
+</div>
+
+
+
+<button class="govuk-button" data-module="govuk-button" style="margin-right: 15px;">
+            Save
+          </button>
+
+            <a href="/handover/task-list-1-of-5" class="govuk-link govuk-link--no-visited-state">Cancel</a>
+
+        </form>
+
+
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <aside class="app-related-items" role="complementary">
+      <h3 class="govuk-heading-m">
+              Guidance
+            </h3>
+            <ul class="govuk-list">
+              <li>
+                <a class="govuk-link govuk-link--no-visited-state" href="#">View OMiC handover on EQuiP</a>
+              </li>
+              <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            <h2 class="govuk-heading-m" id="subsection-title">
+              Resident details
+            </h2>
+            <ul class="govuk-list govuk-!-font-size-16">
+              <li>
+                <p class="govuk-body">Name: Jack Robinson </p>
+                <p class="govuk-body">Date of birth: 15 Jan 2000 </p>
+                <p class="govuk-body">NOMIS number: G2911GD</p>
+            </ul>
+    </div>
+  </div>
+
+
+
+
+
+{% endblock %}

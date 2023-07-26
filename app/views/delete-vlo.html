@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- <section class="key-details-bar" aria-label="Key details">
+  <div class="key-details-bar__key-details">
+    <div class="prisoner-photo">
+      <img style="width:100%" src="/public/images/NoPhoto.png" alt="no photo" />
+    </div>
+
+  <div class="prisoner-info">
+  <div class="key-details-bar__top-block">
+    <span class="key-details-bar__name">Davey, Paul</span>
+    <span class="key-details-bar__status govuk-!-margin-right-2">Determinate</span>
+    <span class="key-details-bar__status govuk-!-margin-right-2">Recall</span>
+  </div>
+  <div class="key-details-bar__bottom-block"><span class="govuk-body">NOMS number: G4198UW</span>
+    <p class="govuk-body govuk-!-margin-0 app-!-float-right"><a class="govuk-link govuk-link--no-visited-state govuk-link--text-colour" href="/case-activity">View case activity</a></p>
+  </br>
+  <span class="govuk-body">Date of birth: 11/08/1987</span>
+    </div>
+  </div>
+</div>
+</section> -->
+
+<div class="govuk-width-container">
+
+  <main id="main-content" role="main" class="govuk-main-wrapper govuk-!-padding-top-6">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+<form method="post" action="/prisoner-profile-contacts-tab-vlo-deleted">
+
+
+  <h1 class="govuk-heading-l">Delete the selected Victim Liaison Officer (VLO) contact?</h1>
+  <p class="govuk-body">Contact details for the VLO Higgins, Grainne will be removed from the prisoner record.</p>
+
+
+  <form method="post">
+
+
+            <div class="govuk-!-padding-bottom-4"></div>
+
+    <div class="moj-button-action">
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Confirm
+      </button>
+
+ <a href="prisoner-profile-contacts-tab" class="govuk-link" style="
+    margin-left: 20px;
+">Cancel</a>
+
+    </div>
+
+  </form>
+
+
+
+        </form>
+      </div>
+    </div>
+
+      </main>
+    </div>
+  </div>
+
+
+
+
+
+{% endblock %}

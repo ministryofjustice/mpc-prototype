@@ -1,0 +1,247 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+POM dashboard
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+
+<a href="/team-management/staff-view-mix" class="govuk-back-link govuk-body">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+      <span class="govuk-caption-xl">Probation Officer POM</span>
+
+      Andrien Ricketts
+    </h1>
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link" href="/team-management/view-of-pom-overview">Overview</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link" aria-current="page" href="#">Caseload</a>
+      </li>
+
+      </ul>
+
+</nav>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header" aria-sort="ascending">Case</th>
+      <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+      <th scope="col" class="govuk-table__header" aria-sort="none">Handover start date</th>
+      <th scope="col" class="govuk-table__header" aria-sort="none">Allocation date</th>
+      <th scope="col" class="govuk-table__header" aria-sort="none">Role</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Adams" href="#">Michael Adams</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">A</td>
+      <td class="govuk-table__cell" data-sort-value="2021.02.21">21 Feb 2021</td>
+      <td class="govuk-table__cell" data-sort-value="2021.02.15">15 Feb 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Ahmed" href="#">Naeem Ahmed</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">B</td>
+      <td class="govuk-table__cell" data-sort-value="2021.03.15">15 Mar 2021</td>
+      <td class="govuk-table__cell" data-sort-value="2021.01.30">30 Jan 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Brady" href="#">Stefan Brady-Hughes</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">A</td>
+      <td class="govuk-table__cell" data-sort-value="2022.04.01">1 Apr 2022</td>
+      <td class="govuk-table__cell" data-sort-value="2021.02.15">15 Feb 2021</td>
+      <td class="govuk-table__cell">Supporting</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Butler" href="#">Callum Butler</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">A</td>
+      <td class="govuk-table__cell" data-sort-value="2021.01.02">2 Jan 2021</td>
+      <td class="govuk-table__cell" data-sort-value="2021.03.03">3 Mar 2021</td>
+      <td class="govuk-table__cell">Supporting</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Charlton" href="#">James Charlton</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">A</td>
+      <td class="govuk-table__cell" data-sort-value="2023.12.01">1 Dec 2023</td>
+      <td class="govuk-table__cell" data-sort-value="2021.01.05">5 Jan 2021</td>
+      <td class="govuk-table__cell">Co-working</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state"data-sort-value="Daniels" href="#">Jerry Daniels</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">B</td>
+      <td class="govuk-table__cell" data-sort-value="2022.06.06">6 Jun 2022</td>
+      <td class="govuk-table__cell" data-sort-value="2021.02.11">11 Feb 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Davey" href="#">Jack Davey</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">B</td>
+      <td class="govuk-table__cell" data-sort-value="2021.02.14">14 Feb 2021</td>
+      <td class="govuk-table__cell" data-sort-value="2021.01.05">5 Jan 2021</td>
+      <td class="govuk-table__cell">Supporting</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Davey" href="#">Laurence Dunn</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">A</td>
+      <td class="govuk-table__cell" data-sort-value="2024.08.08">8 Aug 2024</td>
+      <td class="govuk-table__cell" data-sort-value="2021.02.06">6 Feb 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Enuku" href="#">Leo Enuku</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">A</td>
+      <td class="govuk-table__cell" data-sort-value="2021.09.17">17 Sep 2021</td>
+      <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Hall" href="/womens/pom/pom-profile-info">Charles Hall</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G4198UW </span></td>
+      <td class="govuk-table__cell">C</td>
+      <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+      <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Hill" href="#">Anton Hill</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G4198UW </span></td>
+      <td class="govuk-table__cell">B</td>
+      <td class="govuk-table__cell" data-sort-value="2022.11.27">27 Nov 2022</td>
+      <td class="govuk-table__cell" data-sort-value="2021.02.02">2 Feb 2021</td>
+      <td class="govuk-table__cell">Co-working</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Kelly" href="#">Peter Kelly</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G4198UW </span></td>
+      <td class="govuk-table__cell">B</td>
+      <td class="govuk-table__cell" data-sort-value="2021.02.01">1 Feb 2021</td>
+      <td class="govuk-table__cell" data-sort-value="2021.02.02">2 Feb 2021</td>
+      <td class="govuk-table__cell">Supporting</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Moody" href="#">Keith Moody</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">A</td>
+      <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+      <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Morris" href="#">Otto Morris</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">A</td>
+    <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Murphy" href="#">Eoghan Murphy</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">A</td>
+    <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Nelson" href="#">Marcus Nelson</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">B</td>
+    <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Ozols" href="#">Errol Ozols</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">B</td>
+    <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Patel" href="#">Kirit Patel</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">A</td>
+    <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Patrick" href="#">Matthew Patrick</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">B</td>
+    <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Peters" href="#">Jesse Peters</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">B</td>
+    <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Perry" href="#">Bryn Perry</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">A</td>
+    <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Smith" href="#">Gabriel Smith</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">B</td>
+    <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Reyes" href="#">Andrew Reyes</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">B</td>
+    <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Riley" href="#">Luke Riley</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">B</td>
+    <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Robinson" href="#">Damien Robinson</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">B</td>
+    <td class="govuk-table__cell" data-sort-value="2025.08.11">11 Aug 2025</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Watson" href="#">Samuel Watson</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">B</td>
+    <td class="govuk-table__cell" data-sort-value="2023.01.13">13 Jan 2023</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Webster" href="#">Zak Webster</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+      <td class="govuk-table__cell">A</td>
+    <td class="govuk-table__cell" data-sort-value="2024.09.01">1 Sep 2024</td>
+    <td class="govuk-table__cell" data-sort-value="2021.03.08">8 Mar 2021</td>
+      <td class="govuk-table__cell">Responsible</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+{% endblock %}

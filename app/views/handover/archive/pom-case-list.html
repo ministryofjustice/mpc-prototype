@@ -1,0 +1,230 @@
+{% extends "layout-pom-blank-nav.html" %}
+
+
+{% block pageTitle %}
+Handover cases
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+  <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+    Your handover cases
+  </h1>
+</div>
+
+<div class="govuk-grid-column-one-third">
+
+  <aside class="app-related-items" role="complementary">
+    <h3 class="govuk-heading-m">
+            Guidance
+          </h3>
+          <ul class="govuk-list">
+            <li>
+              <a class="govuk-link govuk-link--no-visited-state" href="#">View OMiC handover on EQuiP</a>
+            </li>
+  </div>
+</div>
+
+    <div class="govuk-grid-row">
+
+
+  <div class="govuk-grid-column-full">
+  <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+    <ul class="moj-sub-navigation__list">
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/handover/pom-overview-tab">Overview</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page" href="#">Handover case list</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/handover/missing-com-details">Cases missing COM details</a>
+    </li>
+
+    </ul>
+
+</nav>
+</div>
+</div>
+
+<section class="app-filter-card govuk-!-margin-bottom-6" style="max-width: 100%; border: 0;">
+
+  <p class="govuk-heading-s">View handovers due, starting soon or completed</p>
+
+  <div class="app-filter-container">
+    <button id="button-record" type="button" class="app-filter-button" data-controls="probation-record-selection" onclick="event.stopPropagation(); toggleFilter(this)" style="width: 244px;">Select status from list</button>
+    <div id="probation-record-selection" class="app-filter-selection govuk-visually-hidden">
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-visually-hidden">
+
+    Select filters
+
+  </legend>
+
+
+  <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="checkbox-record" name="checkbox-record" type="checkbox" value="current">
+          <label class="govuk-label govuk-checkboxes__label" for="checkbox-record">
+        Handover has started (3)
+      </label>
+
+        </div>
+
+
+        <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="checkbox-record-3" name="checkbox-record" type="checkbox" value="known">
+                  <label class="govuk-label govuk-checkboxes__label" for="checkbox-record-3">
+                Starting in next 14 days (1)
+              </label>
+
+                </div>
+                <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="checkbox-record-4" name="checkbox-record" type="checkbox" value="known">
+                          <label class="govuk-label govuk-checkboxes__label" for="checkbox-record-4">
+                        Completed (2)
+                      </label>
+
+                        </div>
+
+
+  </div>
+  </fieldset>
+
+
+</div>
+
+
+    </div>
+  </div>
+
+
+
+  <button type="button" class="govuk-button app-apply-filters-button" onclick="applyFilters()">Apply selection</button>
+
+
+  <div class="selected-filters govuk-visually-hidden">
+    <p class="govuk-body"><span class="govuk-!-font-weight-bold">Applied filters</span> <a href="#" class="govuk-body-s govuk-!-margin-left-2" onclick="event.preventDefault(); applyFilters(true)">Clear all</a></p>
+
+    <p class="applied-record govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 app-selected-filters--label govuk-visually-hidden"></p>
+    <div class="app-filters-applied-record"></div>
+
+    <p class="applied-courtroom govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 app-selected-filters--label govuk-visually-hidden"></p>
+    <div class="app-filters-applied-courtroom"></div>
+
+    <p class="applied-session govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 app-selected-filters--label govuk-visually-hidden"></p>
+    <div class="app-filters-applied-session"></div>
+
+  </div>
+
+</section>
+
+  <div class="govuk-!-padding-bottom-6"></div>
+
+
+
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Case</th>
+              <th scope="col" class="govuk-table__header">COM supports case<br> (start handover)</th>
+              <th scope="col" class="govuk-table__header">Complete<br>handover by</th>
+              <th scope="col" class="govuk-table__header">COM</th>
+                <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Pharrell Jameson</a><br> <span class="govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell">30 Jan 2021</td>
+              <td class="govuk-table__cell due-date">
+                <span class="date due">30 Mar 2021</span>
+                <span class="secondary due">Due in 8 days</span>
+              </td>
+              <td class="govuk-table__cell">Deborah Simpson</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
+                <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Record progress</a></td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Jerry Coggins</a><br> <span class="govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell">01 Jan 2021</td>
+              <td class="govuk-table__cell">01 Mar 2021</td>
+              <td class="govuk-table__cell due-date">
+                <span class="date overdue">Unkown</span>
+                <span class="secondary overdue">Allocation overdue</span>
+              </td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
+            <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Record progress</a></td>
+
+            </tr>
+
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Jack Robinson</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell">21 Feb 2021</td>
+              <td class="govuk-table__cell">24 May 2021</td>
+              <td class="govuk-table__cell">Sandra Marcus</td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not started</strong></td>
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="/handover/task-list">Record progress</a></td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Damien Adams </a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell">19 May 2021</td>
+              <td class="govuk-table__cell">19 Aug 2021</td>
+              <td class="govuk-table__cell">Unknown</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not started</strong></td>
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Record progress</a></td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Kirit Patel</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell">21 Feb 2021</td>
+              <td class="govuk-table__cell">24 May 2021</td>
+              <td class="govuk-table__cell">Michaela Oliver</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag">Completed</strong></td>
+            <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Record progress</a></td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Eoghan Murphy</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell">05 Mar 2021</td>
+              <td class="govuk-table__cell">05 Mar 2021</td>
+              <td class="govuk-table__cell">Peter Rooke</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag">Completed</strong></td>
+            <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Record progress</a></td>
+
+            </tr>
+
+
+          </tbody>
+        </table>
+
+
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}

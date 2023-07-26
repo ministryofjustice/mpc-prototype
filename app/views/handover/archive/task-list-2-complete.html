@@ -1,0 +1,140 @@
+{% extends "layout-pom-blank-nav.html" %}
+
+
+{% block pageTitle %}
+Handover cases
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+<a href="/handover/prepare-for-handover-list-split-tables-2-tasks" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-4">
+      Record handover progress
+    </h1>
+
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Handover in progress</h2>
+    <p class="govuk-body govuk-!-margin-bottom-7">You have completed 2 of 5 tasks.</p>
+
+    <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Review Jack's case
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/handover/q1-oasys-review" class="govuk-link--no-visited-state" aria-describedby="oaysys-review">
+                  Review the last OASys
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="oaysys-review">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/handover/q2-immediate-needs" class="govuk-link--no-visited-state" aria-describedby="immediate-needs">
+                  Check immediate pre-release needs
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="immediate-needs">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Help Jack build a strong relationship with the COM
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" class="govuk-link--no-visited-state" aria-describedby="explain-process">
+                  Explain the handover process to Jack
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="explain-process">Not started</strong>
+            </li>
+            <!-- <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="record-observations">
+                  Record your observations
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="record-observations">Not started</strong>
+            </li> -->
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Share your knowledge with the COM
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" class="govuk-link--no-visited-state" aria-describedby="discuss-case">
+                Discuss Jack's case with the COM
+              </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="discuss-case">Not started</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" class="govuk-link--no-visited-state" aria-describedby="handover-meeting">
+                  Attend pre-release board (handover meeting)
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="handover-meeting">Not started</strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <aside class="app-related-items" role="complementary">
+      <h3 class="govuk-heading-m">
+              Guidance
+            </h3>
+            <ul class="govuk-list">
+              <li>
+                <a class="govuk-link govuk-link--no-visited-state" href="#">View OMiC handover on EQuiP</a>
+              </li>
+              <li>
+                <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  What does a good handover look like?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                Your role is to make the resident feel involved throughout the handover process. You should explain how the handover and pre-release process will work, and regularly update the resident on what decisions are being made and why.<br>
+
+
+                <br>The aim of handover is to help the resident build a strong relationship with their COM. A strong relationship increases the likelihood of successful rehabilitation for Jack.<br>
+
+                <br>You can help by providing the COM with the information they need in order to make good decisions.
+
+              </div>
+            </details>
+            </li>
+    </div>
+  </div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,159 @@
+{% extends "layout-pom.html" %}
+
+
+{% block pageTitle %}
+Assess early allocation
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/service-user-banner.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/pom-v2-prisoner-profile-info-tab" class="govuk-back-link">Back to case</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Assess a case for early allocation</h1>
+
+            <p class="govuk-body">Use this service to assess whether the community probation team should take responsibility for this person's case early.</p>
+
+            <p class="govuk-body">There are 3 possible outcomes:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>eligible -  this case will go to the community probation team early</li>
+                <li>discretionary - the community probation team will make a decision</li>
+                  <li>not eligible -  this case does not need to go to the community probation team early</li>
+              </ul>
+
+                <h2 class="govuk-heading-m">Not all assessments will be sent</h1>
+
+            <p class="govuk-body">Eligible and discretionary referrals will only be sent to the community probation team if the person has 18 months or less until their release from prison.</p>
+
+            <p class="govuk-body">If the person has more than 18 months until their release from prison, this assessment will be saved but not sent to the community probation team.</p>
+
+            <p class="govuk-body">We will remind the allocated Prison Offender Manager (POM) to make a new assessment 18 months before release.</p>
+
+
+            <div class="govuk-!-padding-bottom-4"></div>
+
+
+
+            <form action="ea-first-form" method="post" novalidate>
+
+              <input type="hidden" name="answers-checked" value="true">
+
+              <button class="govuk-button" data-module="govuk-button">
+                Start new assessment
+              </button>
+
+              <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          View saved assessments
+        </span>
+      </h2>
+    </div>
+
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+    <table class="govuk-table">
+      <!-- <caption class="govuk-table__caption">Previously saved assessments</caption> -->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header app-custom-class">Assessment date</th>
+          <th scope="col" class="govuk-table__header app-custom-class">Assessment outcome</th>
+          <th scope="col" class="govuk-table__header app-custom-class">Status</th>
+          <th scope="col" class="govuk-table__header app-custom-class">Details</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">16 July 2022</td>
+          <td class="govuk-table__cell">Discretionary</td>
+          <td class="govuk-table__cell">Waiting for decision</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="ea-view-past-form-v2">
+            View<span class="govuk-visually-hidden"> view assessment</span>
+          </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">01 March 2021</td>
+          <td class="govuk-table__cell">Discretionary</td>
+          <td class="govuk-table__cell">Sent and declined</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">
+            View<span class="govuk-visually-hidden"> view assessment</span>
+          </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">05 December 2020</td>
+          <td class="govuk-table__cell">Eligible</td>
+          <td class="govuk-table__cell">Saved</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">
+            View<span class="govuk-visually-hidden"> view assessment</span>
+          </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">20 November 2019</td>
+          <td class="govuk-table__cell">Not eligible</td>
+          <td class="govuk-table__cell">Saved</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">
+            View<span class="govuk-visually-hidden"> view assessment</span>
+          </a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    </div>
+  </div>
+</div>
+
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+
+            <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+            <aside class="app-related-items" role="complementary">
+              <h2 class="govuk-heading-m" id="subsection-title">
+                Guidance
+              </h2>
+              <nav role="navigation" aria-labelledby="subsection-title">
+                <ul class="govuk-list govuk-!-font-size-16">
+                  <li>
+                    <p class="govuk-body"><a class="govuk-link" href="#">
+                      View EQuiP guidance
+                    </a></p>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,164 @@
+{% extends "layout-pom-blank-nav.html" %}
+
+
+{% block pageTitle %}
+Handover cases
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+
+
+  <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+    Your handover cases
+  </h1>
+</div>
+
+<div class="govuk-grid-column-one-third">
+
+  <aside class="app-related-items" role="complementary">
+    <h3 class="govuk-heading-m">
+            More on handovers
+          </h3>
+          <ul class="govuk-list">
+            <li>
+              <a class="govuk-link govuk-link--no-visited-state" href="#">View handover guidance on EQuiP</a>
+            </li>
+            <li>
+              <a class="govuk-link govuk-link--no-visited-state" href="./manage-email-reminders.html">Choose how often we send you emails to remind you about handovers</a>
+            </li>
+          </ul>
+    </aside>
+  </div>
+</div>
+
+    <div class="govuk-grid-row">
+
+
+  <div class="govuk-grid-column-full">
+  <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+    <ul class="moj-sub-navigation__list">
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page" href="#">Upcoming handovers (0)</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state"  href="./handovers-in-progress.html">Handovers in progress (4)</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./tasks-overdue.html">Overdue tasks (3)</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./com-allocation-overdue.html">COM allocation overdue (3)</a>
+    </li>
+
+    </ul>
+
+</nav>
+</div>
+</div>
+
+
+
+  <h2 class="govuk-heading-l">
+    Upcoming handovers
+  </h2>
+  <p>A COM will be allocated in the next 8 weeks. Start getting ready to hand the case over to the community.</p>
+
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list" style="padding-top: 15px; padding-bottom: 15px;">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <a class="moj-pagination__link" href="" style="margin-left: -20px;"><span class="govuk-visually-hidden"> set of pages</span></a>
+      </li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1"></a></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active"></li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"></a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <a class="moj-pagination__link" href=""><span class="govuk-visually-hidden"> set of pages</span></a>
+      </li>
+    </ul>
+    <p class="moj-pagination__results" style="margin-top: -20px">Showing <b>0</b> to <b>0</b> of <b>0</b> results</p>
+  </nav>
+  
+
+
+        <table class="govuk-table" data-module="moj-sortable-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header" aria-sort="none">Prisoner details</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none">COM responsible</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+              <th scope="col" class="govuk-table__header" style="padding-left: 20px;">Handover progress</th>
+
+
+            </tr>
+          </thead>
+        </table>
+
+<p style="padding-bottom: 5px;">No upcoming handovers at the moment</p>
+
+
+
+          
+ 
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+
+
+    <ul class="moj-pagination__list">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <a class="moj-pagination__link" href="" style="margin-left: -20px;"><span class="govuk-visually-hidden"> set of pages</span></a>
+      </li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1"></a></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active"></li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"></a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <a class="moj-pagination__link" href=""><span class="govuk-visually-hidden"> set of pages</span></a>
+      </li>
+
+
+    </ul>
+
+
+
+    <p class="moj-pagination__results" style="margin-top: -10px; margin-bottom: -10px;">Showing <b>0</b> to <b>0</b> of <b>0</b> results</p>
+  </nav>
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}

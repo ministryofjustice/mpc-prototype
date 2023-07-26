@@ -1,0 +1,152 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="/q2-service-provider-tier-robert">
+  <form class="form" action="/q2-service-provider-tier-robert" method="post">
+
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        Add missing information
+      </h1>
+      <p>This information can be found on nDelius.</p>
+
+      <br>
+
+
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="address-conditional-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Where is the prisoner's last known address?
+          </h2>
+        </legend>
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+    <!-- <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="address-conditional" name="address" type="radio" value="yes" {{checked('address','yes')}} data-aria-controls="conditional-address-conditional">
+      <label class="govuk-label govuk-radios__label" for="address-conditional">
+        Yes
+      </label>
+    </div>
+    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-address-conditional">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="no">
+          Which country did they live in?
+        </label>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="scotland">
+            <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+              Scotland - to be managed by Scottish probation
+            </label>
+          </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="ni">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Northern Ireland - to be managed by Northern Irish probation
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Wales
+              </label>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="country-conditional-1" name="country-robert" type="radio" value="EnglandWales" {{checked('country-robert','EnglandWales')}} data-aria-controls="conditional-country-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="country-conditional-1">
+          England
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="country-conditional-2" name="country-robert" type="radio" value="EnglandWales" {{checked('country-robert','EnglandWales')}} data-aria-controls="conditional-country-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="country-conditional-2">
+          Wales
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="country-conditional-3" name="country-robert" type="radio" value="Scotland" {{checked('country-robert','Scotland')}} data-aria-controls="conditional-country-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="country-conditional-3">
+          Scotland - to be managed by Scottish probation
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="country-conditional-4" name="country-robert" type="radio" value="NI" {{checked('country-robert','NI')}} data-aria-controls="conditional-country-conditional-4">
+        <label class="govuk-label govuk-radios__label" for="country-conditional-4">
+          Northern Ireland - to be managed by Northern Irish probation
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="address-conditional-5" name="country-robert" type="radio" value="other" {{checked('country-robert','other')}} data-aria-controls="conditional-country-conditional-5">
+        <label class="govuk-label govuk-radios__label" for="country-conditional-5">
+          Rest of the world
+        </label>
+      </div>
+
+
+
+      </div>
+
+    </fieldset>
+    </div>
+    <!-- <div class="block-space">
+      <button class="govuk-button" type="submit" formaction="search">
+        Continue
+      </button>
+    </div> -->
+
+<button class="govuk-button">Update case</button>
+
+
+          </div>
+
+
+          <div class="govuk-grid-column-one-third">
+            <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Martin, Robert
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <p class="govuk-body govuk-!-font-weight-bold">Date of birth</p>
+            <p>01/01/1970<p>
+            </li>
+            <li>
+              <p class="govuk-body govuk-!-font-weight-bold">NOMIS number</p>
+            <p>G2911GD<p>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+                </div>
+
+              </div>
+        </form>
+
+
+
+
+
+{% endblock %}

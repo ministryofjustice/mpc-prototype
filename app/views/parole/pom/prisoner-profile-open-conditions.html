@@ -1,0 +1,376 @@
+{% extends "layout-search-pom.html" %}
+
+
+{% block pageTitle %}
+Prisoner profile
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="./parole" class="govuk-back-link govuk-!-margin-top-6" style="margin-bottom: -20px;">Back</a>
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/jquery.hideseek.min.js"></script>
+<script>
+$('#search').hideseek({
+    highlight: true,
+    min_chars: 3,
+    nodata: "No results found",
+    hidden_mode: true,
+    ignore: '.ignore'
+});
+</script>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row govuk-grid-column-one-quarter">
+
+  
+  <img src="/public/images/NoPhoto.png" alt="prisoner profile picture" style="width:200px;">
+  
+
+</div>
+
+
+<div class="govuk-grid-row govuk-grid-column-two-thirds">
+
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l govuk-!-margin-top-3">Pharrell Jameson	</br></h1>
+    <p><span class="moj-badge moj-badge--blue" style="margin-right: 5px;">Indeterminate</span><span class="moj-badge moj-badge--grey">Parole eligible</span></p>
+  </div>
+
+<div class="govuk-grid-row govuk-grid-column-full">
+
+  <div class="govuk-grid-column-one-quarter">
+    <p>Prisoner number</br><strong>G5894UP</strong></p>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p>CRN number</br><strong>N/A</strong></p>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p>Date of birth</br><strong>23 Jan 1969</strong></p>
+  </div>
+
+</div>
+
+<div class="govuk-grid-row govuk-grid-column-full">
+
+  <div class="govuk-grid-column-one-quarter">
+    <p>Earliest release date</br><strong>19 Jan 2023</strong></p>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p>Category</br><strong>Cat B</strong></p>
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    <p>Tier calculation</br><strong>B</strong></p>
+  </div>
+
+</div>
+
+
+<div class="govuk-grid-row govuk-grid-column-full">
+
+  <div class="govuk-grid-column-one-quarter">
+    <a class="govuk-link--no-visited-state" href="#">View case on DPS</a>
+  </div>
+
+</div>
+
+
+</div>
+  
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-s govuk-!-margin-top-6" style="margin-bottom: -10px;">Prisoner information</h2>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+ 
+  <tbody class="govuk-table__body">
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Current responsibility</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">Custody</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Handover start date</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">05 May 2022</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Responsibility handover</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">05 May 2022</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Last known address in Wales</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">No</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Service provider</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">NPS (Legacy)</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Location</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">D-7-018</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  </tbody>
+</table>
+
+<h2 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom: -10px;">Sentence</h2>
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+  </tr>
+</thead>
+<tbody class="govuk-table__body">
+
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell govuk-!-width-one-third">Main offence</td>
+  <td class="govuk-table__cell govuk-!-width-one-third">Manslaughter by an unlawful and dangerous act</td>
+  <td class="govuk-table__cell govuk-!-width-one-third"></td>
+</tr>
+
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell govuk-!-width-one-third">Sentence type</td>
+  <td class="govuk-table__cell govuk-!-width-one-third">Indeterminate</td>
+  <td class="govuk-table__cell govuk-!-width-one-third"></td>
+</tr>
+
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell govuk-!-width-one-third">Sentence start date</td>
+  <td class="govuk-table__cell govuk-!-width-one-third">19 Nov 2016</td>
+  <td class="govuk-table__cell govuk-!-width-one-third"></td>
+</tr>
+
+
+
+
+
+</tbody>
+</table>
+
+
+<h2 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom: -10px;">Parole</h2>
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+  </tr>
+</thead>
+<tbody class="govuk-table__body">
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Tariff expiry date</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">24 Jun 2018</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Custody report due</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">28 Nov 2021</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell govuk-!-width-one-third">Target hearing date</td>
+  <td class="govuk-table__cell govuk-!-width-one-third">01 Jan 2022</td>
+  <td class="govuk-table__cell govuk-!-width-one-third"></td>
+</tr>
+
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell govuk-!-width-one-third">Hearing outcome</td>
+  <td class="govuk-table__cell govuk-!-width-one-third">No hearing outcome yet</td>
+  <td class="govuk-table__cell govuk-!-width-one-third"></td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h2 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom: -10px;">Previous parole application
+</h2>
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+    <th scope="col" class="govuk-table__header"></th>
+  </tr>
+</thead>
+<tbody class="govuk-table__body">
+
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell govuk-!-width-one-third">Hearing outcome</td>
+  <td class="govuk-table__cell govuk-!-width-one-third">Feb 2020 – Move to open conditions</td>
+  <td class="govuk-table__cell govuk-!-width-one-third"></td>
+</tr>
+
+
+</tbody>
+</table>
+
+
+  <h2 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom: -10px;">Prison allocation</h2>
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">POM role</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">Responsible</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">POM</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">Taylor Smith</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Co-working POM</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Allocation history</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">POM reallocated on 01 Aug 2021</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="#">View</a></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Keyworker</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">Jessica King</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+
+    </tbody>
+  </table>
+
+
+  <h2 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom: -10px;">Community information</h2>
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Local divisional unit (LDU)</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><span style="margin-left: 30px;">Swansea, Neath Port-Talbot</span></td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Local divisional unit (LDU) email address</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><span style="margin-left: 30px;">neath.port.talbot@justice.gov.uk	</span></td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Team</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><span style="margin-left: 30px;">Unknown</span></td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third due-date">
+        Community Offender Manager (COM) name
+        </td>
+
+      <td class="govuk-table__cell govuk-!-width-one-third"><span style="margin-left: 30px;">Michaela Oliver</span></td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+
+    
+    </tbody>
+  </table>
+
+
+  <h2 class="govuk-heading-s govuk-!-margin-top-4" style="margin-bottom: -10px;">Victim Liaison Officer (VLO) <span class="moj-badge moj-badge--red" style="margin-left: 10px;">Non-disclosable</span></h2>
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Victim Liaison Officer name</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><span style="margin-left: -5px;">N/A</span></td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="#">Add new VLO contact</a></td>
+
+
+    </tbody>
+  </table>
+
+
+  </div>
+</div>
+
+
+{% endblock %}

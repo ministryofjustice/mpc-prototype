@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="ea-start-page" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+
+
+          <div class="govuk-grid-column-two-thirds">
+
+            <!-- <h1 class="govuk-heading-l">Check whether this case should be referred to the community probation team early</h1> -->
+
+            <h1 class="govuk-heading-l">Assess case for early allocation to the community probation team</h1>
+
+            <p class="govuk-body">Some cases will be referred to the community automatically. Others need the agreement of both the Head of Offender Management Delivery and the community probation team. This assessment will help you determine what kind of community referral you need to make.</p>
+
+            <div class="govuk-!-padding-bottom-3"></div>
+
+
+            <div class="govuk-form-group">
+  <!-- <fieldset class="govuk-fieldset" role="group" aria-describedby="oasys-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h2 class="govuk-fieldset__heading">
+        When was the last OASys risk assessment?
+      </h2>
+    </legend>
+    <div id="oasys" class="govuk-hint">
+      For example, 27 3 2020
+    </div>
+    <div class="govuk-date-input" id="oasys">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="oasys-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="oasys-day" name="oasys-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="oasys-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="oasys-month" name="oasys-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="oasys-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="oasys-year" name="oasys-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+    </div>
+
+    <div class="govuk-!-padding-bottom-6"></div> -->
+
+
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h1 class="govuk-fieldset__heading">
+        Was this prisoner convicted under the Terrorism Act 2000?
+      </h1>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="terrorism-act" name="terrorism-act" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="terrorism-act">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="terrorism-act-2" name="terrorism-act" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="terrorism-act-2">
+          No
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+  </fieldset>
+</div>
+
+<p class="govuk-body">ETC. INCLUDE ALL CURRENT QUESTIONS ON THE FORM. APPLY SUBSECTION ON PG 1 AND PG 2 OF THE FORM</p>
+
+
+
+
+<form action="#" method="post" novalidate>
+
+  <input type="hidden" name="answers-checked" value="true">
+
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+
+</form>
+
+            <!-- <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              No action needed - return to prisoner profile
+            </button> -->
+
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+
+            <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+            <aside class="app-related-items" role="complementary">
+              <h2 class="govuk-heading-m" id="subsection-title">
+                Guidance
+              </h2>
+              <nav role="navigation" aria-labelledby="subsection-title">
+                <ul class="govuk-list govuk-!-font-size-16">
+                  <li>
+                    <a class="govuk-link" href="#">
+                      View EQuiP guidance
+                    </a>
+                  </li>
+                </ul>
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+              <h2 class="govuk-heading-m" id="subsection-title">
+                Prisoner information
+              </h2>
+              <ul class="govuk-list govuk-!-font-size-16">
+                <li>
+                  <p class="govuk-body">Name: Frogspawn, Bob </p>
+                  <p class="govuk-body">Date of birth: 15/01/2000 </p>
+                  <p class="govuk-body">NOMIS number: G2911GD</p>
+              </ul>
+              </nav>
+            </aside>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+
+
+
+
+{% endblock %}

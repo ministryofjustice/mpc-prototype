@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="ea-last-oasys" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+
+
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Check and update the most recent assessment</h1>
+
+            <p class="govuk-body">The most recent assessment was saved on 16/07/2022.</p>
+            <p class="govuk-body">You must check that all answers are accurate before continuing.</p>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of last OASys risk assessment
+            </dt>
+            <dd class="govuk-summary-list__value">
+              01/11/2020
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> oasys</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Convicted under Terrorism Act 2000
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> terrorism act</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Identified as 'high profile'
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> high profile</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Has Serious Crime Prevention Order
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">No</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> crime prevention order</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <div class="govuk-!-padding-bottom-4"></div>
+
+        <form action="check-ea-answers-pg2" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+
+      </div>
+
+
+          <div class="govuk-grid-column-one-third">
+
+            <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+            <aside class="app-related-items" role="complementary">
+              <h2 class="govuk-heading-m" id="subsection-title">
+                Guidance
+              </h2>
+              <nav role="navigation" aria-labelledby="subsection-title">
+                <ul class="govuk-list govuk-!-font-size-16">
+                  <li>
+                    <a class="govuk-link" href="#">
+                      View EQuiP guidance
+                    </a>
+                  </li>
+                </ul>
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+              <h2 class="govuk-heading-m" id="subsection-title">
+                Prisoner information
+              </h2>
+              <ul class="govuk-list govuk-!-font-size-16">
+                <li>
+                  <p class="govuk-body">Name: Frogspawn, Bob </p>
+                  <p class="govuk-body">Date of birth: 15/01/2000 </p>
+                  <p class="govuk-body">NOMIS number: G2911GD</p>
+              </ul>
+              </nav>
+            </aside>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+
+
+
+
+{% endblock %}

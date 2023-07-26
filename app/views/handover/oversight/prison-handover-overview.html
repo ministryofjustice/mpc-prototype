@@ -1,0 +1,122 @@
+{% extends "layout-homd-test-nav.html" %}
+
+
+{% block pageTitle %}
+Handover cases - overview
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+  <!-- <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">
+    Sentenced cases at HMP Moorland
+  </h1> -->
+
+  <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+
+
+  <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+    Handover cases – overview
+  </h1>
+
+<div>
+</div>
+
+  <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+        <hr style="border-top: 2px dotted grey"/>
+          <h2 class="govuk-heading-m govuk-!-margin-top-4">Cases for handover</h2>
+          <div class="overview overview-label">
+            <!-- <p>Cases for handover</p> -->
+            <div class="overview-total">
+            <a href="/handover/oversight/prison-case-list-tabs" class="govuk-link--no-visited-state"><span class="card__heading">34</span></a>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="govuk-grid-column-one-third">
+    <hr style="border-top: 2px dotted grey"/>
+      <h2 class="govuk-heading-m govuk-!-margin-top-4">Releases in next 14 days</h2>
+      <div class="overview overview-label">
+        <!-- <p>Releases in next 14 days</p> -->
+        <div class="overview-total">
+        <a href="/handover/oversight/prison-releases-list" class="govuk-link--no-visited-state"><span class="card__heading">6</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  <hr style="border-top: 2px dotted grey"/>
+    <h2 class="govuk-heading-m govuk-!-margin-top-4">COM allocation overdue</h2>
+    <div class="overview overview-label">
+      <!-- <p>COM allocation overdue</p> -->
+      <div class="overview-total">
+      <a href="/handover/oversight/prison-cases-missing-com" class="govuk-link--no-visited-state"><span class="card__heading">3</span></a>
+    </div>
+  </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-8">
+    <hr style="border-top: 2px dotted grey"/>
+    <h2 class="govuk-heading-m govuk-!-margin-top-4">
+      By stage
+    </h2>
+      <img style="width:70%" src="/public/images/handover-stage-pie.png" alt="handover stage"/>
+      <ul class="govuk-list govuk-!-margin-top-4">
+        <li><span class="caseload-swatch tier-a"></span>POM preparing case before COM allocation: 7</li>
+        <li><span class="caseload-swatch tier_d"></span>POM sharing case details with the COM: 27</li>
+      </ul>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-8">
+      <hr style="border-top: 2px dotted grey"/>
+      <h2 class="govuk-heading-m govuk-!-margin-top-4">
+        By type
+      </h2>
+      <img style="width:70%" src="/public/images/handover-type-pie.png" alt="handover stage"/>
+      <ul class="govuk-list govuk-!-margin-top-4">
+        <li><span class="caseload-swatch tier_a"></span>Legacy CRC: 14</li>
+        <li><span class="caseload-swatch tier_b"></span>Probation Service: 20</li>
+      </ul>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-margin-top-8">
+        <hr style="border-top: 2px dotted grey"/>
+        <h2 class="govuk-heading-m govuk-!-margin-top-4">
+          By tier
+        </h2>
+      <div class="workforce-progress-container">
+        <div class="workforce-progress-bar tier_a" style="width:12%"><p style="govuk-colour("white")">4</p></div>
+        <div class="workforce-progress-bar tier_b" style="width:38%"><p>13</p></div>
+        <div class="workforce-progress-bar tier_c" style="width:35%"><p style="govuk-colour("white")">12</p></div>
+        <div class="workforce-progress-bar tier_d" style="width:15%"><p>5</p></div>
+      </div>
+
+      <ul class="govuk-list govuk-!-margin-top-4">
+        <li><span class="caseload-swatch tier_a"></span>Tier A: 4</li>
+        <li><span class="caseload-swatch tier_b"></span>Tier B: 13</li>
+        <li><span class="caseload-swatch tier_c"></span>Tier C: 12</li>
+        <li><span class="caseload-swatch tier_d"></span>Tier D: 5</li>
+        <li><span class="caseload-swatch tier_other"></span>Tier N/A: 0</li>
+      </ul>
+  </div>
+
+
+
+
+</div>
+    </div>
+  </div>
+
+
+
+
+{% endblock %}

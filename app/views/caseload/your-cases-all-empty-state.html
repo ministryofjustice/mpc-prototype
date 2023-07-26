@@ -1,0 +1,236 @@
+{% extends "layout-caseload-pom.html" %}
+
+
+{% block pageTitle %}
+Caseload
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block pageScripts %}
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row govuk-grid-column-half">
+
+
+
+  <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+    Caseload
+  </h1>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      
+
+      <div class="moj-search govuk-!-margin-bottom-6">
+
+        <form action="/search/pom/results" method="post">
+      
+          <div class="govuk-form-group">
+            <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+              Find a case
+            </label>
+      
+            <div id="search-hint" class="govuk-hint moj-search__hint ">
+              
+            </div>
+      
+            <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+          </div>
+      
+          <button class="govuk-button moj-search__button" data-module="govuk-button">
+            Search
+          </button>
+      
+        </form>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+ 
+  
+
+
+
+    <div class="govuk-grid-row">
+
+
+  <div class="govuk-grid-column-full">
+  <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+    <ul class="moj-sub-navigation__list">
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./overview">Overview</a>
+      </li>
+
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page">Your cases (0)</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/parole/pom/parole">Parole cases (0)</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./case-updates-needed">Case updates needed (0)</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./prison-cases-all.html">All allocations in this prison (206)</a>
+      </li>
+
+    </ul>
+
+</nav>
+</div>
+</div>
+
+
+
+  <h2 class="govuk-heading-l">
+    Your cases
+  </h2>
+  
+<!--Filter horizontal start-->
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h3 class="govuk-heading-m" style="margin-bottom: -5px;">
+       Choose which cases you want to see
+      </h3>
+    </legend>
+
+    <div class="govuk-radios govuk-radios--inline govuk-radios govuk-radios--small">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes" checked="true">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          <a href="#" style="color:black; text-decoration:none">All your cases (0)</a>
+        </label>
+      </div>
+      
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          <a href="./your-cases-allocations.html" style="color:black; text-decoration:none">Allocated in last 7 days (0)</a>
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          <a href="./your-cases-releases.html" style="color:black; text-decoration:none">Releases in next 4 weeks (0)</a>
+        </label>
+      </div>
+    
+  
+    </div>
+
+  </fieldset>
+</div>
+
+
+
+
+
+<!--Filter horizontal end-->
+
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    
+      <ul class="moj-pagination__list" style="padding-top: 15px; margin-bottom: -15px;">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a>--></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"><!--3--></a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+    </ul>
+  
+
+    <p class="moj-pagination__results" style="padding-top: 15px; margin-bottom: -15px">Showing <b>0</b> to <b>0</b> of <b>0</b> results</p>
+  </nav>
+  
+
+
+  <table class="govuk-table govuk-!-margin-top-6" data-module="moj-sortable-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Case</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Role</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Earliest release date</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Allocation date</th>
+    </thead>
+  </table>
+
+
+  <p class="govuk-body">No cases allocated</p>
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a>--></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"><!--3--></a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+    </ul>
+    <p class="moj-pagination__results">Showing <b>0</b> to <b>0</b> of <b>0</b> results</p>
+  </nav>
+
+
+
+
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}

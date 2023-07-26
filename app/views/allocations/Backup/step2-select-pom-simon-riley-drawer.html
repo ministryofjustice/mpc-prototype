@@ -1,0 +1,761 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Review case details – Digital Prison Services
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+
+
+<div class="govuk-!-margin-bottom-3"></div>
+
+<a href="/allocations/step1-review-case-simon-riley" class="govuk-back-link govuk-body">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="/team-management/allocations-select-pom-mix">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+    
+    <div class="moj-page-header-actions">
+  
+      <div class="moj-page-header-actions__title">
+        <h1 class="govuk-heading-l">Allocate a POM to Simon Riley</h1></br>
+        <span class="govuk-caption-l">Prison number: AE1234BX</span>
+        <span class="govuk-caption-l">Date of birth: 04 Jun 1986 (35)</span>
+      </div>
+    </div>
+  
+  </div>
+  </div>
+
+
+  <!-- <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <p class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    The following POMs have previously been allocated to this case:
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Stephen Dicks</li>
+      <li>Sophie Hill</li>
+    </ul>
+  
+<p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="#">View case activity</a> for more information.</p>
+  </p>
+    </div> -->
+
+
+
+
+
+
+  
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  
+  
+      <div class="govuk-!-margin-top-8"></div>
+      <h2 class="govuk-heading-m">
+        Recommended: Choose an available prison POM
+      </h2>
+
+
+      <div class="govuk-inset-text">
+      
+        <p>Simon needs a responsible POM because there is more than 12 weeks</br> between their sentence start date and home detention curfew eligibility date.</br>
+
+        They are tier D, so we recommend allocating a prison POM.</p>
+
+
+
+      </div>
+
+
+
+
+        
+  
+<!--
+    <h3 class="govuk-heading-s">Case mix key</h3>
+  
+    <ul class="govuk-list govuk-!-margin-bottom-9 ">
+     
+        <div style="float: left; margin-right: 20px;"><span class="caseload-swatch tier_a" style="margin-right: 10px;"></span>Tier A</div>
+        <div style="float: left; margin-right: 20px;"><span class="caseload-swatch tier_b" style="margin-right: 10px;"></span>Tier B</div>
+        <div style="float: left; margin-right: 20px;"><span class="caseload-swatch tier_c" style="margin-right: 10px;"></span>Tier C</div>
+        <div style="float: left; margin-right: 20px;" ><span class="caseload-swatch tier_d" style="margin-right: 10px;"></span>Tier D</div>
+        <div style="float: left; margin-right: 20px;"><span class="caseload-swatch tier_other" style="margin-right: 10px;"></span>Tier N/A</div>
+    </ul>
+  -->
+  <br>
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">POM</th>
+      <th class="govuk-table__header" scope="col">Working pattern</th>
+      <th class="govuk-table__header" scope="col">Allocations in last 7 days</th>
+      <!-- <th class="govuk-table__header govuk-table__header--numeric" scope="col">High<br>complexity<br>cases</th> -->
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Co-working cases</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Supporting cases</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Responsible cases</th>
+      <th class="govuk-table__header" scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row recommended_pom_row_0">
+      <td aria-label="POM name" class="govuk-table__cell">
+        <details class="govuk-details" data-module="govuk-details" >
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Annie Bradley
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            
+          </div>
+        </details>
+      </td>
+        <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+        <td aria-label="case mix" class="govuk-table__cell govuk-table__cell--numeric">3</td>
+        <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+          <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">1</td>
+        <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">17</td>
+        <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">9</td>
+        <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./step3-confirm-allocation-simon-riley.html">Allocate</a></td>
+      </tr>
+
+      <tr class="govuk-table__row recommended_pom_row_1">
+        <td aria-label="POM name" class="govuk-table__cell">
+          <details class="govuk-details" data-module="govuk-details" >
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Geoff Colum
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              
+            </div>
+          </details>
+        </td>
+        <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+        <td aria-label="case mix" class="govuk-table__cell govuk-table__cell--numeric">2</td>
+        <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+          <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+          <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">11</td>
+          <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">5</td>
+        <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+      </tr>
+
+      <tr class="govuk-table__row recommended_pom_row_2">
+        <td aria-label="POM name" class="govuk-table__cell">
+          <details class="govuk-details" data-module="govuk-details" >
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Matthew Hanson
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              
+            </div>
+          </details>
+        </td>
+        <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+        <td aria-label="case mix" class="govuk-table__cell govuk-table__cell--numeric">4</td>
+        <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">1</td> -->
+          <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">1</td>
+          <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">8</td>
+          <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">10</td>
+        <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+      </tr>
+
+      <tr class="govuk-table__row recommended_pom_row_3">
+        <td aria-label="POM name" class="govuk-table__cell">
+          <details class="govuk-details" data-module="govuk-details" >
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Sophie Hill
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              
+            </div>
+          </details>
+        </td>
+        <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+        <td aria-label="case mix" class="govuk-table__cell govuk-table__cell--numeric">1</td>
+        <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+          <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">6</td>
+          <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">1</td>
+          <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">19</td>
+        <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+      </tr>
+
+      <tr class="govuk-table__row recommended_pom_row_4">
+        <td aria-label="POM name" class="govuk-table__cell">
+          <details class="govuk-details" data-module="govuk-details" >
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Helen James
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              
+            </div>
+          </details>
+        </td>
+        <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+        <td aria-label="case mix" class="govuk-table__cell govuk-table__cell--numeric">7</td>
+        <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+          <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">3</td>
+          <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">17</td>
+          <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">9</td>
+        <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+      </tr>
+
+      <tr class="govuk-table__row recommended_pom_row_5">
+        <td aria-label="POM name" class="govuk-table__cell">
+          <details class="govuk-details" data-module="govuk-details" >
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Jim Roantree
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              
+            </div>
+          </details>
+        </td>
+        <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+        <td aria-label="case mix" class="govuk-table__cell govuk-table__cell--numeric">3</td>
+        <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+          <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">4</td>
+          <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">21</td>
+          <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">24</td>
+        <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+      </tr>
+
+      <tr class="govuk-table__row recommended_pom_row_6">
+        <td aria-label="POM name" class="govuk-table__cell">
+          <details class="govuk-details" data-module="govuk-details" >
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Carlos Santos
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              
+            </div>
+          </details>
+        </td>
+        <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.8</td>
+        <td aria-label="case mix" class="govuk-table__cell govuk-table__cell--numeric">2</td>
+        <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+          <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">3</td>
+          <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">3</td>
+          <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="38">19</td>
+        <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <!-- <h3 class="govuk-heading-s">
+    Case mix
+  </h3>
+  
+  <ul class="govuk-list">
+    <li><span class="caseload-swatch tier_a"></span>Tier A</li>
+    <li><span class="caseload-swatch tier_b"></span>Tier B</li>
+    <li><span class="caseload-swatch tier_c"></span>Tier C</li>
+    <li><span class="caseload-swatch tier_d"></span>Tier D</li>
+    <li><span class="caseload-swatch tier_other"></span>No tier</li>
+  </ul> -->
+  <div class="govuk-grid-column-full govuk-!-margin-top-4"></div>
+  
+  
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h3 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Option 2: Choose an available probation POM
+        </span>
+      </h3>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+        You will need to provide a reason for overridding the recommended prison POM.
+      </div>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+  
+      
+
+        <table class="govuk-table" data-module="moj-sortable-table">
+          <thead class="govuk-table__head">
+      
+          <tr class="govuk-table__row">
+      
+            <th class="govuk-table__header" scope="col">POM</th>
+            <th class="govuk-table__header" scope="col">Working pattern</th>
+            <!--<th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Tier A</th>-->
+            <!--<th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Tier B</th>-->
+            <!--<th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Tier C</th>-->
+            <!--<th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Tier D</th>-->
+            <!--<th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Tier N/A</th>-->
+            <!--<th class="govuk-table__header" scope="col" aria-sort="none">Parole cases</th>-->
+            <!--<th class="govuk-table__header" scope="col" aria-sort="none">Handover cases</th>-->
+            <!--<th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">High complexity cases</th>-->
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col" >Allocations in last 7 days</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric" >Supporting cases</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric" >Responsible cases</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric" >Co-working cases</th>
+            <!--<th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">Total cases</th>-->
+            <th class="govuk-table__header" scope="col">Action</th>
+          </tr>
+          </thead>
+      
+      
+          <tbody class="govuk-table__body">
+      
+      
+            <tr class="govuk-table__row recommended_pom_row_5">
+              <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Bayram"><a href="#" target="_blank" class="govuk-link govuk-link--no-visited-state">
+                
+                
+                <details class="govuk-details" data-module="govuk-details" >
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Eve Bayram
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    
+                  </div>
+                </details>
+              
+                
+              </td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <!--<td aria-label="tier_a" class="govuk-table__cell" data-sort-value="12">12
+                
+               <div class="workforce-progress-container">
+                <div class="workforce-progress-bar tier_a" style="width:45%"><p style="govuk-colour("white")">12<p></div>
+                <div class="workforce-progress-bar tier_b" style="width:45%">12</div>
+                <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">3<p></div>
+                <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+                <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+              </div>
+      
+            </td>
+            <td aria-label="tier_b" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="12">12</td>
+            <td aria-label="tier_c" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="3">3</td>
+            <td aria-label="tier_d" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="0">0</td>
+            <td aria-label="tier_other" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="0">0</td>
+      
+              <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">15</td>
+              <td aria-label="parole cases" class="govuk-table__cell govuk-table__cell--numeric">3</td>
+              <td aria-label="handover casese" class="govuk-table__cell govuk-table__cell--numeric">5</td>--> 
+              <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">4</td>
+              <td aria-label="supporting cases" class="govuk-table__cell govuk-table__cell--numeric">17</td>
+              <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric">11</td>
+              <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+              <!--<td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="27">27</td>--> 
+                <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+            </tr>
+        
+            <tr class="govuk-table__row recommended_pom_row_4">
+              <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Dicks">
+                
+                
+                <details class="govuk-details" data-module="govuk-details" >
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Stephen Dicks<br><p class="govuk-!-font-weight-bold"></p>
+                    </span>
+                    
+                  </summary>
+                  <div class="govuk-details__text">
+                  </div>
+                </details>
+      
+                <span class="govuk-!-font-weight-bold">Previously allocated</span></td>
+      
+                </td>
+      
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <!--<td aria-label="tier_a" class="govuk-table__cell " data-sort-value="10">10
+                
+                
+                <div class="workforce-progress-container">
+                <div class="workforce-progress-bar tier_a" style="width:30%"><p style="govuk-colour("white")">10<p></div>
+                <div class="workforce-progress-bar tier_b" style="width:50%">15</div>
+                <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">4<p></div>
+                <div class="workforce-progress-bar tier_d" style="width:5%">1</div>
+                <div class="workforce-progress-bar tier_other" style="width:5%">1</div>
+              </div>
+              
+            
+            </td>
+      
+            <td aria-label="tier_b" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="15">15</td>
+            <td aria-label="tier_c" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="4">4</td>
+            <td aria-label="tier_d" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+            <td aria-label="tier_other" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+      
+                <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">12</td>
+                <td aria-label="parole cases" class="govuk-table__cell govuk-table__cell--numeric">0</td>
+              <td aria-label="handover casese" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">6</td>
+                <td aria-label="supporting cases" class="govuk-table__cell govuk-table__cell--numeric">19</td>
+                <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric">3</td>
+              <!--<td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="31">31</td>-->
+              <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+            </tr>
+        
+            <tr class="govuk-table__row recommended_pom_row_2">
+              <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Hindocha">
+                
+      
+                <details class="govuk-details" data-module="govuk-details" >
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Binit Hindocha
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    
+                  </div>
+                </details>
+               
+              
+              
+              
+              
+              </td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <!--<td aria-label="tier_a" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="18">18</td>
+                
+            <td aria-label="tier_b" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="11">11</td>
+            <td aria-label="tier_c" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="5">5</td>
+            <td aria-label="tier_d" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+            <td aria-label="tier_other" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="0">0</td>
+                
+               <div class="workforce-progress-container">
+                <div class="workforce-progress-bar tier_a" style="width:50%"><p style="govuk-colour("white")">18<p></div>
+                <div class="workforce-progress-bar tier_b" style="width:30%">11</div>
+                <div class="workforce-progress-bar tier_c" style="width:15%"><p style="govuk-colour("white")">5<p></div>
+                <div class="workforce-progress-bar tier_d" style="width:5%">1</div>
+                <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+                </div>
+      
+      
+            
+              <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric">15</td>
+              <td aria-label="parole cases" class="govuk-table__cell govuk-table__cell--numeric">4</td>
+              <td aria-label="handover casese" class="govuk-table__cell govuk-table__cell--numeric">6</td>-->   
+              <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">25</td>
+              <td aria-label="supporting cases" class="govuk-table__cell govuk-table__cell--numeric">7</td>
+              <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric">3</td>
+              <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric">16</td>
+              <!--<td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="35">35</td>-->
+              <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+            </tr>
+        
+            <tr class="govuk-table__row recommended_pom_row_1">
+              <td aria-label="POM name" class="govuk-table__cell" data-sort-value="McCann">
+                
+                <details class="govuk-details" data-module="govuk-details" >
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Katy McCann
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    
+                  </div>
+                </details>
+                
+              
+              
+              </td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <!--<td aria-label="tier_a" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="15">15</td>
+              <td aria-label="tier_b" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="23">23</td>
+              <td aria-label="tier_c" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="0">0</td>
+              <td aria-label="tier_d" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="0">0</td>
+              <td aria-label="tier_other" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="0">0</td>
+                
+               <div class="workforce-progress-container">
+                <div class="workforce-progress-bar tier_a" style="width:40%"><p style="govuk-colour("white")">15<p></div>
+                <div class="workforce-progress-bar tier_b" style="width:60%">23</div>
+                <div class="workforce-progress-bar tier_c" style="width:0%"></div>
+                <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+                <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+              </div>
+            
+            
+            
+            
+              <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+              <td aria-label="parole cases" class="govuk-table__cell govuk-table__cell--numeric">0</td>
+              <td aria-label="handover casese" class="govuk-table__cell govuk-table__cell--numeric">0</td>--> 
+                <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">3</td>
+                <td aria-label="supporting cases" class="govuk-table__cell govuk-table__cell--numeric">7</td>
+                <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric">27</td>
+                <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <!--<td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="38">38</td>-->
+              <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+            </tr>
+        
+            <tr class="govuk-table__row recommended_pom_row_0">
+              <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Rahman">
+                
+              
+                <details class="govuk-details" data-module="govuk-details" >
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Shahina Rahman
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    
+                  </div>
+                </details>
+                
+              
+            
+              
+              
+              </td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <!--<td aria-label="tier_a" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="24">24</td>
+              <td aria-label="tier_b" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="12">12</td>
+              <td aria-label="tier_c" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="4">4</td>
+              <td aria-label="tier_d" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="0">0</td>
+              <td aria-label="tier_other" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="0">0</td>
+                
+      
+                
+                <div class="workforce-progress-container">
+                <div class="workforce-progress-bar tier_a" style="width:60%"><p style="govuk-colour("white")">24<p></div>
+                <div class="workforce-progress-bar tier_b" style="width:30%">12</div>
+                <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">4<p></div>
+                <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+                <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+                </div>
+            
+            
+           
+              <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">8</td>
+              <td aria-label="parole cases" class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td aria-label="handover casese" class="govuk-table__cell govuk-table__cell--numeric">0</td>--> 
+              <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">22</td>
+              <td aria-label="supporting cases" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+              <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric">3</td>
+              <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric">9</td>
+              <!--<td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="40">40</td>-->
+              <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+            </tr>
+        
+            <tr class="govuk-table__row recommended_pom_row_6">
+              <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Ricketts">
+                
+                <details class="govuk-details" data-module="govuk-details" >
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Andrien Ricketts
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    
+                  </div>
+                </details>
+              
+              
+              </td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.8</td>
+              <!--<td aria-label="tier_a" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="23">23</td>
+              <td aria-label="tier_b" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="11">11</td>
+              <td aria-label="tier_c" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="4">4</td>
+              <td aria-label="tier_d" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="0">0</td>
+              <td aria-label="tier_other" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="0">0</td>
+                
+                <div class="workforce-progress-container">
+                <div class="workforce-progress-bar tier_a" style="width:55%"><p style="govuk-colour("white")">23<p></div>
+                <div class="workforce-progress-bar tier_b" style="width:35%">11</div>
+                <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">4<p></div>
+                <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+                <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+                </div>
+            
+            
+            
+             <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">9</td>
+              <td aria-label="parole cases" class="govuk-table__cell govuk-table__cell--numeric">2</td>
+              <td aria-label="handover casese" class="govuk-table__cell govuk-table__cell--numeric">2</td>--> 
+              <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">4</td>
+              <td aria-label="supporting cases" class="govuk-table__cell govuk-table__cell--numeric">19</td>
+              <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric">6</td>
+              <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric">12</td>
+              <!--<td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="45.6">38</td>-->
+              <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+            </tr>
+        
+            <tr class="govuk-table__row recommended_pom_row_3">
+              <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Treend">
+                
+                <details class="govuk-details" data-module="govuk-details" >
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Ollie Treend
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    
+                  </div>
+                </details>
+              
+              </td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.5</td>
+              <!--<td aria-label="tier_a" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="3">3</td>
+              <td aria-label="tier_b" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="24">24</td>
+              <td aria-label="tier_c" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="3">3</td>
+              <td aria-label="tier_d" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
+              <td aria-label="tier_other" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="0">0</td>
+              
+              
+              
+              
+                <div class="workforce-progress-container">
+                <div class="workforce-progress-bar tier_a" style="width:10%"><p style="govuk-colour("white")">3<p></div>
+                <div class="workforce-progress-bar tier_b" style="width:80%">24</div>
+                <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">3<p></div>
+                <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+                <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+                </div>
+            
+            
+            
+          
+              <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">8</td>
+              <td aria-label="parole cases" class="govuk-table__cell govuk-table__cell--numeric">0</td>
+              <td aria-label="handover casese" class="govuk-table__cell govuk-table__cell--numeric">0</td>--> 
+              <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric">4</td>
+              <td aria-label="supporting cases" class="govuk-table__cell govuk-table__cell--numeric">17</td>
+              <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric">7</td>
+              <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric">8</td>
+              <!--<td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="45">30</td>-->
+              <td aria-label="recent allocations" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+            </tr>
+        
+        
+          </tbody>
+        </table>
+        </div>
+
+        <!--<h3 class="govuk-heading-s">
+          Case mix
+        </h3>
+    
+        <ul class="govuk-list">
+          <li><span class="caseload-swatch tier_a"></span>Tier A</li>
+          <li><span class="caseload-swatch tier_b"></span>Tier B</li>
+          <li><span class="caseload-swatch tier_c"></span>Tier C</li>
+          <li><span class="caseload-swatch tier_d"></span>Tier D</li>
+          <li><span class="caseload-swatch tier_other"></span>No tier</li>
+        </ul> 
+        <div class="govuk-grid-column-full govuk-!-margin-top-4"></div>-->
+
+
+
+      
+  
+  
+
+    </div>
+  </div>
+    <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h3 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-2">
+            Unavailable POMs
+          </span>
+        </h3>
+      </div>
+      <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-2">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+  
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">POM</th>
+            <th class="govuk-table__header" scope="col">Status</th>
+            <th class="govuk-table__header" scope="col">POM level</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Total cases</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row recommended_pom_row_0">
+              <td aria-label="POM name" class="govuk-table__cell">
+  
+                  Richard Adams
+          </td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Unavailable for new allocations</td>
+              <!-- <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td> -->
+              <td aria-label="POM type" class="govuk-table__cell ">Probation Officer POM</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">37</td>
+  
+            </tr>
+  
+              <tr class="govuk-table__row recommended_pom_row_0">
+                <td aria-label="POM name" class="govuk-table__cell">
+  
+                    Malcolm Casimir
+                  </td>
+                <td aria-label="Working pattern" class="govuk-table__cell">Unavailable for new allocations</td>
+                <!-- <td aria-label="Previous allocation" class="govuk-table__cell">-
+                </td> -->
+                <td aria-label="POM type" class="govuk-table__cell ">Prison Officer POM</td>
+                <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">25</td>
+              </tr>
+  
+    </tbody>
+  </table>
+  <div class="govuk-grid-column-full govuk-!-margin-top-4"></div>
+  
+      </div>
+  </div>
+  
+  </div>
+  </div>
+  </div>
+  <div class="govuk-grid-column-full govuk-!-margin-top-4"></div>
+  
+  
+  </div>
+  </div>
+  </main>
+  </div>
+
+
+
+
+
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends "layout-search-pom.html" %}
+
+
+{% block pageTitle %}
+Search results tabs
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/jquery.hideseek.min.js"></script>
+<script>
+$('#search').hideseek({
+    highlight: true,
+    min_chars: 3,
+    nodata: "No results found",
+    hidden_mode: true,
+    ignore: '.ignore'
+});
+</script>
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+
+
+  <a href="/caseload/overview" class="govuk-back-link govuk-!-margin-bottom-8">Back</a>
+
+  <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+    Search results for Jones
+  </h1>
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+
+
+      <div class="moj-search govuk-!-margin-bottom-8">
+
+        <form action="#" method="post">
+      
+          <div class="govuk-form-group">
+            <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+              Find a case
+            </label>
+      
+            <div id="search-hint" class="govuk-hint moj-search__hint ">
+              <!--Enter a name or prison number-->
+            </div>
+      
+            <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+          </div>
+      
+          <button class="govuk-button moj-search__button " data-module="govuk-button">
+            Search
+          </button>
+      
+        </form>
+      </div>
+
+
+</div>
+  </div>
+
+
+ <!--tabs-->
+
+
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#past-day">
+          0 results from your caseload
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#past-week">
+          0 results from this prison
+        </a>
+      </li>
+    </ul>
+    <div class="govuk-tabs__panel" id="past-day">
+      <h2 class="govuk-heading-l">0 results from your caseload</h2>
+
+
+
+<!--table content-->
+
+<p class="govuk-body">Search again</p>
+
+
+
+
+<!--tab 2-->
+
+  
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+      <h2 class="govuk-heading-l">0 results from this prison</h2>
+     
+      <p class="govuk-body">Search again</p>
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}

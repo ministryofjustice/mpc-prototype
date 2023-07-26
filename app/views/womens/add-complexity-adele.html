@@ -1,0 +1,81 @@
+{% extends "layout-main.html" %}
+
+
+{% block pageTitle %}
+Add complexity
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/womens-service-user-banner-adele.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-!-padding-bottom-4"></div>
+<a href="/womens/missing-info-list-after-maria" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="#">
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading govuk-!-padding-bottom-4">
+        Add complexity level
+      </h1>
+      <p>You can find the complexity score in XXXX.</p>
+      <p>Complexity score must be added before the case can be allocated.</p>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="record-complexity" name="record-complexity" type="radio" value="high">
+        <label class="govuk-label govuk-radios__label" for="record-complexity">
+          High
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="record-complexity-2" name="record-complexity" type="radio" value="medium">
+        <label class="govuk-label govuk-radios__label" for="record-complexity-2">
+          Medium
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="record-complexity-3" name="record-complexity" type="radio" value="low">
+        <label class="govuk-label govuk-radios__label" for="record-complexity-3">
+          Low
+        </label>
+      </div>
+
+    </div>
+
+  </fieldset>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button" formaction="/womens/missing-info-list-after-adele" style="margin-right: 15px;">
+    Update
+  </button>
+
+  <a href="/womens/missing-info-list-after-maria" class="govuk-link govuk-link--no-visited-state">Cancel</a>
+
+
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+{% endblock %}

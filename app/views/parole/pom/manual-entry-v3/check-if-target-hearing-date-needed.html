@@ -1,0 +1,51 @@
+{% extends "layout-search-pom.html" %}
+
+{% block pageTitle %}
+Check if you need to enter a new target hearing date – Digital Prison Services
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="#" class="govuk-back-link govuk-!-margin-bottom-6">Back</a>
+
+
+  <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+           
+            <form action="/parole/pom/manual-entry/prisoner-profile" method="post">
+            
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-4">
+                    Check if you need to enter a new target hearing date for James
+                  </h1>
+                </legend>
+
+
+                <ul class="govuk-hint govuk-!-margin-bottom-6">
+                  <li>If James was <strong>recommended for release</strong>, you do not need to enter a new target hearing date.</li>
+                  <li>If <strong>no decision</strong> has been made yet, try again once it has.</li>
+                  <li>If James was <strong>not recommended for release</strong>, wait until after the 21-day reconsideration stage and then enter the next target hearing date from the 'outcome of Parole Board decision' letter or from PPUD.</li>
+                </ul>
+
+              </form>
+
+          <p><a class="govuk-link govuk-link--no-visited-state" href="/caseload/overview">Go to your caseload</a></p>
+           
+          </div>
+
+         
+        </div>
+
+        
+
+      </div>
+
+
+
+
+{% endblock %}

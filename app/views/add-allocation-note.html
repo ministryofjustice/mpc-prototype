@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="/allocations">
+<div class="govuk-width-container">
+
+<a href="allocate-case-v1" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-l">
+  Confirm allocation
+</h1>
+
+<p>You are allocating Andrew Stanford to Eve Bayram.</p>
+
+<p>We will send a confirmation email to eve.bayram@digital.justice.gov.uk.</p>
+
+<div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="allocation-note">
+      Add a note to the email:
+    </label>
+  </h2>
+  <div id="allocation-note-hint" class="govuk-hint">
+    For example, you can tell the prison offender manager about any special requirements.
+  </div>
+  <textarea class="govuk-textarea" id="allocation-note" name="allocation-note" rows="3" aria-describedby="allocation-note-hint"></textarea>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button" formaction="/allocations-success-banner" style="margin-right: 15px;">
+    Complete allocation
+  </button>
+
+  <a href="allocate-case-v1" class="govuk-link">Cancel</a>
+
+
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+
+
+
+
+{% endblock %}

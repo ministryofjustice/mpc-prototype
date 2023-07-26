@@ -1,0 +1,214 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+<ul class="moj-sub-navigation__list">
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" href="#">See allocations</a>
+  </li>
+
+<li class="moj-sub-navigation__item">
+  <a class="moj-sub-navigation__link" href="allocations">Make allocations</a>
+</li>
+
+<li class="moj-sub-navigation__item">
+  <a class="moj-sub-navigation__link" aria-current="page" href="missing-info">Update information</a>
+</li>
+
+<li class="moj-sub-navigation__item">
+  <a class="moj-sub-navigation__link" href="newly-arrived">Newly arrived</a>
+</li>
+</ul>
+
+</nav>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width">
+
+
+      <h1 class="govuk-heading-xl">
+        Update information (7)
+      </h1>
+
+      <p>You need to update information for prisoners when they could not be matched automatically with a record in NDelius or a date needs to be added from PPUD. </p>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>7</b> of <b>7</b> results</p>
+      </nav>
+
+
+      <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Prisoner</th>
+
+        <th scope="col" class="govuk-table__header" aria-sort="none">Update required</th>
+
+        <th scope="col" class="govuk-table__header govuk-table__header" aria-sort="none">Recall</th>
+
+        <th scope="col" class="govuk-table__header govuk-table__header" aria-sort="none">POM</th>
+
+        <th scope="col" class="govuk-table__header govuk-table__header" aria-sort="none">Action</th>
+
+      </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Wilson, Ferdinand <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="">Add missing case information</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">No</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">No allocation</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="Update-missing">
+          Update</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Johnson, Samuel <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="">Add missing case information</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">No</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="1">Eve Bayram</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="Update-missing">
+          Update</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Houston, Graham <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="">Check allocated POM status</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">No</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">Stephen Dicks</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="/inactive-pom">
+          Update</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Higgins, Desmond <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="">Check allocated POM status</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">No</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="11">Stephen Dicks</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="/inactive-pom">
+          Update</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Martin, Robert<br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="">Add missing case information</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">Yes</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">Laura Jara-Duncan</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="Update-missing">
+          Update</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Alfiya, Leo<br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="">Add missing case information</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">Yes</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="4">No allocation</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="Update-missing">
+          Update</a> </td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">McDonald, James <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="">Missing case information</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">No</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="5">No allocation</td>
+
+        <td class="govuk-table__cell"> <a class="govuk-link" href="Update-missing">
+          Update</a> </td>
+
+      </tr>
+
+      </tbody>
+      </table>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>7</b> of <b>7</b> results</p>
+      </nav>
+
+          </div>
+      </div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "layout-womens-homd.html" %}
+
+
+{% block pageTitle %}
+Confirm allocation
+{% endblock %}
+
+{% block bodyStart %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="moj-organisation-nav" aria-label="Organisation switcher">
+<div class="moj-organisation-nav__title">HMP Peterborough (Female)</div>
+
+<a href="/womens/homd_second_round/change-prison.html" class="moj-organisation-nav__link">Change prison</a>
+
+</div>
+<div class="govuk-!-margin-bottom-3"></div>
+<a href="/womens/homd_second_round/allocation-select-pom-mix" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="#">
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-l">Step 3 of 3</span>
+<h1 class="govuk-heading-l">
+  Confirm allocation
+</h1>
+
+<p>You are allocating prisoner Jessica Davey to Probation Officer POM Stephen Dicks.</p>
+
+<p>We will send a confirmation email to stephen.dicks@justice.gov.uk.</p>
+
+<div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="allocation-note">
+      Add a note to the email
+    </label>
+  </h2>
+  <div id="allocation-note-hint" class="govuk-hint">
+    For example you can tell the POM about any special requirements.
+  </div>
+  <textarea class="govuk-textarea" id="allocation-note" name="allocation-note" rows="3" aria-describedby="allocation-note-hint"></textarea>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button" formaction="/womens/homd_second_round/make-allocations-confirmation-message" style="margin-right: 15px;">
+    Complete allocation
+  </button>
+
+  <!-- <a href="#" class="govuk-link">Cancel</a> -->
+
+
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+{% endblock %}

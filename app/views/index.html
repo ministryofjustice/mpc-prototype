@@ -5,16 +5,486 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-four-quarters">
 
     {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
 
-    <h1 class="govuk-heading-xl">
-      Stephs MPC prototype is on version 13
-    </h1>
+    <!--start-->
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Prototype: Manage POM cases</h1><br />
+
+    
+        <h1 class="govuk-heading-m">Related links</h2>
+          <ul class="govuk-list govuk-list--bullet">
+        <li><a target="_blank" href="https://manage-pom-cases-design-history.apps.live.cloud-platform.service.justice.gov.uk">Design history</a></li>
+        <li><a target="_blank" href="https://github.com/ministryofjustice/mpc-prototype/actions">Prototype repository</a></li>
+        <li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1w0zhjx1_oIScAULFLAE4sEBVlXTRPl2wjMw44VrUcTc/edit?usp=sharing">MPC Product glossary</a></li>
+        </ul></br>
+      
+    
+    
+        
+
+        <!--accordions start-->
+  
+        
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Staff
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              
+              <h3 class="govuk-heading-s">Individual POM view</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/staff/staff-pom-overview">Overview</a></li> 
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/staff/staff-pom-caseload">Caseload</a></li> 
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/staff/staff-pom-handover">Handover cases</a></li> 
+              </ul>
+              
+            </div>
+          </div>
+
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Tier change (on hold)
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+
+              <p class='govuk-body'>On hold: See Jira ticket <a class="govuk-link govuk-link--no-visited-state" href="https://dsdmoj.atlassian.net/browse/MO-1083">MO-1083</a></p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/tier-change/check-tier-changes">Check tier changes</a></li> 
+              </ul>
+
+            </div>
+          </div>
+
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                  Allocation (live)
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+              
+              <p class='govuk-body'>
+              HOW TO: Start this user journey on the <a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/make-allocations">make allocations</a> page and click on Smith, Jack at the top of the table.
+              When you choose a POM either click the "Compare workloads" CTA or allocate him directly to Annie Bradley.</p>
+
+              <h3 class="govuk-heading-s">Final design</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/make-allocations">Make allocations</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/step1-review-case-jack-smith">Review case details (Jack Smith)</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/step2-select-pom-jack-smith">Select a POM</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/step2-select-pom-jack-smith-error">Select a POM - Error message</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/step2-select-pom-jack-smith-override">Select a POM - override recommendation (minimal content change)</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/step2b-select-pom-jack-smith">Compare POMs</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/step3-confirm-allocation-jack-smith">Check allocation</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/step4-success-msg-jack-smith">Success message</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://manage-pom-cases-design-history.apps.live.cloud-platform.service.justice.gov.uk/allocations-design-notes/">Design notes</a></li>
+              </ul>
+
+              <h3 class="govuk-heading-s">Additional changes</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/add-missing-details">Add missing details</a> (minimal content & styling changes)</li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/newly-arrived">Newly arrived</a> (minimal content & styling changes)</li>
+              </ul>
+
+
+
+
+            </div>
+          </div>
+
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  Reallocation (live)
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              
+              <p class='govuk-body'>HOW TO: Start this user journey on the <a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/see-allocations">see allocations</a> page and click on Simon Riley at the bottom of the table.
+              When you get to the prisoner profile page you'll find the "Reallocate" link in the prison allocation section. Reallocate him to Annie Bradley.</p>
+              
+              <h3 class="govuk-heading-s">Final design</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/see-allocations">See allocations</a> (minimal content & styling changes)</li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/reallocate/step1-review-case-simon-riley">Review case details (Simon Riley)</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/reallocate/step2-select-pom-simon-riley">Select a POM</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/reallocate/step2b-select-pom-simon-riley">Compare POMs</a></li>
+                <li>Allocate a new POM: <a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/reallocate/step3-confirm-allocation-simon-riley">Check allocation</a></li>
+                <li>Allocate a new POM: <a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/reallocate/step4-success-msg-simon-riley">Success message</a></li>
+                <li>Decide to stay with current POM: <a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/reallocate/step3b-validate-allocation-simon-riley">Confirm allocation</a></li>
+                <li>Decide to stay with current POM: <a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/reallocate/step4b-success-msg-simon-riley">Success message</a></li>
+              </ul>
+              
+            </div>
+          </div>
+
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  Co-working POM allocation (live)
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              
+              <p class='govuk-body'>HOW TO: Start this user journey on the <a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/see-allocations">see allocations</a> page and click on Jack Smith at the bottom of the table.
+                  When you get to the prisoner profile page you'll find the "Allocate" link in the prison allocation section. Allocate Helen James as a co-working POM.</p>
+            
+                  <h3 class="govuk-heading-s">Final design</h3>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/coworking/review-case">Review case details</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/coworking/select-pom">Select a co-working POM</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/coworking/compare-pom">Compare co-working POMs</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/coworking/confirm-allocation">Confirm allocation</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/coworking/see-allocations-success">Success message</a></li>
+                  </ul>
+              
+            </div>
+          </div>
+
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  Help (live)
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              
+              <h3 class="govuk-heading-s">Final design</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/help/dashboard">Help overview</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/help/add-staff">Help section: Add staff members</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/help/missing-cases">Help section: Missing cases</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/help/case-responsiblity">Help section: Case case-responsiblity</a></li>
+              </ul>
+              
+            </div>
+          </div>
+
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  Parole manual entry journey (will not be implemented)
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              
+              <h3 class="govuk-heading-s">Final design</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/manual-entry-v3/case-updates-needed" target="_blank">Case updates needed</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/manual-entry-v3/prisoner-profile" target="_blank">Prisoner profile with update banner</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/manual-entry-v3/enter-next-target-hearing-date.html" target="_blank">Enter next target hearing date</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/manual-entry-v3/outcome-of-parole.html" target="_blank">Help step 1 – outcome of hearing</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/manual-entry-v3/target-hearing-date-announced.html" target="_blank">Help step 2 – target hearing date announced</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/manual-entry-v3/enter-next-target-hearing-date-no-help.html" target="_blank">Help step 3 – enter next date</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/manual-entry-v3/check-if-target-hearing-date-needed.html" target="_blank">Help step 4 – check if you need to enter a new date (if no) </a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/manual-entry-v3/prisoner-profile-success" target="_blank">Prisoner profile with success banner</a></li>
+                </ul>
+              
+
+                <h3 class="govuk-heading-s">UR - Prison visits in Nov 2021</h3>
+               
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/manual-entry.html" target="_blank">Parole manual entry</a> (if needed <span><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/knockback-letter.html" target="_blank">source of the date</a></span>)</li>
+                  </ul>
+        
+            </div>
+          </div>
+
+
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  Parole
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              
+              
+              <h3 class="govuk-heading-s">Final POM design</h3>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/caseload/overview">Caseload - Overview</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/parole">Caseload - Parole cases</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/prisoner-profile-remain-closed-conditions">Profile page - Remain in closed conditions</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/prisoner-profile-open-conditions">Profile page - Move to open conditions</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/prisoner-profile-release">Profile page - Recommendation for release</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="https://manage-pom-cases-design-history.apps.live.cloud-platform.service.justice.gov.uk/parole-documentation/">Design notes</a></li>
+                </ul>
+      
+                <h3 class="govuk-heading-s">Final HOMD design</h3>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/parole">Parole - All cases in this prison</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/prisoner-profile-remain-closed-conditions">Allocation information - Remain in closed conditions</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/prisoner-profile-open-conditions">Allocation information - Move to open conditions</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/prisoner-profile-release">Allocation information - Recommendation for release</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/staff/staff-pom-overview">Staff - Individual POM overview</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/staff/staff-pom-parole">Staff - Individual POM parole cases</a></li>
+                  </ul>
+      
+                  <h3 class="govuk-heading-s">Rules</h3>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/table-rules">Parole table behaviour</a></li>
+                    </ul>
+
+                  <h3 class="govuk-heading-s">UR - Prison visits in Nov 2021</h3>
+        
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/parole">POM - Parole</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/parole">POM - Parole – empty state</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/table-rules">POM - Parole table behaviour</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/prisoner-profile-remain-closed-conditions">POM - Profile page - Remain in closed conditions</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/prisoner-profile-open-conditions">POM - Profile page - Move to open conditions</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/prisoner-profile-release">POM - Profile page - Recommendation for release</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/staff">HOMD - Staff view</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/parole">HOMD - Parole</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/parole">HOMD - Parole – empty state</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/table-rules">HOMD - Parole table behaviour</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/prisoner-profile-remain-closed-conditions">HOMD - Profile page - Remain in closed conditions</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/prisoner-profile-open-conditions">HOMD - Profile page - Move to open conditions</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/prisoner-profile-release">HOMD - Profile page - Recommendation for release</a></li>
+                </ul>
+
+
+                <h3 class="govuk-heading-s">UR - Sept 2021</h3>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/parole">HOMD - Parole</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/prisoner-profile-remain-closed-conditions">HOMD - Prisoner Profile - Remain in closed conditions</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/prisoner-profile-open-conditions">HOMD - Prisoner Profile - Move to open conditions</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/prisoner-profile-release">HOMD - Prisoner Profile - Recommendation for release</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/staff">HOMD - Staff</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/staff-pom-overview">HOMD - Staff - POM overview</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/staff-pom-caseload">HOMD - Staff - POM caseload</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/parole">POM - Parole</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/prisoner-profile-remain-closed-conditions">POM - Prisoner Profile - Remain in closed conditions</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="parole/pom/prisoner-profile-open-conditions">POM - Prisoner Profile - Move to open conditions</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="parole/pom/prisoner-profile-release">POM - Prisoner Profile - Recommendation for release</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/overview">POM - Overview</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/caseload">POM - Caseload</a></li>
+                </ul>
+        
+            </div>
+          </div>
+
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  Error pages (live)
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              
+              <h3 class="govuk-heading-s">Final design</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/error/401">Error 401</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/error/500">Error 500</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/error/not-recorded-as-pom">Error POM inactive</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/error/staff-inactive">Staff view (new copy)</a></li>
+              </ul>
+
+              <h3 class="govuk-heading-s">UR - Prison visits in Nov 2021</h3>
+              
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/error/not-recorded-as-pom.html">POM inactive error page</a></li>
+              </ul>
+
+            </div>
+          </div>
+
+
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  Caseload (live)
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              
+              <h3 class="govuk-heading-s">Final design</h3>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/caseload/overview">Overview</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/caseload/your-cases-all">Your cases – All your cases (default filter)</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/caseload/your-cases-all-empty-state">Your cases – empty state</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/caseload/your-cases-releases-empty-state">Releases in next 4 weeks – empty state</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/caseload/your-cases-allocations-empty-state">Allocated in last 7 days – empty state</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/caseload/your-cases-allocations">Your cases – Allocated in the last 7 days (filter)</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/caseload/your-cases-releases">Your cases – Releases in the next 4 weeks (filter)</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/caseload/case-updates-needed">Case updates needed</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="/caseload/case-updates-needed-empty-state">Case updates needed – empty state</a></li>
+                  <li><a class="govuk-link govuk-link--no-visited-state" href="caseload/prison-cases-all">All allocations in this prison</a></li>
+               </ul>
+      
+            </div>
+          </div>
+
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  Search results (live)
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/search/pom/results">POM search results page</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/search/pom/empty-state">POM Empty state</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/search/homd/results">HOMD search results page</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/search/homd/empty-state">HOMD Empty state</a></li>
+              </ul>
+                         
+              
+
+              <h3 class="govuk-heading-s">UR - Prison visits in Nov 2021</h3>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/overview">POM Search v1</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/results">POM Search results v1</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/overview-2">POM Search v2</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/results-tabs">POM Search results v2</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/parole/homd/results">HOMD Search results</a></li>
+              </ul>
+
+            </div>
+          </div>
+
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  OASys assessment (live)
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              
+              <h3 class="govuk-heading-s">UR - Prison visits in Nov 2021</h3>
+              
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/prison-visits/prisoner-profile-last-oasys">OASys assessment</a></li>
+              </ul>
+              
+            </div>
+          </div>
+
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  POM to COM handover (live)
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              
+              <h3 class="govuk-heading-s">Final design</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/final/homd/upcoming-handovers">HOMD view</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/final/pom-and-homd/upcoming-handovers-all-cases">HOMD view - display additonal link</a></br>(Only for users who have BOTH roles - POM and HOMD)</li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/final/pom/upcoming-handovers">POM view</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/final/pom-and-homd/upcoming-handovers-your-cases">POM view - display additonal link</a></br>(Only for users who have BOTH roles - POM and HOMD)</li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/final/pom/empty-state">HOMD/POM tables empty state</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://docs.google.com/document/d/1VeXNQDZqQERde3MIfcCdxZTumza5UWPIWLcphSaOVfM/edit?usp=sharing">POM Emails</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://manage-pom-cases-design-history.apps.live.cloud-platform.service.justice.gov.uk/handover-design-notes/">Design notes</a></li>
+              </ul>
+              
+              <h3 class="govuk-heading-s">UR - HOMD handover concepts 15th/16th July 2021</h3>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/oversight/prison-handover-overview-tabs.html">Handover cases 'upcoming handovers'</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/oversight/handover-table-highlights.html">Handover table highlights</a></li>
+              </ul>
+
+              <h3 class="govuk-heading-s">UR - HOMD handover concepts w/c 17th May 2021</h3>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/oversight/prison-handover-overview.html">Handover cases dashboard</a></li>
+              <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/oversight/prison-case-list-tabs.html">Handover case list</a></li>
+              <li><a class="govuk-link govuk-link--no-visited-state" href="/team-management/view-of-pom-overview-v2.html">View an individual POM</a></li>
+            </ul>
+    
+            <h3 class="govuk-heading-s">POM handover concepts with changes from user testing</h3>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/prepare-for-handover-list.html">Upcoming handovers</a></li>
+              <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/share-case-information-list.html">Handovers in progress</a></li>
+              <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/tasks-overdue.html">Overdue tasks</a></li>
+              <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/missing-com-details.html">COM allocation overdue</a></li>
+              <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/task-list-nps">NPS tasks - record progress</a></li>
+              <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/task-list-crc">CRC tasks - record progress</a></li>
+              <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/share-case-information-list-handover-complete">Confirmation message - Task/s updated</a></li>
+              <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/manage-email-reminders-form.html">Manage email reminders</a></li>
+              <li><a class="govuk-link govuk-link--no-visited-state" href="/handover/prepare-for-handover-list-confirmation">Confirmation message - Email reminders updated</a></li>
+              <li><a class="govuk-link govuk-link--no-visited-state" href="handover/handover-notifications.html">Handover notification emails</a></li>
+            </ul>
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+    <!--accordions end-->
+
+
 
     {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
 
 {% endblock %}

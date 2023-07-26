@@ -1,0 +1,222 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="/needs-COM">
+<a href="allocations" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+
+<h1 class="govuk-heading-l">
+  Review case information before making an allocation
+</h1>
+</div>
+
+<div class="govuk-grid-column-one-quarter">
+<button class="govuk-button" data-module="govuk-button" formaction="/needs-COM">
+  Continue
+</button>
+
+</div>
+</div>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+
+<span class="moj-badge" style="margin-right:5px">Determinate</span>
+<span class="moj-badge moj-badge--grey">Recall</span>
+
+<div class="govuk-!-margin-top-6"></div>
+
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Prisoner</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Name</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">Stanford, Andrew</td>
+      <td class="govuk-table__cell"></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Date of birth</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">10/06/1977</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Prisoner number</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">G4198UW</td>
+      <td class="govuk-table__cell govuk-!-width-one-third govuk-table__cell--numeric"><a class="govuk-link pull-right" href="#">View DPS profile</a>
+    </td></tr>
+    </tbody>
+  </table>
+
+          <table class="govuk-table">
+            <caption class="govuk-table__caption">Offence</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Main offence</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Theft of motor vehicle</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Sentence type	</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Determinate</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Sentence start date	</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">29 May 2015</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">
+            </td></tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Conditional release date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">11 June 2017</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Automatic release date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Parole eligibility</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Parole review date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Home detentional curfew eligibility</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">5 April 2017</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Tariff date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Post recall release date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Sentence/ licence end date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">2 August 2018</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            </tbody>
+          </table>
+
+          <table class="govuk-table">
+            <caption class="govuk-table__caption">Case information</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Current case owner</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Community</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">POM role</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Supporting</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Last known address in Wales</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Yes</td>
+              <td class="govuk-table__cell govuk-!-width-one-third govuk-table__cell--numeric"><a class="govuk-link" href="#">Change</a>
+            </td>
+            </td></tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Service provider</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">National Probation Service (NPS)</td>
+              <td class="govuk-table__cell govuk-!-width-one-third govuk-table__cell--numeric"><a class="govuk-link" href="#">Change</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Tiering calculation</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Tier B</td>
+              <td class="govuk-table__cell govuk-!-width-one-third govuk-table__cell--numeric"><a class="govuk-link" href="#">Change</a></td>
+            </tr>
+            </tbody>
+          </table>
+
+          <table class="govuk-table">
+            <caption class="govuk-table__caption">Community information</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Local divisional unit (LDU)</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Unknown</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Local divisional unit (LDU) email address</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Unknown</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Team</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Unknown</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Community Offender Manager (COM) name</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Unknown</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            </tbody>
+          </table>
+
+          <button class="govuk-button" data-module="govuk-button" formaction="/needs-COM">
+            Continue
+          </button>
+
+
+</div>
+</div>
+</main>
+</form>
+
+{% endblock %}

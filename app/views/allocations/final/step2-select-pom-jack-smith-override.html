@@ -1,0 +1,121 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Allocate a POM – Digital Prison Services
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+
+
+<div class="govuk-!-margin-bottom-3"></div>
+
+<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom:0">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+<form action="/allocations/final/step3-confirm-allocation-jack-smith" method="post">
+
+<div class="govuk-form-group">
+
+<!--START set dynamic checkbox hide/show text-->
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set textHtmlReason %}
+{{ govukInput({
+  id: "other-reason",
+  name: "Enter your reason for this decision",
+  type: "tel",
+  autocomplete: "tel",
+  classes: "govuk-fieldset__legend--s govuk-input govuk-input--width-30",
+  label: {
+    text: "Enter your reason for this decision"
+  }
+}) }}
+{% endset -%}
+<!--end set dynamic checkbox hide/show text-->
+</div>
+
+<div class="govuk-form-group">
+
+
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukCheckboxes({
+  idPrefix: "other-reason",
+  name: "other-reason",
+  fieldset: {
+    legend: {
+      text: "Why are you allocating a probation POM?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Choose all that apply."
+  },
+  items: [
+  {
+    value: "assessed",
+    text: "Prisoner assessed as not suitable for a prison POM",
+    conditional: {
+      html: emailHtml
+    }
+  },
+  {
+    value: "availability",
+    text: "No available prison POMs",
+    conditional: {
+      html: phoneHtml
+    }
+  },
+  {
+    value: "history",
+    text: "This POM has worked with the prisoner before",
+    conditional: {
+      html: phoneHtml
+    }
+  },
+  {
+    value: "history",
+    text: "Other reason",
+    conditional: {
+      html: textHtmlReason
+    }
+  }
+]
+}) }}
+
+
+
+</div>
+
+
+
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+</form>
+
+
+
+
+
+
+{% endblock %}

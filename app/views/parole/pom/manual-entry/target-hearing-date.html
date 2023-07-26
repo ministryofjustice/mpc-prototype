@@ -1,0 +1,75 @@
+{% extends "layout-search-pom.html" %}
+
+{% block pageTitle %}
+Update target hearing date – Digital Prison Services
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="/parole/pom/manual-entry/parole-outcome-letter" class="govuk-back-link govuk-!-margin-bottom-6">Back</a>
+
+
+  <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+           
+            <form action="/parole/pom/manual-entry/prisoner-profile-success" method="post">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-4">
+                    Enter the target date that James Saunders’ case will next be considered by the Parole Board
+                  </h1>
+                </legend>
+                <div id="passport-issued-hint" class="govuk-hint">
+
+                  <p class="govuk-hint">This allows us to work out whether the custody or community probation team should take responsibility for this case.</p>
+                  <p class="govuk-hint">It is the:</p>
+                  <ul class="govuk-hint">
+                    <li>date after the start of their review period on the 'outcome of Parole Board decision' letter</li>
+                    <li>target oral hearing date in PPUD</li>
+                  </ul>  
+
+                <p class="govuk-hint">For example, 9 2022.</p>
+
+
+                </div>
+                <div class="govuk-date-input" id="passport-issued">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                  </div>
+                </div>
+
+                
+              </fieldset>
+            </div>
+           
+            <button class="govuk-button" data-module="govuk-button">
+              Save
+            </button>
+
+          </from> 
+           
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+{% endblock %}

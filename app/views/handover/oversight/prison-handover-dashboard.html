@@ -1,0 +1,106 @@
+{% extends "layout-homd-test-nav.html" %}
+
+
+{% block pageTitle %}
+Handover cases
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+<!--21/07/21 Dashboard to be revisited when we will look at staff view-->
+  
+  
+  <h2 class="govuk-heading-l">Overview</h2>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+    <!--<hr style="border-top: 2px dotted grey"/>-->
+      <h2 class="govuk-heading-m govuk-!-margin-top-6">COM allocation<br>overdue</h2>
+      <div class="overview overview-label">
+        <div class="overview-total">
+        <a href="/handover/oversight/prison-handover-overview-tabs#past-minutes" class="govuk-link--no-visited-state"><span class="card__heading">3</span></a>
+      </div>
+    </div>
+  </div>
+
+
+<div class="govuk-grid-column-one-third">
+<!--<hr style="border-top: 2px dotted grey"/>-->
+  <h2 class="govuk-heading-m govuk-!-margin-top-6">Handovers with tasks<br> in progress</h2>
+  <div class="overview overview-label">
+    <div class="overview-total">
+    <a href="#" class="govuk-link--no-visited-state"><span class="card__heading">34</span></a>
+  </div>
+</div>
+</div>
+
+<div class="govuk-grid-column-one-third">
+<!--<hr style="border-top: 2px dotted grey"/>-->
+<h2 class="govuk-heading-m govuk-!-margin-top-6">COM responsible with tasks outstanding</h2>
+<div class="overview overview-label">
+  <div class="overview-total">
+  <a href="#" class="govuk-link--no-visited-state"><span class="card__heading">6</span></a>
+</div>
+</div>
+</div>
+
+
+
+<!--Diagrams -->
+
+
+
+<div class="govuk-grid-column-one-third"> 
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">
+    Tasks outstanding for cases<br>within 7 days of handover
+  </h2>
+<div class="workforce-progress-container">
+  <div class="workforce-progress-bar tier_a" style="width:17%"><p style="govuk-colour('white')">7</p></div>
+  <div class="workforce-progress-bar tier_b" style="width:36%"><p>10</p></div>
+  <div class="workforce-progress-bar tier_c" style="width:26%"><p style="govuk-colour('white')">15</p></div>
+  <div class="workforce-progress-bar tier_d" style="width:21%"><p>9</p></div>
+</div>
+
+<ul class="govuk-list govuk-!-margin-top-4">
+  <li><span class="caseload-swatch tier_a"></span>Review OASys: 7</li>
+  <li><span class="caseload-swatch tier_b"></span>Have contact with COM: 10</li>
+  <li><span class="caseload-swatch tier_c"></span>Attend handover meeting: 15</li>
+  <li><span class="caseload-swatch tier_d"></span>Send handover report: 9</li>
+</ul>
+</div>
+
+  <div class="govuk-grid-column-one-third"> 
+    <h2 class="govuk-heading-m govuk-!-margin-top-8">
+      Handovers <br>by tier
+    </h2>
+  <div class="workforce-progress-container">
+    <div class="workforce-progress-bar tier_a" style="width:12%"><p style="govuk-colour("white")">4</p></div>
+    <div class="workforce-progress-bar tier_b" style="width:38%"><p>13</p></div>
+    <div class="workforce-progress-bar tier_c" style="width:35%"><p style="govuk-colour("white")">12</p></div>
+    <div class="workforce-progress-bar tier_d" style="width:15%"><p>5</p></div>
+  </div>
+
+  <ul class="govuk-list govuk-!-margin-top-4">
+    <li><span class="caseload-swatch tier_a"></span>Tier A: 4</li>
+    <li><span class="caseload-swatch tier_b"></span>Tier B: 13</li>
+    <li><span class="caseload-swatch tier_c"></span>Tier C: 12</li>
+    <li><span class="caseload-swatch tier_d"></span>Tier D: 5</li>
+  </ul>
+</div>
+
+
+
+</div>
+
+
+
+{% endblock %}
+

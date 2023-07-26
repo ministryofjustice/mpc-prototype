@@ -1,0 +1,194 @@
+{% extends "layout-staff-homd.html" %}
+
+
+{% block pageTitle %}
+Sarah Bailey
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+
+<a href="./staff" class="govuk-back-link govuk-body" style="margin-left: -10px;">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+      <span class="govuk-caption-xl">Probation Officer POM</span>
+
+      Sarah Bailey
+    </h1>
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-overview.html">Overview</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page">All cases (14)</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-parole">Parole cases (8)</a>
+      </li>
+
+        </ul>
+          </nav>
+
+          <h2 class="govuk-heading-l">
+            All cases
+          </h2>
+          
+        <!--Filter horizontal start-->
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h3 class="govuk-heading-m" style="margin-bottom: -5px;">
+       Choose which cases you want to see
+      </h3>
+    </legend>
+
+    <div class="govuk-radios govuk-radios--inline govuk-radios govuk-radios--small">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          <a href="./staff-pom-caseload.html" style="color:black; text-decoration:none">All cases (14)</a>
+        </label>
+      </div>
+      
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          <a href="./staff-pom-caseload-allocations.html" style="color:black; text-decoration:none">Allocated in last 7 days (2)</a>
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" checked="true">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          <a href="#" style="color:black; text-decoration:none">Releases in next 4 weeks (3)</a>
+        </label>
+      </div>
+    
+  
+    </div>
+
+  </fieldset>
+</div>
+
+
+
+
+
+<!--Filter horizontal end-->
+
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list" style="padding-top: 15px; margin-bottom: -15px;">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a></li>-->
+  
+      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"><!--3--></a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+    </ul>
+    <p class="moj-pagination__results" style="padding-top: 15px; margin-bottom: -15px;">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+  </nav>
+  
+
+
+  <table class="govuk-table govuk-!-margin-top-6" data-module="moj-sortable-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" aria-sort="none">Case</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">POM role</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Earliest release date</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Allocation date</th>
+    </thead>
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Nguyễn" href="./prisoner-profile-release.html">Nguyễn, Bảo</a><br> <span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
+        <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+        <td class="govuk-table__cell" data-sort-value="B-3-011">B-3-011</td>
+        <td class="govuk-table__cell" data-sort-value="2021.07.01">PED:</br>01 Jul 2021</td>
+        <td class="govuk-table__cell" data-sort-value="B"><strong>B</strong></td>
+        <td class="govuk-table__cell" data-sort-value="2017.06.06">06 Jun 2017</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Musial" href="./prisoner-profile-release.html">Musial, Kwasi</a><br> <span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
+        <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+        <td class="govuk-table__cell" data-sort-value="C-5-078">C-5-078</td>
+        <td class="govuk-table__cell" data-sort-value="2021.09.17">ARD: </br>17 Sept 2021</td>
+        <td class="govuk-table__cell" data-sort-value="C"><strong>C</strong></td>
+        <td class="govuk-table__cell" data-sort-value="2018.12.08">08 Dec 2018</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Parker" href="./prisoner-profile-release.html">Parker, Hadyn</a><br> <span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
+        <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+        <td class="govuk-table__cell" data-sort-value="F-8-025">F-8-025</td>
+        <td class="govuk-table__cell" data-sort-value="2021.09.24">ARD: </br>24 Sept 2021</td>
+        <td class="govuk-table__cell" data-sort-value="C"><strong>C</strong></td>
+        <td class="govuk-table__cell" data-sort-value="2019.02.22">22 Feb 2019</td>
+      </tr>
+
+      
+    </tbody>
+  </table>
+
+
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a></li>-->
+  
+      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"><!--3--></a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+    </ul>
+    <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+  </nav>
+
+
+
+
+
+
+{% endblock %}

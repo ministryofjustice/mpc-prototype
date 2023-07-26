@@ -1,0 +1,53 @@
+{% extends "layout-search-pom.html" %}
+
+{% block pageTitle %}
+Check if new target hearing date needed – Digital Prison Services
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="#" class="govuk-back-link govuk-!-margin-bottom-6">Back</a>
+
+
+  <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+           
+            <form action="/parole/pom/manual-entry/prisoner-profile" method="post">
+            
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-4">
+                    Check if you need to enter a new target hearing date for James
+                  </h1>
+                </legend>
+
+
+                <ul class="govuk-hint govuk-!-margin-bottom-6">
+                  <li>Only update this information if James’ parole application is unsuccessful</li>
+                  <li>If the Parole Board have not made a decision yet, try again once they have</li>
+                  <li>The new date can be found on an 'outcome of Parole Board decision' letter or in PPUD</li>
+                </ul>
+
+
+
+          </form>
+
+          <p><a class="govuk-link govuk-link--no-visited-state" href="/caseload/overview">Go to your caseload</a></p>
+           
+          </div>
+
+         
+        </div>
+
+        
+
+      </div>
+
+
+
+
+{% endblock %}

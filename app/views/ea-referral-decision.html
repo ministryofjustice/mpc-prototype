@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="#" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+
+
+          <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Do you want to assess the case and send a referral to the community probation team?
+      </h1>
+      <!-- <h1 class="govuk-fieldset__heading">
+        Should this case be referred to the community probation team?
+      </h1> -->
+    </legend>
+    <div id="sign-in-hint" class="govuk-hint">
+
+    </div>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in">
+          Yes, I want to send an assessment to the community probation team
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+            You’ll need to check the most recent early allocation assessment form and submit the assessment in your name. 
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+          No, I do not want to take any further action
+        </label>
+        <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+          The previous assessments are no longer valid.
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+
+            <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+              Continue
+            </button>
+
+            <!-- <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              No - return to prisoner profile
+            </button> -->
+
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+
+            <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+            <aside class="app-related-items" role="complementary">
+              <h2 class="govuk-heading-m" id="subsection-title">
+                Guidance
+              </h2>
+              <nav role="navigation" aria-labelledby="subsection-title">
+                <ul class="govuk-list govuk-!-font-size-16">
+                  <li>
+                    <a class="govuk-link" href="#">
+                      View EQuiP guidance
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+
+
+
+
+{% endblock %}

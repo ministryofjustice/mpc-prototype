@@ -1,0 +1,176 @@
+{% extends "layout-pom-blank-nav.html" %}
+
+
+{% block pageTitle %}
+Handover cases
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+<a href="/handover/prepare-for-handover-list" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-4">
+      Record handover progress
+    </h1>
+
+    <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Handover not started</h2>
+    <p class="govuk-body">You have completed 1 of 3 tasks.</p>
+
+    <div class="govuk-inset-text">
+      A COM will support this case from 24 Sep 2021.
+    </div>
+
+
+    <form action="task-list-2-of-5" method="post" novalidate>
+
+    <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3 </span>
+           Tasks for Jack's case
+          </h2>
+          
+          
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+             
+              <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                    Review the last OASys
+                  </label>
+      
+        
+                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="oaysys-review">Not started</strong>
+
+                  <div><a href="#" class="govuk-link--no-visited-state" aria-describedby="view-guidance" style="margin-left: 15px;">
+                    View guidance
+                  </a></div>
+               
+                </div>
+
+            </li>
+
+
+           
+
+
+
+            <li class="app-task-list__item">
+
+              <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                    Share case information with the COM
+                  </label>
+        
+                  
+                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="check-pre-release-needs">Not started</strong>
+
+                  <div><a href="#" class="govuk-link--no-visited-state" aria-describedby="view-guidance" style="margin-left: 15px;">
+                    View guidance
+                  </a></div>
+               
+                </div>  
+            
+            </li>
+
+
+
+            <li class="app-task-list__item">
+          
+
+              <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                    Attend handover meeting
+                  </label>
+        
+    
+        
+                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="explain-handover">Not started</strong>
+
+                  <div><a href="#" class="govuk-link--no-visited-state" aria-describedby="view-guidance" style="margin-left: 15px;">
+                    View guidance
+                  </a></div>
+                  
+               
+                </div>  
+
+            </li>
+
+
+
+          </ul>
+        </li>
+      </ol>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button" href="/handover/task-list-2-of-5">
+          Save tasks
+        </button>
+      
+        <a class="govuk-link govuk-link govuk-link--no-visited-state" href="/handover/prepare-for-handover-list">Cancel</a>
+      </div>
+  
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <aside class="app-related-items" role="complementary">
+      <h3 class="govuk-heading-m">
+              Guidance
+            </h3>
+            <ul class="govuk-list">
+              <li>
+                <a class="govuk-link govuk-link--no-visited-state" href="#">View OMiC handover on EQuiP</a>
+              </li>
+              <li>
+                <!-- <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    What does a good handover look like?
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  Your role is to make the resident feel involved throughout the handover process. You should explain how the handover and pre-release process will work, and regularly update the resident on what decisions are being made and why.<br>
+
+
+                  <br>The aim of handover is to help the resident build a strong relationship with their COM. A strong relationship increases the likelihood of successful rehabilitation for Jack.<br>
+
+                  <br>You can help by providing the COM with the information they need in order to make good decisions.
+
+                </div>
+              </details> -->
+              </li>
+              <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            <h2 class="govuk-heading-m" id="subsection-title">
+              Prisoner details
+            </h2>
+            <ul class="govuk-list govuk-!-font-size-16">
+              <li>
+                <p class="govuk-body">Name: Jack Robinson </p>
+                <p class="govuk-body">Date of birth: 15 Jan 2000 </p>
+                <p class="govuk-body">NOMIS number: G2911GD</p>
+            </ul>
+    </div>
+  </div>
+
+
+
+
+
+{% endblock %}
+
+

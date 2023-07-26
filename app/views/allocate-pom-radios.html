@@ -1,0 +1,389 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="/add-allocation-note">
+<div class="govuk-width-container">
+
+<a href="review-case" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+<h1 class="govuk-heading-l">
+  Allocate a Prison Offender Manager
+</h1>
+
+<div class="govuk-!-margin-top-6">
+
+
+  <div class="recommendation">
+
+  <div class="govuk-width-container">
+
+    <h2 class="govuk-heading-m recommendation__title">Recommendation: Prison officer POM to work with Stanford, Andrew</h2>
+
+    <p>This recommendation takes the prisoner's tier and
+    time left to serve into account.</p>
+
+  </div>
+
+</div>
+
+<h3 class="govuk-heading-s">Active prison officer POMs</h3>
+
+<table class="govuk-table responsive">
+  <thead class="govuk-table__head">
+
+  <tr class="govuk-table__row">
+    <th class="govuk-table__header" scope="col">POM name</th>
+    <th class="govuk-table__header" scope="col">Working pattern</th>
+    <th class="govuk-table__header" scope="col">Previous<br>allocation</th>
+    <th class="govuk-table__header" scope="col">Tier A<br>cases</th>
+    <th class="govuk-table__header" scope="col">Tier B<br>cases</th>
+    <th class="govuk-table__header" scope="col">Tier C<br>cases</th>
+    <th class="govuk-table__header" scope="col">Tier D<br>cases</th>
+    <th class="govuk-table__header" scope="col">No Tier<br>cases</th>
+    <th class="govuk-table__header" scope="col">Total</th>
+  </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row recommended_pom_row_0">
+      <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="eve">
+        <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+          Bayram, Eve
+          <!-- <br><p>
+            Full time
+          </p> -->
+        </label>
+      </div></td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">5</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">23</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">14</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">43</td>
+    </tr>
+
+    <tr class="govuk-table__row recommended_pom_row_1">
+      <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="amy">
+        <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+          Cufflin, Amy
+        </label>
+      </div></td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">10</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">13</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">10</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">33</td>
+    </tr>
+
+    <tr class="govuk-table__row recommended_pom_row_2">
+      <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="stephen">
+        <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+          Dicks, Stephen
+        </label>
+      </div></td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">14</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">25</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">4</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">43</td>
+    </tr>
+
+    <tr class="govuk-table__row recommended_pom_row_3">
+      <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="binit">
+        <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+          Hindocha, Binit
+        </label>
+      </div></td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">2</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">12</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">22</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">6</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">42</td>
+    </tr>
+
+    <tr class="govuk-table__row recommended_pom_row_4">
+      <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="katy">
+        <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+          Mccann, Katherine
+        </label>
+      </div></td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">1</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">11</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">9</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">21</td>
+    </tr>
+
+    <tr class="govuk-table__row recommended_pom_row_5">
+      <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="andrien">
+        <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+          Ricketts, Andrien
+        </label>
+      </div></td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">11</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">28</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">4</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">42</td>
+    </tr>
+
+    <tr class="govuk-table__row recommended_pom_row_6">
+      <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="ollie">
+        <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+          Treend, Ollie
+        </label>
+      </div></td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">1</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">7</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">26</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">8</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">42</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="govuk-grid-column-full govuk-!-margin-top-4"></div>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Show active probation officer POMs
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <h2 class="govuk-heading-m">
+      </h2>
+
+      <table class="govuk-table responsive">
+        <thead class="govuk-table__head">
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">POM name</th>
+          <th class="govuk-table__header" scope="col">Previous<br>allocation</th>
+          <th class="govuk-table__header" scope="col">Tier A<br>cases</th>
+          <th class="govuk-table__header" scope="col">Tier B<br>cases</th>
+          <th class="govuk-table__header" scope="col">Tier C<br>cases</th>
+          <th class="govuk-table__header" scope="col">Tier D<br>cases</th>
+          <th class="govuk-table__header" scope="col">No Tier<br>cases</th>
+          <th class="govuk-table__header" scope="col">Total</th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="annie">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Brady, Annie <br><p>
+                  Part time
+                </p>
+              </label>
+            </div></td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+            </td>
+            <td aria-label="Tier A cases" class="govuk-table__cell ">0</td>
+            <td aria-label="Tier B cases" class="govuk-table__cell ">11</td>
+            <td aria-label="Tier C cases" class="govuk-table__cell ">28</td>
+            <td aria-label="Tier D cases" class="govuk-table__cell ">4</td>
+            <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+            <td aria-label="Total" class="govuk-table__cell ">42</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_1">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="geoff">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Butler, Geoff<br><p>
+                  Part time
+                </p>
+              </label>
+            </div></td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+            </td>
+            <td aria-label="Tier A cases" class="govuk-table__cell ">0</td>
+            <td aria-label="Tier B cases" class="govuk-table__cell ">14</td>
+            <td aria-label="Tier C cases" class="govuk-table__cell ">25</td>
+            <td aria-label="Tier D cases" class="govuk-table__cell ">4</td>
+            <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+            <td aria-label="Total" class="govuk-table__cell ">43</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_2">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="matthew">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Hanson, Matthew<br><p>
+                  Full time
+                </p>
+              </label>
+            </div></td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+            </td>
+            <td aria-label="Tier A cases" class="govuk-table__cell ">0</td>
+            <td aria-label="Tier B cases" class="govuk-table__cell ">5</td>
+            <td aria-label="Tier C cases" class="govuk-table__cell ">23</td>
+            <td aria-label="Tier D cases" class="govuk-table__cell ">14</td>
+            <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+            <td aria-label="Total" class="govuk-table__cell ">43</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_3">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="sophie">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Hill, Sophie<br><p>
+                  Full time
+                </p>
+              </label>
+            </div></td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+            </td>
+            <td aria-label="Tier A cases" class="govuk-table__cell ">0</td>
+            <td aria-label="Tier B cases" class="govuk-table__cell ">10</td>
+            <td aria-label="Tier C cases" class="govuk-table__cell ">23</td>
+            <td aria-label="Tier D cases" class="govuk-table__cell ">10</td>
+            <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+            <td aria-label="Total" class="govuk-table__cell ">43</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_4">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="helen">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                James, Helen<br><p>
+                  Part time
+                </p>
+              </label>
+            </div></td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+            </td>
+            <td aria-label="Tier A cases" class="govuk-table__cell ">2</td>
+            <td aria-label="Tier B cases" class="govuk-table__cell ">12</td>
+            <td aria-label="Tier C cases" class="govuk-table__cell ">22</td>
+            <td aria-label="Tier D cases" class="govuk-table__cell ">6</td>
+            <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+            <td aria-label="Total" class="govuk-table__cell ">42</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_5">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="jim">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Roantree, Jim<br><p>
+                  Full time
+                </p>
+              </label>
+            </div></td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+            </td>
+            <td aria-label="Tier A cases" class="govuk-table__cell ">1</td>
+            <td aria-label="Tier B cases" class="govuk-table__cell ">7</td>
+            <td aria-label="Tier C cases" class="govuk-table__cell ">26</td>
+            <td aria-label="Tier D cases" class="govuk-table__cell ">8</td>
+            <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+            <td aria-label="Total" class="govuk-table__cell ">42</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_6">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="carlos">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Santos, Carlos<br><p>
+                  Full time
+                </p>
+              </label>
+            </div></td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">N/A
+            </td>
+            <td aria-label="Tier A cases" class="govuk-table__cell ">1</td>
+            <td aria-label="Tier B cases" class="govuk-table__cell ">6</td>
+            <td aria-label="Tier C cases" class="govuk-table__cell ">26</td>
+            <td aria-label="Tier D cases" class="govuk-table__cell ">9</td>
+            <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+            <td aria-label="Total" class="govuk-table__cell ">42</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+  </div>
+</details>
+
+<p>
+    There are 2 POMs unavailable for new allocations.
+      <a href=#>See all POMs</a>
+  </p>
+
+  <button class="govuk-button" data-module="govuk-button" formaction="/add-allocation-note">
+    Allocate
+  </button>
+
+
+</div>
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+
+
+{% endblock %}

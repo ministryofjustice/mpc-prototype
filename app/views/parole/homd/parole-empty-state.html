@@ -1,0 +1,102 @@
+{% extends "layout-parole-homd.html" %}
+
+
+{% block pageTitle %}
+Parole cases
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+
+
+
+  <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+    Parole cases
+  </h1>
+
+  <p class="govuk-body">All cases in this prison with a target haering date, PED or TED in the next 10 months.</p>
+
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list" style="padding-top: 15px; margin-bottom: -15px;">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a>--></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"><!--3--></a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+    </ul>
+    <p class="moj-pagination__results" style="padding-top: 15px; margin-bottom: -15px;">Showing <b>1</b> to <b>8</b> of <b>8</b> results</p>
+  </nav>
+  
+
+
+
+  <table class="govuk-table govuk-!-margin-top-6" data-module="moj-sortable-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" aria-sort="none">Case</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">POM</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">POM role</th>
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Next parole date</th>
+       
+    </thead>
+  </table>
+
+  
+  <p class="govuk-body">No cases.</p>
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a>--></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=3">3</a>--></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+    </ul>
+    <p class="moj-pagination__results">Showing <b>1</b> to <b>8</b> of <b>8</b> results</p>
+  </nav>
+
+
+
+
+
+</div>
+
+  </div>
+
+
+
+
+{% endblock %}

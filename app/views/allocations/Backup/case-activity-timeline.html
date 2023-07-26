@@ -1,0 +1,473 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Case activity
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/service-user-banner-v2.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+<a href="/team-management/allocations-review-case-info" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<h1 class="govuk-heading-l">
+  Case activity
+</h1>
+
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#key-events">
+        Key events
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#all-events">
+        List of all events
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="key-events">
+    <!-- <h2 class="govuk-heading-m">Key events</h2> -->
+    <div class="moj-timeline">
+
+    <div class="moj-timeline__item">
+
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Arrived at HMP Birmingham</h2>
+
+
+
+    </div>
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">04 Mar 2021 at 3:01pm</time>
+    </p>
+
+    </div>
+
+    <div class="moj-timeline__item">
+      <div class="moj-timeline__header">
+        <h2 class="moj-timeline__title">Case unallocated (transfer)</h2>
+        <p class="moj-timeline__byline">automatic system action</p>
+      </div>
+
+      <p class="moj-timeline__date">
+        <time datetime="2019-06-06T09:12:00.000Z">04 March 2021 at 10:12am</time>
+      </p>
+      <details class="govuk-details" data-module="govuk-details" style="margin-top: 15px; margin-bottom: 0px;">
+        <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Notes
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="margin-bottom: 0px;">Left HMP Nottingham. Resident from 18 Sep 2020 to 04 Mar 2021.</p>
+        <br>
+      <p style="margin-bottom: 0px;">Previous POM details:<br><br>Dylan Paterson<br> <a class="govuk-link govuk-link--no-visited-state" href="#">dylan.paterson@justice.gov.uk</a></p>
+      </div>
+    </details>
+    </div>
+
+    <!-- <div class="moj-timeline__item">
+
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Left HMP Nottingham</h2>
+
+    </div>
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">04 March 2021 at 10:12am</time>
+    </p>
+
+    <details class="govuk-details" data-module="govuk-details" style="margin-top: 15px; margin-bottom: 0px;">
+      <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Notes
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      Resident from 18 Sep 2020 to 04 Mar 2021
+    </div>
+    </details>
+
+    </div> -->
+
+    <div class="moj-timeline__item">
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Tier changed from C to B</h2>
+
+      <p class="moj-timeline__byline">by Laura Adams</p>
+
+    </div>
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">09 Nov 2020 at 9:12am</time>
+    </p>
+    </div>
+
+    <div class="moj-timeline__item">
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">OASys assessment updated</h2>
+
+      <p class="moj-timeline__byline">by Dylan Paterson</p>
+
+    </div>
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">07 Nov 2020 at 5:00pm</time>
+    </p>
+
+    <p style="margin-bottom: 0px; margin-top: 10px;"><a class="govuk-link govuk-link--no-visited-state" href="#">View report on OASys</a></p>
+
+    </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="all-events">
+    <h2 class="govuk-heading-m">HMP Birmingham</h2>
+    <div class="moj-timeline">
+
+    <div class="moj-timeline__item">
+
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Arrived at HMP Birmingham</h2>
+    </div>
+
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">04 Mar 2021 at 3:01pm</time>
+    </p>
+
+    </div>
+
+    </div>
+
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-8">HMP Nottingham</h2>
+    <div class="moj-timeline">
+
+      <div class="moj-timeline__item">
+        <div class="moj-timeline__header">
+          <h2 class="moj-timeline__title">Case unallocated (transfer)</h2>
+          <p class="moj-timeline__byline">automatic system action</p>
+        </div>
+
+        <p class="moj-timeline__date">
+          <time datetime="2019-06-06T09:12:00.000Z">04 March 2021 at 10:12am</time>
+        </p>
+        <div class="note-panel" style="margin-top: 15px;">
+          <p style="margin-bottom: 0px;">Left HMP Nottingham. Resident from 18 Sep 2020 to 04 Mar 2021.</p>
+          <br>
+        <p style="margin-bottom: 0px;">Previous POM details:<br><br>Dylan Paterson<br> <a class="govuk-link govuk-link--no-visited-state" href="#">dylan.paterson@justice.gov.uk</a></p>
+        </div>
+      </div>
+
+    <!-- <div class="moj-timeline__item">
+
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Left HMP Nottingham</h2>
+    </div>
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">04 March 2021 at 10:12am</time>
+    </p>
+
+    <div class="note-panel" style="margin-top: 15px;">
+    <p style="margin-bottom: 0px;">Resident from 18 Sep 2020 to 04 Mar 2021</p>
+    </div>
+
+    </div> -->
+    <div class="moj-timeline__item">
+
+
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Tier changed from C to B</h2>
+      <p class="moj-timeline__byline">by Laura Adams</p>
+
+    </div>
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">09 Nov 2020 at 9:12am</time>
+    </p>
+
+
+
+    </div>
+
+    <div class="moj-timeline__item">
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Victim Liaison Officer contact added</h2>
+
+      <p class="moj-timeline__byline">by Dylan Paterson</p>
+
+    </div>
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">08 Nov 2020 at 8:36am</time>
+    </p>
+
+    </div>
+
+    <div class="moj-timeline__item">
+      <div class="moj-timeline__header">
+        <h2 class="moj-timeline__title">OASys assessment updated</h2>
+        <p class="moj-timeline__byline">by Dylan Paterson</p>
+      </div>
+
+      <p class="moj-timeline__date">
+        <time datetime="2019-06-06T09:12:00.000Z">07 Nov 2020 at 5:00pm</time>
+      </p>
+      <div class="note-panel" style="margin-top: 15px;">
+      <p style="margin-bottom: 0px;"><a class="govuk-link govuk-link--no-visited-state" href="#">View report on OASys</a></p>
+      </div>
+    </div>
+
+    <div class="moj-timeline__item">
+      <div class="moj-timeline__header">
+        <h2 class="moj-timeline__title">Probation Officer POM allocated</h2>
+        <p class="moj-timeline__byline">by Laura Adams</p>
+      </div>
+
+      <p class="moj-timeline__date">
+        <time datetime="2019-06-06T09:12:00.000Z">20 Sep 2020 at 9:33am</time>
+      </p>
+      <div class="note-panel" style="margin-top: 15px;">
+      <p style="margin-bottom: 0px;">Case allocated to Dylan Paterson <a class="govuk-link govuk-link--no-visited-state" href="#">dylan.paterson@justice.gov.uk</a></p>
+      </div>
+    </div>
+
+    <div class="moj-timeline__item">
+
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Arrived at HMP Nottingham</h2>
+    </div>
+
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">18 Sep 2020 at 3:01pm</time>
+    </p>
+
+    </div>
+
+  </div>
+
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">HMP Birmingham</h2>
+  <div class="moj-timeline">
+
+    <div class="moj-timeline__item">
+      <div class="moj-timeline__header">
+        <h2 class="moj-timeline__title">Case unallocated (transfer)</h2>
+        <p class="moj-timeline__byline">automatic system action</p>
+      </div>
+
+      <p class="moj-timeline__date">
+        <time datetime="2019-06-06T09:12:00.000Z">18 Sep 2020 at 10:12am</time>
+      </p>
+      <div class="note-panel" style="margin-top: 15px;">
+        <p style="margin-bottom: 0px;">Left HMP Birmingham. Resident from 22 Nov 2017 to 18 Sep 2020.</p>
+        <br>
+      <p style="margin-bottom: 0px;">Previous POM details:<br><br>Stephen Dicks<br> <a class="govuk-link govuk-link--no-visited-state" href="#">stephen.dicks@justice.gov.uk</a></p>
+      </div>
+    </div>
+
+  <!-- <div class="moj-timeline__item">
+
+  <div class="moj-timeline__header">
+    <h2 class="moj-timeline__title">Left HMP Leicester</h2>
+  </div>
+
+  <p class="moj-timeline__date">
+    <time datetime="2019-06-06T09:12:00.000Z">04 March 2021 at 10:12am</time>
+  </p>
+
+  <div class="note-panel" style="margin-top: 15px;">
+  <p style="margin-bottom: 0px;">Resident from 04 Mar 2021 to 01 May 2018</p>
+  </div>
+
+  </div> -->
+  <div class="moj-timeline__item">
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Reallocated to Probation Officer POM</h2>
+      <p class="moj-timeline__byline">by Elizabeth Taylor</p>
+    </div>
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">06 Feb 2020 at 2:44pm</time>
+    </p>
+    <div class="note-panel" style="margin-top: 15px;">
+    <p style="margin-bottom: 0px;">Case allocated to Stephen Dicks <a class="govuk-link govuk-link--no-visited-state" href="#">stephen.dicks@justice.gov.uk</a></p>
+    </div>
+  </div>
+
+  <div class="moj-timeline__item">
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Prison Officer POM allocated</h2>
+      <p class="moj-timeline__byline">by Elizabeth Taylor</p>
+    </div>
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">06 Oct 2019 at 2:44pm</time>
+    </p>
+    <div class="note-panel" style="margin-top: 15px;">
+    <p style="margin-bottom: 0px;">Case allocated to Sophie Hill <a class="govuk-link govuk-link--no-visited-state" href="#">sophie.hill@justice.gov.uk</a></p>
+    <br>
+
+    <p style="margin-bottom: 0px;">Prison Officer POM allocated instead of recommended Probation Officer POM. <br><br>Reason(s)<br>- No available Probation Officer POMs
+
+</p>
+    </div>
+  </div>
+
+    <div class="moj-timeline__item">
+
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Arrived at HMP Birmingham</h2>
+    </div>
+
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">22 Nov 2017 at 3:01pm</time>
+    </p>
+
+    </div>
+
+
+  </div>
+
+  <h2 class="govuk-heading-m govuk-!-margin-top-8">HMP Leicester</h2>
+  <div class="moj-timeline">
+
+    <div class="moj-timeline__item">
+      <div class="moj-timeline__header">
+        <h2 class="moj-timeline__title">Left HMP Leicester</h2>
+        <p class="moj-timeline__byline">automatic system action</p>
+      </div>
+
+      <p class="moj-timeline__date">
+        <time datetime="2019-06-06T09:12:00.000Z">22 Nov 2017 at 10:12am</time>
+      </p>
+      <div class="note-panel" style="margin-top: 15px;">
+        <p style="margin-bottom: 0px;">Resident from 05 May 2015 to 22 Nov 2017.</p>
+      </div>
+    </div>
+
+  <div class="moj-timeline__item">
+
+  <div class="moj-timeline__header">
+    <h2 class="moj-timeline__title">Sentence start date</h2>
+  </div>
+
+
+  <p class="moj-timeline__date">
+    <time datetime="2019-06-06T09:12:00.000Z">29 May 2015</time>
+  </p>
+
+  </div>
+
+    <div class="moj-timeline__item">
+
+    <div class="moj-timeline__header">
+      <h2 class="moj-timeline__title">Arrived at HMP Leicester</h2>
+    </div>
+
+
+    <p class="moj-timeline__date">
+      <time datetime="2019-06-06T09:12:00.000Z">05 May 2015 at 5:07pm</time>
+    </p>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+</div>
+
+
+</div>
+
+<div class="govuk-grid-column-one-third">
+  <aside class="app-related-items" role="complementary">
+    <h3 class="govuk-heading-m">
+            Jack's activity summary
+          </h3>
+      <p class="govuk-body">Activity during current sentence up to and including 11 March 2021</p>
+
+      <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3" style="max-width:none;">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p class="govuk-heading-s govuk-!-margin-bottom-0">
+                  Prison movements
+              </p>
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              4
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p class="govuk-heading-s govuk-!-margin-bottom-0">
+                  POM allocations
+              </p>
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              3
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <p class="govuk-heading-s govuk-!-margin-bottom-0">
+                  Tier changes
+              </p>
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              1
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href=#>View case notes on DPS (new NOMIS)</a>
+        </li>
+      </ul>
+    </aside>
+
+
+
+</div>
+</div>
+
+
+
+
+{% endblock %}

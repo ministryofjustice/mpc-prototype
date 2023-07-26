@@ -1,0 +1,75 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Compare POMs – Digital Prison Services
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+
+
+<div class="govuk-!-margin-bottom-3"></div>
+
+<a href="./step2b-select-pom-simon-riley" class="govuk-back-link govuk-body">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+    
+
+        <div class="moj-page-header-actions">
+  
+          <div class="moj-page-header-actions__title">
+            <h1 class="govuk-heading-l">Confirm allocation for Simon Riley</h1></br>
+            <span class="govuk-caption-l" style="margin-bottom: 10px;">Currently allocated to Jessica King</span>
+            <span class="govuk-caption-l">Prison number: AE1234BX</span>
+            <!--<span class="govuk-caption-l">CRN: A165856</span>-->
+            <span class="govuk-caption-l">Date of birth: 04 Jun 1986 (35)</span>
+          </div>
+        </div>
+
+       
+        
+        <p>Confirm you want Simon Riley to stay allocated to Jessica King.</p>
+
+
+        <form method="post" action="/allocations/reallocate/step4b-success-msg-simon-riley">
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+
+        
+          <a class="govuk-link govuk-link--no-visited-state" href="./step2b-select-pom-simon-riley.html">Choose a different POM</a>
+        </div>
+
+      
+
+      </div>
+    </div>
+  
+  </div>
+</div>
+  
+      
+
+
+{% endblock %}

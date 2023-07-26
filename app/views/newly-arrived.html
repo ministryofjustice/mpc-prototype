@@ -1,0 +1,228 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+<ul class="moj-sub-navigation__list">
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" href="missing-info-unallocated">Fix missing information</a>
+  </li>
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" href="allocations">Make allocations</a>
+  </li>
+
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" href="#">See allocations</a>
+  </li>
+
+<li class="moj-sub-navigation__item">
+  <a class="moj-sub-navigation__link" aria-current="page" href="newly-arrived">Newly arrived</a>
+</li>
+</ul>
+
+</nav>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width">
+
+
+      <h1 class="govuk-heading-l">
+        Newly arrived (10)
+      </h1>
+      <p>Case information for these prisoners will be matched with nDelius records in the next 24-48 hours. If case information is matched successfully you will be able to allocate a POM. If not, the case will move to 'Add missing information’ for you to update first.</p>
+      <div class="govuk-!-padding-bottom-4"></div>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>10</b> results</p>
+      </nav>
+
+
+      <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Prisoner</th>
+
+        <th scope="col" class="govuk-table__header govuk-table__header" aria-sort="none">Arrival date</th>
+
+        <th scope="col" class="govuk-table__header govuk-table__header" aria-sort="none">Earliest release date</th>
+
+        <th scope="col" class="govuk-table__header govuk-table__header" aria-sort="none">Matching with nDelius scheduled for</th>
+
+      </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">James, Duncan <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="20191113">13/11/2019</td>
+
+        <td class="govuk-table__cell" data-sort-value="20220101">01/01/2022</td>
+
+        <td class="govuk-table__cell" data-sort-value="20191114">Today, 9:15pm</td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Doe, John <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="20191113">13/11/2019</td>
+
+        <td class="govuk-table__cell" data-sort-value="20210601">01/06/2021</td>
+
+        <td class="govuk-table__cell" data-sort-value="20191114">Today, 9:15pm</td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Smith, Harry <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="20191113">13/11/2019</td>
+
+        <td class="govuk-table__cell" data-sort-value="20220530">30/05/2022</td>
+
+        <td class="govuk-table__cell" data-sort-value="20191114">Today, 9:15pm</td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Yvygsee, Jo <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="20191113">13/11/2019</td>
+
+        <td class="govuk-table__cell" data-sort-value="20191201">01/12/2019</td>
+
+        <td class="govuk-table__cell" data-sort-value="20191114">Today, 9:15pm</td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Eunela, Pete <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="20191114">15/11/2019</td>
+
+        <td class="govuk-table__cell" data-sort-value="20190201">01/02/2020</td>
+
+        <td class="govuk-table__cell" data-sort-value="20191115">Tomorrow, 9:15pm</td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Ibaravid, Luke <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="20191114">15/11/2019</td>
+
+        <td class="govuk-table__cell" data-sort-value="20191215">15/12/2019</td>
+
+        <td class="govuk-table__cell" data-sort-value="20191115">Tomorrow, 9:15pm</td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Trackl, Paul <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="20191114">15/11/2019</td>
+
+        <td class="govuk-table__cell" data-sort-value="20200107">07/01/2020</td>
+
+        <td class="govuk-table__cell" data-sort-value="20191115">Tomorrow, 9:15pm</td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Butler, Troy <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="20191114">15/11/2019</td>
+
+        <td class="govuk-table__cell" data-sort-value="20191128">28/11/2019</td>
+
+        <td class="govuk-table__cell" data-sort-value="20191114">Today, 9:15pm</td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Harley, Roger <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell">15/11/2019</td>
+
+        <td class="govuk-table__cell">01/11/2031</td>
+
+        <td class="govuk-table__cell">Today, 9:15pm</td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">Jones, Kyle <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell">15/11/2019</td>
+
+        <td class="govuk-table__cell">03/12/2019</td>
+
+        <td class="govuk-table__cell">Today, 9:15pm</td>
+
+      </tr>
+
+      </tbody>
+      </table>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">1</a></li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>10</b> results</p>
+      </nav>
+
+          </div>
+      </div>
+
+{% endblock %}

@@ -1,0 +1,547 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Review case details
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/service-user-banner-v2.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+
+
+<div class="govuk-!-margin-bottom-3"></div>
+
+<a href="/team-management/make-allocations-male" class="govuk-back-link govuk-body">Back to make allocations list</a>
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="/team-management/allocations-select-pom-mix">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Step 1 of 3</span>
+    <h1 class="govuk-heading-l">Review case details
+  </h1>
+
+  <!-- <strong class="govuk-tag govuk-tag--red" style="margin-right: 5px;">
+  High complexity
+</strong> -->
+  <strong class="govuk-tag govuk-tag--blue govuk-!-margin-bottom-7">
+  Determinate
+  </strong>
+</div>
+</div>
+
+
+
+  <!-- <div class="govuk-grid-column-one-third">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="#">View case on DPS (new NOMIS)</a>
+        </li>
+      </ul>
+    </div> -->
+
+
+      <!-- <div class="govuk-grid-row"> -->
+        <!-- <div class="govuk-grid-column-one-half app-!-display-flex--1">
+          <div class="app-card app-card--muted">
+            <p class="govuk-heading-m govuk-!-margin-0">POM role: responsible</p>
+            <br>
+            <p class="govuk-body">A co-working POM has not been allocated.</p>
+          </div>
+
+      </div> -->
+
+
+      <!-- <div class="govuk-grid-column-one-half app-!-display-flex--1">
+        <div class="app-card app-card--muted">
+          <p class="govuk-heading-m govuk-!-margin-0">COM handover: not started</p>
+        </br>
+        </div>
+      </div> -->
+
+  <!-- </div> -->
+
+
+
+  <!-- <h3 class="govuk-heading-m govuk-!-margin-top-3">Personal details</h3>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Name</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">Jack Davey</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Date of birth</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">01 Oct 1985 (36 years)</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></a></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">NOMIS ID</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">G4198UW</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">CRN number</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link" href="#"></a></td>
+  </tr>
+  </tbody>
+</table> -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <div class="ticket-card ticket-card--muted">
+    <p class="govuk-heading-m govuk-!-margin-0">POM role: responsible</p>
+  </br>
+    <p class="govuk-body">A co-working POM has not been allocated.</p>
+  </div>
+
+
+  <div class="ticket-card ticket-card--muted">
+    <p class="govuk-heading-m govuk-!-margin-0">COM handover: not started</p>
+    <br>
+
+  </div>
+
+
+
+
+  <!-- <article class="moj-ticket-panel moj-ticket-panel--inline" aria-label="Sub navigation 1">
+          <section class="moj-ticket-panel__content moj-ticket-panel__content--blue" aria-label="Section 1">
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-2">POM role: responsible</h2>
+                <p class="govuk-body">A co-working POM has not been allocated.</p></section>
+          <section class="moj-ticket-panel__content moj-ticket-panel__content--blue" aria-label="Section 2">
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-2">COM handover: not started</h2>
+              </section>
+</article> -->
+
+    <h3 class="govuk-heading-m govuk-!-margin-top-6">Sentence</h3>
+  <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+          Jack's sentence
+        </h3>
+  <div class="graph">
+        <div>
+            <span class="amount" style="width:40%">
+                <span>5 of 15 years</span>
+            </span>
+        </div>
+      </div>
+
+  <table class="govuk-table govuk-!-margin-top-6">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Length</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">15 years</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Start date	</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">29 May 2015</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">
+    </td></tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Conditional release date</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">21 Feb 2023</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Sentence/ licence end date</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">26 May 2030</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Recall</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">No</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Sentence type	</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">Determinate</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      View all sentence details
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <table class="govuk-table govuk-!-margin-top-6">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header"></th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-!-width-one-third">Automatic release date</td>
+        <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-!-width-one-third">Parole eligibility</td>
+        <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-!-width-one-third">Parole review date</td>
+        <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-!-width-one-third">Home detentional curfew eligibility</td>
+        <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-!-width-one-third">Tariff date</td>
+        <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-!-width-one-third">Post recall release date</td>
+        <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+
+
+<h3 class="govuk-heading-m govuk-!-margin-top-6">Offence</h3>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Main offence</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">Section 18 - wounding with intent</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+  </tbody>
+</table>
+
+<details class="govuk-details" data-module="govuk-details">
+<summary class="govuk-details__summary">
+  <span class="govuk-details__summary-text">
+    View other offences (3)
+  </span>
+</summary>
+<div class="govuk-details__text">
+  <p class="govuk-heading-s govuk-!-margin-bottom-0">Assaults occasioning actual bodily harm - 00806</p>
+          <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">CJA Community Order (12 Months)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Active</td>
+          </tr>
+        </tbody>
+      </table>
+  <p class="govuk-heading-s govuk-!-margin-bottom-0">Careless driving - 80400</p>
+          <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">ORA Community Order (12 Months)</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 17 May 2013</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-heading-s govuk-!-margin-bottom-0">Offences against Public Order (Summary) - 12500	</p>
+              <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">CJA Community Order (12 Months)</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 30 June 2010</td>
+              </tr>
+            </tbody>
+          </table>
+
+</div>
+</details>
+
+
+  <h3 class="govuk-heading-m govuk-!-margin-top-3">Risks and needs</h3>
+
+  <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Last OASys assessment date</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">07 Nov 2020</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="#">View case on OASys</a></td>
+    </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Tier</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">B</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="#">Change</a></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Category</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">Cat C</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">ROSHA</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">MAPPA offender</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">No</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+  </tbody>
+  </table>
+
+  <ul class="govuk-list">
+    <li>
+      <a class="govuk-link govuk-link--no-visited-state" href="#">View risk information on DPS (new NOMIS)</a>
+    </li>
+  </ul>
+
+
+
+
+
+
+
+  <h3 class="govuk-heading-m govuk-!-margin-top-6">Case management and handover</h3>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+
+
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">POM role</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">Responsible</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="#">Change</a></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Has POM role been manually overriden?</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">No - responsibility follows OMiC guidelines</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Co-working POM</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">Unallocated</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Provider country</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">England</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="#">Change</a></td>
+
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Provider</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">National Probation Service (NPS)</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="#">Change</a></td>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">COM provides case support (start handover)</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">From 06 Jul 2022</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link" href="#"></a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">COM takes responsibility of case</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">06 Oct 2022</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link" href="#"></a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">POM case support ends (transfer)</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">21 Feb 2023</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link" href="#"></a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Early allocation referral</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">None</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+  </tr>
+  </tbody>
+</table>
+
+</div>
+
+<div class="govuk-grid-column-one-third">
+
+  <aside class="app-related-items" role="complementary">
+    <h3 class="govuk-heading-m">
+            Key events
+          </h3>
+
+          <!-- <h3 class="govuk-heading-s">HMP Birmingham</h2> -->
+
+
+<div class="moj-timeline">
+
+<div class="moj-timeline__item">
+
+<div class="moj-timeline__header">
+  <h2 class="moj-timeline__title">Arrived at HMP Birmingham</h2>
+
+
+
+</div>
+
+<p class="moj-timeline__date">
+  <time datetime="2019-06-06T09:12:00.000Z">04 Mar 2021 at 3:01pm</time>
+</p>
+
+</div>
+
+<!-- </div>
+<h2 class="govuk-heading-s govuk-!-margin-top-4">HMP Nottingham</h2>
+<div class="moj-timeline"> -->
+<div class="moj-timeline__item">
+  <div class="moj-timeline__header">
+    <h2 class="moj-timeline__title">Case unallocated (transfer)</h2>
+    <p class="moj-timeline__byline">automatic system action</p>
+  </div>
+
+  <p class="moj-timeline__date">
+    <time datetime="2019-06-06T09:12:00.000Z">04 March 2021 at 10:12am</time>
+  </p>
+
+  <details class="govuk-details" data-module="govuk-details" style="margin-top: 15px; margin-bottom: 0px;">
+    <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Notes
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p style="margin-bottom: 0px;">Left HMP Nottingham. Resident from 18 Sep 2020 to 04 Mar 2021.</p>
+    <br>
+  <p style="margin-bottom: 0px;">Previous POM details:<br><br>Dylan Paterson<br> <a class="govuk-link govuk-link--no-visited-state" href="#">dylan.paterson@justice.gov.uk</a></p>
+  </div>
+</details>
+
+</div>
+
+<!-- <div class="moj-timeline__item">
+
+<div class="moj-timeline__header">
+  <h2 class="moj-timeline__title">Left HMP Nottingham</h2>
+
+</div>
+
+<p class="moj-timeline__date">
+  <time datetime="2019-06-06T09:12:00.000Z">04 March 2021 at 10:12am</time>
+</p>
+<details class="govuk-details" data-module="govuk-details" style="margin-top: 15px; margin-bottom: 0px;">
+  <summary class="govuk-details__summary">
+  <span class="govuk-details__summary-text">
+    Notes
+  </span>
+</summary>
+<div class="govuk-details__text">
+  Resident from 18 Sep 2020 to 04 Mar 2021
+</div>
+</details>
+
+</div> -->
+<div class="moj-timeline__item">
+
+
+<div class="moj-timeline__header">
+  <h2 class="moj-timeline__title">Tier changed from C to B</h2>
+
+  <p class="moj-timeline__byline">by Laura Adams</p>
+
+</div>
+
+<p class="moj-timeline__date">
+  <time datetime="2019-06-06T09:12:00.000Z">09 Nov 2020 at 9:12am</time>
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+<ul class="govuk-list">
+  <li>
+    <a class="govuk-link govuk-link--no-visited-state" href="/team-management/case-activity-timeline">View full case activity</a>
+  </li>
+</ul>
+<ul class="govuk-list">
+  <li>
+    <a class="govuk-link govuk-link--no-visited-state" href="/team-management/case-activity-timeline">View case notes on DPS (new NOMIS)</a>
+  </li>
+</ul>
+    </aside>
+</div>
+</div>
+
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-two-thirds">
+
+
+  <div class="govuk-!-margin-bottom-6"></div>
+
+<button class="govuk-button" data-module="govuk-button" formaction="/team-management/allocations-select-pom">
+  Continue
+</button>
+
+
+
+</div>
+</div>
+</form>
+
+
+{% endblock %}

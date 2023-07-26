@@ -1,0 +1,126 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-full-width">
+  <h2 class="govuk-heading-l">To do</h2>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <h4 class="govuk-heading-s">Prisoners waiting to be allocated</h4>
+        <div class="govuk-home-box2">
+          <h3 class="govuk-heading-m">20</h3>
+        </div>
+          <br>
+          <p>Prisoners who need to be allocated to a Prison Offender Manager.</p>
+          <a href="#" class="govuk-link">Make allocations</a>
+        </div>
+
+          <div class="govuk-grid-column-one-third">
+            <h4 class="govuk-heading-s">Case information needs fixing</h4>
+          <div class="govuk-home-box2">
+            <h3 class="govuk-heading-m">7</h3>
+          </div>
+            <br>
+            <p>Prisoners with missing case information. This needs to be fixed before they can be allocated.</p>
+            <a href="#" class="govuk-link">Fix information</a>
+          </div>
+
+
+
+            <div class="govuk-grid-column-one-third">
+              <h4 class="govuk-heading-s">Handover blocked</h4>
+            <div class="govuk-home-box2">
+              <h3 class="govuk-heading-m">10</h3>
+            </div>
+              <br>
+              <p>Information that needs to be updated on cases so that handover dates can be calculated.</p>
+              <a href="#" class="govuk-link">Fix information</a>
+            </div>
+  </div>
+  </div>
+
+<div class="govuk-!-padding-bottom-9"></div>
+
+  <h2 class="govuk-heading-l">For information</h2>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <h4 class="govuk-heading-s">Allocated prisoners</h4>
+        <div class="govuk-home-box3">
+          <h3 class="govuk-heading-m">120</h3>
+        </div>
+          <br>
+          <p>All prisoners who have been allocated to a Prison Offender Manager.</p>
+          <a href="#" class="govuk-link">View allocations</a>
+        </div>
+
+          <div class="govuk-grid-column-one-third">
+            <h4 class="govuk-heading-s">Newly arrived prisoners</h4>
+          <div class="govuk-home-box3">
+            <h3 class="govuk-heading-m">10</h3>
+          </div>
+            <br>
+            <p>Prisoners who have recently arrived at your prison. We will try to match their details with nDelius in the next 24hrs.</p>
+            <a href="#" class="govuk-link">View newly arrived</a>
+          </div>
+
+
+
+            <div class="govuk-grid-column-one-third">
+              <h4 class="govuk-heading-s">Case approaching handover</h4>
+            <div class="govuk-home-box3">
+              <h3 class="govuk-heading-m">10</h3>
+            </div>
+              <br>
+              <p>Cases that are approaching handover in the next thirty days.</p>
+              <a href="#" class="govuk-link">Fix information</a>
+            </div>
+  </div>
+  </div>
+
+  <div class="govuk-!-padding-bottom-9"></div>
+
+    <h2 class="govuk-heading-l">Manage staff</h2>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <p>Check and edit availability of offender managers.</p>
+            <a href="#" class="govuk-link">View all offender managers</a>
+          </div>
+        </div>
+
+        <div class="govuk-!-padding-bottom-9"></div>
+
+          <h2 class="govuk-heading-l">Reports</h2>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+                  <p>
+                  <img src="/public/images/Report1.jpg" alt="report paper"/>
+                </p>
+                  <a href="#" class="govuk-link">All allocated prisoners (current as of 07/11/2019)</a>
+                  <p>.csv file, 1.42MB</p>
+                </div>
+              </div>
+
+    </div>
+</div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends "layout-main.html" %}
+
+
+{% block pageTitle %}
+Add missing information
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/womens-service-user-banner-no-complexity.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-!-padding-bottom-4"></div>
+<a href="/womens/add-missing-ndelius-info-pg1" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="#">
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Add missing information
+    </h1>
+    <p>This information can be found on nDelius.</p>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading govuk-!-padding-bottom-4">
+        Select the service provider
+      </h2>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="nps-or-crc" name="nps-or-crc" type="radio" value="NPS">
+        <label class="govuk-label govuk-radios__label" for="nps-or-crc">
+          National Probation Service (NPS)
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="nps-or-crc-2" name="nps-or-crc" type="radio" value="CRC">
+        <label class="govuk-label govuk-radios__label" for="nps-or-crc-2">
+          Community Rehabilitation Company (CRC)
+        </label>
+      </div>
+
+    </div>
+
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading govuk-!-padding-bottom-4">
+        Select the tier
+      </h2>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-tier" name="choose-tier" type="radio" value="a">
+        <label class="govuk-label govuk-radios__label" for="choose-tier">
+          A
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-tier-2" name="choose-tier" type="radio" value="b">
+        <label class="govuk-label govuk-radios__label" for="choose-tier-2">
+          B
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-tier-3" name="choose-tier" type="radio" value="c">
+        <label class="govuk-label govuk-radios__label" for="choose-tier-3">
+          C
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-tier-4" name="choose-tier" type="radio" value="d">
+        <label class="govuk-label govuk-radios__label" for="choose-tier-4">
+          D
+        </label>
+      </div>
+
+    </div>
+
+  </fieldset>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button" formaction="/womens/missing-info-list-after-maria" style="margin-right: 15px;">
+    Update
+  </button>
+
+  <a href="/womens/missing-info-list" class="govuk-link govuk-link--no-visited-state">Cancel</a>
+
+
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+{% endblock %}

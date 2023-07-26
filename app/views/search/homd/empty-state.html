@@ -1,0 +1,104 @@
+{% extends "layout-search-homd.html" %}
+
+
+{% block pageTitle %}
+Search results
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/jquery.hideseek.min.js"></script>
+<script>
+$('#search').hideseek({
+    highlight: true,
+    min_chars: 3,
+    nodata: "No results found",
+    hidden_mode: true,
+    ignore: '.ignore'
+});
+</script>
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<div class="govuk-grid-row">
+
+
+
+
+<a href="#" class="govuk-back-link govuk-!-margin-bottom-8">Back</a>
+
+
+
+  <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+    0 results for Jones
+  </h1>
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      
+
+      <div class="moj-search govuk-!-margin-bottom-6">
+
+        <form action="#" method="post">
+      
+          <div class="govuk-form-group">
+            <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+              Find a case
+            </label>
+      
+            <div id="search-hint" class="govuk-hint moj-search__hint ">
+              <!--Enter a name or prison number to search all allocations in this prison-->
+            </div>
+      
+            <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+          </div>
+      
+          <button class="govuk-button moj-search__button " data-module="govuk-button">
+            Search
+          </button>
+      
+        </form>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  
+
+
+
+
+    <div class="govuk-grid-row">
+
+
+  <div class="govuk-grid-column-full">
+  
+</div>
+</div>
+
+<p class="govuk-body">Search again</p>
+
+
+
+
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}

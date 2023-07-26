@@ -1,0 +1,657 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Review case details – Digital Prison Services
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+
+
+<div class="govuk-!-margin-bottom-3"></div>
+
+<a href="/allocations/see-allocations" class="govuk-back-link govuk-body">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="./select-pom-reallocate">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+    
+    <div class="moj-page-header-actions">
+  
+
+      <!--<p><strong>Reallocate a primary POM</strong></p>-->
+
+
+      <div class="moj-page-header-actions__title">
+        <h1 class="govuk-heading-l">Review Jack Smith's case</h1></br>
+        <span class="govuk-caption-l" style="margin-bottom: 10px;">Currently allocated to Annie Bradley</span>
+        <span class="govuk-caption-l">Prison number: G4198UW</span>
+        <span class="govuk-caption-l">Date of birth: 01 Oct 1985 (36)</span>
+
+        
+      </div>
+    
+      <div class="moj-page-header-actions__actions">
+    
+        
+    
+        <button class="govuk-button" data-module="govuk-button">
+          Choose POM
+        </button>
+    
+  
+      </div>
+    
+    </div>
+    
+  
+  
+    <!--<strong class="govuk-tag govuk-tag--red" style="margin-right: 5px;">
+    High complexity
+  </strong>
+  
+    <strong class="govuk-tag govuk-tag--blue govuk-!-margin-bottom-7">
+    Determinate
+    </strong>-->
+  
+  </div>
+  </div>
+  
+<!--
+
+<div class="govuk-grid-column-one-third">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link govuk-link--no-visited-state" href="#">View case on DPS (new NOMIS)</a>
+        </li>
+      </ul>
+    </div>-->
+
+
+      <!-- <div class="govuk-grid-row"> -->
+        <!-- <div class="govuk-grid-column-one-half app-!-display-flex--1">
+          <div class="app-card app-card--muted">
+            <p class="govuk-heading-m govuk-!-margin-0">POM role: responsible</p>
+            <br>
+            <p class="govuk-body">A co-working POM has not been allocated.</p>
+          </div>
+
+      </div> -->
+
+
+      <!-- <div class="govuk-grid-column-one-half app-!-display-flex--1">
+        <div class="app-card app-card--muted">
+          <p class="govuk-heading-m govuk-!-margin-0">COM handover: not started</p>
+        </br>
+        </div>
+      </div> -->
+
+  <!-- </div> -->
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          At a glance
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          
+          <p  style="margin-bottom: -40px; margin-top:-5px">
+            
+    <strong class="govuk-tag govuk-tag--blue govuk-!-margin-bottom-7">
+    Determinate
+    </strong>
+  
+      </p>
+
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header govuk-!-width-one-third">Main offence</th>
+      <td class="govuk-table__cell govuk-!-width-one-third">Section 18 - wounding with intent</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header govuk-!-width-one-third">Tier</th>
+      <td class="govuk-table__cell govuk-!-width-one-third">B</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a href="" class="govuk-link govuk-link--no-visited-state">Change</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header govuk-!-width-one-third">Sentence start date</th>
+      <td class="govuk-table__cell govuk-!-width-one-third">29 May 2015</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header govuk-!-width-one-third">Earliest release date</th>
+      <td class="govuk-table__cell govuk-!-width-one-third">Conditional release date: 22 May 2022</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header govuk-!-width-one-third">Location</th>
+      <td class="govuk-table__cell govuk-!-width-one-third">E-4-017</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header govuk-!-width-one-third">POM role needed</th>
+      <td class="govuk-table__cell govuk-!-width-one-third">Supporting</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+  </tbody>
+</table> 
+
+
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Key dates</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header govuk-!-width-one-third">Last OASys completed</th>
+      <td class="govuk-table__cell govuk-!-width-one-third">01 Dec 2021</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header govuk-!-width-one-third">COM allocation due</th>
+      <td class="govuk-table__cell">01 Nov 2021</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header govuk-!-width-one-third">COM due to take responsibility</th>
+      <td class="govuk-table__cell">09 Jan 2022</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+  </tbody>
+</table> 
+
+
+    
+          <a class="govuk-notification-banner__link" href="step2-select-pom-jack-smith">Choose a POM to allocate to now</a> or see more information below before allocating.
+        </p>
+      </div>
+    </div>
+
+
+
+
+<!-- GRAPH
+
+ <h3 class="govuk-heading-m govuk-!-margin-top-6">Sentence</h3>
+  <h3 class="govuk-heading-s govuk-!-margin-bottom-2">
+          Jack's sentence
+        </h3>
+  <div class="graph">
+        <div>
+            <span class="amount" style="width:40%">
+                <span>5 of 15 years</span>
+            </span>
+        </div>
+      </div>
+
+  <table class="govuk-table govuk-!-margin-top-6">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+      </tr>
+    </thead>
+
+-->
+
+<h2 class="govuk-heading-m govuk-!-margin-top-8">More information</h2>
+
+<p>You can also see Jack's:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="#">full DPS profile</a></li>
+  <li><a href="#">allocation history</a></li>
+</ul>
+
+
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Sentence
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <p class='govuk-body'>
+        
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Sentence/licence end date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">26 May 2023</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            </tbody>
+          </table>
+      
+      
+      </p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Other offences
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <p class='govuk-body'>
+        
+        
+        <div class="moj-timeline">
+          <div class="moj-timeline__item">
+        
+            <div class="moj-timeline__header">
+              <h2 class="moj-timeline__title">Assaults occasioning actual bodily harm - 00806</h2>
+        
+            </br><p class="moj-timeline__byline">CJA Community Order (12 Months)</p>
+        
+            </div>
+        
+            <p class="moj-timeline__date">
+              <time datetime="2019-06-14T14:01:00.000Z"></time>
+            </p>
+        
+            <div class="moj-timeline__description">
+              Active
+            </div>
+        
+          </div>
+        
+          <div class="moj-timeline__item">
+        
+            <div class="moj-timeline__header">
+              <h2 class="moj-timeline__title">Careless driving - 80400</h2>
+        
+            </br><p class="moj-timeline__byline">ORA Community Order (12 Months)</p>
+        
+            </div>
+        
+            <p class="moj-timeline__date">
+              <time datetime="2019-06-07T12:32:00.000Z"></time>
+            </p>
+        
+            <div class="moj-timeline__description">Ended on 17 May 2013</div>
+        
+          </div>
+        
+          <div class="moj-timeline__item">
+        
+            <div class="moj-timeline__header">
+              <h2 class="moj-timeline__title">Offences against Public Order (Summary) - 12500</h2>
+        
+            </br><p class="moj-timeline__byline">CJA Community Order (12 Months)</p>
+        
+            </div>
+        
+            <p class="moj-timeline__date">
+              <time datetime="2019-06-06T09:12:00.000Z"></time>
+            </p>
+        
+            <div class="moj-timeline__description">Ended on 30 June 2010</div>
+        
+          </div>
+        
+          
+        
+        
+          </div>
+        </div>
+        
+
+
+
+        <!--
+        <p class="govuk-heading-s govuk-!-margin-bottom-0">Assaults occasioning actual bodily harm - 00806</p>
+        <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">CJA Community Order (12 Months)</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">Active</td>
+        </tr>
+      </tbody>
+    </table>
+<p class="govuk-heading-s govuk-!-margin-bottom-0">Careless driving - 80400</p>
+        <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">ORA Community Order (12 Months)</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 17 May 2013</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="govuk-heading-s govuk-!-margin-bottom-0">Offences against Public Order (Summary) - 12500	</p>
+            <table class="govuk-table app-table govuk-!-margin-top-0 govuk-!-margin-bottom-3">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">CJA Community Order (12 Months)</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">Ended on 30 June 2010</td>
+            </tr>
+          </tbody>
+        </table>
+      
+      </p>
+    </div>-->
+  </div>
+
+
+
+
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          Risks and needs
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <p class='govuk-body'>
+        
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-!-width-one-third">Category</td>
+                <td class="govuk-table__cell govuk-!-width-one-third">Cat C</td>
+                <td class="govuk-table__cell govuk-!-width-one-third"></td>
+              </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-width-one-third">Previous tier</td>
+            <td class="govuk-table__cell govuk-!-width-one-third">C – changed in Sep 2019</td>
+            <td class="govuk-table__cell govuk-!-width-one-third"></td>
+          </tr>
+          </tbody>
+          </table>
+        
+          
+        
+      
+      
+      
+      </p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Case management
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <p class='govuk-body'>
+          
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">LDU</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">Bolton</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">COM name</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">Alice Maddison</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Co-working POM</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">None allocated</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Service provider</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">NPS (legacy)</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"><a href="" class="govuk-link govuk-link--no-visited-state">Change</a></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell govuk-!-width-one-third">Last known address in Wales?</td>
+    <td class="govuk-table__cell govuk-!-width-one-third">No</td>
+    <td class="govuk-table__cell govuk-!-width-one-third"><a href="" class="govuk-link govuk-link--no-visited-state">Change</a></td>
+  </tr>
+
+  </tbody>
+</table>
+
+</div>
+      
+      
+      </p>
+    </div>
+  </div>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Choose POM
+  </button>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--OLD SECTION-->
+
+
+
+  
+
+<div class="govuk-grid-column-one-third">
+
+  <aside class="app-related-items" role="complementary">
+
+    <h3 class="govuk-heading-m">
+            Active alerts
+          </h3>
+
+
+          <p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Racist</li>
+              <li>Risk to LGBT</li>
+              <li>TACT</li>
+              <li>Sex offender</li>
+              <li>Gang member</li>
+            </ul>  
+          </p>
+          
+          
+
+<!--<p class="govuk-!-margin-bottom-6">
+  <span class="moj-badge moj-badge--red">Racist</span><br>
+  <span class="moj-badge moj-badge--purple">Risk to LGBT</span><br>
+  <span class="moj-badge moj-badge--pink">Tact</span><br>
+  <span class="moj-badge moj-badge--green">Care experienced</span><br>
+  </p>-->      
+
+  <p  class="govuk-!-margin-bottom-6">
+    <a class="govuk-link govuk-link--no-visited-state" href="https://digital-dev.prison.service.justice.gov.uk/prisoner/G4227GV/alerts"target="_blank">View more alerts information</a>
+  </p>
+
+
+<!--
+<p>
+  <ul class="govuk-list">
+    <li>Racist</li>
+    <li>Risk to LGBT</li>
+    <li>Tact</li>
+    <li>Care experienced</li>
+  </ul>  
+</p>
+
+
+
+
+<h3 class="govuk-heading-m">
+  Risk
+</h3>
+-->
+
+
+<img src="/public/images/risk/Rosh_High.png" style="width:380px" alt="RoSH">
+
+
+
+<!--
+
+<h3 class="govuk-heading-m">
+  RoSH
+</h3>
+
+<ul class="govuk-list">
+  <li>Children <span class="govuk-tag govuk-tag--red">Low</span></li>
+  <li>Public <span class="govuk-tag govuk-tag--red">High</span></li>
+  <li>Known adult <span class="govuk-tag govuk-tag--red">Low</span></li>
+  <li>Staff <span class="govuk-tag govuk-tag--red">Medium</span></li>
+  <li>Prisoners <span class="govuk-tag govuk-tag--red">Low</span></li>
+</ul>
+
+<p>Last updated: 01 Dec 2021</p>
+
+-->
+
+
+<img src="/public/images/risk/mappa_date.png" style="width:380px; margin-top: 30px;" alt="MAPPA">
+
+
+<!--
+
+<h3 class="govuk-heading-s">
+  MAPPA
+</h3>
+
+<ul class="govuk-list">
+  <li><span class="govuk-tag govuk-tag--red">Category 2</span></li> 
+  <li><span class="govuk-tag govuk-tag--red">Level 2</span></li> 
+</ul>
+
+
+<p>Start date: 12 Dec 2021</p>
+
+-->
+
+</div>
+
+
+
+
+
+
+
+<!-- <h3 class="govuk-heading-m">
+  Useful links???
+</h3>
+
+
+</div>
+
+<ul class="govuk-list">
+  <li>
+    <a class="govuk-link govuk-link--no-visited-state govuk-!-margin-left-3" href="https://digital-dev.prison.service.justice.gov.uk/prisoner/G4227GV" target="_blank">View all case information</a>
+  </li>
+</ul>
+    </aside>
+</div>
+</div> -->
+
+
+
+
+</div>
+</div>
+</form>
+
+
+{% endblock %}

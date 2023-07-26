@@ -1,0 +1,485 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="allocations" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    You must contact the community probation office
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#com-error">A Community Offender Manager (COM) must be allocated to support this case.</a>
+      </li>
+      <li>
+        <a href="#com-error">An automatic email could not be sent to the LDU. You need to find an alternative way of contacting them.</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<h1 class="govuk-heading-l">
+  Allocate a Prison Offender Manager
+</h1>
+
+<span class="moj-badge" style="margin-right:5px">Indeterminate</span>
+
+<div class="govuk-!-margin-top-6">
+
+
+  <!-- <h2 class="govuk-heading-m">Prisoner</h2> -->
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Prisoner</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+        <th scope="col" class="govuk-table__header"></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Name</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">Iman, Nigel</td>
+      <td class="govuk-table__cell"></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Date of birth</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">10/06/1977</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-!-width-one-third">Prisoner number</td>
+      <td class="govuk-table__cell govuk-!-width-one-third">G4198UW</td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link pull-right" href="#">View DPS profile</a>
+    </td></tr>
+    </tbody>
+  </table>
+
+
+          <!-- <h2 class="govuk-heading-m">Offence</h2> -->
+
+          <table class="govuk-table">
+            <caption class="govuk-table__caption">Offence</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Main offence</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Theft of motor vehicle</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Sentence type	</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Indeterminate</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Sentence start date	</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">29 May 2015</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">
+            </td></tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Conditional release date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Automatic release date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Parole eligibility</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">01/08/2021</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Parole review date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Home detentional curfew eligibility</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Tariff date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Post recall release date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Sentence/ licence end date</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">N/A</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            </tbody>
+          </table>
+
+
+          <table class="govuk-table">
+            <caption class="govuk-table__caption">Case information</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Current case owner</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Custody</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">POM role</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Responsible</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Last known address in Wales</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Yes</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link" href="#">Change</a>
+            </td>
+            </td></tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Service provider</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">National Probation Service (NPS)</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link" href="#">Change</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Tiering calculation</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Tier B</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link" href="#">Change</a></td>
+            </tr>
+            </tbody>
+          </table>
+
+
+
+          <table class="govuk-table">
+            <caption class="govuk-table__caption">Community information</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Local divisional unit (LDU)</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Birmingham LDU</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Local divisional unit (LDU) email address</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">example@ldu.gov.uk</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-!-width-one-third">Team</td>
+              <td class="govuk-table__cell govuk-!-width-one-third">Central Birmingham Team 1</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell-error govuk-!-width-one-third" span id="com-error">Community Offender Manager (COM) name</td>
+              <td class="govuk-table__cell-error-value govuk-!-width-one-third govuk-body govuk-!-font-weight-bold">Unallocated</td>
+              <td class="govuk-table__cell govuk-!-width-one-third"></td>
+            </tr>
+            </tbody>
+          </table>
+
+
+<!--add in the allocation part OR link to another page? -->
+<!--how does the user access allocation history? Important to see this at the point of allocation -->
+
+<h2 class="govuk-heading-m">
+  Recommendation: Prison officer POM
+</h2>
+
+<p>This recommendation takes the prisoner's tier and
+time left to serve into account.</p>
+
+<h3 class="govuk-heading-s">Active prison officer POMs</h3>
+
+<table class="govuk-table responsive">
+  <thead class="govuk-table__head">
+
+  <tr class="govuk-table__row">
+    <th class="govuk-table__header" scope="col">Name</th>
+    <th class="govuk-table__header" scope="col">Previous<br>allocation</th>
+    <th class="govuk-table__header" scope="col">Tier A<br>cases</th>
+    <th class="govuk-table__header" scope="col">Tier B<br>cases</th>
+    <th class="govuk-table__header" scope="col">Tier C<br>cases</th>
+    <th class="govuk-table__header" scope="col">Tier D<br>cases</th>
+    <th class="govuk-table__header" scope="col">No Tier<br>cases</th>
+    <th class="govuk-table__header" scope="col">Total</th>
+    <th class="govuk-table__header" scope="col">Working<br>pattern</th>
+    <th class="govuk-table__header" scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row recommended_pom_row_0">
+      <td aria-label="POM name" class="govuk-table__cell ">Ricketts, Andrien</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">
+
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">3</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">5</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">3</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">11</td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+      <td aria-label="Action" class="govuk-table__cell table_cell__left_align">
+      <a class="govuk-link" href="/add-allocation-note">Allocate</a>
+      </td>
+    </tr>
+    <tr class="govuk-table__row recommended_pom_row_1">
+      <td aria-label="POM name" class="govuk-table__cell ">Dicks, Stephen</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">
+
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">11</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">4</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">5</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">6</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">26</td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+      <td aria-label="Action" class="govuk-table__cell table_cell__left_align">
+      <a class="govuk-link" href="/add-allocation-note">Allocate</a>
+      </td>
+    </tr>
+    <tr class="govuk-table__row recommended_pom_row_2">
+      <td aria-label="POM name" class="govuk-table__cell ">Bayram, Eve</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">
+
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">6</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">5</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">3</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">7</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">21</td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+      <td aria-label="Action" class="govuk-table__cell table_cell__left_align">
+      <a class="govuk-link" href="/add-allocation-note">Allocate</a>
+      </td>
+    </tr>
+    <tr class="govuk-table__row recommended_pom_row_3">
+      <td aria-label="POM name" class="govuk-table__cell ">Cufflin, Amy</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">
+
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">2</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">1</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">3</td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+      <td aria-label="Action" class="govuk-table__cell table_cell__left_align">
+      <a class="govuk-link" href="/add-allocation-note">Allocate</a>
+      </td>
+    </tr>
+    <tr class="govuk-table__row recommended_pom_row_4">
+      <td aria-label="POM name" class="govuk-table__cell ">Hindocha, Binit</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">
+
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">1</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">1</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">2</td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+      <td aria-label="Action" class="govuk-table__cell table_cell__left_align">
+      <a class="govuk-link" href="/add-allocation-note">Allocate</a>
+      </td>
+    </tr>
+    <tr class="govuk-table__row recommended_pom_row_5">
+      <td aria-label="POM name" class="govuk-table__cell ">Treend, Ollie</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">
+
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">1</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">1</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">2</td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+      <td aria-label="Action" class="govuk-table__cell table_cell__left_align">
+      <a class="govuk-link" href="/add-allocation-note">Allocate</a>
+      </td>
+    </tr>
+    <tr class="govuk-table__row recommended_pom_row_6">
+      <td aria-label="POM name" class="govuk-table__cell ">Mccann, Katherine</td>
+      <td aria-label="Previous allocation" class="govuk-table__cell">
+
+      </td>
+      <td aria-label="Tier A cases" class="govuk-table__cell ">2</td>
+      <td aria-label="Tier B cases" class="govuk-table__cell ">1</td>
+      <td aria-label="Tier C cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Tier D cases" class="govuk-table__cell ">2</td>
+      <td aria-label="No tier cases" class="govuk-table__cell ">0</td>
+      <td aria-label="Total" class="govuk-table__cell ">5</td>
+      <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+      <td aria-label="Action" class="govuk-table__cell table_cell__left_align">
+      <a class="govuk-link" href="/add-allocation-note">Allocate</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="govuk-grid-column-full govuk-!-margin-top-4"></div>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Show active probation officer POMs
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <h2 class="govuk-heading-m">
+      </h2><table class="govuk-table responsive">
+
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col">Name</th>
+        <th class="govuk-table__header" scope="col">Previous<br>allocation</th>
+        <th class="govuk-table__header" scope="col">Tier A<br>cases</th>
+        <th class="govuk-table__header" scope="col">Tier B<br>cases</th>
+        <th class="govuk-table__header" scope="col">Tier C<br>cases</th>
+        <th class="govuk-table__header" scope="col">Tier D<br>cases</th>
+        <th class="govuk-table__header" scope="col">No tier<br>cases</th>
+        <th class="govuk-table__header" scope="col">Total</th>
+        <th class="govuk-table__header" scope="col">Working<br>pattern</th>
+        <th class="govuk-table__header" scope="col">Action</th>
+      </tr>
+
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row not_recommended_pom_row_0">
+          <td aria-label="POM name" class="govuk-table__cell ">Integration-Tests, Moic</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">
+
+          </td>
+          <td aria-label="Tier A cases" class="govuk-table__cell ">1</td>
+          <td aria-label="Tier B cases" class="govuk-table__cell ">2</td>
+          <td aria-label="Tier C cases" class="govuk-table__cell ">1</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">3</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">0</td>
+          <td aria-label="Total" class="govuk-table__cell ">7</td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+          <td aria-label="Action" class="govuk-table__cell table_cell__right_align">
+          <a class="govuk-link" href=#>Allocate</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row not_recommended_pom_row_1">
+          <td aria-label="POM name" class="govuk-table__cell ">Money, Leigh</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">
+
+          </td>
+          <td aria-label="Tier A cases" class="govuk-table__cell ">5</td>
+          <td aria-label="Tier B cases" class="govuk-table__cell ">0</td>
+          <td aria-label="Tier C cases" class="govuk-table__cell ">1</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">0</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">0</td>
+          <td aria-label="Total" class="govuk-table__cell ">6</td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+          <td aria-label="Action" class="govuk-table__cell table_cell__right_align">
+          <a class="govuk-link" href=#>Allocate</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row not_recommended_pom_row_2">
+          <td aria-label="POM name" class="govuk-table__cell ">Jara Duncan, Laura</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">
+
+          </td>
+          <td aria-label="Tier A cases" class="govuk-table__cell ">2</td>
+          <td aria-label="Tier B cases" class="govuk-table__cell ">2</td>
+          <td aria-label="Tier C cases" class="govuk-table__cell ">1</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">2</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">0</td>
+          <td aria-label="Total" class="govuk-table__cell ">7</td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+          <td aria-label="Action" class="govuk-table__cell table_cell__right_align">
+          <a class="govuk-link" href=#>Allocate</a>
+          </td>
+        </tr>
+        <tr class="govuk-table__row not_recommended_pom_row_3">
+          <td aria-label="POM name" class="govuk-table__cell ">Henley, Mary</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">
+
+          </td>
+          <td aria-label="Tier A cases" class="govuk-table__cell ">1</td>
+          <td aria-label="Tier B cases" class="govuk-table__cell ">0</td>
+          <td aria-label="Tier C cases" class="govuk-table__cell ">0</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">0</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">0</td>
+          <td aria-label="Total" class="govuk-table__cell ">1</td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Part time</td>
+          <td aria-label="Action" class="govuk-table__cell table_cell__right_align">
+          <a class="govuk-link" href=#>Allocate</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<p>
+    There are 2 POMs unavailable for new allocations.
+      <a href=#>See all POMs</a>
+  </p>
+
+
+
+
+
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+
+
+
+
+{% endblock %}

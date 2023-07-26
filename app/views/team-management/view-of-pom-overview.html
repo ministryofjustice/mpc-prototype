@@ -1,0 +1,213 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+POM dashboard
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+
+<a href="/team-management/staff-view-mix" class="govuk-back-link govuk-body">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
+      <span class="govuk-caption-xl">Probation Officer POM</span>
+
+      Andrien Ricketts
+    </h1>
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link" aria-current="page" href="#">Overview</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link" href="/team-management/view-of-pom-caseload">Caseload</a>
+      </li>
+
+      </ul>
+
+</nav>
+
+</div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+<h2 class="govuk-heading-l">Current workload</h2>
+
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <div class="card card-total">
+          <a href="/team-management/view-of-pom-caseload" class="govuk-link--no-visited-state"><span class="card__heading">27</span>
+          <p>total cases</p></a>
+        </div>
+      </div>
+
+      <!-- <div class="govuk-grid-column-one-third">
+        <div class="card card-total-subset">
+          <span class="card__heading">15</span>
+          <p>high complexity level</p>
+        </div>
+      </div> -->
+
+      <div class="govuk-grid-column-one-third">
+        <div class="card card-total-subset">
+          <span class="card__heading">4</span>
+          <p>in handover window</p>
+        </div>
+      </div>
+
+    </div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+<h2 class="govuk-heading-l">Availability</h2>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Weekly hours
+            </dt>
+            <dd class="govuk-summary-list__value">
+              37
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Edit<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Active - available for new allocations
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Edit<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Last case allocated
+            </dt>
+            <dd class="govuk-summary-list__value">
+              15 Feb 2021
+            </dd>
+            <dd class="govuk-summary-list__actions">
+
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Number of allocations in past 7 days
+            </dt>
+            <dd class="govuk-summary-list__value">
+              6
+            </dd>
+            <dd class="govuk-summary-list__actions">
+
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Cases due to be released in next 2 weeks
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                View<span class="govuk-visually-hidden"> closing cases</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+
+
+<h2 class="govuk-heading-l">Specialist areas</h2>
+
+<ul class="govuk-list govuk-list--bullet">
+      <li>Repeat offenders</li>
+      <li>Child protection</li>
+      <li>Care experienced</li>
+    </ul>
+
+    <h3 class="govuk-heading-m">Completed training</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Domestic abuse</li>
+    </ul>
+    <p><a href=#>Edit</a></p>
+
+</div>
+
+
+
+
+
+
+  <div class="govuk-grid-column-one-third">
+    <h3 class="govuk-heading-m">
+      Case mix by tier
+    </h3>
+
+    <div class="workforce-progress-container">
+      <div class="workforce-progress-bar tier_a" style="width:45%"><p style="govuk-colour("white")">12</p></div>
+      <div class="workforce-progress-bar tier_b" style="width:45%"><p>12</p></div>
+      <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">3</p></div>
+    </div>
+
+    <ul class="govuk-list">
+      <li><span class="caseload-swatch tier_a"></span>Tier A: 12</li>
+      <li><span class="caseload-swatch tier_b"></span>Tier B: 12</li>
+      <li><span class="caseload-swatch tier_c"></span>Tier C: 3</li>
+      <li><span class="caseload-swatch tier_d"></span>Tier D: 0</li>
+      <li><span class="caseload-swatch tier_other"></span>Tier N/A: 0</li>
+    </ul>
+
+
+    <h3 class="govuk-heading-m govuk-!-margin-top-7">
+      Case mix by POM role
+    </h3>
+
+    <div class="workforce-progress-container">
+      <div class="workforce-progress-bar tier_a" style="width:60%"><p style="govuk-colour("white")">16</p></div>
+      <div class="workforce-progress-bar tier_d" style="width:30%"><p>8</p></div>
+      <div class="workforce-progress-bar tier_other" style="width:10%"><p>3</p></div>
+    </div>
+
+    <ul class="govuk-list">
+      <li><span class="caseload-swatch tier_a"></span>Responsible: 16</li>
+      <li><span class="caseload-swatch tier_d"></span>Supporting: 8</li>
+      <li><span class="caseload-swatch tier_other"></span>Co-working: 3</li>
+    </ul>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+{% endblock %}

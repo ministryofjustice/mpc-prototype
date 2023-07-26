@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="#" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+
+
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Early allocation assessment process</h1>
+
+            <p class="govuk-body">Use this form to assess whether the community probation team should take responsibility for this case early.</p>
+
+            <p class="govuk-body">There are three possible outcomes:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>eligible - the community probation team will take responsibility for this case early</li>
+                <li>discretionary - the community probation team will need to make a decision</li>
+                  <li>not eligible</li>
+              </ul>
+
+              <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          View previous saved assessments
+        </span>
+      </h2>
+    </div>
+
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+    <table class="govuk-table">
+      <!-- <caption class="govuk-table__caption">Previously saved assessments</caption> -->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header app-custom-class">Assessment date</th>
+          <th scope="col" class="govuk-table__header app-custom-class">Result</th>
+          <th scope="col" class="govuk-table__header app-custom-class">POM name</th>
+          <th scope="col" class="govuk-table__header app-custom-class">Status</th>
+          <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">16/07/2022</td>
+          <td class="govuk-table__cell">Discretionary - the community probation team will make a decision</td>
+          <td class="govuk-table__cell">Henley, Mary</td>
+          <td class="govuk-table__cell">Not sent to community probation team</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="view-past-ea-form">
+            View<span class="govuk-visually-hidden"> view assessment</span>
+          </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">01/03/2021</td>
+          <td class="govuk-table__cell">Discretionary - the community probation team will make a decision</td>
+          <td class="govuk-table__cell">Henley, Mary</td>
+          <td class="govuk-table__cell">Not sent to community probation team</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">
+            View<span class="govuk-visually-hidden"> view assessment</span>
+          </a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">05/12/2020</td>
+          <td class="govuk-table__cell">Eligible - the community probation team will take responsibility for this case early</td>
+          <td class="govuk-table__cell">Treend, Ollie</td>
+          <td class="govuk-table__cell">Not sent to community probation team</td>
+          <td class="govuk-table__cell"><a class="govuk-link" href="#">
+            View<span class="govuk-visually-hidden"> view assessment</span>
+          </a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    </div>
+  </div>
+</div>
+
+              <h2 class="govuk-heading-m">Before you start</h2>
+
+              <!-- <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+      The assessment will be sent to the community 18 months before release
+    </strong>
+    </div> -->
+
+
+              <p class="govuk-body">Eligible and discretionary assessments will be sent to the community probation team 18 months before release.</p>
+
+            <p class="govuk-body">We will remind the allocated POM to check saved assessments 18 months before release.</p>
+
+            <p class="govuk-body">The POM can make changes to the assessment before it is sent.</p>
+
+            <div class="govuk-!-padding-bottom-4"></div>
+
+
+
+
+            <button class="govuk-button" data-module="govuk-button">Start assessment</button>
+
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+
+            <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+            <aside class="app-related-items" role="complementary">
+              <h2 class="govuk-heading-m" id="subsection-title">
+                Guidance
+              </h2>
+              <nav role="navigation" aria-labelledby="subsection-title">
+                <ul class="govuk-list govuk-!-font-size-16">
+                  <li>
+                    <a class="govuk-link" href="#">
+                      View EQuiP guidance
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,175 @@
+{% extends "layout-parole-homd.html" %}
+
+
+{% block pageTitle %}
+Parole cases
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+
+
+
+  <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+    Parole cases
+  </h1>
+
+  <p class="govuk-body">All cases in this prison with a target haering date, PED or TED in the next 10 months.</p>
+
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list" style="padding-top: 15px; margin-bottom: -15px;">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a>--></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"><!--3--></a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+    </ul>
+    <p class="moj-pagination__results" style="padding-top: 15px; margin-bottom: -15px;">Showing <b>1</b> to <b>8</b> of <b>8</b> results</p>
+  </nav>
+  
+
+
+
+  <table class="govuk-table govuk-!-margin-top-6" data-module="moj-sortable-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" aria-sort="none">Case</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">POM</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">POM role</th>
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Next parole date</th>
+       
+    </thead>
+
+
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Nguyễn" href="./prisoner-profile-release.html">Nguyễn, Bảo</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> A2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" data-sort-value="Dicks" href="#">Stephen Dicks</a></td>
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+        <td class="govuk-table__cell" data-sort-value="2021.05.01">Target hearing date:
+          </br>01 Nov 2021 </td>
+        
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Patel" href="./prisoner-profile-remain-closed-conditions.html">Patel, Kirit</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> A2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" data-sort-value="Bailey" href="#">James Gordon</a></td>
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+        <td class="govuk-table__cell" data-sort-value="2023.08.10">Target hearing date: </br>01 Nov 2021</td>
+        
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Jameson" href="./prisoner-profile-open-conditions.html">Jameson, Pharrell</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> A2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" data-sort-value="Gordon" href="./staff-pom-overview.html">Sarah Bailey</a></td>
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+        <td class="govuk-table__cell" data-sort-value="2023.01.19">Target hearing date: </br>01 Jan 2022</td>
+        
+      </tr>
+
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Simpkin" href="#">Simpkin, Derick</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> A2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" data-sort-value="Hanson" href="#">Matthew Hanson</a></td>
+        <td class="govuk-table__cell" data-sort-value="Responsible">Supporting</td>
+        <td class="govuk-table__cell" data-sort-value="2022.01.17">TED: </br>17 Jan 2022</td>
+        
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Perry" href="#">Perry, Bryn</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> A2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" data-sort-value="Barker" href="#">Sylvie Barker</a></td>
+        <td class="govuk-table__cell" data-sort-value="Supporting">Supporting</td>
+        <td class="govuk-table__cell" data-sort-value="2022.02.01">TED:</br>26 Feb 2022</td>
+       
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Niemec" href="#">Niemec, Tobiasz</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> A2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" data-sort-value="King" href="#">Jessica King</a></td>
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+        <td class="govuk-table__cell" data-sort-value="2022.11.26">PED: </br>26 Apr 2022</td>
+        
+      </tr>
+
+      
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Holmes" href="#">Holmes, Benjamin</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> A2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" data-sort-value="Santos" href="#">Carlos Santos</a></td>
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+        <td class="govuk-table__cell" data-sort-value="2023.07.25">PED: </br>25 Jun 2022</td>
+      
+      </tr>
+
+  
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Adams" href="#">Adams, Damien</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> A2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" data-sort-value="Barker" href="#">Sylvie Barker</a></td>
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+        <td class="govuk-table__cell" data-sort-value="2024.02.28">TED:</br>28 Aug 2022</td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a>--></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=3">3</a>--></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+    </ul>
+    <p class="moj-pagination__results">Showing <b>1</b> to <b>8</b> of <b>8</b> results</p>
+  </nav>
+
+
+
+
+
+</div>
+
+  </div>
+
+
+
+
+{% endblock %}

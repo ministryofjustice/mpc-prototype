@@ -1,0 +1,72 @@
+{% extends "layout-search-pom.html" %}
+
+{% block pageTitle %}
+Enter Parole Board decision – Digital Prison Services
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="./prisoner-profile.html" class="govuk-back-link govuk-!-margin-bottom-6">Back</a>
+
+
+  <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+           
+            <form action="/parole-eligible-answer" method="post">
+            
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What was the outcome of James Saunders’ parole application?
+                  </h1>
+                </legend>
+                <!-- <div id="changed-name-hint" class="govuk-hint">
+                  Additional information needed?
+                </div> -->
+                <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-many-balls" name="how-many-balls" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="changed-name">
+                      Recommended for release
+                    </label>
+                  </div>
+
+                
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-many-balls" name="how-many-balls" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                      Move to open or remain in closed conditions
+                    </label>
+                  </div>
+
+                <div class="govuk-radios__divider">or</div>
+                
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="how-many-balls" name="how-many-balls" type="radio" value="no-decision">
+                  <label class="govuk-label govuk-radios__label" for="how-many-balls">
+                    No decision yet
+                  </label>
+                </div>
+
+              </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+
+          </form>
+           
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+{% endblock %}

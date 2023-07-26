@@ -1,0 +1,336 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<!-- <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+<ul class="moj-sub-navigation__list">
+<li class="moj-sub-navigation__item">
+
+  <a class="moj-sub-navigation__link" href="allocations">Make allocations</a>
+</li>
+
+<li class="moj-sub-navigation__item">
+  <a class="moj-sub-navigation__link" href="missing-info">Fix missing information</a>
+</li>
+
+<li class="moj-sub-navigation__item">
+  <a class="moj-sub-navigation__link" href="newly-arrived">Newly arrived</a>
+</li>
+</ul>
+
+</nav> -->
+
+
+<form method="post" action="/handover-my-cases">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width">
+
+
+      <h1 class="govuk-heading-l">
+        Case handover status (8)
+      </h1>
+      <p>All cases at HMP Leeds where responsibility is being handed over (or is within 30 days of handover) to the community probation team. You can sort and filter this list.</p>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+
+        <!-- <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">2</a></li> -->
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>2</b> of <b>2</b> results</p>
+      </nav>
+
+
+
+      <div class="moj-filter-layout">
+
+<div class="moj-filter-layout__filter">
+
+<div class="moj-filter">
+
+  <div class="moj-filter__header">
+
+    <div class="moj-filter__header-title">
+      <h2 class="govuk-heading-m">Filter</h2>
+    </div>
+
+    <div class="moj-filter__header-action">
+
+    </div>
+
+  </div>
+
+  <div class="moj-filter__content">
+
+    <div class="moj-filter__selected">
+
+      <div class="moj-filter__selected-heading">
+
+        <div class="moj-filter__heading-title">
+          <h2 class="govuk-heading-m">Selected filters</h2>
+        </div>
+
+        <div class="moj-filter__heading-action">
+          <p><a class="govuk-link govuk-link--no-visited-state" href="">Clear filters</a></p>
+        </div>
+
+      </div>
+
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Allocated POM</h3>
+
+      <ul class="moj-filter-tags">
+
+        <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Bayram, Eve</a></li>
+
+      </ul>
+
+
+    </div>
+
+    <div class="moj-filter__options">
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Apply filters
+      </button>
+
+      <div class="govuk-form-group">
+
+        <fieldset class="govuk-fieldset">
+
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+            Allocated POM
+
+          </legend>
+
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="type">
+                Bayram, Eve (2)
+              </label>
+
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2">
+              <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                Henley, Mary (1)
+              </label>
+
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="3">
+              <label class="govuk-label govuk-checkboxes__label" for="type-3">
+                Jara-Duncan, Laura (5)
+              </label>
+
+            </div>
+
+          </div>
+        </fieldset>
+
+      </div>
+
+      <div class="govuk-form-group">
+
+        <fieldset class="govuk-fieldset">
+
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            COM assigned
+            </legend>
+
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="1">
+              <label class="govuk-label govuk-checkboxes__label" for="status">
+                Yes (3)
+              </label>
+
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="2">
+              <label class="govuk-label govuk-checkboxes__label" for="status-2">
+                No (5)
+              </label>
+
+            </div>
+
+          </div>
+        </fieldset>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+<div class="moj-filter-layout__content">
+
+<div class="moj-action-bar">
+
+  <div class="moj-action-bar__filter">
+
+    <button type="submit" class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button" href="/index">
+      Hide filter
+    </button>
+
+
+  </div>
+
+  <div class="moj-button-menu">
+    <div class="moj-button-menu__wrapper">
+
+      <button type="submit" class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button" href="/index">
+        Show my allocated cases
+      </button>
+
+
+    </div>
+  </div>
+
+</div>
+
+<div class="moj-scrollable-pane">
+
+  <div class="moj-scrollable-pane__wrapper">
+
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">
+            <button type="button" data-index="0">
+              Prisoner
+          </button>
+        </th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">
+            <button type="button" data-index="1">
+              Handover start date
+            </button>
+            </th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">
+            <button type="button" data-index="2">
+              Community become responsible
+            </button>
+          </th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">
+            <button type="button" data-index="3">
+              Service provider
+            </button>
+          </th>
+          <th scope="col" class="govuk-table__header">
+              POM
+          </th>
+          <th scope="col" class="govuk-table__header">
+              COM
+          </th>
+
+        </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="#">
+            Mole, Adrian </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="26072020">26/07/2020</td>
+
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="26102020">26/10/2020</td>
+
+          <td class="govuk-table__cell govuk-table__cell">NPS</td>
+
+          <td class="govuk-table__cell govuk-table__cell" data-sort-value="#">Bayram, Eve</td>
+
+          <td class="govuk-table__cell govuk-table__cell" data-sort-value="#">Bloggs, Joe</td>
+
+        </tr>
+
+
+        <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="#">
+            Potter. Harry </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="26072020">26/07/2020</td>
+
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="26102020">26/10/2020</td>
+
+          <td class="govuk-table__cell govuk-table__cell">NPS</td>
+
+          <td class="govuk-table__cell govuk-table__cell" data-sort-value="#">Bayram, Eve</td>
+
+          <td class="govuk-table__cell govuk-table__cell" data-sort-value="#">Keene, Dan</td>
+
+        </tr>
+
+
+      </tbody>
+      </table>
+
+    </div>
+
+</div>
+</div>
+
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <!-- <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=2">2</a></li> -->
+
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>2</b> of <b>2</b> results</p>
+      </nav>
+
+          </div>
+      </div>
+
+    </form>
+
+{% endblock %}

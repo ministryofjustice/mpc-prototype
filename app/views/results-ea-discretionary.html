@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="#" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+
+
+          <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Assessment saved
+      </h1>
+      <div class="govuk-panel__body">
+        The community probation team will make a decision</div>
+    </div>
+    <div class="govuk-!-padding-bottom-4"></div>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+      The assessment has not been sent to the community probation team
+      </strong>
+    </div>
+
+    <p class="govuk-body">The case record has been updated to show that this might be an early allocation case.</p>
+
+    <p class="govuk-body">We will remind the allocated POM to make a new assessment 18 months before release.</p>
+
+      <p class="govuk-body">The POM can view saved assessments.</p>
+
+<!--
+      <p class="govuk-body">
+      You should receive an email with a decision from the community probation team about this case.</p>
+      <p class="govuk-body">
+        You will need to record this decision on the prisoner profile page.</p>
+    <p class="govuk-body">
+      A new handover date will be calculated if the prisoner is accepted by the community probation team.
+  </p> -->
+
+    <h2 class="govuk-heading-m">Save this assessment</h2>
+    <p class="govuk-body">
+  <a class="govuk-link" href="#">Save completed assessment (pdf)</a>
+  <p class="govuk-body">
+  <a class="govuk-link" href="#">Return to prisoner page</a>
+</p>
+</p>
+
+    </div>
+
+
+
+          <!-- <div class="govuk-grid-column-one-third">
+
+            <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+            <!-- <aside class="app-related-items" role="complementary">
+              <h2 class="govuk-heading-m" id="subsection-title">
+                Guidance
+              </h2>
+              <nav role="navigation" aria-labelledby="subsection-title">
+                <ul class="govuk-list govuk-!-font-size-16">
+                  <li>
+                    <a class="govuk-link" href="#">
+                      View EQuiP guidance
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+          </div> -->
+
+        </div>
+      </main>
+    </div>
+
+
+
+
+
+
+
+{% endblock %}

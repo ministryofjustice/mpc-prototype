@@ -1,0 +1,189 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Confirm allocation
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+<a href="/allocations/step2b-select-pom-jack-smith" class="govuk-back-link govuk-body">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="/allocations/make-allocations-success-jack-smith">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+    
+    <div class="moj-page-header-actions">
+  
+      <div class="moj-page-header-actions__title">
+        <h1 class="govuk-heading-l">Check co-working allocation details<br> for Jack Smith</h1></br>
+        <span class="govuk-caption-l" style="margin-bottom: 10px;">Primary POM: Annie Bradley</span>
+        <span class="govuk-caption-l">Prison number: G4198UW</span>
+        <span class="govuk-caption-l">Date of birth: 01 Oct 1985 (36)</span>
+      </div>
+    </div>
+  
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"></hr>
+
+  </div>
+  </div>
+
+      
+  
+      
+
+
+
+
+
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<p>We will send the information below to co-working prison POM <strong>helen.james@justice.gov.uk</strong><br/>
+  and notify Annie Bradely of this allocation.</p>
+
+<p>You can:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <!-- <li>amend these details</li> -->
+  <li>copy this information to email to someone else or to <a href="#">add to a case note</a></li>
+  <li>add a note to the POM, for example about upcoming or overdue deadlines</li>
+</ul>
+
+<div class="govuk-form-group">
+  <!-- <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="allocation-note">
+      Add a note to the email
+    </label>
+  </h2>
+  <div id="allocation-note-hint" class="govuk-hint">
+    For example you can tell the POM about any special requirements.
+  </div> -->
+
+  
+
+
+  <div class="govuk-inset-text" style="margin-top:40px ;">
+    
+    <ul class="govuk-list">
+      <li>Name: Jack Smith</li>
+      <li>Prison number: G4198UW</li>
+      <li>Primary POM: Annie Bradley</li>
+      <li>Co-working POM: Helen James</li>
+      <li>POM role: Supporting</li>
+    </br>
+      <li>Last OASys completed: 01 Dec 2021</li>
+      <li>Handover due to start: 01 Nov 2021</li>
+      <li>Handover due to finish: 09 Jan 2022</li>
+    
+    </ul>
+    
+
+    <h2 class="govuk-heading-s">Add a note to the email</h2>
+
+    <textarea class="govuk-textarea" id="allocation-note" name="allocation-note" rows="3" aria-describedby="allocation-note-hint"></textarea>
+    
+
+    <button class="govuk-button govuk-button--secondary govuk-!-margin-top-2" data-module="govuk-button">
+      Copy this
+    </button>
+
+  
+
+  </div>
+
+
+
+
+<!--
+
+  <div class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on [name of service]">
+    <div class="govuk-cookie-banner__message govuk-width-container">
+  
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          
+  
+          <div class="govuk-cookie-banner__content" style="margin-left: 20px; margin-top: 20px;">
+            
+            <ul class="govuk-list">
+              <li>Name: Jack Smith</li>
+              <li>Prison number: G4198UW</li>
+              <li>POM: Stephen Dicks</li>
+              <li>POM role: Responsible</li>
+            </br>
+              <li>Last OASys completed: 01 Dec 2021</li>
+              <li>Handover due to start: 01 Nov 2021</li>
+              <li> Handover due to finish: 09 Jan 2022</li>
+            
+            </ul>
+            
+
+            <h2 class="govuk-heading-m">Add a note</h2>
+
+            <textarea class="govuk-textarea" id="allocation-note" name="allocation-note" rows="3" aria-describedby="allocation-note-hint"></textarea>
+            
+
+            <button class="govuk-button govuk-button--secondary govuk-!-margin-top-2" data-module="govuk-button">
+              Copy this
+            </button>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+  
+      
+    </div>
+  </div>
+
+
+
+-->
+
+
+  
+</div>
+
+
+
+<button class="govuk-button govuk-!-margin-top-2" data-module="govuk-button" style="margin-right: 15px;">
+  Complete allocation
+</button>
+
+
+
+</form>
+
+
+
+
+
+
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+{% endblock %}

@@ -1,0 +1,204 @@
+{% extends "layout-caseload-pom.html" %}
+
+
+{% block pageTitle %}
+Case updates needed – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/jquery.hideseek.min.js"></script>
+<script>
+$('#search').hideseek({
+    highlight: true,
+    min_chars: 3,
+    nodata: "No results found",
+    hidden_mode: true,
+    ignore: '.ignore'
+});
+</script>
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row govuk-grid-column-half">
+
+
+
+  <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+    Caseload
+  </h1>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      
+
+      <div class="moj-search govuk-!-margin-bottom-6">
+
+        <form action="/parole/pom/results" method="post">
+      
+          <div class="govuk-form-group">
+            <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+              Find a case
+            </label>
+      
+            <div id="search-hint" class="govuk-hint moj-search__hint ">
+              
+            </div>
+      
+            <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+          </div>
+      
+          <button class="govuk-button moj-search__button" data-module="govuk-button">
+            Search
+          </button>
+      
+        </form>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+ 
+  
+
+
+
+    <div class="govuk-grid-row">
+
+
+  <div class="govuk-grid-column-full">
+  <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+    <ul class="moj-sub-navigation__list">
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/caseload/overview">Overview</a>
+      </li>
+
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/caseload/your-cases-all">Your cases (14)</a>
+      </li>
+
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page">Case updates needed (1)</a>
+      </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="/caseload/prison-cases-all">All allocations in this prison (206)</a>
+      </li>
+
+    </ul>
+
+</nav>
+</div>
+</div>
+
+
+
+  <h2 class="govuk-heading-l">
+    Case updates needed
+  </h2>
+  
+
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    
+      <ul class="moj-pagination__list" style="padding-top: 15px; margin-bottom: -15px;">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a>--></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"><!--3--></a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+    </ul>
+  
+
+    <p class="moj-pagination__results" style="padding-top: 15px; margin-bottom: -15px">Showing <b>1</b> to <b>1</b> of <b>1</b> results</p>
+  </nav>
+  
+
+
+  <table class="govuk-table govuk-!-margin-top-6" data-module="moj-sortable-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Case</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Update needed</th>
+        <th scope="col" class="govuk-table__header">Action</th>
+    </thead>
+    <tbody class="govuk-table__body">
+
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Robinson" href="/parole/pom/manual-entry/prisoner-profile">Saunders, James</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+        <td class="govuk-table__cell" data-sort-value="">Target hearing date</td>
+        <td class="govuk-table__cell" data-sort-value=""><a class="govuk-link govuk-link--no-visited-state" href="/parole/pom/manual-entry-v1/manual-entry">Update</a></td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+
+
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a>--></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"><!--3--></a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+    </ul>
+    <p class="moj-pagination__results">Showing <b>1</b> to <b>1</b> of <b>1</b> results</p>
+  </nav>
+
+
+
+
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}

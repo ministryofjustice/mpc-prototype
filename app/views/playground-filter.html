@@ -1,0 +1,435 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width">
+
+      <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" aria-current="page" href="missing-info-unallocated">Fix missing information</a>
+        </li>
+
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="allocations">Make allocations</a>
+        </li>
+
+
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="#">See allocations</a>
+        </li>
+
+      <li class="moj-sub-navigation__item">
+        <a class="moj-sub-navigation__link" href="newly-arrived">Newly arrived</a>
+      </li>
+      </ul>
+
+      </nav>
+
+
+      <h1 class="govuk-heading-l">
+        Fix missing information (5)
+      </h1>
+
+      <p>These cases are blocked from allocation or handover. You need to update information for prisoners when they could not be matched automatically with a record in NDelius.</p>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>5</b> of <b>5</b> results</p>
+      </nav>
+
+
+
+      <section class="app-filter-card govuk-!-margin-bottom-6" style="max-width: 100%; border: 0;">
+  <p class="govuk-heading-s">Filters</p>
+
+  <div class="app-filter-container">
+    <button id="button-record" type="button" class="app-filter-button" data-controls="probation-record-selection" onclick="event.stopPropagation(); toggleFilter(this)" style="width: 244px;">Status</button>
+    <div id="probation-record-selection" class="app-filter-selection govuk-visually-hidden">
+
+
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-visually-hidden">
+
+    Prisoner record
+
+  </legend>
+
+
+  <div class="govuk-checkboxes govuk-checkboxes--small">
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="checkbox-record" name="checkbox-record" type="checkbox" value="current">
+          <label class="govuk-label govuk-checkboxes__label" for="checkbox-record">
+        Allocation blocked
+      </label>
+
+        </div>
+
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="checkbox-record-2" name="checkbox-record" type="checkbox" value="known">
+          <label class="govuk-label govuk-checkboxes__label" for="checkbox-record-2">
+        Handover blocked
+      </label>
+
+        </div>
+
+
+
+  </div>
+  </fieldset>
+
+
+</div>
+
+
+    </div>
+  </div>
+
+  <div class="app-filter-container">
+    <button id="button-courtroom" type="button" class="app-filter-button" data-controls="courtroom-selection" onclick="event.stopPropagation(); toggleFilter(this)" style="width: 200px;">POM</button>
+    <div id="courtroom-selection" class="app-filter-selection govuk-visually-hidden">
+
+
+
+
+<div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset">
+
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-visually-hidden">
+
+    Courtroom
+
+  </legend>
+
+
+  <div class="govuk-checkboxes govuk-checkboxes--small">
+
+
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="checkbox-courtroom" name="checkbox-courtroom" type="checkbox" value="1">
+          <label class="govuk-label govuk-checkboxes__label" for="checkbox-courtroom">
+        Not allocated
+      </label>
+
+        </div>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="checkbox-courtroom-2" name="checkbox-courtroom" type="checkbox" value="2">
+          <label class="govuk-label govuk-checkboxes__label" for="checkbox-courtroom-2">
+        Bayram, Eve
+      </label>
+
+        </div>
+
+
+
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="checkbox-courtroom-3" name="checkbox-courtroom" type="checkbox" value="3">
+          <label class="govuk-label govuk-checkboxes__label" for="checkbox-courtroom-3">
+        Jara-Duncan, Laura
+      </label>
+
+        </div>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="checkbox-courtroom-4" name="checkbox-courtroom" type="checkbox" value="4">
+          <label class="govuk-label govuk-checkboxes__label" for="checkbox-courtroom-4">
+        Henley, Mary
+      </label>
+
+        </div>
+
+
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="checkbox-courtroom-5" name="checkbox-courtroom" type="checkbox" value="5">
+          <label class="govuk-label govuk-checkboxes__label" for="checkbox-courtroom-5">
+        McKann, Katy
+      </label>
+
+        </div>
+
+
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="checkbox-courtroom-6" name="checkbox-courtroom" type="checkbox" value="6">
+          <label class="govuk-label govuk-checkboxes__label" for="checkbox-courtroom-6">
+        Treend, Ollie
+      </label>
+
+        </div>
+
+
+
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="checkbox-courtroom-7" name="checkbox-courtroom" type="checkbox" value="7">
+          <label class="govuk-label govuk-checkboxes__label" for="checkbox-courtroom-7">
+        Dicks, Stephen
+      </label>
+
+        </div>
+
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="checkbox-courtroom-8" name="checkbox-courtroom" type="checkbox" value="8">
+          <label class="govuk-label govuk-checkboxes__label" for="checkbox-courtroom-8">
+        Ricketts, Andrien
+      </label>
+
+        </div>
+
+
+
+  </div>
+  </fieldset>
+
+
+</div>
+
+
+    </div>
+  </div>
+
+
+  <button type="button" class="govuk-button app-apply-filters-button" onclick="applyFilters()">Apply filters</button>
+
+  <div class="selected-filters govuk-visually-hidden">
+    <p class="govuk-body"><span class="govuk-!-font-weight-bold">Applied filters</span> <a href="#" class="govuk-body-s govuk-!-margin-left-2" onclick="event.preventDefault(); applyFilters(true)">Clear all</a></p>
+
+    <p class="applied-record govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 app-selected-filters--label govuk-visually-hidden">Status</p>
+    <div class="app-filters-applied-record"></div>
+
+    <p class="applied-courtroom govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 app-selected-filters--label govuk-visually-hidden">POM</p>
+    <div class="app-filters-applied-courtroom"></div>
+
+    <p class="applied-session govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0 app-selected-filters--label govuk-visually-hidden">Session</p>
+    <div class="app-filters-applied-session"></div>
+
+  </div>
+
+</section>
+
+
+
+      <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+
+        <th scope="col" class="govuk-table__header" aria-sort="none">
+          <button type="button" data-index="0">
+            Prisoner
+        </button>
+      </th>
+
+      <th scope="col" class="govuk-table__header" aria-sort="none">
+        <button type="button" data-index="0">
+          Status
+      </button>
+    </th>
+
+    <!-- <th scope="col" class="govuk-table__header">
+        Update required
+  </th> -->
+
+  <th scope="col" class="govuk-table__header" aria-sort="none">
+    <button type="button" data-index="0">
+      POM
+  </button>
+</th>
+
+<th scope="col" class="govuk-table__header" aria-sort="none">
+  <button type="button" data-index="0">
+    Waiting to be allocated
+</button>
+</th>
+
+<th scope="col" class="govuk-table__header" aria-sort="none">
+  <button type="button" data-index="0">
+    Handover start date
+</button>
+</th>
+
+      </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="Update-missing" data-sort-value="Mole, Adrian">
+          Mole, Adrian </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="Allocation blocked">Allocation blocked</td>
+
+        <!-- <td class="govuk-table__cell" data-sort-value="">Information from NDelius</td> -->
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="A">Not allocated</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3 days</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="60">2 months away</td>
+
+
+
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="Update-missing" data-sort-value="Johnson, Samuel">
+          Johnson, Samuel </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="Handover blocked">Handover blocked - no community information</td>
+
+        <!-- <td class="govuk-table__cell" data-sort-value="">Information from NDelius</td> -->
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="Eve Bayram">Eve Bayram</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="1000">N/A</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="-5">5 days ago</td>
+
+
+      </tr>
+
+      <!-- <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="#">
+          Houston, Graham </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="">No active POM</td>
+
+        <td class="govuk-table__cell" data-sort-value="">Check allocated POM status</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">Stephen Dicks</td>
+
+
+      </tr> -->
+
+      <!-- <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="#">
+          Higgins, Desmond </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="">No active POM</td>
+
+        <td class="govuk-table__cell" data-sort-value="">Check allocated POM status</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="11">Stephen Dicks</td>
+
+
+      </tr> -->
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="#" data-sort-value="Martin, Robert">
+          Martin, Robert </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="Handover blocked">Handover blocked - no community information</td>
+
+        <!-- <td class="govuk-table__cell" data-sort-value="">Information from NDelius</td> -->
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="Laura Jara-Duncan">Laura Jara-Duncan</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="1000">N/A</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="365">1 year away</td>
+
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="#" data-sort-value="Alfiya, Leo">
+          Alfiya, Leo</a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="Allocation blocked">Allocation blocked</td>
+
+        <!-- <td class="govuk-table__cell" data-sort-value="">Information from NDelius</td> -->
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="A">Not allocated</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2 days</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="183">6 months away</td>
+
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-!-font-weight-bold" href="#" data-sort-value="McDonald, James">
+          McDonald, James </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell" data-sort-value="Allocation blocked">Allocation blocked</td>
+
+        <!-- <td class="govuk-table__cell" data-sort-value="">Information from NDelius</td> -->
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="A">Not allocated</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="11">11 days</td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2 days away</td>
+
+
+      </tr>
+
+      </tbody>
+      </table>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>5</b> of <b>5</b> results</p>
+      </nav>
+
+          </div>
+      </div>
+
+{% endblock %}

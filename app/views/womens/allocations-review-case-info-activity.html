@@ -1,0 +1,198 @@
+{% extends "layout-main.html" %}
+
+
+{% block pageTitle %}
+Review case before allocating
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<div class="govuk-!-padding-bottom-4"></div>
+
+<a href="/womens/make-allocations" class="govuk-back-link govuk-body govuk-!-font-weight-bold">Back to make allocations list</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<form method="post" action="/womens/allocaton-select-pom-uplift">
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+    <span class="govuk-caption-l">Step 1 of 3</span>
+    <h1 class="govuk-heading-l">Review case to understand risks and needs
+  </h1>
+</div>
+</div>
+
+    <!-- <div class="govuk-!-padding-bottom-3"></div>
+      <button class="govuk-button" data-module="govuk-button" formaction="/womens/allocations-select-pom">
+        Continue
+      </button> -->
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-full-width">
+
+
+          <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+            <ul class="moj-sub-navigation__list">
+              <li class="moj-sub-navigation__item">
+                <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+                  href="/womens/allocations-review-case-info">Case summary</a>
+              </li>
+              <li class="moj-sub-navigation__item">
+                <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+                  href="/womens/allocations-review-case-info-contacts">Contacts</a>
+              </li>
+              <li class="moj-sub-navigation__item">
+                <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page"
+                  href="/womens/allocations-review-case-info-activity">Case activity</a>
+              </li>
+            </ul>
+
+          </nav>
+        </div>
+      </div>
+
+
+
+
+        <!-- <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-l govuk-!-margin-bottom-7">Case activity</h1>
+        </div> -->
+
+
+
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+            <h2 class="govuk-heading-m">HMP Bronzefield</h1>
+
+              <div class="moj-timeline">
+
+                <!-- <div class="moj-timeline__item">
+                <div class="moj-timeline__header">
+                  <h2 class="moj-timeline__title">Reminder sent for supporting COM allocation</h2>
+                  <p class="moj-timeline__byline">email sent automatically</p>
+                </div>
+                <p class="moj-timeline__date">
+                  <time datetime="2019-06-14T14:01:00.000Z">18 April 2021 at 2:01pm</time>
+                </p>
+                <div class="moj-timeline__description">
+                  <p>The LDU for Central Birmingham Team 1 - <a href="#" class="govuk-link">ldu.example@justice.gov.uk</a> - was reminded to allocate a supporting COM by 01/05/21</p>
+                </div>
+              </div>
+
+                <div class="moj-timeline__item">
+                <div class="moj-timeline__header">
+                  <h2 class="moj-timeline__title">Supporting COM allocation requested</h2>
+                  <p class="moj-timeline__byline">email sent automatically</p>
+                </div>
+                <p class="moj-timeline__date">
+                  <time datetime="2019-06-14T14:01:00.000Z">14 March 2021 at 9:00am</time>
+                </p>
+                <div class="moj-timeline__description">
+                  <p>The LDU for Central Birmingham Team 1 - <a href="#" class="govuk-link">ldu.example@justice.gov.uk</a> - was asked to allocate a supporting COM by 01/05/21</p>
+                </div>
+                </div> -->
+
+
+
+                <div class="moj-timeline__item">
+                <div class="moj-timeline__header">
+                  <h2 class="moj-timeline__title">Prisoner unallocated (transfer)</h2>
+                  <p class="moj-timeline__byline">automatic system action</p>
+                </div>
+                <p class="moj-timeline__date">
+                  <time datetime="2019-06-14T14:01:00.000Z">05 January 2021 at 9:00am</time>
+                </p>
+                </div>
+
+              <div class="moj-timeline__item">
+              <div class="moj-timeline__header">
+                <h2 class="moj-timeline__title">Prison Offender Manager (POM) allocated</h2>
+                <p class="moj-timeline__byline">by Sarah Jacobs</p>
+              </div>
+              <p class="moj-timeline__date">
+                <time datetime="2019-06-14T14:01:00.000Z">01 March 2020 at 2:01pm</time>
+              </p>
+              <div class="moj-timeline__description">
+                <p>Susan Hardy (Probation staff POM) <a href="#" class="govuk-link">susan.hardy@justice.gov.uk</a> allocated</p>
+              </div>
+
+              </div>
+            </div>
+
+            <h2 class="govuk-heading-m">HMP Peterborough</h1>
+
+              <div class="moj-timeline">
+
+
+                <div class="moj-timeline__item">
+                <div class="moj-timeline__header">
+                  <h2 class="moj-timeline__title">Prisoner unallocated (transfer)</h2>
+                  <p class="moj-timeline__byline">automatic system action</p>
+                </div>
+                <p class="moj-timeline__date">
+                  <time datetime="2019-06-14T14:01:00.000Z">28 February 2020 at 9:00am</time>
+                </p>
+                </div>
+
+              <div class="moj-timeline__item">
+              <div class="moj-timeline__header">
+                <h2 class="moj-timeline__title">Prison Offender Manager (POM) allocated</h2>
+                <p class="moj-timeline__byline">by Baron, Lauren</p>
+              </div>
+              <p class="moj-timeline__date">
+                <time datetime="2019-06-14T14:01:00.000Z">01 November 2019 at 2:01pm</time>
+              </p>
+              <div class="moj-timeline__description">
+                <p>Ben Richardson (Probation staff POM) <a href="#" class="govuk-link">ben.richardson@justice.gov.uk</a> allocated</p>
+              </div>
+              </div>
+
+            </div>
+
+
+
+
+
+            <div class="govuk-!-padding-bottom-4"></div>
+
+<button class="govuk-button" data-module="govuk-button" formaction="/womens/allocation-select-pom-uplift">
+  Continue
+</button>
+
+
+</div>
+<div class="govuk-grid-column-one-third">
+    <ul class="govuk-list">
+      <!-- <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="appointment">Change POM allocation</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="appointment">Allocate co-working POM</a>
+      </li> -->
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="#">View case on DPS</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+{% endblock %}

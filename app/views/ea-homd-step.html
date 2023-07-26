@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+<a href="check-ea-answers-pg2" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+
+
+          <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-l">You must get approval before you continue</h1>
+
+            <p class="govuk-body">This case can be sent to the community probation team early.</p>
+
+            <p class="govuk-body">Your Head of Offender Management Delivery (HOMD) must approve this referral before you proceed.</p>
+
+            <p class="govuk-body">You can save your assessment as a draft and come back to this page later.</p>
+
+          <p class="govuk-body">
+            <a class="govuk-link" href="#">Download completed assessment (pdf)</a>
+          </p>
+
+          <div class="govuk-!-padding-bottom-4"></div>
+
+
+
+
+          <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+            Submit assessment
+        </button>
+
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save as draft
+        </button>
+
+</form>
+
+            <!-- <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              No action needed - return to prisoner profile
+            </button> -->
+
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+
+            <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+            <aside class="app-related-items" role="complementary">
+              <h2 class="govuk-heading-m" id="subsection-title">
+                Guidance
+              </h2>
+              <nav role="navigation" aria-labelledby="subsection-title">
+                <ul class="govuk-list govuk-!-font-size-16">
+                  <li>
+                    <a class="govuk-link" href="#">
+                      View EQuiP guidance
+                    </a>
+                  </li>
+                </ul>
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+              <h2 class="govuk-heading-m" id="subsection-title">
+                Prisoner information
+              </h2>
+              <ul class="govuk-list govuk-!-font-size-16">
+                <li>
+                  <p class="govuk-body">Name: Frogspawn, Bob </p>
+                  <p class="govuk-body">Date of birth: 15/01/2000 </p>
+                  <p class="govuk-body">NOMIS number: G2911GD</p>
+              </ul>
+              </nav>
+            </aside>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+
+
+
+
+{% endblock %}

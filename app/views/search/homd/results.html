@@ -1,0 +1,200 @@
+{% extends "layout-search-homd.html" %}
+
+
+{% block pageTitle %}
+Search results – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/jquery.hideseek.min.js"></script>
+<script>
+$('#search').hideseek({
+    highlight: true,
+    min_chars: 3,
+    nodata: "No results found",
+    hidden_mode: true,
+    ignore: '.ignore'
+});
+</script>
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<div class="govuk-grid-row">
+
+
+
+
+<a href="#" class="govuk-back-link govuk-!-margin-bottom-8">Back</a>
+
+
+
+  <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+    3 results for Jones
+  </h1>
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      
+
+      <div class="moj-search govuk-!-margin-bottom-6">
+
+        <form action="#" method="post">
+      
+          <div class="govuk-form-group">
+            <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+              Find a case
+            </label>
+      
+            <div id="search-hint" class="govuk-hint moj-search__hint ">
+              <!--Enter a name or prison number to search all allocations in this prison-->
+            </div>
+      
+            <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+          </div>
+      
+          <button class="govuk-button moj-search__button " data-module="govuk-button">
+            Search
+          </button>
+      
+        </form>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  
+
+
+
+
+    <div class="govuk-grid-row">
+
+
+  <div class="govuk-grid-column-full">
+  
+</div>
+</div>
+
+
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list" style="padding-top: 15px; margin-bottom: -15px;">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a>--></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"><!--3--></a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+    </ul>
+    <p class="moj-pagination__results" style="padding-top: 15px; margin-bottom: -15px;">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+  </nav>
+  
+
+
+  <table class="govuk-table govuk-!-margin-top-6">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Case</th>
+        <th scope="col" class="govuk-table__header">POM</th>
+        <th scope="col" class="govuk-table__header">POM role</th>
+        <th scope="col" class="govuk-table__header">Location</th>
+        <th scope="col" class="govuk-table__header">Earliest release date</th>
+        <th scope="col" class="govuk-table__header">Tier</th>
+        <th scope="col" class="govuk-table__header">Action</th>
+    </thead>
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" data-sort-value="Jones"><a class="govuk-link--no-visited-state" href="#">Jones, Dalton</a><br> <span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
+        <td class="govuk-table__cell" data-sort-value="Smith">Gemma Smith</td>
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+        <td class="govuk-table__cell" data-sort-value="A-7-038">A-7-038</td>
+        <td class="govuk-table__cell" data-sort-value="2021.12.11">HDCED:</br>11 Dec 2021</td>
+        <td class="govuk-table__cell" data-sort-value="D">D</td>
+        <td class="govuk-table__cell" data-sort-value="View"><a class="govuk-link govuk-link--no-visited-state" href="#"></a></td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" data-sort-value="Jones"><a class="govuk-link--no-visited-state" href="#">Jones, Derick</a><br> <span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
+        <td class="govuk-table__cell" data-sort-value="Hill">None allocated</td>
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+        <td class="govuk-table__cell" data-sort-value="C-8-066">C-8-066</td>
+        <td class="govuk-table__cell" data-sort-value="2022.01.17">TED: </br>17 Jan 2022</td>
+        <td class="govuk-table__cell" data-sort-value="B">No tier found</td>
+        <td class="govuk-table__cell" data-sort-value="View"><a class="govuk-link govuk-link--no-visited-state" href="#">Add missing details</a></td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" data-sort-value="Jones"><a class="govuk-link--no-visited-state" href="#">Jones, Jack</a><br><span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
+        <td class="govuk-table__cell" data-sort-value="Colum">None allocated</td>
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+        <td class="govuk-table__cell" data-sort-value="B-3-099">B-3-099</td>
+        <td class="govuk-table__cell" data-sort-value="2022.04.23">CRD:</br>23 Apr 2022</td>
+        <td class="govuk-table__cell" data-sort-value="A">A</td>
+        <td class="govuk-table__cell" data-sort-value="View"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+  
+      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a>--></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"><!--3--></a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
+      </li>
+    </ul>
+    <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+  </nav>
+
+
+
+
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}

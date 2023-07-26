@@ -1,0 +1,93 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="/missing-info-notifications-can-allocate-no-ldu">
+  <form class="form" action="/missing-info-notifications-can-allocate-no-ldu" method="post">
+
+
+  <div class="govuk-grid-row">
+    <!-- <div class="govuk-grid-column-full-width">
+
+
+    <div class="moj-banner moj-banner--success">
+
+<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+
+<div class="moj-banner__message">
+<span class="moj-banner__assistive">Success</span>LDU information for OMIC All Manchester saved</div>
+
+</div>
+</div>
+</div>
+  <div class="govuk-grid-row"> -->
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        You must contact the LDU
+      </h1>
+      <p>An email could not be sent to the LDU for OMIC All Manchester because an email address for the LDU could not be found.</p>
+
+      <p>The LDU must fix information on nDelius so that the case can be handed over when responsibility changes.</p>
+
+      <p>You may need to find an alternative way of contacting them.</p>
+
+      <h2 class="govuk-heading-m">Share these instructions with the LDU</h2>
+
+      <p class="govuk-body govuk-!-font-weight-bold">Action required: case information to update in nDelius.</p>
+
+      <p>Prisoner name: Martin, Robert</p>
+      <p>Date of birth: 01/01/1970</p>
+      <p>NOMIS number: G2911GD</p>
+
+      <p>When we tried to match the nDelius record we found the prisoner didn't have a tiering calculation.</p>
+
+      <p>We need you to update the record with the tiering calculation as soon as possible to prevent problems at handover.</p>
+</p>
+
+
+      <br>
+
+
+<button class="govuk-button">Continue</button>
+
+
+          </div>
+
+
+          <div class="govuk-grid-column-one-third">
+            <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Martin, Robert
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <p class="govuk-body govuk-!-font-weight-bold">Date of birth</p>
+            <p>01/01/1970<p>
+            </li>
+            <li>
+              <p class="govuk-body govuk-!-font-weight-bold">NOMIS number</p>
+            <p>G2911GD<p>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+                </div>
+
+              </div>
+        </form>
+
+
+
+
+
+{% endblock %}

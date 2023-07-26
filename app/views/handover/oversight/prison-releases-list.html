@@ -1,0 +1,122 @@
+{% extends "layout-homd-test-nav.html" %}
+
+
+{% block pageTitle %}
+Handover cases
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-!-margin-bottom-3"></div>
+<a href="/handover/oversight/prison-handover-overview" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+  <h1 class="govuk-heading-l">
+    Releases in next 14 days
+  </h1>
+
+  <nav class="moj-pagination" id="pagination-label">
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+    <ul class="moj-pagination__list">
+    <li class="moj-pagination__item moj-pagination__item--active"></li>
+    </ul>
+    <p class="moj-pagination__results">Showing <b>1</b> to <b>6</b> of <b>6</b> results</p>
+  </nav>
+
+  <table class="govuk-table govuk-!-margin-top-6">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" aria-sort="none">Case</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">POM</th>
+        <th scope="col" class="govuk-table__header">COM</th>
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Tier</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Release date</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Release date type</th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Morris" href="#">Otto Morris</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#" data-sort-value="King">Jessica King</a></td>
+        <td class="govuk-table__cell">Victoria Champion</td>
+        <td class="govuk-table__cell" data-sort-value="B">B</td>
+        <td class="govuk-table__cell" data-sort-value="2021.05.24">24 May 2021</td>
+        <td class="govuk-table__cell" data-sort-value="CRD">CRD</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Dunn" href="#">Laurence Dunn</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="/team-management/view-of-pom-overview-v3" data-sort-value="Doe">Peter Doe</a></td>
+        <td class="govuk-table__cell">Jonathan Nunn</td>
+        <td class="govuk-table__cell" data-sort-value="B">B</td>
+        <td class="govuk-table__cell" data-sort-value="2021.05.28">28 May 2021</td>
+        <td class="govuk-table__cell" data-sort-value="CRD">CRD</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Townsend" href="#">Zachary Townsend</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="/team-management/view-of-pom-overview-v3" data-sort-value="Yates">Laura Yates</a></td>
+        <td class="govuk-table__cell">Nadia Rose</td>
+        <td class="govuk-table__cell" data-sort-value="C">C</td>
+        <td class="govuk-table__cell" data-sort-value="2021.05.21">21 May 2021</td>
+        <td class="govuk-table__cell" data-sort-value="HDC">HDC</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Charlton" href="#">James Charlton</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="/team-management/view-of-pom-overview-v3" data-sort-value="Doe">Peter Doe</a></td>
+        <td class="govuk-table__cell">Niall O'Connell</td>
+        <td class="govuk-table__cell" data-sort-value="C">C</td>
+        <td class="govuk-table__cell" data-sort-value="2021.06.01">01 Jun 2021</td>
+        <td class="govuk-table__cell" data-sort-value="ARD">ARD</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Bryn Perry</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#" data-sort-value="Jones">Paul Jones</a></td>
+        <td class="govuk-table__cell">Michael Hillier</td>
+        <td class="govuk-table__cell" data-sort-value="D">D</td>
+        <td class="govuk-table__cell" data-sort-value="2021.05.29">29 May 2021</td>
+        <td class="govuk-table__cell" data-sort-value="CRD">CRD</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state"  data-sort-value="Farmer" href="#">Michael Farmer</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#" data-sort-value="Barker">Sylvie Barker</a></td>
+        <td class="govuk-table__cell">Rebecca Taylor</td>
+        <td class="govuk-table__cell" data-sort-value="D">D</td>
+        <td class="govuk-table__cell" data-sort-value="2021.05.26">26 May 2021</td>
+        <td class="govuk-table__cell" data-sort-value="CRD">CRD</td>
+      </tr>
+
+
+    </tbody>
+  </table>
+
+  <nav class="moj-pagination" id="pagination-label">
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+    <ul class="moj-pagination__list">
+    <li class="moj-pagination__item moj-pagination__item--active"></li>
+    </ul>
+    <p class="moj-pagination__results">Showing <b>1</b> to <b>6</b> of <b>6</b> results</p>
+  </nav>
+
+
+
+
+
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}

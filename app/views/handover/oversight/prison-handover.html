@@ -1,0 +1,246 @@
+{% extends "layout-homd-test-nav.html" %}
+
+
+{% block pageTitle %}
+Handover cases dashboard
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+  <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+    Handover to the community
+  </h1>
+
+<div>
+</div>
+
+  <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+        <hr style="border-top: 2px dotted grey"/>
+          <h2 class="govuk-heading-m govuk-!-margin-top-4">Cases for handover</h2>
+          <div class="overview overview-label">
+            <!-- <p>Cases for handover</p> -->
+            <div class="overview-total">
+            <span class="card__heading">34</span>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="govuk-grid-column-one-third">
+    <hr style="border-top: 2px dotted grey"/>
+      <h2 class="govuk-heading-m govuk-!-margin-top-4">Releases in next 14 days</h2>
+      <div class="overview overview-label">
+        <!-- <p>Releases in next 14 days</p> -->
+        <div class="overview-total">
+        <a href="#" class="govuk-link--no-visited-state"><span class="card__heading">6</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  <hr style="border-top: 2px dotted grey"/>
+    <h2 class="govuk-heading-m govuk-!-margin-top-4">COM allocation overdue</h2>
+    <div class="overview overview-label">
+      <!-- <p>COM allocation overdue</p> -->
+      <div class="overview-total">
+      <a href="/handover/oversight/prison-cases-missing-com" class="govuk-link--no-visited-state"><span class="card__heading">3</span></a>
+    </div>
+  </div>
+  </div>
+
+
+    </div>
+
+
+    <div class="govuk-tabs govuk-!-margin-top-8" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#past-day">
+            POM preparing case before COM allocation (7)
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#past-week">
+            POM and COM preparing case for community (27)
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-tabs__panel" id="past-day">
+        <h2 class="govuk-heading-l">POM preparing case before COM allocation
+        </h2>
+        <p>A COM will be allocated in the next 8 weeks. The POM should start reviewing the case and getting ready for the move to the community.</p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Case</th>
+              <th scope="col" class="govuk-table__header">POM</th>
+              <th scope="col" class="govuk-table__header">COM supports case</th>
+              <th scope="col" class="govuk-table__header">COM responsible for case</th>
+              <th scope="col" class="govuk-table__header">Tier</th>
+                <th scope="col" class="govuk-table__header">POM handover progress</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Jack Robinson</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="/team-management/view-of-pom-overview-v2">Peter Doe</a></td>
+              <td class="govuk-table__cell">21 May 2021</td>
+              <td class="govuk-table__cell">24 Jul 2021</td>
+              <td class="govuk-table__cell">A</td>
+              <td class="govuk-table__cell">
+          <ul class="govuk-list govuk-body-s task-summary-checklist">
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Review OASys</li>
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Check pre-release needs</li>
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Explain handover process to prisoner</a></li>
+            <li class="nope"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Attend pre-release board</li>
+          </ul>
+        </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Hadyn Parker</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#ww">Jessica King</a></td>
+              <td class="govuk-table__cell">N/A - CRC</td>
+              <td class="govuk-table__cell">15 Jun 2021</td>
+              <td class="govuk-table__cell">C</td>
+              <td class="govuk-table__cell">
+          <ul class="govuk-list govuk-body-s task-summary-checklist">
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>
+              Review OASys</li>
+            <li class="nope"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Check pre-release needs</li>
+            <li class="nope"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Explain handover process to prisoner</a></li>
+            <li class="nope"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Send POM-COM handover report</li>
+          </ul>
+        </td>
+            </tr>
+
+
+          </tbody>
+        </table>
+
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+        <h2 class="govuk-heading-l">POM and COM preparing case for community</h2>
+        <p>The POM should discuss any pre-release needs and prepare to attend the pre-release board.</p>
+        <p>Once the COM is responsible, the POM should continue to provide the COM with the information they need in order to make good decisions.</p>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Case</th>
+              <th scope="col" class="govuk-table__header">POM</th>
+              <th scope="col" class="govuk-table__header">COM</th>
+              <th scope="col" class="govuk-table__header">COM supports case<br> (start COM handover)</th>
+              <th scope="col" class="govuk-table__header">Complete<br>handover by</th>
+              <th scope="col" class="govuk-table__header">Tier</th>
+                <th scope="col" class="govuk-table__header">POM handover progress</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Pharrell Jameson</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#ww">James Gordon</a></td>
+              <td class="govuk-table__cell">Deborah Simpson</td>
+              <td class="govuk-table__cell">18 Mar 2021</td>
+              <td class="govuk-table__cell due-date">
+                <span class="date due">18 May 2021</span>
+                <span class="secondary due">Due in 8 days</span>
+              </td>
+              <td class="govuk-table__cell">C</td>
+              <td class="govuk-table__cell">
+          <ul class="govuk-list govuk-body-s task-summary-checklist">
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>
+              Review OASys</li>
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Check pre-release needs</li>
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Explain handover process to prisoner</li>
+            <li class="nope"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Attend pre-release board</li>
+          </ul>
+        </td>
+            </tr>
+
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Jerry Coggins</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#ww">Peter Doe</a></td>
+              <td class="govuk-table__cell due-date">
+                <span class="date overdue">Unknown</span>
+                <span class="secondary overdue">Allocation overdue</span>
+              </td>
+              <td class="govuk-table__cell">01 Apr 2021</td>
+              <td class="govuk-table__cell">01 Jun 2021</td>
+              <td class="govuk-table__cell">B</td>
+              <td class="govuk-table__cell">
+          <ul class="govuk-list govuk-body-s task-summary-checklist">
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Review OASys</li>
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Check pre-release needs</li>
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Explain handover process to prisoner</li>
+            <li class="nope"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Attend pre-release board</li>
+          </ul>
+        </td>
+            </tr>
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Kirit Patel</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#ww">Sylvie Barker</a></td>
+              <td class="govuk-table__cell">Michaela Oliver</td>
+            <td class="govuk-table__cell">21 Jan 2021</td>
+              <td class="govuk-table__cell">24 Apr 2021</td>
+              <td class="govuk-table__cell">A</td>
+              <td class="govuk-table__cell">
+          <ul class="govuk-list govuk-body-s task-summary-checklist">
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Review OASys</li>
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Check pre-release needs</li>
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Explain handover process to prisoner</li>
+            <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Attend pre-release board</li>
+          </ul>
+        </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Harrison Parker</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+              <td class="govuk-table__cell"><a class="govuk-link--no-visited-state" href="#ww">Laura Yates</a></td>
+              <td class="govuk-table__cell">Liam Jones</td>
+              <td class="govuk-table__cell">N/A - CRC</td>
+              <td class="govuk-table__cell">06 May 2021</td>
+              <td class="govuk-table__cell">D</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-body-s task-summary-checklist">
+                  <li class="nope"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Review OASys</li>
+                  <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Check pre-release needs</li>
+                  <li class="yep"><img style="width:7%; padding-right: 5px;" src="/public/images/check.png" alt="task complete"/>Explain handover process to prisoner</li>
+                  <li class="nope"><img style="width:7%; padding-right: 5px;" src="/public/images/cross.png" alt="task not started"/>Send POM-COM handover report</li>
+                </ul>
+</td>
+            </tr>
+
+
+          </tbody>
+        </table>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+
+{% endblock %}

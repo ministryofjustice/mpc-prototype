@@ -1,0 +1,191 @@
+{% extends "layout-pom-blank-nav.html" %}
+
+
+{% block pageTitle %}
+Handover cases
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+
+
+
+  <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+    Handover cases
+  </h1>
+
+
+
+
+    <div class="govuk-grid-row">
+
+
+  <div class="govuk-grid-column-full">
+  <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+    <ul class="moj-sub-navigation__list">
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./upcoming-handovers.html">Upcoming handovers (7)</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state"  href="./handovers-in-progress.html">Handovers in progress (23)</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./tasks-overdue.html">Overdue tasks (3)</a>
+    </li>
+
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page">COM allocation overdue (3)</a>
+    </li>
+
+    </ul>
+
+</nav>
+</div>
+</div>
+
+
+
+  <h2 class="govuk-heading-l">
+    COM allocation overdue
+  </h2>
+  <p>These cases have past their handover date and are missing COM details on NDelius.</p>
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list" style="padding-top: 15px; margin-bottom: -15px;">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+      </li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">1</a></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active">2</li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">3</a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+      </li>
+    </ul>
+    <p class="moj-pagination__results" style="padding-top: 15px; margin-bottom: -15px;">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+  </nav>
+
+
+
+  <table class="govuk-table govuk-!-margin-top-6">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" aria-sort="none">Prisoner details</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">POM</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">COM responsible</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Earliest </br>release date</th>
+        <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+        <th scope="col" class="govuk-table__header" aria-sort="descending">Days </br>overdue</th>
+        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">LDU details</th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Amit, Udin</a><br> <span class="govuk-!-margin-bottom-0"> G2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Sylvie Barker</a></td>
+        <td class="govuk-table__cell">COM responsible:</br>03 May 2021</td>
+        <td class="govuk-table__cell">CRD: </br>26 Jul 2021</td>
+        <td class="govuk-table__cell"><strong>D</strong><br>CRC (legacy)</td>
+        <td class="govuk-table__cell due-date">
+          <span class="date overdue">28</span>
+        </td>
+        <td class="govuk-table__cell"><p>Cornwall and Isles of Scilly</p><p style="margin-top: -10px;">PlymouthCornwallandIslesofScilly-omic@justice.gov.uk</p></td>
+      </tr>
+
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Damien, Adams</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Sylvie Barker</a></td>
+        <td class="govuk-table__cell">COM responsible:<br>30 Jun 2021</td>
+        <td class="govuk-table__cell">PRD: </br>28 Feb 2022</td>
+        <td class="govuk-table__cell"><strong>B</strong><br>NPS (legacy)</td>
+        <td class="govuk-table__cell due-date">
+          <span class="date overdue">16</span>
+        </td>
+        <td class="govuk-table__cell">Check how to contact Swansea, Neath Port-Talbot LDU. We do not have an email address recorded for it.</td>
+      </tr>
+
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Coggins, Jerry</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Peter Doe</a></td>
+        <td class="govuk-table__cell">COM allocated:<br>20 Apr 2021<br><p style="padding-top: 10px;">COM responsible:<br>20 Jul 2021</p></td>
+        <td class="govuk-table__cell">CRD: </br>03 Dec 2021</td>
+        <td class="govuk-table__cell"><strong>B</strong><br>NPS (legacy)</td>
+        <td class="govuk-table__cell due-date">
+          <span class="date overdue">5</span>
+        </td>
+        <td class="govuk-table__cell">We don’t have this information.
+          <a class="govuk-link govuk-link--no-visited-state" href="#">Check DPS to find where this person was sentenced</a> and then try contacting the LDU for that area.</td>
+      </tr>
+
+
+
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+  <nav class="moj-pagination" id="pagination-label">
+
+    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+  
+    <ul class="moj-pagination__list">
+      <li class="moj-pagination__item  moj-pagination__item--prev">
+        <a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+      </li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=1">1</a></li>
+  
+      <li class="moj-pagination__item moj-pagination__item--active">2</li>
+  
+      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3">3</a></li>
+  
+      <li class="moj-pagination__item  moj-pagination__item--next">
+        <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+      </li>
+    </ul>
+    <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+  </nav>
+
+
+
+
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}
