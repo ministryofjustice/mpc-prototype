@@ -1,0 +1,64 @@
+// copied from: https://github.com/Charan-MoJ/hmpps-prepare-a-case-prototype/blob/master/app/assets/javascripts/application.js
+.app-filter-card {
+  width: 100%;
+  background-color: govuk-colour("light-grey");
+  padding: 15px;
+  min-height: 115px;
+  box-sizing: border-box;
+}
+
+.app-filter-container {
+  display: inline-block;
+  float:left;
+  margin: 0 15px;
+  min-width: 200px;
+  @include govuk-clearfix();
+}
+
+.app-filter-selection {
+  position: relative;
+  display: block;
+  background-color: white;
+  border: 1px solid black;
+  padding: 25px 15px 0 15px;
+  top: -1px;
+  border-top: 0;
+  z-index: 9999;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.app-selected-filters--label {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  @include govuk-clearfix();
+  @include govuk-typography-weight-bold;
+}
+
+.selected-filters {
+  clear: left;
+  overflow: hidden;
+}
+
+.app-filter-tags {
+  display: block;
+}
+
+.app-filter__tag {
+  position: relative;
+  float: left;
+  margin: 0 15px 0 0;
+  padding-right: 25px;
+  @include govuk-clearfix();
+  z-index: 1;
+
+  &:after {
+    position: absolute;
+    background-image: none;
+    height: auto;
+    content: "x";
+    top: 5px;
+    right: 5px
+  }
+}
