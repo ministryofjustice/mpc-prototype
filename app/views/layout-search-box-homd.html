@@ -41,7 +41,7 @@
   {% include "includes/cookie-banner.html" %}
   {# Set serviceName in config.js. #}
 
-  {%- from "header/macro.njk" import mojHeader -%}
+  {%- from "moj/components/header/macro.njk" import mojHeader -%}
 
   {{ mojHeader({
   organisationLabel: {
@@ -66,8 +66,8 @@
 
   }) }}
 
-  {%- from "primary-navigation/macro.njk" import mojPrimaryNavigation -%}
-  {%- from "search/macro.njk" import mojSearch -%}
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {%- from "moj/components/search/macro.njk" import mojSearch -%}
 
   {%- set toggleSearchHtml %}
 
