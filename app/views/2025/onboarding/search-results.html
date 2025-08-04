@@ -1,0 +1,124 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Make allocations – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom:0">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-xl govuk-!-margin-top-6">
+ Add a POM
+</h1>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+  
+
+    <div class="moj-search">
+
+      <form action="#" method="post">
+    
+        <div class="govuk-form-group">
+          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+            Find a staff member
+          </label>
+    
+          <div id="search-hint" class="govuk-hint moj-search__hint ">
+            Search by name, email or username
+          </div>
+    
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+    
+        </div>
+    
+        <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+    
+      </form>
+    </div>
+
+ 
+</div>
+</div>
+
+
+
+<div class="govuk-grid-row govuk-!-margin-top-8">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l">
+      H2 (5 results)
+     </h2>
+
+
+
+     <table class="govuk-table" data-module="moj-sortable-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="none">Name</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">Email address</th>
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Username</th>
+        </tr>
+      </thead>
+
+    
+      <tbody class="govuk-table__body">
+    
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Aconcagua</td>
+          <td class="govuk-table__cell" data-sort-value="6961">6,961 meters</td>
+          <td class="govuk-table__cell">South America</td>
+        </tr>
+    
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Denali</td>
+          <td class="govuk-table__cell" data-sort-value="6194">6,194 meters</td>
+          <td class="govuk-table__cell">North America</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Denali</td>
+          <td class="govuk-table__cell" data-sort-value="6194">6,194 meters</td>
+          <td class="govuk-table__cell">North America</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Denali</td>
+          <td class="govuk-table__cell" data-sort-value="6194">6,194 meters</td>
+          <td class="govuk-table__cell">North America</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Denali</td>
+          <td class="govuk-table__cell" data-sort-value="6194">6,194 meters</td>
+          <td class="govuk-table__cell">North America</td>
+        </tr>
+    
+      </tbody>
+    </table>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+{% endblock %}
