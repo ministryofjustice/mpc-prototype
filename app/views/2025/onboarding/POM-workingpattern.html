@@ -1,4 +1,4 @@
-{% extends "layout-mens-homd.html" %}
+{% extends "includes/layouts/main.html" %}
 
 
 {% block pageTitle %}
@@ -12,21 +12,149 @@ Make allocations – Digital Prison Services
 {% block content %}
 
 
-<h1 class="govuk-heading-xl govuk-!-margin-top-6">
- Add a POM
-</h1>
+<h1 class="govuk-heading-xl govuk-!-margin-top-6">Add a POM</h1>
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
   
+    <div class="govuk-inset-text">
+      
+        <strong>Name:</strong>xxxx</br>
+        <strong>Email address:</strong>xxxx</br>
+        <strong>Username:</strong>xxxx
+
+    </div>
 
 
 
+    <form method="" action="check-your-answers.html">
 
-
-
+      <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+                     
+        <!--START set dynamic radio hide/show text-->
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+    
+        {% set DetailsParttime %}
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Select how many days per week they will work 
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="workpatternDays" name="workpatternDays" type="radio" value="90">
+                <label class="govuk-label govuk-radios__label" for="workpatternDays">
+                  Four and a half days (0.9 full-time equivalent)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="workpatternDays-2" name="workpatternDays" type="radio" value="80">
+                <label class="govuk-label govuk-radios__label" for="workpatternDays-2">
+                  Four days (0.8 full-time equivalent) 
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="workpatternDays-3" name="workpatternDays" type="radio" value="70">
+                <label class="govuk-label govuk-radios__label" for="workpatternDays-3">
+                  Three and a half days (0.7 full-time equivalent)  
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="workpatternDays-4" name="workpatternDays" type="radio" value="60">
+                <label class="govuk-label govuk-radios__label" for="workpatternDays-4">
+                  Three days (0.6 full-time equivalent) 
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="workpatternDays-5" name="workpatternDays" type="radio" value="50">
+                <label class="govuk-label govuk-radios__label" for="workpatternDays-5">
+                  Two and a half days (0.5 full-time equivalent) 
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="workpatternDays-6" name="workpatternDays" type="radio" value="40">
+                <label class="govuk-label govuk-radios__label" for="workpatternDays-6">
+                  Two days (0.4 full-time equivalent) 
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="workpatternDays-7" name="workpatternDays" type="radio" value="30">
+                <label class="govuk-label govuk-radios__label" for="workpatternDays-7">
+                  One and a half days (0.3 full-time equivalent) 
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="workpatternDays-8" name="workpatternDays" type="radio" value="20">
+                <label class="govuk-label govuk-radios__label" for="workpatternDays-8">
+                  One day (0.2 full-time equivalent) 
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="workpatternDays-9" name="workpatternDays" type="radio" value="10">
+                <label class="govuk-label govuk-radios__label" for="workpatternDays-9">
+                  Half a day (0.1 full-time equivalent)
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        {% endset -%}
+    
+    
+        <!--END set dynamic radio hide/show text-->
+               
+        {{ govukRadios({
+          idPrefix: "workingpatternPOM",
+          name: "workingpatternPOM",
+          fieldset: {
+            legend: {
+              text: "Choose the working pattern of this POM",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: ""
+          },
+          items: [
+    
+    
+            {
+              value: "fulltime",
+              text: "Full time",
+              conditional: {
+                html: textHtmlTimesThree
+              }
+            },
+    
+    
+            {
+              value: "parttime",
+              text: "Part time",
+              conditional: {
+                html: DetailsParttime
+              }
+            }
+           
+          ]
+        }) }}
+          
+     
+      </fieldset>
+      </div>
+       
+        <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button" name="submit" value="continue">
+          Continue
+        </button>
+        </div>
+    
+    </form>
 
 
 

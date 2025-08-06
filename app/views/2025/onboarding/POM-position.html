@@ -2,7 +2,7 @@
 
 
 {% block pageTitle %}
-Make allocations – Digital Prison Services
+Select this POM’s level – Digital Prison Services
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,22 +12,48 @@ Make allocations – Digital Prison Services
 {% block content %}
 
 
-<h1 class="govuk-heading-xl govuk-!-margin-top-6">
- Add a POM
-</h1>
+<h1 class="govuk-heading-xl govuk-!-margin-top-6">Select this POM’s level</h1>
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
   
+    <div class="govuk-inset-text">
+      
+        <strong>Name:</strong>xxxx</br>
+        <strong>Email address:</strong>xxxx</br>
+        <strong>Username:</strong>xxxx
+
+    </div>
 
 
 
-
-
-
-
+    <form action="POM-workingpattern" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Select whether this individual is a Prison POM or a Probation POM
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="TypePOM" name="TypePOM" type="radio" value="PrisonPOM">
+              <label class="govuk-label govuk-radios__label" for="TypePOM">
+                Prison POM
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="TypePOM-2" name="TypePOM" type="radio" value="ProbationPOM">
+              <label class="govuk-label govuk-radios__label" for="TypePOM-2">
+                Porbation POM
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
 
 
 
