@@ -28,6 +28,9 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/timeline";
 @import "components/ticket-panel";
 @import "accessible-autocomplete.min";
+@import "components/cards";
+@import "components/date-picker";
+@import "components/dps-home";
 
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
