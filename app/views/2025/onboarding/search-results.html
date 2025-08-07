@@ -12,7 +12,7 @@ Select a POM – Digital Prison Services
 {% block content %}
 
 
-<h1 class="govuk-heading-l govuk-!-margin-top-6">Select a POM</h1>
+<h1 class="govuk-heading-l govuk-!-margin-top-6">Search results for [keyword]</h1>
 
 
 <div class="govuk-grid-row">
@@ -24,13 +24,13 @@ Select a POM – Digital Prison Services
       <form action="#" method="post">
     
         <div class="govuk-form-group">
-          <!--<label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
-            Find a staff member
-          </label>-->
-    
-          <div id="search-hint" class="govuk-hint moj-search__hint ">
+          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
             Search by name, email address or username
-          </div>
+          </label>
+    
+          <!--<div id="search-hint" class="govuk-hint moj-search__hint ">
+            Search by name, email address or username
+          </div>-->
     
           <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
     
@@ -52,7 +52,7 @@ Select a POM – Digital Prison Services
 <div class="govuk-grid-row govuk-!-margin-top-8">
   <div class="govuk-grid-column-two-thirds">
 
-    <!--<h2 class="govuk-heading-l">H2 (5 results)</h2>-->
+    <h2 class="govuk-heading-m">Select a POM</h2>
 
 
 
@@ -67,6 +67,15 @@ Select a POM – Digital Prison Services
       </thead>
 
     
+      <nav class="moj-pagination" id="pagination-label" style="margin-top: -30px; margin-bottom: 10px;">
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+        <ul class="moj-pagination__list">
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>50</b> of <b>50</b> results</p>
+      </nav>
+
+
+
       <tbody class="govuk-table__body">
     
         <tr class="govuk-table__row">
@@ -103,7 +112,12 @@ Select a POM – Digital Prison Services
     </table>
 
     
-
+    <nav class="moj-pagination" id="pagination-label" style="margin-top: 20px;">
+      <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+      <ul class="moj-pagination__list">
+      </ul>
+      <p class="moj-pagination__results">Showing <b>1</b> to <b>50</b> of <b>50</b> results</p>
+    </nav>
 
 
 

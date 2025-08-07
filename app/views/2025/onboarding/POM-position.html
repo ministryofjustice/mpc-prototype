@@ -12,7 +12,7 @@ Select this POM’s level – Digital Prison Services
 {% block content %}
 
 
-<h1 class="govuk-heading-l govuk-!-margin-top-6">Select this POM’s level</h1>
+<h1 class="govuk-heading-l govuk-!-margin-top-6">Q: Select this POM’s level</h1>
 
 
 <div class="govuk-grid-row">
@@ -31,9 +31,9 @@ Select this POM’s level – Digital Prison Services
     <form action="POM-workingpattern" method="post" novalidate>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
-          <!--<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            Select whether this individual is a Prison POM or a Probation POM
-          </legend>-->
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Select this POM’s level
+          </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="TypePOM" name="TypePOM" type="radio" value="PrisonPOM">
@@ -44,7 +44,7 @@ Select this POM’s level – Digital Prison Services
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="TypePOM-2" name="TypePOM" type="radio" value="ProbationPOM">
               <label class="govuk-label govuk-radios__label" for="TypePOM-2">
-                Porbation POM
+                Probation POM
               </label>
             </div>
           </div>
