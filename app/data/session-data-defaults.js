@@ -1,5 +1,7 @@
+let pomnew = require('./pomnew.json')
+
+
+
 module.exports = {
-
-  // Insert values here
-
+  pomnew,
 }

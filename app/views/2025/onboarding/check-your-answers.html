@@ -1,4 +1,4 @@
-{% extends "layout-mens-homd.html" %}
+{% extends "includes/layouts/main.html" %}
 
 
 {% block pageTitle %}
@@ -36,7 +36,11 @@ Check your answers – Digital Prison Services
               Level
             </dt>
             <dd class="govuk-summary-list__value">
-              xxx
+              {% if data.TypePOM=="PrisonPOM" %}
+              Prison POM
+              {% else %}
+              Probation POM
+              {% endif %}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link govuk-link--no-visited-state" href="POM-position.html">Change<span class="govuk-visually-hidden"> level</span></a>
@@ -48,7 +52,30 @@ Check your answers – Digital Prison Services
               Working pattern
             </dt>
             <dd class="govuk-summary-list__value">
-              xxx
+              {% if data.workingpatternPOM=="fulltime" %}
+              Full time
+              {% else %}
+              Part time
+                {% if data.workpatternDays=="90" %}
+                4.5 days
+                {% elseif data.workpatternDays=="80" %}
+                4 days
+                {% elseif data.workpatternDays=="70" %}
+                3.5 days
+                {% elseif data.workpatternDays=="60" %}
+                3 days
+                {% elseif data.workpatternDays=="50" %}
+                2.5 days
+                {% elseif data.workpatternDays=="40" %}
+                2 days
+                {% elseif data.workpatternDays=="30" %}
+                1.5 days
+                {% elseif data.workpatternDays=="20" %}
+                1 day
+                {% elseif data.workpatternDays=="10" %}
+                0.5 day
+                {% endif %}
+              {% endif %}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link govuk-link--no-visited-state" href="POM-workingpattern.html">Change<span class="govuk-visually-hidden"> working pattern</span></a>

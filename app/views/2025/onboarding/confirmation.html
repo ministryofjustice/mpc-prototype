@@ -1,4 +1,4 @@
-{% extends "layout-mens-homd.html" %}
+{% extends "includes/layouts/main.html" %}
 
 
 {% block pageTitle %}
@@ -19,10 +19,20 @@ Make allocations – Digital Prison Services
             POM added
           </h1>
           <div class="govuk-panel__body">
-            {Name} added as a {probation} POM 
+            {Name} added as a
+            {% if data.TypePOM=="PrisonPOM" %}
+            prison POM
+            {% else %}
+            probation POM
+            {% endif %}
           </div>
         </div>
-        <p class="govuk-body">You can now allocate cases to probation POM {NAME}. If you need to change their working pattern, you can do this on the <a href="#">staff overview</a>. </a>
+        <p class="govuk-body govuk-!-margin-top-4">You can now allocate cases to {% if data.TypePOM=="PrisonPOM" %}
+          prison POM
+          {% else %}
+          probation POM
+          {% endif %}
+          {NAME}.</br>If you need to change their working pattern, you can do this on the <a class="govuk-link--no-visited-state" href="../staff/staff">staff overview</a>.
         </p>
 
         <form action="/confirmation" method="post" novalidate>
