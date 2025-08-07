@@ -1,4 +1,4 @@
-{% extends "layout-mens-homd.html" %}
+{% extends "includes/layouts/main.html" %}
 
 
 {% block pageTitle %}
@@ -71,42 +71,20 @@ Select a POM – Digital Prison Services
         <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
         <ul class="moj-pagination__list">
         </ul>
-        <p class="moj-pagination__results">Showing <b>1</b> to <b>50</b> of <b>50</b> results</p>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>20</b> of <b>20</b> results</p>
       </nav>
 
 
 
       <tbody class="govuk-table__body">
-    
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="POM-position">First Name Last Name</a></td>
-          <td class="govuk-table__cell">Email</td>
-          <td class="govuk-table__cell">Username</td>
-        </tr>
-    
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="POM-position">First Name Last Name</a></td>
-          <td class="govuk-table__cell">Email</td>
-          <td class="govuk-table__cell">Username</td>
-        </tr>
 
+        {% for searchresults in data['pomnew'] %}    
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="POM-position">First Name Last Name</a></td>
-          <td class="govuk-table__cell">Email</td>
-          <td class="govuk-table__cell">Username</td>
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="POM-position">{{ searchresults.name }}</a></td>
+          <td class="govuk-table__cell">{{ searchresults.pomemail }}</td>
+          <td class="govuk-table__cell">{{ searchresults.pomusername }}</td>
         </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="POM-position">First Name Last Name</a></td>
-          <td class="govuk-table__cell">Email</td>
-          <td class="govuk-table__cell">Username</td>
-        </tr>
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="POM-position">First Name Last Name</a></td>
-          <td class="govuk-table__cell">Email</td>
-          <td class="govuk-table__cell">Username</td>
-        </tr>
+        {% endfor %}
     
       </tbody>
     </table>
@@ -116,7 +94,7 @@ Select a POM – Digital Prison Services
       <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
       <ul class="moj-pagination__list">
       </ul>
-      <p class="moj-pagination__results">Showing <b>1</b> to <b>50</b> of <b>50</b> results</p>
+      <p class="moj-pagination__results">Showing <b>1</b> to <b>20</b> of <b>20</b> results</p>
     </nav>
 
 
