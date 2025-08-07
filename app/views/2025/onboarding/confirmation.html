@@ -6,57 +6,44 @@ Make allocations – Digital Prison Services
 {% endblock %}
 
 {% block beforeContent %}
-<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom:0">Back</a>
+
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container govuk-!-margin-top-8">
+<div class="govuk-width-container">
   <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-
-        
-       
-          
-
         <div class="govuk-panel govuk-panel--confirmation">
           <h1 class="govuk-panel__title">
-            POM added 
+            POM added
           </h1>
-          <div class="govuk-panel__body">
-          </div>
+          <!--<div class="govuk-panel__body">
+            Your reference number<br><strong>HDJ2123F</strong>
+          </div>-->
         </div>
-
-
+        <p class="govuk-body">You added [name] to this service as a [level].</p>
+        <h2 class="govuk-heading-m">What next</h2>
         <p class="govuk-body">
-          You added name to this service as a level.
+          <a class="govuk-link govuk-link--no-visited-state" href="../staff/staff.html">View all POMs who work in this prison</a>
         </p>
 
-        <h2 class="govuk-heading-m govuk-!-margin-top-6">What next</h2>
-        
-
-        <a class="govuk-link" href="../../staff/staff.html">View all POMs who work in this prison</a>
-
-        
-        <form action="" method="post" novalidate>
+        <form action="/confirmation" method="post" novalidate>
 
           <div class="govuk-button-group">
-            <button type="submit" class="govuk-button" data-module="govuk-button">
+            <button type="submit" class="govuk-button" data-module="govuk-button" name="POMadded" value="MakeAllocations">
               Make allocations
             </button>
-            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="POMadded" value="AddAnotherPOM">
               Add another POM
             </button>
           </div>
         
         </form>
 
-
-        <p class="govuk-body" style="margin-top: 50px; margin-bottom: -50px;">
+        <p class="govuk-body">
           <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
         </p>
-
-
       </div>
     </div>
   </main>
