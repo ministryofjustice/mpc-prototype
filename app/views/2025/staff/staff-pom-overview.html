@@ -1,5 +1,4 @@
-{% extends "layout-pom-blank-nav" %}
-
+{% extends "includes/layouts/main.html" %}
 
 {% block pageTitle %}
 Sarah Bailey
@@ -18,10 +17,32 @@ Sarah Bailey
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-full-width">
 
-    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
-      <span class="govuk-caption-xl">Probation Officer POM</span>
-      Sarah Bailey
-    </h1>
+
+
+    <div class="moj-page-header-actions">
+      <div class="moj-page-header-actions__title">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-4">
+          <span class="govuk-caption-xl">Probation Officer POM</span>
+          Sarah Bailey
+        </h1>
+      </div>
+    
+      <div class="moj-page-header-actions__actions govuk-!-margin-top-7">
+        <div class="moj-button-group moj-button-group--inline">
+    
+          <form action="staff-edit-profile" method="post">
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Edit profile
+          </button>
+        </form>
+    
+        </div>
+      </div>
+    
+    </div>
+
+
+    
 
     <div class="govuk-grid-row">
 
@@ -147,7 +168,7 @@ Sarah Bailey
                       Part time 0.8
                     </dd>
                     <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link govuk-link--no-visited-state" href="#">
+                      <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile">
                         Change<span class="govuk-visually-hidden">working pattern</span>
                       </a>
                     </dd>
@@ -162,7 +183,7 @@ Sarah Bailey
                       Active: available for new allocations
                     </dd>
                     <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link govuk-link--no-visited-state" href="#">
+                      <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile">
                         Change<span class="govuk-visually-hidden">status</span>
                       </a>
                     </dd>

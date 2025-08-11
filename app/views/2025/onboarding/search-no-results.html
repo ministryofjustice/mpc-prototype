@@ -1,0 +1,74 @@
+{% extends "includes/layouts/main.html" %}
+
+
+{% block pageTitle %}
+Select a POM – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom:0">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l govuk-!-margin-top-6">Heading? Search results for Khaan</h1>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+  
+
+    <div class="moj-search">
+
+      <form action="#" method="post">
+    
+        <div class="govuk-form-group">
+          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+            Search by name, email address or username
+          </label>
+    
+          <!--<div id="search-hint" class="govuk-hint moj-search__hint ">
+            Search by name, email address or username
+          </div>-->
+    
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint" value="Khaan">
+    
+        </div>
+    
+        <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+    
+      </form>
+    </div>
+
+ 
+</div>
+</div>
+
+
+
+<div class="govuk-grid-row govuk-!-margin-top-8">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-m">Heading?</h2>
+
+    <p class="govuk-body">There are no results for this name or email address at Leeds (HMP).</p>
+
+    <p class="govuk-body">Suggestion from discussion: Has the LSA done the DPS account setup?</p>
+
+    <p class="govuk-body">Suggestion from discussion: Do they have the Allocation Case Manager role on DPS?</p>
+
+
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Help pages?
+    </button>
+
+  
+
+
+
+  </div>
+</div>
+{% endblock %}

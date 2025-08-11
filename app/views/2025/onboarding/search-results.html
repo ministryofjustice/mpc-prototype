@@ -11,13 +11,13 @@ Select a POM – Digital Prison Services
 
 {% block content %}
 
-
-<h1 class="govuk-heading-l govuk-!-margin-top-6">Search results for [keyword]</h1>
+<h1 class="govuk-heading-l govuk-!-margin-top-6" id="search-heading">Search results for </h1>
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half">
-  
+
+
 
     <div class="moj-search">
 
@@ -33,8 +33,22 @@ Select a POM – Digital Prison Services
           </div>-->
     
           <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
-    
+
         </div>
+
+        <script>
+          const params = new URLSearchParams(window.location.search);
+          const keyword = params.get('search');
+        
+          if (keyword) {
+            const input = document.getElementById('search');
+            const heading = document.getElementById('search-heading');
+        
+            input.value = keyword;
+            heading.textContent = `Search results for ${keyword}`; // No colon here
+          }
+        </script>
+        
     
         <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
           Search
