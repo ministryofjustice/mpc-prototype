@@ -18,7 +18,7 @@ router.post('/confirmation', function (req, res) {
       res.redirect('/allocations/final/make-allocations')
     } else {
       // Send user to onboarding POM search
-      res.redirect('/2025/onboarding/search')
+      res.redirect('/2025/add-pom/find-staff-member')
     }
   });
 

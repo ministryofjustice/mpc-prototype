@@ -2,7 +2,7 @@
 
 
 {% block pageTitle %}
-Select a POM – Digital Prison Services
+Find a staff member – Digital Prison Services
 {% endblock %}
 
 {% block beforeContent %}
@@ -94,7 +94,7 @@ Select a POM – Digital Prison Services
 
         {% for searchresults in data['pomnew'] %}    
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="POM-position">{{ searchresults.name }}</a></td>
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="what-type-of-pom.html">{{ searchresults.name }}</a></td>
           <td class="govuk-table__cell">{{ searchresults.pomemail }}</td>
           <td class="govuk-table__cell">{{ searchresults.pomusername }}</td>
         </tr>
