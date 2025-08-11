@@ -2,7 +2,7 @@
 
 
 {% block pageTitle %}
-Find a POM – Digital Prison Services 
+Select a POM – Digital Prison Services
 {% endblock %}
 
 {% block beforeContent %}
@@ -14,28 +14,29 @@ Find a POM – Digital Prison Services
 
 <h1 class="govuk-heading-l govuk-!-margin-top-6">Find a staff member</h1>
 
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half">
   
 
     <div class="moj-search">
 
-      <form action="./search-results" method="GET">
+      <form action="#" method="post">
     
         <div class="govuk-form-group">
           <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
-            Search by name, email address or username 
+            Search by name, email address or username
           </label>
     
           <!--<div id="search-hint" class="govuk-hint moj-search__hint ">
-            Search by name, email address or username 
+            Search by name, email address or username
           </div>-->
     
           <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
     
         </div>
     
-        <button type="submit" class="govuk-button moj-search__button" data-module="govuk-button">
+        <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
           Search
         </button>
     
@@ -45,5 +46,4 @@ Find a POM – Digital Prison Services
  
 </div>
 </div>
-
 {% endblock %}
