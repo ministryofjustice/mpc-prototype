@@ -33,7 +33,7 @@ Check your answers – Digital Prison Services
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Level
+              Type of POM
             </dt>
             <dd class="govuk-summary-list__value">
               {% if data.TypePOM=="PrisonPOM" %}
@@ -55,25 +55,25 @@ Check your answers – Digital Prison Services
               {% if data.workingpatternPOM=="fulltime" %}
               Full time
               {% else %}
-              Part time
+              Part time – 
                 {% if data.workpatternDays=="90" %}
-                4.5 days
+                4.5 days per week
                 {% elseif data.workpatternDays=="80" %}
-                4 days
+                4 days per week
                 {% elseif data.workpatternDays=="70" %}
-                3.5 days
+                3.5 days per week
                 {% elseif data.workpatternDays=="60" %}
-                3 days
+                3 days per week
                 {% elseif data.workpatternDays=="50" %}
-                2.5 days
+                2.5 days per week
                 {% elseif data.workpatternDays=="40" %}
-                2 days
+                2 days per week
                 {% elseif data.workpatternDays=="30" %}
-                1.5 days
+                1.5 days per week
                 {% elseif data.workpatternDays=="20" %}
-                1 day
+                1 day per week
                 {% elseif data.workpatternDays=="10" %}
-                0.5 day
+                0.5 day per week
                 {% endif %}
               {% endif %}
             </dd>
