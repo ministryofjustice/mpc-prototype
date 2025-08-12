@@ -10,16 +10,16 @@ Make allocations – Digital Prison Services
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container">
-  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-panel govuk-panel--confirmation">
+
+        <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-top-6">
           <h1 class="govuk-panel__title">
             POM added
           </h1>
           <div class="govuk-panel__body">
-            {Name} added as a
+            Aamir Khan added as a
             {% if data.TypePOM=="PrisonPOM" %}
             prison POM
             {% else %}
@@ -32,7 +32,7 @@ Make allocations – Digital Prison Services
           {% else %}
           probation POM
           {% endif %}
-          {NAME}.</br>If you need to change their working pattern, you can do this on the <a class="govuk-link--no-visited-state" href="../staff/staff">staff overview</a>.
+          Aamir Khan.</br>If you need to change their working pattern, you can do this on the <a class="govuk-link--no-visited-state" href="../staff/staff">staff overview</a>.
         </p>
 
         <form action="/confirmation" method="post" novalidate>
@@ -51,8 +51,7 @@ Make allocations – Digital Prison Services
         <p class="govuk-body">
           <a href="#" class="govuk-link govuk-link--no-visited-state">What did you think of this service?</a> (takes 30 seconds)
         </p>
+
       </div>
     </div>
-  </main>
-</div>
 {% endblock %}
