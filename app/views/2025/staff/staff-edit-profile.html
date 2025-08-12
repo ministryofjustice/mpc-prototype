@@ -19,9 +19,15 @@ Select this POM’s level – Digital Prison Services
       Edit profile
     </h1>
 
+    <h2 class="govuk-heading-l govuk-!-margin-top-6 govuk-!-margin-bottom-8">
+      Sarah Bailey
+    </h2>
 
 
-    <form method="" action="check-your-answers.html">
+
+    <form action="./staff-pom-overview" method="post">
+
+
 
       <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
@@ -106,7 +112,7 @@ Select this POM’s level – Digital Prison Services
           name: "workingpatternPOM",
           fieldset: {
             legend: {
-              text: "Select one option",
+              text: "Working pattern",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--m"
             }
@@ -141,12 +147,161 @@ Select this POM’s level – Digital Prison Services
       </fieldset>
       </div>
        
-        <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button" name="submit" value="continue">
-          Continue
-        </button>
+        
+      
+
+      <!--STATUS START-->
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+                       
+          <!--START set dynamic radio hide/show text-->
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+          {% from "govuk/components/input/macro.njk" import govukInput %}
+      
+          {% set DetailsParttime %}
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <h1 class="govuk-fieldset__heading">
+                  Select how many days per week they will work 
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="workpatternDays" name="workpatternDays" type="radio" value="90">
+                  <label class="govuk-label govuk-radios__label" for="workpatternDays">
+                    4.5 days
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="workpatternDays-2" name="workpatternDays" type="radio" value="80">
+                  <label class="govuk-label govuk-radios__label" for="workpatternDays-2">
+                    4 days 
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="workpatternDays-3" name="workpatternDays" type="radio" value="70">
+                  <label class="govuk-label govuk-radios__label" for="workpatternDays-3">
+                    3.5 days  
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="workpatternDays-4" name="workpatternDays" type="radio" value="60">
+                  <label class="govuk-label govuk-radios__label" for="workpatternDays-4">
+                    3 days 
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="workpatternDays-5" name="workpatternDays" type="radio" value="50">
+                  <label class="govuk-label govuk-radios__label" for="workpatternDays-5">
+                    2.5 days
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="workpatternDays-6" name="workpatternDays" type="radio" value="40">
+                  <label class="govuk-label govuk-radios__label" for="workpatternDays-6">
+                    2 days 
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="workpatternDays-7" name="workpatternDays" type="radio" value="30">
+                  <label class="govuk-label govuk-radios__label" for="workpatternDays-7">
+                    1.5 days 
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="workpatternDays-8" name="workpatternDays" type="radio" value="20">
+                  <label class="govuk-label govuk-radios__label" for="workpatternDays-8">
+                    1 day 
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="workpatternDays-9" name="workpatternDays" type="radio" value="10">
+                  <label class="govuk-label govuk-radios__label" for="workpatternDays-9">
+                    0.5 day
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          {% endset -%}
+      
+      
+          <!--END set dynamic radio hide/show text-->
+                 
+          {{ govukRadios({
+            idPrefix: "workingpatternPOM",
+            name: "workingpatternPOM",
+            fieldset: {
+              legend: {
+                text: "Status",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            hint: {
+              text: ""
+            },
+            items: [
+      
+      
+              {
+                value: "active",
+                text: "Active",
+                conditional: {
+                  html: textHtmlTimesThree
+                }
+              },
+              {
+                value: "activeunavailable",
+                text: "Active but unavailable for new cases",
+                conditional: {
+                  html: textHtmlTimesThree
+                }
+              },
+              {
+                value: "inactive",
+                text: "Inactive",
+                conditional: {
+                  html: DetailsParttime
+                }
+              },
+              {
+                value: "delete",
+                text: "Not at this prison anymore",
+                conditional: {
+                  html: DetailsParttime
+                }
+              }
+             
+            ]
+          }) }}
+            
+       
+        </fieldset>
         </div>
-    
+
+
+
+
+      
+      
+      
+      
+      
+        <div class="govuk-button-group">
+          
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Save
+          </button>
+          <p><a class="govuk-link--no-visited-state" href="#">Cancel</a></p>
+
+        </div>
+
+
+
     </form>
     
 
