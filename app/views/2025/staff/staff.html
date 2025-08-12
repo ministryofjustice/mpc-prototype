@@ -25,6 +25,8 @@ Select this POM’s level – Digital Prison Services
         <h1 class="govuk-heading-xl govuk-!-margin-top-6">Manage your staff</h1>
       </div>
     
+      <form action="../add-pom/find-staff-member" method="post">
+
       <div class="moj-page-header-actions__actions govuk-!-margin-top-7">
         <div class="moj-button-group moj-button-group--inline">
     
@@ -34,7 +36,9 @@ Select this POM’s level – Digital Prison Services
     
         </div>
       </div>
-    
+
+      </form>
+
     </div>
 
 
@@ -56,12 +60,28 @@ Select this POM’s level – Digital Prison Services
     <ul class="govuk-tabs__list">
       <li class="govuk-tabs__list-item">
         <a class="govuk-tabs__tab" href="#active-probation-staff">
+          {% if data.POMadded=="yes" %}
+          {% if data.TypePOM=="ProbationPOM" %}
+          Active Probation officer POMs (5)
+          {% else %}
           Active Probation officer POMs (4)
+          {% endif %}
+          {% else %}
+          Active Probation officer POMs (4)
+          {% endif %}
         </a>
       </li>
       <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
         <a class="govuk-tabs__tab" href="#active-prison-staff">
+          {% if data.POMadded=="yes" %}
+          {% if data.TypePOM=="PrisonPOM" %}
+          Active Prison officer POMs (9)
+          {% else %}
           Active Prison officer POMs (8)
+          {% endif %}
+          {% else %}
+          Active Prison officer POMs (8)
+          {% endif %}
         </a>
       </li>
       <li class="govuk-tabs__list-item">
@@ -139,7 +159,7 @@ Select this POM’s level – Digital Prison Services
 
           <tr class="govuk-table__row recommended_pom_row_2">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Stephen Dicks</a></td>
-            <td aria-label="Working pattern" class="govuk-table__cell">Part time 0.5</td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time – 0.5 day per week</td>
             <td aria-label="status" class="govuk-table__cell">Available</td>
             <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
               <div class="workforce-progress-bar tier_a" style="width:50%"><p style="govuk-colour("white")">18<p></div>
@@ -151,6 +171,54 @@ Select this POM’s level – Digital Prison Services
             <!-- <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric">15</td> -->
             <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="35">35</td>
           </tr>
+
+          {% if data.POMadded=="yes" %}
+          {% if data.TypePOM=="ProbationPOM" %}
+          <tr class="govuk-table__row recommended_pom_row_2">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Aamir Khan</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">
+              {% if data.workingpatternPOM=="fulltime" %}
+              Full time
+              {% else %}
+              Part time – 
+                {% if data.workpatternDays=="90" %}
+                4.5 days per week
+                {% elseif data.workpatternDays=="80" %}
+                4 days per week
+                {% elseif data.workpatternDays=="70" %}
+                3.5 days per week
+                {% elseif data.workpatternDays=="60" %}
+                3 days per week
+                {% elseif data.workpatternDays=="50" %}
+                2.5 days per week
+                {% elseif data.workpatternDays=="40" %}
+                2 days per week
+                {% elseif data.workpatternDays=="30" %}
+                1.5 days per week
+                {% elseif data.workpatternDays=="20" %}
+                1 day per week
+                {% elseif data.workpatternDays=="10" %}
+                0.5 day per week
+                {% endif %}
+              {% endif %}
+            </td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell ">
+              <!--<div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:50%"><p style="govuk-colour("white")">18<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:30%">11</div>
+              <div class="workforce-progress-bar tier_c" style="width:15%"><p style="govuk-colour("white")">5<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:5%">1</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div>--></td>
+            <!-- <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric">15</td> -->
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="0">0</td>
+          </tr>
+          {% else %}
+          {% endif %}
+          {% endif %}
+
+
 
           <tr class="govuk-table__row recommended_pom_row_5">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">James Gordon</a></td>
@@ -226,7 +294,7 @@ Select this POM’s level – Digital Prison Services
 
           <tr class="govuk-table__row recommended_pom_row_6">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Malcolm Casimir</a></td>
-            <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.6</td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time – 3 days per week</td>
             <td aria-label="status" class="govuk-table__cell">Unvailable</td>
             <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
               <div class="workforce-progress-bar tier_a" style="width:0%"></div>
@@ -299,6 +367,53 @@ Select this POM’s level – Digital Prison Services
             <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="44">44</td>
           </tr>
 
+
+          {% if data.POMadded=="yes" %}
+          {% if data.TypePOM=="PrisonPOM" %}
+          <tr class="govuk-table__row recommended_pom_row_2">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Aamir Khan</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">
+              {% if data.workingpatternPOM=="fulltime" %}
+              Full time
+              {% else %}
+              Part time – 
+                {% if data.workpatternDays=="90" %}
+                4.5 days per week
+                {% elseif data.workpatternDays=="80" %}
+                4 days per week
+                {% elseif data.workpatternDays=="70" %}
+                3.5 days per week
+                {% elseif data.workpatternDays=="60" %}
+                3 days per week
+                {% elseif data.workpatternDays=="50" %}
+                2.5 days per week
+                {% elseif data.workpatternDays=="40" %}
+                2 days per week
+                {% elseif data.workpatternDays=="30" %}
+                1.5 days per week
+                {% elseif data.workpatternDays=="20" %}
+                1 day per week
+                {% elseif data.workpatternDays=="10" %}
+                0.5 day per week
+                {% endif %}
+              {% endif %}
+            </td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell ">
+              <!--<div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:50%"><p style="govuk-colour("white")">18<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:30%">11</div>
+              <div class="workforce-progress-bar tier_c" style="width:15%"><p style="govuk-colour("white")">5<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:5%">1</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div>--></td>
+            <!-- <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric">15</td> -->
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="0">0</td>
+          </tr>
+          {% else %}
+          {% endif %}
+          {% endif %}
+
           <tr class="govuk-table__row recommended_pom_row_5">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Jim Roantree</a></td>
             <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
@@ -316,7 +431,7 @@ Select this POM’s level – Digital Prison Services
 
           <tr class="govuk-table__row recommended_pom_row_6">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Carlos Santos</a></td>
-            <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.8</td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time – 4 days per week</td>
             <td aria-label="status" class="govuk-table__cell">Available</td>
             <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
               <div class="workforce-progress-bar tier_a" style="width:0%"></div>
