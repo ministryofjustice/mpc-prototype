@@ -22,7 +22,7 @@ Select this POM’s level – Digital Prison Services
           <path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
         </svg>
       </div>
-      <div class="moj-alert__content">POM removed / cases freed: Copy Tom - thank you! <a href="#">link</a></div>
+      <div class="moj-alert__content">Amy Cufflin removed. Their cases have been moved to <a href="../../allocations/final/make-allocations">the allocations list.</a></div>
     
       <div class="moj-alert__action">
         <button class="moj-alert__dismiss" hidden>Dismiss</button>
@@ -75,12 +75,12 @@ Select this POM’s level – Digital Prison Services
         <a class="govuk-tabs__tab" href="#active-probation-staff">
           {% if data.POMadded=="yes" %}
           {% if data.TypePOM=="ProbationPOM" %}
-          Active Probation officer POMs (5)
+          Active probation POMs (5)
           {% else %}
-          Active Probation officer POMs (4)
+          Active probation POMs (4)
           {% endif %}
           {% else %}
-          Active Probation officer POMs (4)
+          Active probation POMs (4)
           {% endif %}
         </a>
       </li>
@@ -88,12 +88,12 @@ Select this POM’s level – Digital Prison Services
         <a class="govuk-tabs__tab" href="#active-prison-staff">
           {% if data.POMadded=="yes" %}
           {% if data.TypePOM=="PrisonPOM" %}
-          Active Prison officer POMs (9)
+          Active prison POMs (9)
           {% else %}
-          Active Prison officer POMs (8)
+          Active prison POMs (8)
           {% endif %}
           {% else %}
-          Active Prison officer POMs (8)
+          Active prison POMs (8)
           {% endif %}
         </a>
       </li>
@@ -103,8 +103,8 @@ Select this POM’s level – Digital Prison Services
         </a>
       </li>
       <li class="govuk-tabs__list-item">
-        <a class="govuk-tabs__tab" href="#removed-staff">
-          Removed staff</a><span id="notifications" class="moj-notification-badge" style="margin-left: 10px;">3</span>
+        <a class="govuk-tabs__tab" href="#attention-needed">
+          Attention needed</a><span id="notifications" class="moj-notification-badge" style="margin-left: 10px;">3</span>
       </li>
     </ul>
 
@@ -113,7 +113,7 @@ Select this POM’s level – Digital Prison Services
     
     <div class="govuk-tabs__panel" id="active-probation-staff">
 
-        <h2 class="govuk-heading-l">Active Probation officer POMs</h2>
+        <h2 class="govuk-heading-l">Active probation POMs</h2>
 
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
@@ -268,7 +268,7 @@ Select this POM’s level – Digital Prison Services
 
     <div class="govuk-tabs__panel" id="active-prison-staff">
 
-      <h2 class="govuk-heading-l">Active Prison officer POMs</h2>
+      <h2 class="govuk-heading-l">Active prison POMs</h2>
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
@@ -496,14 +496,14 @@ Select this POM’s level – Digital Prison Services
     </div>
 
 
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="removed-staff">
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="attention-needed">
 
-      <h2 class="govuk-heading-l">Removed staff</h2>
+      <h2 class="govuk-heading-l">Attention needed </h2>
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body">This is a list of staff that no longer have access to this caseload but still have allocated cases.</br>
-          You can remove a POM from here, which will deallocate all their cases so they can be reallocated again.</p>
+          <p class="govuk-body">These people are no longer recorded as POMs on NOMIS or Digital Prison Services.</br>
+            You must remove them from this service and then reallocate their cases.</p>
         </div>
       </div>
 
