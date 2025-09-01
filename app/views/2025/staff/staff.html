@@ -16,7 +16,7 @@ Select this POM’s level – Digital Prison Services
   
     
     <!--Confirmation banner if a POM was removed-->
-    <div id="name-of-div" style="display: none">
+    <div id="first-div" style="display:none">
       
     <div role="region" class="moj-alert moj-alert--success" aria-label="success: Upload successful" data-module="moj-alert" style="margin-top: 40px;">
       <div>
@@ -24,7 +24,7 @@ Select this POM’s level – Digital Prison Services
           <path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
         </svg>
       </div>
-      <div class="moj-alert__content">Amy Cufflin removed. Their cases have been moved to <a href="../../allocations/final/make-allocations">the allocations list.</a></div>
+      <div class="moj-alert__content">Mateo Rossi removed. Their cases have been moved to <a href="../../allocations/final/make-allocations">the allocations list.</a></div>
     
       <div class="moj-alert__action">
         <button class="moj-alert__dismiss" hidden>Dismiss</button>
@@ -525,26 +525,26 @@ Select this POM’s level – Digital Prison Services
         <tbody class="govuk-table__body">
 
           <tr class="govuk-table__row recommended_pom_row_0">
-            <td aria-label="POMname" class="govuk-table__cell">Amy Cufflin Test</td>
+            <td aria-label="POMname" class="govuk-table__cell">Amina El-Sayed</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">1 September 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">84</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Remove POM</a></td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Hiroshi Tanaka</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">20 August 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">90</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Remove POM</a></td>
+          </tr>
+
+          <tr id="second-row" class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Mateo Rossi</td>
             <td aria-label="LastCaseAllocated" class="govuk-table__cell">7 August 2025</td>
             <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
             <td aria-label="RemovePOM" class="govuk-table__cell">
-              <a class="govuk-link govuk-link--no-visited-state" href="#" onclick="showthing(); return false;">Remove POM</a>  
+              <a class="govuk-link--no-visited-state" href="#" onclick="showFirstHideRow(); return false;">Remove POM</a>
             </td>
-          </tr>
-
-          <tr class="govuk-table__row recommended_pom_row_0">
-            <td aria-label="POMname" class="govuk-table__cell">Amy Cufflin</td>
-            <td aria-label="LastCaseAllocated" class="govuk-table__cell">7 August 2025</td>
-            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
-            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Remove POM</a></td>
-          </tr>
-
-          <tr class="govuk-table__row recommended_pom_row_0">
-            <td aria-label="POMname" class="govuk-table__cell">Amy Cufflin</td>
-            <td aria-label="LastCaseAllocated" class="govuk-table__cell">7 August 2025</td>
-            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
-            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Remove POM</a></td>
           </tr>
 
         </tbody>
@@ -566,13 +566,11 @@ Select this POM’s level – Digital Prison Services
 
 
 <script>
-  function showthing() {
-    var divamount = document.getElementById("name-of-div");
-    divamount.style.display = "block"; 
-  }
-  function hidething() {
-    var divamount = document.getElementById("name-of-div");
-    divamount.style.display = "none"; 
+  function showFirstHideRow() {
+    // show the first div
+    document.getElementById("first-div").style.display = "block";
+    // hide the specific row
+    document.getElementById("second-row").style.display = "none";
   }
 </script>
 {% endblock %}
