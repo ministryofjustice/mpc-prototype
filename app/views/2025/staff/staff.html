@@ -16,6 +16,8 @@ Select this POM’s level – Digital Prison Services
   
     
     <!--Confirmation banner if a POM was removed-->
+    <div id="name-of-div" style="display: none">
+      
     <div role="region" class="moj-alert moj-alert--success" aria-label="success: Upload successful" data-module="moj-alert" style="margin-top: 40px;">
       <div>
         <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
@@ -29,6 +31,8 @@ Select this POM’s level – Digital Prison Services
       </div>
     </div>
 
+  </div>
+  <!--Confirmation banner END-->
 
 
 
@@ -521,10 +525,12 @@ Select this POM’s level – Digital Prison Services
         <tbody class="govuk-table__body">
 
           <tr class="govuk-table__row recommended_pom_row_0">
-            <td aria-label="POMname" class="govuk-table__cell">Amy Cufflin</td>
+            <td aria-label="POMname" class="govuk-table__cell">Amy Cufflin Test</td>
             <td aria-label="LastCaseAllocated" class="govuk-table__cell">7 August 2025</td>
             <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
-            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Remove POM</a></td>
+            <td aria-label="RemovePOM" class="govuk-table__cell">
+              <a class="govuk-link govuk-link--no-visited-state" href="#" onclick="showthing(); return false;">Remove POM</a>  
+            </td>
           </tr>
 
           <tr class="govuk-table__row recommended_pom_row_0">
@@ -557,4 +563,16 @@ Select this POM’s level – Digital Prison Services
 
   </div>
 </div>
+
+
+<script>
+  function showthing() {
+    var divamount = document.getElementById("name-of-div");
+    divamount.style.display = "block"; 
+  }
+  function hidething() {
+    var divamount = document.getElementById("name-of-div");
+    divamount.style.display = "none"; 
+  }
+</script>
 {% endblock %}
