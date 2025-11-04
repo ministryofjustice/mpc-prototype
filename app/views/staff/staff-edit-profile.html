@@ -12,7 +12,7 @@ Select this POM’s level – Digital Prison Services
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
   
     
     <h1 class="govuk-heading-xl govuk-!-margin-top-6">
@@ -232,8 +232,8 @@ Select this POM’s level – Digital Prison Services
           <!--END set dynamic radio hide/show text-->
                  
           {{ govukRadios({
-            idPrefix: "workingpatternPOM",
-            name: "workingpatternPOM",
+            idPrefix: "statusPOM",
+            name: "statusPOM",
             fieldset: {
               legend: {
                 text: "Status",
@@ -249,30 +249,28 @@ Select this POM’s level – Digital Prison Services
       
               {
                 value: "active",
-                text: "Active",
-                conditional: {
-                  html: textHtmlTimesThree
-                }
+                text: "Active"
               },
               {
                 value: "activeunavailable",
-                text: "Active but unavailable for new cases",
-                conditional: {
-                  html: textHtmlTimesThree
+                text: "Unavailable for new cases ",
+                hint: {
+                  text: "For example, because they are too busy.
+                  Choosing this will remove them from the list of POMs you can allocate to."
                 }
               },
               {
                 value: "inactive",
                 text: "Inactive",
-                conditional: {
-                  html: DetailsParttime
+                hint: {
+                  text: "For example, because they are away from work for a while.  Setting to inactive will temporarily remove this person from the list of POMs you can allocate to and mean you will need to reallocate their cases. "
                 }
               },
               {
                 value: "delete",
-                text: "Not at this prison anymore",
-                conditional: {
-                  html: DetailsParttime
+                text: "No longer at [prisonName]",
+                hint: {
+                  text: "This will permanently remove this person from the service. You will need to reallocate their cases. "
                 }
               }
              
