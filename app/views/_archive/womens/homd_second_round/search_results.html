@@ -1,0 +1,132 @@
+{% extends "layout-womens-homd.html" %}
+
+{% block pageTitle %}
+  Search results
+{% endblock %}
+
+{% block beforeContent %}
+<div class="moj-organisation-nav" aria-label="Organisation switcher">
+<div class="moj-organisation-nav__title">HMP Peterborough (Female)</div>
+
+<a href="/womens/homd_second_round/change-prison.html" class="moj-organisation-nav__link">Change prison</a>
+
+</div>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Search results</h1>
+<div class="moj-search">
+
+<form action="#" method="post">
+
+<div class="govuk-form-group">
+  <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+    Find a case
+  </label>
+
+  <span id="search-hint" class="govuk-hint moj-search__hint ">
+    Enter a prisoner name or number
+  </span>
+
+  <input class="govuk-input moj-search__input" value="Parker" id="search" name="search" type="search" aria-describedby="search-hint">
+</div>
+
+<button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+  Search
+</button>
+
+</form>
+</div>
+
+<div class="govuk-!-padding-bottom-6"></div>
+
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+      <p class="moj-pagination__results">Showing <b>1</b> to <b>2</b> of <b>2</b> results</p>
+      </nav>
+
+
+      <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+
+      <th class="govuk-table__header" scope="col">Case</th>
+
+      <th class="govuk-table__header" scope="col">Date of birth</th>
+      <th class="govuk-table__header" scope="col">Tier</th>
+
+      <th class="govuk-table__header" scope="col">POM</th>
+
+      </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+
+
+      <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Dianne Parker</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G3462VT </span></td>
+
+        <td class="govuk-table__cell govuk-table__cell">01 Feb 1989</td>
+        <td class="govuk-table__cell govuk-table__cell">C</td>
+        <td class="govuk-table__cell govuk-table__cell">Ollie Treend</td>
+
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="/womens/homd_second_round/allocated-case">Louise Parker</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell govuk-table__cell">27 Oct 1970</td>
+        <td class="govuk-table__cell govuk-table__cell">B</td>
+        <td class="govuk-table__cell govuk-table__cell">Shahina Rahman</td>
+
+      </tr>
+
+
+
+      </tbody>
+      </table>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>2</b> of <b>2</b> results</p>
+      </nav>
+
+          </div>
+      </div>
+
+{% endblock %}

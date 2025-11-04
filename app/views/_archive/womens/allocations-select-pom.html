@@ -1,0 +1,1389 @@
+{% extends "layout-main.html" %}
+
+
+{% block pageTitle %}
+Allocate to a POM
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% include "includes/womens-service-user-banner.html" %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="/womens/allocations-review-case-info" class="govuk-back-link">Back to review case</a>
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="/womens/confirm-allocation">
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+<span class="govuk-caption-l">Step 2 of 3</span>
+<h1 class="govuk-heading-l">
+  Allocate a Prison Offender Manager
+</h1>
+
+<div class="govuk-!-margin-top-6">
+
+
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+      Recommendation: Probation officer POM to work with Jessica Davey.
+    </strong>
+  </div>
+
+    <p>This recommendation takes the prisoner's tier and time left to serve into account.</p>
+
+
+<h3 class="govuk-heading-m">Active probation officer POMs</h3>
+
+<!-- <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+      <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state"
+            href="/womens/womens-allocate-pom-radios-tier">Tier</a>
+        </li>
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page"
+            href="/womens/womens-allocate-pom-radios-complexity">Complexity</a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+</div> -->
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#by-tier">
+        Tier
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#by-complexity">
+        Complexity
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#by-pom-role">
+        POM role
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="by-tier">
+    <h3 class="govuk-heading-m">Distribution by tier</h2>
+
+    <table class="govuk-table responsive">
+      <thead class="govuk-table__head">
+
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col">POM name</th>
+        <th class="govuk-table__header" scope="col">Working pattern</th>
+        <th class="govuk-table__header" scope="col">Worked with service<br>user before</th>
+        <th class="govuk-table__header" scope="col">Tier A</th>
+        <th class="govuk-table__header" scope="col">Tier B</th>
+        <th class="govuk-table__header" scope="col">Tier C</th>
+        <th class="govuk-table__header" scope="col">Tier D</th>
+        <th class="govuk-table__header" scope="col">No tier</th>
+        <th class="govuk-table__header" scope="col">Total</th>
+      </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row recommended_pom_row_0">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="eve">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Eve Bayram
+              <!-- <p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="Tier A cases" class="govuk-table__cell ">30</td>
+          <td aria-label="Tier B cases" class="govuk-table__cell ">10</td>
+          <td aria-label="Tier C cases" class="govuk-table__cell ">0</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">0</td>
+          <td aria-label="No tier" class="govuk-table__cell ">0</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_1">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="amy">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Amy Cufflin
+              <!-- <p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="Tier A cases" class="govuk-table__cell ">5</td>
+          <td aria-label="Tier B cases" class="govuk-table__cell ">40</td>
+          <td aria-label="Tier C cases" class="govuk-table__cell ">5</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">15</td>
+          <td aria-label="No tier" class="govuk-table__cell ">0</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">55</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_2">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="stephen">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Stephen Dicks
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="Tier A cases" class="govuk-table__cell ">22</td>
+          <td aria-label="Tier B cases" class="govuk-table__cell ">5</td>
+          <td aria-label="Tier C cases" class="govuk-table__cell ">25</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">0</td>
+          <td aria-label="No tier" class="govuk-table__cell ">0</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">52</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_3">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="binit">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Binit Hindocha
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.5</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="Tier A cases" class="govuk-table__cell ">20</td>
+          <td aria-label="Tier B cases" class="govuk-table__cell ">7</td>
+          <td aria-label="Tier C cases" class="govuk-table__cell ">4</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">0</td>
+          <td aria-label="No tier" class="govuk-table__cell ">0</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">31</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_4">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="katy">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Katy McCann
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="Tier A cases" class="govuk-table__cell ">20</td>
+          <td aria-label="Tier B cases" class="govuk-table__cell ">15</td>
+          <td aria-label="Tier C cases" class="govuk-table__cell ">25</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">0</td>
+          <td aria-label="No tier" class="govuk-table__cell ">0</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_5">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="andrien">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Andrien Ricketts
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">Yes
+          </td>
+          <td aria-label="Tier A cases" class="govuk-table__cell ">20</td>
+          <td aria-label="Tier B cases" class="govuk-table__cell ">5</td>
+          <td aria-label="Tier C cases" class="govuk-table__cell ">25</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">0</td>
+          <td aria-label="No tier" class="govuk-table__cell ">0</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_6">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="ollie">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Ollie Treend
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.8</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="Tier A cases" class="govuk-table__cell ">18</td>
+          <td aria-label="Tier B cases" class="govuk-table__cell ">12</td>
+          <td aria-label="Tier C cases" class="govuk-table__cell ">7</td>
+          <td aria-label="Tier D cases" class="govuk-table__cell ">3</td>
+          <td aria-label="No tier" class="govuk-table__cell ">0</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">40</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="by-complexity">
+    <h3 class="govuk-heading-m">Distribution by complexity</h2>
+    <table class="govuk-table responsive">
+      <thead class="govuk-table__head">
+
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col">POM name</th>
+        <th class="govuk-table__header" scope="col">Working pattern</th>
+        <th class="govuk-table__header" scope="col">Worked with service<br>user before</th>
+        <th class="govuk-table__header" scope="col">High <br>complexity</th>
+        <th class="govuk-table__header" scope="col">Medium <br>complexity</th>
+        <th class="govuk-table__header" scope="col">Low <br>complexity</th>
+        <th class="govuk-table__header" scope="col">Total</th>
+      </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row recommended_pom_row_0">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="eve">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Eve Bayram
+              <!-- <p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">2</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">5</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">43</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_1">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="amy">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Amy Cufflin
+              <!-- <p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">6</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">49</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">55</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_2">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="stephen">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Stephen Dicks
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">2</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">50</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">52</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_3">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="binit">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Binit Hindocha
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.5</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">1</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">30</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">31</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_4">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="katy">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Katy McCann
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">65</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_5">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="andrien">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Andrien Ricketts
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">Yes
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">1</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">1</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">48</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_6">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="ollie">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Ollie Treend
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.8</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">3</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">37</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">40</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="complexity">
+    <h3 class="govuk-heading-m">Distribution by complexity</h2>
+    <table class="govuk-table responsive">
+      <thead class="govuk-table__head">
+
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col">POM name</th>
+        <th class="govuk-table__header" scope="col">Working pattern</th>
+        <th class="govuk-table__header" scope="col">Worked with service<br>user before</th>
+        <th class="govuk-table__header" scope="col">High <br>complexity</th>
+        <th class="govuk-table__header" scope="col">Medium <br>complexity</th>
+        <th class="govuk-table__header" scope="col">Low <br>complexity</th>
+        <th class="govuk-table__header" scope="col">Total</th>
+      </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row recommended_pom_row_0">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="eve">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Eve Bayram
+              <!-- <p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">2</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">5</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">43</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_1">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="amy">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Amy Cufflin
+              <!-- <p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">6</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">49</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">55</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_2">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="stephen">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Stephen Dicks
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">2</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">50</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">52</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_3">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="binit">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Binit Hindocha
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.5</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">1</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">30</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">31</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_4">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="katy">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Katy McCann
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">65</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_5">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="andrien">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Andrien Ricketts
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">Yes
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">7</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">48</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+        </tr>
+
+        <tr class="govuk-table__row recommended_pom_row_6">
+          <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="ollie">
+            <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+              Ollie Treend
+              <!-- <br><p>
+                Full time
+              </p> -->
+            </label>
+          </div></td>
+          <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.8</td>
+          <td aria-label="Previous allocation" class="govuk-table__cell">-
+          </td>
+          <td aria-label="high complexity" class="govuk-table__cell ">0</td>
+          <td aria-label="medium complexity" class="govuk-table__cell ">3</td>
+          <td aria-label="low complexity" class="govuk-table__cell ">37</td>
+          <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">40</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="govuk-tabs__panel" id="by-pom-role">
+    <h3 class="govuk-heading-m">Distribution by POM role</h2>
+      <table class="govuk-table responsive">
+        <thead class="govuk-table__head">
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">POM name</th>
+          <th class="govuk-table__header" scope="col">Working pattern</th>
+          <th class="govuk-table__header" scope="col">Worked with service<br>user before</th>
+          <th class="govuk-table__header" scope="col">Responsible</th>
+          <th class="govuk-table__header" scope="col">Supporting</th>
+          <th class="govuk-table__header" scope="col">Co-working</th>
+          <th class="govuk-table__header" scope="col">Total</th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="eve">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Eve Bayram
+                <!-- <p>
+                  Full time
+                </p> -->
+              </label>
+            </div></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">-
+            </td>
+            <td aria-label="responsible" class="govuk-table__cell ">20</td>
+            <td aria-label="supporting" class="govuk-table__cell ">30</td>
+            <td aria-label="co-working" class="govuk-table__cell ">0</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_1">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="amy">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Amy Cufflin
+                <!-- <p>
+                  Full time
+                </p> -->
+              </label>
+            </div></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">-
+            </td>
+            <td aria-label="responsible" class="govuk-table__cell ">35</td>
+            <td aria-label="supporting" class="govuk-table__cell ">20</td>
+            <td aria-label="co-working" class="govuk-table__cell ">0</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">55</td>
+
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_2">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="stephen">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Stephen Dicks
+                <!-- <br><p>
+                  Full time
+                </p> -->
+              </label>
+            </div></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">-
+            </td>
+            <td aria-label="responsible" class="govuk-table__cell ">6</td>
+            <td aria-label="supporting" class="govuk-table__cell ">39</td>
+            <td aria-label="co-working" class="govuk-table__cell ">7</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">52</td>
+
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_3">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="binit">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Binit Hindocha
+                <!-- <br><p>
+                  Full time
+                </p> -->
+              </label>
+            </div></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.5</td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">-
+            </td>
+            <td aria-label="responsible" class="govuk-table__cell ">18</td>
+            <td aria-label="supporting" class="govuk-table__cell ">13</td>
+            <td aria-label="co-working" class="govuk-table__cell ">0</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">31</td>
+
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_4">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="katy">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Katy McCann
+                <!-- <br><p>
+                  Full time
+                </p> -->
+              </label>
+            </div></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">-
+            </td>
+            <td aria-label="responsible" class="govuk-table__cell ">43</td>
+            <td aria-label="supporting" class="govuk-table__cell ">20</td>
+            <td aria-label="co-working" class="govuk-table__cell ">2</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
+
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_5">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="andrien">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Andrien Ricketts
+                <!-- <br><p>
+                  Full time
+                </p> -->
+              </label>
+            </div></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">Yes
+            </td>
+            <td aria-label="responsible" class="govuk-table__cell ">22</td>
+            <td aria-label="supporting" class="govuk-table__cell ">25</td>
+            <td aria-label="co-working" class="govuk-table__cell ">3</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_6">
+            <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="ollie">
+              <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                Ollie Treend
+                <!-- <br><p>
+                  Full time
+                </p> -->
+              </label>
+            </div></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.8</td>
+            <td aria-label="Previous allocation" class="govuk-table__cell">-
+            </td>
+            <td aria-label="responsible" class="govuk-table__cell ">30</td>
+            <td aria-label="supporting" class="govuk-table__cell ">10</td>
+            <td aria-label="co-working" class="govuk-table__cell ">0</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">40</td>
+
+          </tr>
+        </tbody>
+      </table>
+
+  </div>
+</div>
+</div>
+
+
+
+
+<div class="govuk-grid-column-full govuk-!-margin-top-4"></div>
+
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+<div class="govuk-accordion__section ">
+  <div class="govuk-accordion__section-header">
+    <h3 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+        Show active prison officer POMs
+      </span>
+    </h3>
+  </div>
+  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#by-prison-pom-tier">
+            Tier
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#by-prison-pom-complexity">
+            Complexity
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#by-prison-pom-role">
+            POM role
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-tabs__panel" id="by-prison-pom-tier">
+        <h3 class="govuk-heading-m">Distribution by tier</h2>
+
+        <table class="govuk-table responsive">
+          <thead class="govuk-table__head">
+
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">POM name</th>
+            <th class="govuk-table__header" scope="col">Working pattern</th>
+            <th class="govuk-table__header" scope="col">Worked with service<br>user before</th>
+            <th class="govuk-table__header" scope="col">Tier A</th>
+            <th class="govuk-table__header" scope="col">Tier B</th>
+            <th class="govuk-table__header" scope="col">Tier C</th>
+            <th class="govuk-table__header" scope="col">Tier D</th>
+            <th class="govuk-table__header" scope="col">No tier</th>
+            <th class="govuk-table__header" scope="col">Total</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row recommended_pom_row_0">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Annie">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Annie Bradley
+                  <!-- <p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td>
+              <td aria-label="prison-pom-tier A cases" class="govuk-table__cell ">30</td>
+              <td aria-label="prison-pom-tier B cases" class="govuk-table__cell ">10</td>
+              <td aria-label="prison-pom-tier C cases" class="govuk-table__cell ">0</td>
+              <td aria-label="prison-pom-tier D cases" class="govuk-table__cell ">0</td>
+              <td aria-label="No prison-pom-tier" class="govuk-table__cell ">0</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+            </tr>
+
+            <tr class="govuk-table__row recommended_pom_row_1">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Geoff">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Geoff Colum
+                  <!-- <p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td>
+              <td aria-label="prison-pom-tier A cases" class="govuk-table__cell ">5</td>
+              <td aria-label="prison-pom-tier B cases" class="govuk-table__cell ">40</td>
+              <td aria-label="prison-pom-tier C cases" class="govuk-table__cell ">5</td>
+              <td aria-label="prison-pom-tier D cases" class="govuk-table__cell ">15</td>
+              <td aria-label="No prison-pom-tier" class="govuk-table__cell ">0</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">55</td>
+
+            </tr>
+
+            <tr class="govuk-table__row recommended_pom_row_2">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Matthew">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Matthew Hanson
+                  <!-- <br><p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td>
+              <td aria-label="prison-pom-tier A cases" class="govuk-table__cell ">22</td>
+              <td aria-label="prison-pom-tier B cases" class="govuk-table__cell ">5</td>
+              <td aria-label="prison-pom-tier C cases" class="govuk-table__cell ">25</td>
+              <td aria-label="prison-pom-tier D cases" class="govuk-table__cell ">0</td>
+              <td aria-label="No prison-pom-tier" class="govuk-table__cell ">0</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">52</td>
+
+            </tr>
+
+            <tr class="govuk-table__row recommended_pom_row_3">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Sophie">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Sophie Hill
+                  <!-- <br><p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.5</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td>
+              <td aria-label="prison-pom-tier A cases" class="govuk-table__cell ">20</td>
+              <td aria-label="prison-pom-tier B cases" class="govuk-table__cell ">7</td>
+              <td aria-label="prison-pom-tier C cases" class="govuk-table__cell ">4</td>
+              <td aria-label="prison-pom-tier D cases" class="govuk-table__cell ">0</td>
+              <td aria-label="No prison-pom-tier" class="govuk-table__cell ">0</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">31</td>
+
+            </tr>
+
+            <tr class="govuk-table__row recommended_pom_row_4">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Helen">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Helen James
+                  <!-- <br><p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td>
+              <td aria-label="prison-pom-tier A cases" class="govuk-table__cell ">20</td>
+              <td aria-label="prison-pom-tier B cases" class="govuk-table__cell ">15</td>
+              <td aria-label="prison-pom-tier C cases" class="govuk-table__cell ">25</td>
+              <td aria-label="prison-pom-tier D cases" class="govuk-table__cell ">0</td>
+              <td aria-label="No prison-pom-tier" class="govuk-table__cell ">0</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
+
+            </tr>
+
+            <tr class="govuk-table__row recommended_pom_row_5">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Jim">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Jim Roantree
+                  <!-- <br><p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">Yes
+              </td>
+              <td aria-label="prison-pom-tier A cases" class="govuk-table__cell ">20</td>
+              <td aria-label="prison-pom-tier B cases" class="govuk-table__cell ">5</td>
+              <td aria-label="prison-pom-tier C cases" class="govuk-table__cell ">25</td>
+              <td aria-label="prison-pom-tier D cases" class="govuk-table__cell ">0</td>
+              <td aria-label="No prison-pom-tier" class="govuk-table__cell ">0</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+            </tr>
+
+            <tr class="govuk-table__row recommended_pom_row_6">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Carlos">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Carlos Santos
+                  <!-- <br><p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.8</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td>
+              <td aria-label="prison-pom-tier A cases" class="govuk-table__cell ">18</td>
+              <td aria-label="prison-pom-tier B cases" class="govuk-table__cell ">12</td>
+              <td aria-label="prison-pom-tier C cases" class="govuk-table__cell ">7</td>
+              <td aria-label="prison-pom-tier D cases" class="govuk-table__cell ">3</td>
+              <td aria-label="No prison-pom-tier" class="govuk-table__cell ">0</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">40</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="by-prison-pom-complexity">
+        <h3 class="govuk-heading-m">Distribution by complexity</h2>
+        <table class="govuk-table responsive">
+          <thead class="govuk-table__head">
+
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">POM name</th>
+            <th class="govuk-table__header" scope="col">Working pattern</th>
+            <th class="govuk-table__header" scope="col">Worked with service<br>user before</th>
+            <th class="govuk-table__header" scope="col">High <br>complexity</th>
+            <th class="govuk-table__header" scope="col">Medium <br> complexity</th>
+            <th class="govuk-table__header" scope="col">Low <br> complexity</th>
+            <th class="govuk-table__header" scope="col">Total</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row recommended_pom_row_0">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Annie">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Annie Bradley
+                  <!-- <p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td>
+              <td aria-label="high prison-pom-complexity" class="govuk-table__cell ">2</td>
+              <td aria-label="medium prison-pom-complexity" class="govuk-table__cell ">5</td>
+              <td aria-label="low prison-pom-complexity" class="govuk-table__cell ">43</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+            </tr>
+
+            <tr class="govuk-table__row recommended_pom_row_1">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Geoff">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Geoff Colum
+                  <!-- <p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td>
+              <td aria-label="high prison-pom-complexity" class="govuk-table__cell ">6</td>
+              <td aria-label="medium prison-pom-complexity" class="govuk-table__cell ">0</td>
+              <td aria-label="low prison-pom-complexity" class="govuk-table__cell ">49</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">55</td>
+
+            </tr>
+
+            <tr class="govuk-table__row recommended_pom_row_2">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Matthew">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Matthew Hanson
+                  <!-- <br><p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td>
+              <td aria-label="high prison-pom-complexity" class="govuk-table__cell ">0</td>
+              <td aria-label="medium prison-pom-complexity" class="govuk-table__cell ">2</td>
+              <td aria-label="low prison-pom-complexity" class="govuk-table__cell ">50</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">52</td>
+
+            </tr>
+
+            <tr class="govuk-table__row recommended_pom_row_3">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Sophie">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Sophie Hill
+                  <!-- <br><p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.5</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td>
+              <td aria-label="high prison-pom-complexity" class="govuk-table__cell ">1</td>
+              <td aria-label="medium prison-pom-complexity" class="govuk-table__cell ">0</td>
+              <td aria-label="low prison-pom-complexity" class="govuk-table__cell ">30</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">31</td>
+
+            </tr>
+
+            <tr class="govuk-table__row recommended_pom_row_4">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Helen">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Helen James
+                  <!-- <br><p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td>
+              <td aria-label="high prison-pom-complexity" class="govuk-table__cell ">0</td>
+              <td aria-label="medium prison-pom-complexity" class="govuk-table__cell ">0</td>
+              <td aria-label="low prison-pom-complexity" class="govuk-table__cell ">65</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
+
+            </tr>
+
+            <tr class="govuk-table__row recommended_pom_row_5">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Jim">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Jim Roantree
+                  <!-- <br><p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">Yes
+              </td>
+              <td aria-label="high prison-pom-complexity" class="govuk-table__cell ">1</td>
+              <td aria-label="medium prison-pom-complexity" class="govuk-table__cell ">1</td>
+              <td aria-label="low prison-pom-complexity" class="govuk-table__cell ">48</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+            </tr>
+
+            <tr class="govuk-table__row recommended_pom_row_6">
+              <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Carlos">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                  Carlos Santos
+                  <!-- <br><p>
+                    Full time
+                  </p> -->
+                </label>
+              </div></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.8</td>
+              <td aria-label="Previous allocation" class="govuk-table__cell">-
+              </td>
+              <td aria-label="high prison-pom-complexity" class="govuk-table__cell ">0</td>
+              <td aria-label="medium prison-pom-complexity" class="govuk-table__cell ">3</td>
+              <td aria-label="low prison-pom-complexity" class="govuk-table__cell ">37</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">40</td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="govuk-tabs__panel" id="by-prison-pom-role">
+        <h3 class="govuk-heading-m">Distribution by POM role</h2>
+          <table class="govuk-table responsive">
+            <thead class="govuk-table__head">
+
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">POM name</th>
+              <th class="govuk-table__header" scope="col">Working pattern</th>
+              <th class="govuk-table__header" scope="col">Worked with service<br>user before</th>
+              <th class="govuk-table__header" scope="col">Responsible</th>
+              <th class="govuk-table__header" scope="col">Supporting</th>
+              <th class="govuk-table__header" scope="col">Co-working</th>
+              <th class="govuk-table__header" scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row recommended_pom_row_0">
+                <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Annie">
+                  <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                    Annie Bradley
+                    <!-- <p>
+                      Full time
+                    </p> -->
+                  </label>
+                </div></td>
+                <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+                <td aria-label="Previous allocation" class="govuk-table__cell">-
+                </td>
+                <td aria-label="prison-pom-responsible" class="govuk-table__cell ">20</td>
+                <td aria-label="prison-pom-supporting" class="govuk-table__cell ">30</td>
+                <td aria-label="prison-pom-co-working" class="govuk-table__cell ">0</td>
+                <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+              </tr>
+
+              <tr class="govuk-table__row recommended_pom_row_1">
+                <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Geoff">
+                  <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                    Geoff Colum
+                    <!-- <p>
+                      Full time
+                    </p> -->
+                  </label>
+                </div></td>
+                <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+                <td aria-label="Previous allocation" class="govuk-table__cell">-
+                </td>
+                <td aria-label="prison-pom-responsible" class="govuk-table__cell ">35</td>
+                <td aria-label="prison-pom-supporting" class="govuk-table__cell ">20</td>
+                <td aria-label="prison-pom-co-working" class="govuk-table__cell ">0</td>
+                <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">55</td>
+
+              </tr>
+
+              <tr class="govuk-table__row recommended_pom_row_2">
+                <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Matthew">
+                  <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                    Matthew Hanson
+                    <!-- <br><p>
+                      Full time
+                    </p> -->
+                  </label>
+                </div></td>
+                <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+                <td aria-label="Previous allocation" class="govuk-table__cell">-
+                </td>
+                <td aria-label="prison-pom-responsible" class="govuk-table__cell ">6</td>
+                <td aria-label="prison-pom-supporting" class="govuk-table__cell ">39</td>
+                <td aria-label="prison-pom-co-working" class="govuk-table__cell ">7</td>
+                <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">52</td>
+
+              </tr>
+
+              <tr class="govuk-table__row recommended_pom_row_3">
+                <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Sophie">
+                  <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                    Sophie Hill
+                    <!-- <br><p>
+                      Full time
+                    </p> -->
+                  </label>
+                </div></td>
+                <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.5</td>
+                <td aria-label="Previous allocation" class="govuk-table__cell">-
+                </td>
+                <td aria-label="prison-pom-responsible" class="govuk-table__cell ">18</td>
+                <td aria-label="prison-pom-supporting" class="govuk-table__cell ">13</td>
+                <td aria-label="prison-pom-co-working" class="govuk-table__cell ">0</td>
+                <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">31</td>
+
+              </tr>
+
+              <tr class="govuk-table__row recommended_pom_row_4">
+                <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Helen">
+                  <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                    Helen James
+                    <!-- <br><p>
+                      Full time
+                    </p> -->
+                  </label>
+                </div></td>
+                <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+                <td aria-label="Previous allocation" class="govuk-table__cell">-
+                </td>
+                <td aria-label="prison-pom-responsible" class="govuk-table__cell ">43</td>
+                <td aria-label="prison-pom-supporting" class="govuk-table__cell ">20</td>
+                <td aria-label="prison-pom-co-working" class="govuk-table__cell ">2</td>
+                <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
+
+              </tr>
+
+              <tr class="govuk-table__row recommended_pom_row_5">
+                <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Jim">
+                  <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                    Jim Roantree
+                    <!-- <br><p>
+                      Full time
+                    </p> -->
+                  </label>
+                </div></td>
+                <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+                <td aria-label="Previous allocation" class="govuk-table__cell">Yes
+                </td>
+                <td aria-label="prison-pom-responsible" class="govuk-table__cell ">22</td>
+                <td aria-label="prison-pom-supporting" class="govuk-table__cell ">25</td>
+                <td aria-label="prison-pom-co-working" class="govuk-table__cell ">3</td>
+                <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">50</td>
+
+              </tr>
+
+              <tr class="govuk-table__row recommended_pom_row_6">
+                <td aria-label="POM name" class="govuk-table__cell "> <div class="govuk-radios govuk-radios--small">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="choose-pom" name="choose-pom" type="radio" value="Carlos">
+                  <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="choose-pom">
+                    Carlos Santos
+                    <!-- <br><p>
+                      Full time
+                    </p> -->
+                  </label>
+                </div></td>
+                <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.8</td>
+                <td aria-label="Previous allocation" class="govuk-table__cell">-
+                </td>
+                <td aria-label="prison-pom-responsible" class="govuk-table__cell ">30</td>
+                <td aria-label="prison-pom-supporting" class="govuk-table__cell ">10</td>
+                <td aria-label="prison-pom-co-working" class="govuk-table__cell ">0</td>
+                <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">40</td>
+
+              </tr>
+            </tbody>
+          </table>
+
+      </div>
+
+  </div>
+</div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h3 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-2">
+          Show POMs unavailable for new allocations
+        </span>
+      </h3>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+        There are 2 POMs unavailable.
+      </div>
+    </div>
+    <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-2">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">POM name</th>
+      <th scope="col" class="govuk-table__header">Type</th>
+      <th scope="col" class="govuk-table__header">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Shahina Rahman</th>
+      <td class="govuk-table__cell">Prison Officer POM</td>
+      <td class="govuk-table__cell">Inactive</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Richard Adams</th>
+      <td class="govuk-table__cell">Probation Officer POM</td>
+      <td class="govuk-table__cell">Active but unavailable for new cases</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</div>
+
+</div>
+
+        </div>
+      </div>
+
+<div class="govuk-!-padding-bottom-3"></div>
+  <button class="govuk-button" data-module="govuk-button" formaction="/womens/confirm-allocation">
+    Allocate
+  </button>
+
+
+</div>
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+
+
+{% endblock %}

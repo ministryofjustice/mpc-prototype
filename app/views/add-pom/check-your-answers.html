@@ -1,0 +1,105 @@
+{% extends "includes/layouts/main.html" %}
+
+
+{% block pageTitle %}
+Check your answers – Digital Prison Services 
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom:0">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l govuk-!-margin-top-6">Check your answers</h1>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Aamir Khan
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type of POM
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {% if data.TypePOM=="PrisonPOM" %}
+              Prison POM
+              {% else %}
+              Probation POM
+              {% endif %}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link govuk-link--no-visited-state" href="what-type-of-pom.html">Change<span class="govuk-visually-hidden"> type of POM</span></a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Working pattern
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {% if data.workingpatternPOM=="fulltime" %}
+              Full time
+              {% else %}
+              Part time – 
+                {% if data.workpatternDays=="90" %}
+                4.5 days per week
+                {% elseif data.workpatternDays=="80" %}
+                4 days per week
+                {% elseif data.workpatternDays=="70" %}
+                3.5 days per week
+                {% elseif data.workpatternDays=="60" %}
+                3 days per week
+                {% elseif data.workpatternDays=="50" %}
+                2.5 days per week
+                {% elseif data.workpatternDays=="40" %}
+                2 days per week
+                {% elseif data.workpatternDays=="30" %}
+                1.5 days per week
+                {% elseif data.workpatternDays=="20" %}
+                1 day per week
+                {% elseif data.workpatternDays=="10" %}
+                0.5 day per week
+                {% endif %}
+              {% endif %}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link govuk-link--no-visited-state" href="what-is-their-working-pattern.html">Change<span class="govuk-visually-hidden"> working pattern</span></a>
+            </dd>
+          </div>
+          
+        </dl>
+
+
+        <form action="pom-added" method="post" novalidate>
+
+          <input type="hidden" name="POMadded" value="yes">
+
+          <div class="govuk-button-group">
+            
+            <button type="submit" class="govuk-button" data-module="govuk-button">Add POM</button>
+            <a class="govuk-link govuk-link--no-visited-state" href="#">Cancel</a>
+
+          </div>
+
+        </form>
+
+
+
+  </div>
+</div>
+{% endblock %}

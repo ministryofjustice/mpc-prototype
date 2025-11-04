@@ -1,0 +1,90 @@
+{% extends "layout-womens-homd.html" %}
+
+{% block pageTitle %}
+Change complexity
+{% endblock %}
+
+{% block beforeContent %}
+<div class="moj-organisation-nav" aria-label="Organisation switcher">
+<div class="moj-organisation-nav__title">HMP Peterborough (Female)</div>
+
+<a href="/womens/homd_second_round/change-prison.html" class="moj-organisation-nav__link">Change prison</a>
+
+</div>
+<div class="govuk-!-margin-bottom-3"></div>
+
+<a href="/womens/homd_second_round/allocations-review-case-info" class="govuk-back-link govuk-body">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+<form method="post" action="#">
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading govuk-!-padding-bottom-4">
+        Update complexity of need level
+      </h1>
+      <p>Complexity of need level can change.</p>
+      <p>See <a class="govuk-link" href="#">guidance on EQUIP</a> for details of how to manually reassess a person's complexity of need level.</p>
+      <!-- <p>You can find the complexity score in xxx.</p> -->
+
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="record-complexity" name="record-complexity" type="radio" value="high">
+        <label class="govuk-label govuk-radios__label" for="record-complexity">
+          High
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="record-complexity-2" name="record-complexity" type="radio" value="medium">
+        <label class="govuk-label govuk-radios__label" for="record-complexity-2">
+          Medium
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="record-complexity-3" checked="true"  name="record-complexity" type="radio" value="low">
+        <label class="govuk-label govuk-radios__label" for="record-complexity-3">
+          Low
+        </label>
+      </div>
+
+    </div>
+
+    <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m govuk-!-padding-top-6" for="more-detail">
+      Record the reason why the level has changed:
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    This will be visible in the case activity list.
+  </div>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="4" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+  </fieldset>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button" formaction="/womens/homd_second_round/allocated-case-details-changed" style="margin-right: 15px;">
+    Update
+  </button>
+
+
+
+</div>
+</div>
+</main>
+</div>
+</form>
+
+
+
+{% endblock %}

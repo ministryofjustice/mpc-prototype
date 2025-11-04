@@ -1,0 +1,412 @@
+{% extends "layout-staff-view.html" %}
+
+
+{% block pageTitle %}
+Manage staff
+{% endblock %}
+
+{% block beforeContent %}
+<div class="moj-organisation-nav" aria-label="Organisation switcher">
+<div class="moj-organisation-nav__title">HMP Peterborough (Female)</div>
+
+<a href="/womens/homd_second_round/change-prison.html" class="moj-organisation-nav__link">Change prison</a>
+
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-8">
+      Manage your staff
+    </h1>
+
+
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#active-probation-staff">
+          Active Probation officer POMs (8)
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#active-prison-staff">
+          Active Prison officer POMs (8)
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#inactive-staff">
+          Inactive staff (1)
+        </a>
+      </li>
+
+    </ul>
+
+    <div class="govuk-tabs__panel" id="active-probation-staff">
+
+      <div class="govuk-grid-column-full govuk-!-margin-top-4"></div>
+      <h2 class="govuk-heading-m">Active Probation officer POMs</h2>
+      <h3 class="govuk-heading-s">Case mix by tier</h3>
+        <img style="width:50%" class="govuk-!-margin-bottom-5" src="/public/images/case-mix-key.png" alt="case mix key"/>
+
+
+
+      <table class="govuk-table responsive app-table--zebra">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">POM</th>
+          <th class="govuk-table__header" scope="col">Working pattern</th>
+          <th class="govuk-table__header" scope="col">Status</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Case mix by tier</th>
+          <th class="govuk-table__header govuk-table__header--numeric" scope="col">High<br>complexity<br>cases</th>
+          <th class="govuk-table__header govuk-table__header--numeric" scope="col">Total cases</th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row recommended_pom_row_3">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Richard Adams</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Unavailable</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:90%"><p style="govuk-colour("white")">33<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:10%">4</div>
+              <div class="workforce-progress-bar tier_c" style="width:0%"><p style="govuk-colour("white")"><p></div>
+              <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+              <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">10</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="37">37</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Eve Bayram</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:60%"><p style="govuk-colour("white")">24<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:30%">12</div>
+              <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">4<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">8</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="40">40</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_2">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Stephen Dicks</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:50%"><p style="govuk-colour("white")">18<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:30%">11</div>
+              <div class="workforce-progress-bar tier_c" style="width:15%"><p style="govuk-colour("white")">5<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:5%">1</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric">15</td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="35">35</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_3">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Binit Hindocha</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.5</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:10%"><p style="govuk-colour("white")">3<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:80%">24</div>
+              <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">3<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+              <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">8</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="45">30</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_4">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Katy McCann</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:30%"><p style="govuk-colour("white")">10<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:50%">15</div>
+              <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">4<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:5%">1</div>
+              <div class="workforce-progress-bar tier_other" style="width:5%">1</div>
+            </div></td>
+              <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">12</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="31">31</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_1">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Shahina Rahman</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell"><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:40%"><p style="govuk-colour("white")">15<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:60%">23</div>
+              <div class="workforce-progress-bar tier_c" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="38">38</td>
+          </tr>
+
+
+          <tr class="govuk-table__row recommended_pom_row_5">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="/womens/homd_second_round/view-of-pom-overview">Andrien Ricketts</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:45%"><p style="govuk-colour("white")">12<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:45%">12</div>
+              <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">3<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">15</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="27">27</td>
+          </tr>
+
+
+          <tr class="govuk-table__row recommended_pom_row_6">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Ollie Treend</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.8</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:55%"><p style="govuk-colour("white")">23<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:35%">11</div>
+              <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">4<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">9</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="45.6">38</td>
+          </tr>
+
+        </tbody>
+      </table>
+      <!-- <h3 class="govuk-heading-s">
+        Case mix
+      </h3>
+
+      <ul class="govuk-list">
+        <li><span class="caseload-swatch tier_a"></span>Tier A</li>
+        <li><span class="caseload-swatch tier_b"></span>Tier B</li>
+        <li><span class="caseload-swatch tier_c"></span>Tier C</li>
+        <li><span class="caseload-swatch tier_d"></span>Tier D</li>
+        <li><span class="caseload-swatch tier_other"></span>No tier</li>
+      </ul> -->
+
+
+      <div class="govuk-grid-column-full govuk-!-margin-top-4"></div>
+
+
+    </div>
+
+    <div class="govuk-tabs__panel" id="active-prison-staff">
+
+      <div class="govuk-grid-column-full govuk-!-margin-top-4"></div>
+      <h2 class="govuk-heading-m">Active Prison officer POMs</h2>
+      <h3 class="govuk-heading-s">Case mix by tier</h3>
+        <img style="width:50%" class="govuk-!-margin-bottom-5" src="/public/images/case-mix-key.png" alt="case mix key"/>
+
+      <table class="govuk-table responsive app-table--zebra">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">POM</th>
+          <th class="govuk-table__header" scope="col">Working pattern</th>
+          <th class="govuk-table__header" scope="col">Status</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Case mix by tier</th>
+          <th class="govuk-table__header govuk-table__header--numeric" scope="col">High<br>complexity<br>cases</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">Total cases</th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row recommended_pom_row_0">
+          <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Annie Bradley</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_c" style="width:40%"><p style="govuk-colour("white")">15<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:60%">23</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="38">38</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_6">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Malcolm Casimir</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.6</td>
+            <td aria-label="status" class="govuk-table__cell">Unvailable</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:0%">2</div>
+              <div class="workforce-progress-bar tier_c" style="width:80%"><p style="govuk-colour("white")">20<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:20%">5</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="25">25</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_1">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Geoff Colum</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:10%">4</div>
+              <div class="workforce-progress-bar tier_c" style="width:60%"><p style="govuk-colour("white")">23<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:30%">12</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="39">39</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_2">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Matthew Hanson</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_c" style="width:80%"><p style="govuk-colour("white")">32<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:15%">6</div>
+              <div class="workforce-progress-bar tier_other" style="width:5%">2</div>
+            </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">1</td>
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="40">40</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_3">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Sophie Hill</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_c" style="width:75%"><p style="govuk-colour("white")">32<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:25%">10</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="42">42</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_4">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Helen James</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:10%">4</div>
+              <div class="workforce-progress-bar tier_c" style="width:50%"><p style="govuk-colour("white")">22<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:40%">18</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="44">44</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_5">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Jim Roantree</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_c" style="width:30%"><p style="govuk-colour("white")">15<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:70%">36</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="51">51</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_6">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Carlos Santos</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time - 0.8</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:5%">2</div>
+              <div class="workforce-progress-bar tier_c" style="width:55%"><p style="govuk-colour("white")">20<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:40%">14</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="36">36</td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+      <!-- <h3 class="govuk-heading-s">
+        Case mix
+      </h3>
+
+      <ul class="govuk-list">
+        <li><span class="caseload-swatch tier_a"></span>Tier A</li>
+        <li><span class="caseload-swatch tier_b"></span>Tier B</li>
+        <li><span class="caseload-swatch tier_c"></span>Tier C</li>
+        <li><span class="caseload-swatch tier_d"></span>Tier D</li>
+        <li><span class="caseload-swatch tier_other"></span>No tier</li>
+      </ul> -->
+
+
+      <div class="govuk-grid-column-full govuk-!-margin-top-4"></div>
+
+
+
+
+
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="inactive-staff">
+      <h2 class="govuk-heading-m">Inactive staff</h2>
+      <table class="govuk-table responsive app-table--zebra">
+        <thead class="govuk-table__head">
+
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header govuk-!-width-one-half" scope="col">POM</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">POM type</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter govuk-table__header--numeric" scope="col">Total cases</th>
+
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Amy Cufflin</a>
+            </td>
+            <td aria-label="POM type" class="govuk-table__cell ">Probation Officer POM</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">0</td>
+
+
+          </tr>
+
+  </tbody>
+</table>
+
+    </div>
+
+
+  </div>
+
+
+
+{% endblock %}

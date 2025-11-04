@@ -1,0 +1,191 @@
+{% extends "layout-womens-homd-allocations.html" %}
+
+{% block pageTitle %}
+  Add missing information
+{% endblock %}
+
+{% block beforeContent %}
+<div class="moj-organisation-nav" aria-label="Organisation switcher">
+<div class="moj-organisation-nav__title">HMP Peterborough (Female)</div>
+
+<a href="/womens/homd_second_round/change-prison.html" class="moj-organisation-nav__link">Change prison</a>
+
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="moj-search">
+
+<form action="#" method="post">
+
+<div class="govuk-form-group">
+  <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+    Find a case
+  </label>
+
+  <span id="search-hint" class="govuk-hint moj-search__hint ">
+    Enter a prisoner name or number
+  </span>
+
+  <input class="govuk-input moj-search__input" id="search" name="search" type="search" aria-describedby="search-hint">
+</div>
+
+<button class="govuk-button moj-search__button" data-module="govuk-button" formaction="/womens/homd_second_round/search_results">
+  Search
+</button>
+
+</form>
+</div>
+
+<div class="govuk-!-padding-bottom-6"></div>
+
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+<ul class="moj-sub-navigation__list">
+
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" href="/womens/homd_second_round/make-allocations">Make new allocations (9)</a>
+  </li>
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" aria-current="page" href="/womens/homd_second_round/missing-info-list">Add missing details (3)</a>
+  </li>
+
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" href="#">See allocations (198)</a>
+  </li>
+
+<li class="moj-sub-navigation__item">
+  <a class="moj-sub-navigation__link" href="#">Newly arrived (1)</a>
+</li>
+</ul>
+
+</nav>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width">
+
+
+      <h1 class="govuk-heading-l">Add missing details</h1>
+
+      <p>You need to add missing details to 3 cases so they can be allocated to a POM.</p>
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+      </nav>
+
+
+      <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+
+        <th scope="col" class="govuk-table__header" aria-sort="none">
+          <button type="button" data-index="0">
+            Case
+        </button>
+      </th>
+
+    <!-- <th scope="col" class="govuk-table__header" aria-sort="none">
+      <button type="button" data-index="0">
+        Reason for matching failure
+    </button>
+  </th> -->
+
+    <th scope="col" class="govuk-table__header" aria-sort="none">
+      <button type="button" data-index="0">
+        Days waiting for allocation
+    </button>
+    </th>
+
+      <th class="govuk-table__header" scope="col">Action</th>
+
+      </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">
+          Adele Morrison <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="3">3</td>
+
+  <td aria-label="action" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="/womens/homd_second_round/add-complexity-adele">Add missing details</a></td>
+
+      </tr>
+
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">
+          Savanna Chapman  <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+        <!-- <td class="govuk-table__cell" data-sort-value="">Information from NDelius</td> -->
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2</td>
+          <td aria-label="action" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Add missing details</a></td>
+
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell">
+          Amber Hawkins <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD</span></td>
+
+        <!-- <td class="govuk-table__cell" data-sort-value="">Information from NDelius</td> -->
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2</td>
+
+          <td aria-label="action" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Add missing details</a></td>
+
+      </tr>
+
+      </tbody>
+      </table>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
+      </nav>
+
+          </div>
+      </div>
+
+{% endblock %}

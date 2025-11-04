@@ -1,0 +1,128 @@
+{% extends "includes/layouts/main.html" %}
+
+
+{% block pageTitle %}
+Find a staff member – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom:0">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l govuk-!-margin-top-6" id="search-heading">Search results for </h1>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+
+
+
+    <div class="moj-search">
+
+      <form action="#" method="post">
+    
+        <div class="govuk-form-group">
+          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+            Use name, email address or username 
+          </label>
+          <p class="govuk-hint">Search people who have not been added to the service yet.</p>
+    
+    
+          <!--<div id="search-hint" class="govuk-hint moj-search__hint ">
+            Search by name, email address or username
+          </div>-->
+    
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+
+        </div>
+
+        <script>
+          const params = new URLSearchParams(window.location.search);
+          const keyword = params.get('search');
+        
+          if (keyword) {
+            const input = document.getElementById('search');
+            const heading = document.getElementById('search-heading');
+        
+            input.value = keyword;
+            heading.textContent = `Search results for ${keyword}`; // No colon here
+          }
+        </script>
+        
+    
+        <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+    
+      </form>
+    </div>
+
+ 
+</div>
+</div>
+
+
+
+<div class="govuk-grid-row govuk-!-margin-top-8">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-m">Select staff member</h2>
+
+
+
+     <table class="govuk-table" data-module="moj-sortable-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Name</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">Email address</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none">Username</th>
+        </tr>
+      </thead>
+
+    
+      <nav class="moj-pagination" id="pagination-label" style="margin-top: -50px; margin-bottom: 10px;">
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+        <ul class="moj-pagination__list">
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>20</b> of <b>20</b> results</p>
+      </nav>
+
+
+
+      <tbody class="govuk-table__body">
+
+        {% for searchresults in data['pomnew'] %}    
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="what-type-of-pom">{{ searchresults.name }}</a></td>
+          <td class="govuk-table__cell">{{ searchresults.pomemail }}</td>
+          <td class="govuk-table__cell">{{ searchresults.pomusername }}</td>
+        </tr>
+        {% endfor %}
+    
+      </tbody>
+    </table>
+
+    
+    <nav class="moj-pagination" id="pagination-label" style="margin-top: 20px;">
+      <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+      <ul class="moj-pagination__list">
+      </ul>
+      <p class="moj-pagination__results">Showing <b>1</b> to <b>20</b> of <b>20</b> results</p>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,164 @@
+{% extends "layout-main.html" %}
+
+{% block pageTitle %}
+  Add missing information
+{% endblock %}
+
+
+{% block content %}
+
+<div class="moj-banner moj-banner--success">
+
+<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+
+<div class="moj-banner__message">
+<span class="moj-banner__assistive">Success</span>You have updated the case for Adele Morrison (NOMIS ID G2911GD). The case is ready to allocate.</div>
+</div>
+
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+<ul class="moj-sub-navigation__list">
+
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" href="/womens/make-allocations">Make new allocations (11)</a>
+  </li>
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" aria-current="page" href="/womens/missing-info-list">Add missing information (2)</a>
+  </li>
+
+
+  <li class="moj-sub-navigation__item">
+    <a class="moj-sub-navigation__link" href="#">See allocations (198)</a>
+  </li>
+
+<li class="moj-sub-navigation__item">
+  <a class="moj-sub-navigation__link" href="#">Newly arrived (1)</a>
+</li>
+</ul>
+
+</nav>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-width">
+
+
+      <h1 class="govuk-heading-l">Add missing information (2)</h1>
+
+      <p>You need to update information on these cases in order to allocate them.</p>
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>2</b> of <b>2</b> results</p>
+      </nav>
+
+
+      <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+
+        <th scope="col" class="govuk-table__header" aria-sort="none">
+          <button type="button" data-index="0">
+            Prisoner
+        </button>
+      </th>
+
+      <th scope="col" class="govuk-table__header" aria-sort="none">
+          Complexity level
+    </th>
+
+    <th scope="col" class="govuk-table__header" aria-sort="none">
+        nDelius information
+  </th>
+
+    <!-- <th scope="col" class="govuk-table__header" aria-sort="none">
+      <button type="button" data-index="0">
+        Reason for matching failure
+    </button>
+  </th> -->
+
+    <th scope="col" class="govuk-table__header" aria-sort="none">
+      <button type="button" data-index="0">
+        Waiting to be allocated
+    </button>
+    </th>
+
+      </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">
+          Savanna Chapman </a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+
+          <td class="govuk-table__cell">Missing</td>
+          <td class="govuk-table__cell">Provided</td>
+
+        <!-- <td class="govuk-table__cell" data-sort-value="">Information from NDelius</td> -->
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2 days</td>
+
+
+      </tr>
+
+      <tr class="govuk-table__row">
+
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">
+          Amber Hawkins</a> <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD</span></td>
+
+          <td class="govuk-table__cell">Provided - Low </td>
+          <td class="govuk-table__cell">Missing</td>
+
+        <!-- <td class="govuk-table__cell" data-sort-value="">Information from NDelius</td> -->
+
+        <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2 days</td>
+
+      </tr>
+
+      </tbody>
+      </table>
+
+
+      <nav class="moj-pagination" id="pagination-label">
+
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+        <ul class="moj-pagination__list">
+        <li class="moj-pagination__item  moj-pagination__item--prev">
+          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+
+        <li class="moj-pagination__item moj-pagination__item--active">1</li>
+
+        <li class="moj-pagination__item  moj-pagination__item--next">
+          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+        </li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>2</b> of <b>2</b> results</p>
+      </nav>
+
+          </div>
+      </div>
+
+{% endblock %}

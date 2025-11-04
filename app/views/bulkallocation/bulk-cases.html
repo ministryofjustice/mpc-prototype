@@ -1,0 +1,85 @@
+{% extends "includes/layouts/main.html" %}
+
+
+{% block pageTitle %}
+Select this POM’s level – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom:0">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  
+    
+    <h1 class="govuk-heading-xl govuk-!-margin-top-6">
+      We show them the list of cases that need reallocating
+    </h1>
+
+
+
+    <form action="./confirm-bulk-allocation" method="post">
+
+
+
+      <table class="govuk-table">
+
+        <thead class="govuk-table__head">
+          
+          <th class="govuk-table__header">Select case</th>
+          <th class="govuk-table__header" scope="col" aria-sort="none" style="width: 200px;">POM</th>
+          <th class="govuk-table__header" scope="col" aria-sort="none" style="width: 200px;">Case</th>
+          <th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Allocations in  last 7 days</th>
+          <th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Supporting cases</th>
+          <th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Responsible cases</th>
+          <th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Co-working cases</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">Total cases</th>
+         
+        <tbody class="govuk-table__body">
+    
+          <tr class="govuk-table__row recommended_pom_row_1">
+
+            <td aria-label="select" class="govuk-table__cell">    
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  </label>
+                </div>
+              </div>
+            </td>
+            
+            <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Hill" style="width: 250px;">Sophie Hill</br>
+             
+            <td aria-label="case mix" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="5">5</td>
+            <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+              <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric"data-sort-value="6">6</td>
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="10">10</td>
+            <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="19">19</td>
+            <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="35">35</td>
+         
+    
+          </tr>   
+    
+    
+        </tbody>
+      </table>
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="#">Cancel</a>
+      </div>
+
+    </form>
+
+
+
+  </div>
+</div>
+{% endblock %}

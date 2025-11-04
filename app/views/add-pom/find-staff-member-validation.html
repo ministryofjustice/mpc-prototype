@@ -1,0 +1,61 @@
+{% extends "includes/layouts/main.html" %}
+
+
+{% block pageTitle %}
+Find a staff member – Digital Prison Services 
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom:0">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+
+
+    <div class="govuk-form-group govuk-form-group--error govuk-!-margin-top-6">
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="cost-per-item-error">
+          Find a staff member
+        </label>
+      </h1>
+      
+
+      <div class="moj-search">
+
+        <form action="#" method="post">
+      
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+              Use name, email address or username 
+            </label>
+            <p class="govuk-hint">Search people who have not been added to the service yet.</p>
+      
+      
+            <!--<div id="search-hint" class="govuk-hint moj-search__hint ">
+              Search by name, email address or username
+            </div>-->
+            <p id="cost-per-item-error-error" class="govuk-error-message">
+              Enter at least 3 characters 
+            </p>
+      
+            <input class="govuk-input govuk-input--error govuk-input moj-search__input" id="search" name="search" type="search" aria-describedby="search-hint">
+      
+          </div>
+      
+          <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+            Search
+          </button>
+      
+        </form>
+      </div>
+    </div>
+  
+
+    
+ 
+</div>
+</div>
+{% endblock %}
