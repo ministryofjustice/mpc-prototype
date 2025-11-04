@@ -12,24 +12,33 @@ Select this POM’s level – Digital Prison Services
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
   
     
-    <h1 class="govuk-heading-xl govuk-!-margin-top-6">
-      We tell them they must reallocate someone's cases but they can choose to do it later
+    <h1 class="govuk-heading-l govuk-!-margin-top-6">
+      Reallocate 72 cases
     </h1>
 
+    <p class="govuk-body">As Sarah Bailey is no longer at this prison, you must reallocate their cases.</br>
+      You can do this now or later. </p>
 
 
-    <form action="./select-pom" method="post">
 
+    <form action="/reallocate" method="post">
 
-      <div class="govuk-button-group">
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-        <a class="govuk-link" href="#">Cancel</a>
-      </div>
+      
+        <div class="govuk-button-group">
+
+          <button type="submit" class="govuk-button" data-module="govuk-button" name="BulkAllocateCases" value="now">
+            Reallocate now
+          </button>
+
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkAllocateCases" value="later">
+            Reallocate later 
+          </button>
+
+        </div>
+        
 
     </form>
 

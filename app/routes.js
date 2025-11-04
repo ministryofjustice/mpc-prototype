@@ -27,16 +27,61 @@ router.post('/confirmation', function (req, res) {
 
 //Bulk allocation
 
+//Edit staff profile
+router.post('/editstaffprofile', function (req, res) {
+  var statusPOM = req.session.data['statusPOM']
+  // Check whether the variable matches a condition
+  if (statusPOM == "active"){
+   
+   // Send user to individual POM page
+    res.redirect('/staff/staff-pom-overview')
+
+  } else if (statusPOM == "unavailable"){
+    
+    // Send user to individual POM page
+    res.redirect('/staff/staff-pom-overview')
+
+  } else if (statusPOM == "inactive"){
+    
+    // Send user to bulkallocation flow
+    res.redirect('/bulkallocation/re-allocate')
+  }
+
+  else if (statusPOM == "delete"){
+    
+    // Send user to bulkallocation flow
+    res.redirect('/bulkallocation/re-allocate')
+  }
+
+
+});
+
+
+//Bulk allocation now or later
+router.post('/reallocate', function (req, res) {
+  var BulkAllocateCases = req.session.data['BulkAllocateCases']
+  // Check whether the variable matches a condition
+  if (BulkAllocateCases == "now"){
+   
+   // Send user to bulk allocation flow
+    res.redirect('/bulkallocation/select-pom')
+  } else {
+    // Send user to staff page
+    res.redirect('/staff/staff')
+  }
+});
+
+
 //Confirmation page: Next steps
 router.post('/confirmationbulk', function (req, res) {
   var BulkCasesAllocated = req.session.data['BulkCasesAllocated']
   // Check whether the variable matches a condition
   if (BulkCasesAllocated == "MoreBulkAllocations"){
    
-   // Send user to make allocations page
+   // Send user to cases for bulk allocation
     res.redirect('/bulkallocation/bulk-cases')
   } else {
-    // Send user to onboarding POM search
+    // Send user to staff page
     res.redirect('/staff/staff')
   }
 });

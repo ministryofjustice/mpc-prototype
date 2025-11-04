@@ -11,69 +11,88 @@ Select this POM’s level – Digital Prison Services
 
 {% block content %}
 
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-top-6">
+      72 cases ...We show them the list of cases that need reallocating
+    </h1>
+
+
+    <p class="govuk-body">Casea allocated to Sarah Bailey... </p>
+
+
+
+  </div>
+</div>
+
+
+
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
   
     
-    <h1 class="govuk-heading-xl govuk-!-margin-top-6">
-      We show them the list of cases that need reallocating
-    </h1>
+   
+    
+
+
+      <table class="govuk-table" data-module="moj-sortable-table">
+        <caption class="govuk-table__caption"></caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Select case</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Case</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Recommended POM type / role needed</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
+            <th scope="col" class="govuk-table__header" aria-sort="ascending">Earliest release date</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">MAPPA</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Additional information</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox">
+                    <label class="govuk-label govuk-checkboxes__label" for="selectcase">
+                    </label>
+                  </div>
+                </div>
+              </td>
+            <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Hamilton, Christopher</a><br>
+              <span class="govuk-hint govuk-!-margin-bottom-0">G4198UW</span>
+            </td>
+            <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">
+              <span class="date highlight">Prison officer POM</span>
+              <span class="secondary highlight">Responsible</span>
+            </td>
+            <td class="govuk-table__cell">H3-AG-012</td>
+            <td class="govuk-table__cell" data-sort-value="1">CRD: 04 Dec 2025</td>
+            <td class="govuk-table__cell">B</td>
+            <td class="govuk-table__cell">Cat 2 / Level 1 Mappa</td>
+            <td class="govuk-table__cell">Returning to this prison</td>
+          </tr>
+
+
+
+
+        </tbody>
+      </table>
+      
 
 
 
     <form action="./confirm-bulk-allocation" method="post">
 
-
-
-      <table class="govuk-table">
-
-        <thead class="govuk-table__head">
-          
-          <th class="govuk-table__header">Select case</th>
-          <th class="govuk-table__header" scope="col" aria-sort="none" style="width: 200px;">POM</th>
-          <th class="govuk-table__header" scope="col" aria-sort="none" style="width: 200px;">Case</th>
-          <th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Allocations in  last 7 days</th>
-          <th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Supporting cases</th>
-          <th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Responsible cases</th>
-          <th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Co-working cases</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">Total cases</th>
-         
-        <tbody class="govuk-table__body">
-    
-          <tr class="govuk-table__row recommended_pom_row_1">
-
-            <td aria-label="select" class="govuk-table__cell">    
-              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                  </label>
-                </div>
-              </div>
-            </td>
-            
-            <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Hill" style="width: 250px;">Sophie Hill</br>
-             
-            <td aria-label="case mix" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="5">5</td>
-            <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
-              <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric"data-sort-value="6">6</td>
-            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="10">10</td>
-            <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="19">19</td>
-            <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="35">35</td>
-         
-    
-          </tr>   
-    
-    
-        </tbody>
-      </table>
-
-
       <div class="govuk-button-group">
         <button type="submit" class="govuk-button" data-module="govuk-button">
           Continue
         </button>
-        <a class="govuk-link" href="#">Cancel</a>
       </div>
 
     </form>

@@ -13,7 +13,8 @@ Select this POM’s level – Digital Prison Services
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-  
+
+
     
     <h1 class="govuk-heading-xl govuk-!-margin-top-6">
       Edit profile
@@ -24,9 +25,7 @@ Select this POM’s level – Digital Prison Services
     </h2>
 
 
-
-    <form action="../bulkallocation/re-allocate" method="post">
-
+    <form action="/editstaffprofile" method="post">
 
 
       <div class="govuk-form-group">
@@ -52,7 +51,7 @@ Select this POM’s level – Digital Prison Services
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="workpatternDays-2" name="workpatternDays" type="radio" value="80">
+                <input class="govuk-radios__input" id="workpatternDays-2" name="workpatternDays" type="radio" value="80" checked>
                 <label class="govuk-label govuk-radios__label" for="workpatternDays-2">
                   4 days 
                 </label>
@@ -112,7 +111,7 @@ Select this POM’s level – Digital Prison Services
           name: "workingpatternPOM",
           fieldset: {
             legend: {
-              text: "Working pattern",
+              text: "Select working pattern ",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--m"
             }
@@ -125,16 +124,14 @@ Select this POM’s level – Digital Prison Services
     
             {
               value: "fulltime",
-              text: "Full time",
-              conditional: {
-                html: textHtmlTimesThree
-              }
+              text: "Full time"
             },
     
     
             {
               value: "parttime",
               text: "Part time",
+              checked: "true",
               conditional: {
                 html: DetailsParttime
               }
@@ -236,7 +233,7 @@ Select this POM’s level – Digital Prison Services
             name: "statusPOM",
             fieldset: {
               legend: {
-                text: "Status",
+                text: "Select status",
                 isPageHeading: true,
                 classes: "govuk-fieldset__legend--m"
               }
@@ -249,10 +246,11 @@ Select this POM’s level – Digital Prison Services
       
               {
                 value: "active",
-                text: "Active"
+                text: "Active",
+                checked: "true"
               },
               {
-                value: "activeunavailable",
+                value: "unavailable",
                 text: "Unavailable for new cases ",
                 hint: {
                   text: "For example, because they are too busy.
@@ -268,7 +266,7 @@ Select this POM’s level – Digital Prison Services
               },
               {
                 value: "delete",
-                text: "No longer at [prisonName]",
+                text: "No longer at HMP Wandsworth",
                 hint: {
                   text: "This will permanently remove this person from the service. You will need to reallocate their cases. "
                 }
@@ -294,7 +292,8 @@ Select this POM’s level – Digital Prison Services
           <button type="submit" class="govuk-button" data-module="govuk-button">
             Save
           </button>
-          <p><a class="govuk-link--no-visited-state" href="#">Cancel</a></p>
+
+          <p><a class="govuk-link--no-visited-state" href="./staff-pom-overview">Cancel</a></p>
 
         </div>
 
