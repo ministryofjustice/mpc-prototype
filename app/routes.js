@@ -20,7 +20,7 @@ router.post('/confirmation', function (req, res) {
       res.redirect('/allocations/final/make-allocations')
     } else {
       // Send user to onboarding POM search
-      res.redirect('/2025/add-pom/find-staff-member')
+      res.redirect('/add-pom/find-staff-member')
     }
   });
 
@@ -34,10 +34,10 @@ router.post('/confirmationbulk', function (req, res) {
   if (BulkCasesAllocated == "MoreBulkAllocations"){
    
    // Send user to make allocations page
-    res.redirect('/2025/bulkallocation/bulk-cases')
+    res.redirect('/bulkallocation/bulk-cases')
   } else {
     // Send user to onboarding POM search
-    res.redirect('/2025/staff/staff')
+    res.redirect('/staff/staff')
   }
 });
 
