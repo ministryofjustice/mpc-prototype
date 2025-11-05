@@ -147,7 +147,7 @@ Select this POM’s level – Digital Prison Services
         
       
 
-      <!--STATUS START-->
+      
 
 
       <div class="govuk-form-group">
@@ -224,9 +224,61 @@ Select this POM’s level – Digital Prison Services
             </fieldset>
           </div>
           {% endset -%}
-      
-      
           <!--END set dynamic radio hide/show text-->
+      
+      
+          <!--STATUS START-->
+          {% if data.statusPOM=="unavailable" %}
+
+          {{ govukRadios({
+            idPrefix: "statusPOM",
+            name: "statusPOM",
+            fieldset: {
+              legend: {
+                text: "Select status",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            hint: {
+              text: ""
+            },
+            items: [
+      
+      
+              {
+                value: "active",
+                text: "Active"
+              },
+              {
+                value: "unavailable",
+                text: "Unavailable for new cases ",
+                hint: {
+                  text: "For example, because they are too busy.
+                  Choosing this will remove them from the list of POMs you can allocate to."
+                },
+                checked: "true"
+              },
+              {
+                value: "inactive",
+                text: "Inactive",
+                hint: {
+                  text: "For example, because they are away from work for a while.  Setting to inactive will temporarily remove this person from the list of POMs you can allocate to and mean you will need to reallocate their cases. "
+                }
+              },
+              {
+                value: "delete",
+                text: "No longer at HMP Wandsworth",
+                hint: {
+                  text: "This will permanently remove this person from the service. You will need to reallocate their cases. "
+                }
+              }
+             
+            ]
+          }) }}
+
+          {% else %}
+          
                  
           {{ govukRadios({
             idPrefix: "statusPOM",
@@ -274,6 +326,9 @@ Select this POM’s level – Digital Prison Services
              
             ]
           }) }}
+
+
+          {% endif %}
             
        
         </fieldset>
