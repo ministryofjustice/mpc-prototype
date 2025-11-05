@@ -197,13 +197,13 @@ Sarah Bailey
                     <dd class="govuk-summary-list__value">
                       <!--TOM any changes here?-->
                       {% if data.statusPOM=="active" %}
-                      Active: available for new allocations	
+                      Available for new cases	
                       {% elseif data.statusPOM=="unavailable" %}
-                      Unavailable for new allocations
+                      Unavailable for new cases
                       {% elseif data.statusPOM=="inactive" %}
                       Inactive
                       {% else %}
-                      Active: available for new allocations	
+                      Available for new cases
                       {% endif %}
                     </dd>
                     <dd class="govuk-summary-list__actions">
