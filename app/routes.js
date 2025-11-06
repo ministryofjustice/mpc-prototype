@@ -25,6 +25,8 @@ router.post('/confirmation', function (req, res) {
   });
 
 
+
+
 //Bulk allocation
 
 //Edit staff profile
@@ -67,7 +69,7 @@ router.post('/reallocate', function (req, res) {
     res.redirect('/bulkallocation/select-pom')
   } else {
     // Send user to staff page
-    res.redirect('/staff/staff')
+    res.redirect('/staff/staff#attention-needed')
   }
 });
 
