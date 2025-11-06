@@ -26,16 +26,15 @@ Allocate a POM – Digital Prison Services
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-    
-    <div class="moj-page-header-actions govuk-!-margin-top-6">
-  
-      <div class="moj-page-header-actions__title">
-        <h1 class="govuk-heading-l">REWRITE Allocate a POM to Jack Smith</h1></br>
-        <span class="govuk-caption-l">Prison number: G4198UW</span>
-        <span class="govuk-caption-l">Date of birth: 01 Oct 1985 (36)</span>
+      <div class="moj-page-header-actions__title govuk-!-margin-top-6">
+        <h1 class="govuk-heading-l">Heading</h1>
+        <span class="govuk-caption-l">x amount of cases</span>
       </div>
-    </div>
-  
+
+      <p class="govuk-!-margin-top-6">Content</p>
+
+<br>
+
     </div>
   </div>
 
@@ -43,48 +42,11 @@ Allocate a POM – Digital Prison Services
   <form method="post" action="./select-pom-compare">
 
   
-      
-      <h2 class="govuk-heading-m govuk-!-margin-top-6">
-        Prison POM recommended
-      </h2>
-
-
-      <div class="govuk-inset-text">
-        <p>Jack is in the handover window, so needs a <strong>supporting prison POM</strong>.</br></p>
-      </div>
-
-
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <p class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        The following POMs have been allocated to this case most recently: 
-        <ul class="govuk-list govuk-list--bullet" style="margin-left: 45px;">
-          <li>Stephen Dicks – 09 Apr 2020 to 03 Mar 2021</li>
-          <li>Sophie Hill – 10 Dec 2018 to 09 Apr 2020</li>
-        </ul>
-      
-  <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="#" style="margin-left: 45px;">View allocation history</a> for more information.</p>
-      </p>
-        </div>
   
-
-
-
-
-<h2 class="govuk-heading-m govuk-!-margin-top-8">
-  Choose a POM
-
-</h2>
-
-<p>You can choose an available prison POM below or allocate to a probation POM,</br> for example if a particular POM has worked with Jack before.</p>
-
-  <br>
-
   
   <!-- Table here -->
 
-  <table class="govuk-table">
+  <table class="govuk-table" data-module="moj-sortable-table">
 
     <thead class="govuk-table__head">
       
@@ -105,14 +67,13 @@ Allocate a POM – Digital Prison Services
       <th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Responsible cases</th>
       <th class="govuk-table__header govuk-table__header--numeric" scope="col" aria-sort="none">Co-working cases</th>
       <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">Total cases</th>
-      <th class="govuk-table__header" scope="col" style="width: 80px; padding-left: 20px;">Action</th>
       <th class="govuk-table__header">Select POMs </br>to compare workloads</th>
 
     <tbody class="govuk-table__body">
 
       <tr class="govuk-table__row recommended_pom_row_1">
         
-        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Hill" style="width: 250px;">Sophie Hill</td>
+        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Hill" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="./bulk-cases">Sophie Hill</a></td>
 
           <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">Prison POM</td>
 
@@ -124,7 +85,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="10">10</td>
         <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="19">19</td>
         <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="35">35</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">    
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -142,7 +103,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_2">
         
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Barker" style="width: 250px;">Sylvie Barker</td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Barker" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="./bulk-cases">Sylvie Barker</a></td>
 
         <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">Prison POM</td>
 
@@ -170,7 +131,7 @@ Allocate a POM – Digital Prison Services
          <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="3">3</td>
          <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="18">18</td>
          <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="26">26</td>
-         <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+         
 
          <td aria-label="select" class="govuk-table__cell">    
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -188,7 +149,7 @@ Allocate a POM – Digital Prison Services
    
        <tr class="govuk-table__row recommended_pom_row_3">
         
-        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Bradely" style="width: 250px;">Annie Bradley</td>
+        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Bradely" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Annie Bradley</a></td>
 
         <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">Prison POM</td>
 
@@ -200,8 +161,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="17">17</td>
         <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="9">9</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="27">27</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="./step3-confirm-allocation-jack-smith.html">Allocate</a></td>
-
+       
         <td aria-label="select" class="govuk-table__cell">
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
             <div class="govuk-checkboxes__item">
@@ -218,7 +178,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_4">
         
-        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Colum" style="width: 250px;">Geoff Colum</td>
+        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Colum" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Geoff Colum</a></td>
 
         <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">Prison POM</td>
 
@@ -230,7 +190,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="11">11</td>
         <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="5">5</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="21">21</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">     
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -248,7 +208,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_5">
         
-        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Hanson" style="width: 250px;">Matthew Hanson</td>
+        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Hanson" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Matthew Hanson</a></td>
 
         <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">Prison POM</td>
 
@@ -260,7 +220,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="8">8</td>
         <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="10">10</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="19">19</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">     
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -278,7 +238,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_6">
        
-        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="James" style="width: 250px;">Helen James</td>
+        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="James" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Helen James</a></td>
 
         <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">Prison POM</td>
 
@@ -290,7 +250,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="17">17</td>
         <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="9">9</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="29">29</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">       
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -308,7 +268,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_7">
         
-        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Roantree" style="width: 250px;">Jim Roantree</td>
+        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Roantree" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Jim Roantree</a></td>
 
         <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">Prison POM</td>
 
@@ -320,7 +280,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="16">16</td>
         <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="24">24</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="44">44</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">       
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -338,7 +298,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_8">
         
-        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Santos" style="width: 250px;">Carlos Santos</td>
+        <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Santos" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Carlos Santos</a></td>
 
         <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">Prison POM</td>
 
@@ -350,7 +310,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="3">3</td>
         <td aria-label="recent allocations" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="14">14</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="20">20</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">    
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -368,7 +328,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_9">
         
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Upshaw" style="width: 250px;">Eve Upshaw</td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Upshaw" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Eve Upshaw</a></td>
 
         <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">Prison POM</td>
 
@@ -397,7 +357,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="11">11</td>
         <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="5">5</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="33">33</td>
-          <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+          
 
           <td aria-label="select" class="govuk-table__cell">
             <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -415,7 +375,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_10">
         
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Dicks" style="width: 250px;">Stephen Dicks</td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Dicks" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Stephen Dicks</a></td>
          <td aria-label="POM name" class="govuk-table__cell">Probation POM</td>
         <td aria-label="Working pattern" class="govuk-table__cell" data-sort-value="Full time">Full time</td>
         <!--<td aria-label="tier_a" class="govuk-table__cell " data-sort-value="10">10
@@ -443,8 +403,7 @@ Allocate a POM – Digital Prison Services
       <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="20">20</td>
       <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="3">3</td>
       <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="42">42</td>
-      <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="./step2-select-pom-jack-smith-override.html">Allocate</a></td>
-
+      
       <td aria-label="select" class="govuk-table__cell">
         <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
           <div class="govuk-checkboxes__item">
@@ -461,7 +420,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_11">
         
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Hindocha" style="width: 250px;">Binit Hindocha</td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Hindocha" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Binit Hindocha</a></td>
         <td aria-label="POM name" class="govuk-table__cell">Probation POM</td>
         
         <td aria-label="Working pattern" class="govuk-table__cell" data-sort-value="Full time">Full time</td>
@@ -488,7 +447,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="16">16</td>
         <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="5">5</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="28">28</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -506,7 +465,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_12">
 
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="King" style="width: 250px;">Jessica King</td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="King" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Jessica King</a></td>
         <td aria-label="POM name" class="govuk-table__cell">Probation POM</td>
         
         <td aria-label="Working pattern" class="govuk-table__cell" data-sort-value="Full time">Full time</td>
@@ -533,7 +492,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="10">10</td>
         <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="16">16</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="33">33</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -551,7 +510,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_13">
       
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="McCann" style="width: 250px;">Katy McCann</td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="McCann" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Katy McCann</a></td>
        <td aria-label="POM name" class="govuk-table__cell">Probation POM</td>
         
         <td aria-label="Working pattern" class="govuk-table__cell" data-sort-value="Full time">Full time</td>
@@ -577,7 +536,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="27">27</td>
         <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="35">35</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -595,7 +554,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_14">
         
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Rahman" style="width: 250px;">Shahina Rahman</td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Rahman" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Shahina Rahman</a></td>
         <td aria-label="POM name" class="govuk-table__cell">Probation POM</td>
         
         <td aria-label="Working pattern" class="govuk-table__cell" data-sort-value="Full time">Full time</td>
@@ -621,7 +580,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="13">13</td>
         <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="9">9</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="27">27</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -639,7 +598,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_15">
        
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Ricketts" style="width: 250px;">Andrien Ricketts</td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Ricketts" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Andrien Ricketts</a></td>
         <td aria-label="POM name" class="govuk-table__cell">Probation POM</td>
 
         <td aria-label="Working pattern" class="govuk-table__cell" data-sort-value="Part time – 4 days per week">Part time – 4 days per week</td>
@@ -665,7 +624,7 @@ Allocate a POM – Digital Prison Services
       <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="26">26</td>
       <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="12">12</td>
       <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="57">57</td>
-      <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+      
 
       <td aria-label="select" class="govuk-table__cell">
         <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -683,7 +642,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_16">
 
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Treend" style="width: 250px;">Ollie Treend</td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Treend" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Ollie Treend</a></td>
       <td aria-label="POM name" class="govuk-table__cell">Probation POM</td>
 
         <td aria-label="Working pattern" class="govuk-table__cell" style="width: 120px;">Part time – 4 days per week</td>
@@ -709,7 +668,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="42">42</td>
         <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="8">8</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="67">67</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -727,7 +686,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_17">
         
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Valentine" style="width: 250px;">Laura Valentine</td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Valentine" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Laura Valentine</a></td>
         <td aria-label="POM name" class="govuk-table__cell">Probation POM</td>
         
         <td aria-label="Working pattern" class="govuk-table__cell" data-sort-value="Full time">Full time</td>
@@ -753,7 +712,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="27">27</td>
         <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1">1</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="35">35</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -771,7 +730,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_17">
        
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Wilson" style="width: 250px;">Michael Wilson</td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Wilson" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Michael Wilson</a></td>
        <td aria-label="POM name" class="govuk-table__cell">Probation POM</td>
 
         <td aria-label="Working pattern" class="govuk-table__cell" data-sort-value="Part time – 4 days per week">Part time – 4 days per week</td>
@@ -797,7 +756,7 @@ Allocate a POM – Digital Prison Services
       <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="12">12</td>
       <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="12">12</td>
       <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="32">32</td>
-      <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+      
 
       <td aria-label="select" class="govuk-table__cell">
         <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -815,7 +774,7 @@ Allocate a POM – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_18">
 
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Yates" style="width: 250px;">Penny Yates</td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Yates" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Penny Yates</a></td>
         <td aria-label="POM name" class="govuk-table__cell">Probation POM</td>
 
         <td aria-label="Working pattern" class="govuk-table__cell" data-sort-value="Part time – 4 days per week">Part time – 4 days per week</td>
@@ -841,7 +800,7 @@ Allocate a POM – Digital Prison Services
         <td aria-label="responsible cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="11">11</td>
         <td aria-label="coworking cases" class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="8">8</td>
         <td aria-label="total cases" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="29">29</td>
-        <td aria-label="recent allocations" class="govuk-table__cell" style="width: 80px; padding-left: 20px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        
 
         <td aria-label="select" class="govuk-table__cell">
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
