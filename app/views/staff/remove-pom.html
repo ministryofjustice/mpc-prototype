@@ -1,0 +1,47 @@
+{% extends "includes/layouts/main.html" %}
+
+
+{% block pageTitle %}
+ – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom:0">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  
+    
+    <h1 class="govuk-heading-l govuk-!-margin-top-6">
+      Remove POM
+    </h1>
+
+    <p class="govuk-body">These people are no longer recorded as POMs on NOMIS or Digital Prison Services.</br>
+      You must remove them from this service and then reallocate their cases.</p>
+
+
+
+    <form action="../bulkallocation/bulk-cases" method="post">
+
+      
+        <div class="govuk-button-group" style="margin-top: 30px;">
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+          <a class="govuk-link govuk-link--no-visited-state" href="./staff#attention-needed">Cancel</a>
+
+        </div>
+        
+
+    </form>
+
+
+
+  </div>
+</div>
+{% endblock %}
