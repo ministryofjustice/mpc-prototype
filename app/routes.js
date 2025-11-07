@@ -81,7 +81,7 @@ router.post('/confirmationbulk', function (req, res) {
   if (BulkCasesAllocated == "MoreBulkAllocations"){
    
    // Send user to cases for bulk allocation
-    res.redirect('/bulkallocation/bulk-cases')
+    res.redirect('/bulkallocation/select-pom')
   } else {
     // Send user to staff page
     res.redirect('/staff/staff')
