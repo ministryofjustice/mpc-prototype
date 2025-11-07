@@ -2,7 +2,7 @@
 
 
 {% block pageTitle %}
-Confirm allocation
+Cases reallocated – Digital Prison Services
 {% endblock %}
 
 {% block bodyStart %}
@@ -28,42 +28,46 @@ Confirm allocation
       <div class="govuk-grid-column-two-thirds">
         <div class="govuk-panel govuk-panel--confirmation">
           <h1 class="govuk-panel__title">
-            Application complete
+            Cases reallocated
           </h1>
           <div class="govuk-panel__body">
-            Your reference number<br><strong>HDJ2123F</strong>
           </div>
         </div>
-        <p class="govuk-body">We have sent you a confirmation email.</p>
-        <h2 class="govuk-heading-m">What happens next</h2>
+        
+        
+        <h2 class="govuk-heading-m">Reallocation details</h2>
         <p class="govuk-body">
-          We’ve sent your application to Hackney Electoral Register Office.
-        </p>
-        <p class="govuk-body">
-          They will contact you either to confirm your registration, or to ask for more information.
+          You have reallocated 20 cases from probation POM Sarah Bailey to prison POM Sophie Hill. 
         </p>
 
+
+        <h2 class="govuk-heading-m">Update sent</h2>
+        <p class="govuk-body">We have emailed Sophie Hill about the new allocations.</p>
+        
         <details class="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
-              Help with nationality
+              You can copy information about this allocation to paste into an email to someone else.
             </span>
           </summary>
           <div class="govuk-details__text">
-            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+           
           </div>
         </details>
+        
+      
 
-
+        <h2 class="govuk-heading-m">What next</h2>
+        <p class="govuk-body">Sarah Bailey has 32 cases left to reallocate.</p>
 
         <form action="/confirmationbulk" method="post" novalidate>
 
           <div class="govuk-button-group">
             <button type="submit" class="govuk-button" data-module="govuk-button" name="BulkCasesAllocated" value="MoreBulkAllocations">
-              Bulk allocate?
+              Reallocate cases now
             </button>
             <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkCasesAllocated" value="StaffPage">
-              staff page
+              Back to staff list
             </button>
           </div>
 
