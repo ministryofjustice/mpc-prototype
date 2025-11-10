@@ -89,6 +89,19 @@ router.post('/confirmationbulk', function (req, res) {
 });
 
 
+//From inactive to active: Bulk reallocate back to POM or skip
+router.post('/reallocateorskip', function (req, res) {
+  var BulkAllocate = req.session.data['BulkAllocate']
+  // Check whether the variable matches a condition
+  if (BulkAllocate == "yes"){
+   
+   // Send user to cases for bulk allocation
+    res.redirect('/bulkallocation/allocate-back/confirm-allocation')
+  } else {
+    // Send user to staff page
+    res.redirect('/staff/staff')
+  }
+});
 
 
 

@@ -37,8 +37,12 @@ Sarah Bailey
     <div class="moj-page-header-actions">
       <div class="moj-page-header-actions__title">
         <h1 class="govuk-heading-xl govuk-!-margin-top-4">
-          <span class="govuk-caption-xl">Probation Officer POM</span>
+          <span class="govuk-caption-xl">Probation POM</span>
+          {% if data['pom'] == 'hakim' %} 
+          Hakim Reeves
+          {% else %} 
           Sarah Bailey
+          {% endif %} 
         </h1>
       </div>
     
