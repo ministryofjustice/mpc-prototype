@@ -21,11 +21,19 @@ Select this POM’s level – Digital Prison Services
     </h1>
 
     <h2 class="govuk-heading-l govuk-!-margin-top-6 govuk-!-margin-bottom-8">
+      {% if data['pom'] == 'hakim' %} 
+      Hakim Reeves
+      {% else %} 
       Sarah Bailey
+      {% endif %} 
     </h2>
 
 
+    {% if data['pom'] == 'hakim' %}
+    <form action="../bulkallocation/allocate-back/caselist" method="post">
+    {% else %}
     <form action="/editstaffprofile" method="post">
+    {% endif %}
 
 
       <div class="govuk-form-group">
@@ -105,6 +113,45 @@ Select this POM’s level – Digital Prison Services
     
     
         <!--END set dynamic radio hide/show text-->
+
+        {% if data['pom'] == 'hakim' %} 
+
+        {{ govukRadios({
+          idPrefix: "workingpatternPOM",
+          name: "workingpatternPOM",
+          fieldset: {
+            legend: {
+              text: "Select working pattern ",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: ""
+          },
+          items: [
+    
+    
+            {
+              value: "fulltime",
+              text: "Full time",
+              checked: "true"
+            },
+    
+    
+            {
+              value: "parttime",
+              text: "Part time",
+              conditional: {
+                html: DetailsParttime
+              }
+            }
+           
+          ]
+        }) }}
+
+
+        {% else %} 
                
         {{ govukRadios({
           idPrefix: "workingpatternPOM",
@@ -141,6 +188,7 @@ Select this POM’s level – Digital Prison Services
         }) }}
           
      
+        {% endif %} 
       </fieldset>
       </div>
        
@@ -152,83 +200,58 @@ Select this POM’s level – Digital Prison Services
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
-                       
-          <!--START set dynamic radio hide/show text-->
-          {% from "govuk/components/radios/macro.njk" import govukRadios %}
-          {% from "govuk/components/input/macro.njk" import govukInput %}
-      
-          {% set DetailsParttime %}
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                <h1 class="govuk-fieldset__heading">
-                  Select how many days per week they will work 
-                </h1>
-              </legend>
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="workpatternDays" name="workpatternDays" type="radio" value="90">
-                  <label class="govuk-label govuk-radios__label" for="workpatternDays">
-                    4.5 days
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="workpatternDays-2" name="workpatternDays" type="radio" value="80">
-                  <label class="govuk-label govuk-radios__label" for="workpatternDays-2">
-                    4 days 
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="workpatternDays-3" name="workpatternDays" type="radio" value="70">
-                  <label class="govuk-label govuk-radios__label" for="workpatternDays-3">
-                    3.5 days  
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="workpatternDays-4" name="workpatternDays" type="radio" value="60">
-                  <label class="govuk-label govuk-radios__label" for="workpatternDays-4">
-                    3 days 
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="workpatternDays-5" name="workpatternDays" type="radio" value="50">
-                  <label class="govuk-label govuk-radios__label" for="workpatternDays-5">
-                    2.5 days
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="workpatternDays-6" name="workpatternDays" type="radio" value="40">
-                  <label class="govuk-label govuk-radios__label" for="workpatternDays-6">
-                    2 days 
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="workpatternDays-7" name="workpatternDays" type="radio" value="30">
-                  <label class="govuk-label govuk-radios__label" for="workpatternDays-7">
-                    1.5 days 
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="workpatternDays-8" name="workpatternDays" type="radio" value="20">
-                  <label class="govuk-label govuk-radios__label" for="workpatternDays-8">
-                    1 day 
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="workpatternDays-9" name="workpatternDays" type="radio" value="10">
-                  <label class="govuk-label govuk-radios__label" for="workpatternDays-9">
-                    0.5 day
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-          {% endset -%}
-          <!--END set dynamic radio hide/show text-->
-      
-      
+                            
           <!--STATUS START-->
-          {% if data.statusPOM=="unavailable" %}
+          {% if data['pom'] == 'hakim' %}
+
+          {{ govukRadios({
+            idPrefix: "statusPOM",
+            name: "statusPOM",
+            fieldset: {
+              legend: {
+                text: "Select status",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            hint: {
+              text: ""
+            },
+            items: [
+      
+      
+              {
+                value: "active",
+                text: "Available for new cases"
+              },
+              {
+                value: "unavailable",
+                text: "Unavailable for new cases ",
+                hint: {
+                  text: "For example, because they are too busy.
+                  Choosing this will remove them from the list of POMs you can allocate to."
+                }
+              },
+              {
+                value: "inactive",
+                text: "Inactive",
+                hint: {
+                  text: "For example, because they are away from work for a while.  Setting to inactive will temporarily remove this person from the list of POMs you can allocate to and mean you will need to reallocate their cases. "
+                },
+                checked: "true"
+              },
+              {
+                value: "delete",
+                text: "No longer at HMP Wandsworth",
+                hint: {
+                  text: "This will permanently remove this person from the service. You will need to reallocate their cases. "
+                }
+              }
+             
+            ]
+          }) }}
+
+          {% elseif data.statusPOM=="unavailable" %}
 
           {{ govukRadios({
             idPrefix: "statusPOM",
