@@ -26,7 +26,8 @@ Cases reallocated – Digital Prison Services
   <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-panel govuk-panel--confirmation">
+
+        <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-top-6">
           <h1 class="govuk-panel__title">
             Cases reallocated
           </h1>
@@ -35,14 +36,24 @@ Cases reallocated – Digital Prison Services
         </div>
         
         
-        <h2 class="govuk-heading-m">Reallocation details</h2>
+        <h2 class="govuk-heading-m govuk-!-margin-top-6">Reallocation details</h2>
         <p class="govuk-body">
-          You have reallocated 20 cases from probation POM Sarah Bailey to prison POM Sophie Hill. 
+          {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+          You have reallocated 10 cases from probation POM Sarah Bailey to probation POM Binit Hindocha. 
+          {% else %}
+          You have reallocated 20 cases from probation POM Sarah Bailey to probation POM Jessica King. 
+          {% endif %}
         </p>
 
 
         <h2 class="govuk-heading-m">Update sent</h2>
-        <p class="govuk-body">We have emailed Sophie Hill about the new allocations.</p>
+        <p class="govuk-body">We have emailed
+          {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+          Binit Hindocha
+          {% else %}
+          Jessica King
+          {% endif %}
+          about the new allocations.</p>
         
         <details class="govuk-details">
           <summary class="govuk-details__summary">
@@ -52,17 +63,37 @@ Cases reallocated – Digital Prison Services
           </summary>
           <div class="govuk-details__text">
            
+            {% set counter = 0 %}
+            {% for pipnames in data['pipnames'] %}
+              {% if counter < 10 %}
+                <ul class="govuk-list govuk-list--bullet">
+                  <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                </ul>
+                {% set counter = counter + 1 %}
+              {% else %}
+                
+              {% endif %}
+            {% endfor %}
+
+
+
           </div>
         </details>
         
       
 
         <h2 class="govuk-heading-m">What next</h2>
-        <p class="govuk-body">Sarah Bailey has 52 cases left to reallocate.</p>
+        <p class="govuk-body">Sarah Bailey has
+          {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+          41 cases
+          {% else %}
+          51 cases
+          {% endif %}
+          left to reallocate.</p>
 
         <form action="/confirmationbulk" method="post" novalidate>
 
-          <div class="govuk-button-group">
+          <div class="govuk-button-group" style="margin-top: 25px;">
             <button type="submit" class="govuk-button" data-module="govuk-button" name="BulkCasesAllocated" value="MoreBulkAllocations">
               Reallocate cases now
             </button>

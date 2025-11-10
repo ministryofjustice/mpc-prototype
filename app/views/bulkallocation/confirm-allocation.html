@@ -33,10 +33,17 @@ Confirm allocation
       <div class="moj-page-header-actions govuk-!-margin-top-6">
   
         <div class="moj-page-header-actions__title">
+        {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+          <h1 class="govuk-heading-l">Confirm reallocation of 10 cases</h1></br>
+          <span class="govuk-caption-l">Reallocating from: probation POM Sarah Bailey</span>
+          <span class="govuk-caption-l">Reallocating to: probation POM Binit Hindocha</span>
+          <span class="govuk-caption-l">Cases remaining: 41</span>
+        {% else %}
           <h1 class="govuk-heading-l">Confirm reallocation of 20 cases</h1></br>
           <span class="govuk-caption-l">Reallocating from: probation POM Sarah Bailey</span>
-          <span class="govuk-caption-l">Reallocating to: prison POM Sophie Hill</span>
-          <span class="govuk-caption-l">Cases remaining: 52</span>
+          <span class="govuk-caption-l">Reallocating to: prison POM Jessica King</span>
+          <span class="govuk-caption-l">Cases remaining: 51</span>
+        {% endif %}
         </div>
   
       </div>
@@ -58,7 +65,13 @@ Confirm allocation
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<p>We will send the information below to <strong>sophie.hill@justice.gov.uk</strong></p>
+<p>We will send the information below to
+  {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+  <strong>binit.hindocha@justice.gov.uk</strong>
+  {% else %}
+  <strong>jessica.king@justice.gov.uk</strong>
+  {% endif %}
+</p>
 
 
 
@@ -68,34 +81,23 @@ Confirm allocation
   <div class="govuk-inset-text" style="margin-top:40px ;">
     
 
-        
-        <ul class="govuk-list govuk-list--bullet">
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-        </ul>  
       
+{% set counter = 0 %}
+{% for pipnames in data['pipnames'] %}
+  {% if counter < 10 %}
+    <ul class="govuk-list govuk-list--bullet">
+      <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+    </ul>
+    {% set counter = counter + 1 %}
+  {% else %}
+    
+  {% endif %}
+{% endfor %}
+
 
     
 
-    <h2 class="govuk-heading-s">Add a note to the email</h2>
+    <h2 class="govuk-heading-s" style="margin-top: 40px;">Add a note to the email</h2>
 
     <textarea class="govuk-textarea" id="allocation-note" name="allocation-note" rows="9" aria-describedby="allocation-note-hint"></textarea>
     

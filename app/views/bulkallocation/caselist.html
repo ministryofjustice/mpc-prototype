@@ -20,8 +20,13 @@ Select this POM’s level – Digital Prison Services
       <div class="moj-page-header-actions__title">
         <h1 class="govuk-heading-l">Choose cases to reallocate</h1></br>
         <span class="govuk-caption-l">Reallocating from: probation POM Sarah Bailey</span>
-        <span class="govuk-caption-l">Reallocating to: prison POM Sophie Hill</span>
-        <span class="govuk-caption-l">Cases remaining: 72</span>
+        {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+        <span class="govuk-caption-l">Reallocating to: probation POM Binit Hindocha</span>
+        <span class="govuk-caption-l">Cases remaining: 51</span>
+        {% else %}
+        <span class="govuk-caption-l">Reallocating to: probation POM Jessica King</span>
+        <span class="govuk-caption-l">Cases remaining: 71</span>
+        {% endif %}
       </div>
       
     </div>
@@ -38,7 +43,6 @@ Select this POM’s level – Digital Prison Services
   
     
    
-    
 
 
       <table class="govuk-table" data-module="moj-sortable-table">
@@ -57,6 +61,8 @@ Select this POM’s level – Digital Prison Services
         </thead>
         <tbody class="govuk-table__body">
 
+
+          {% for pipnames in data ['pipnames'] %}
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
                 <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
@@ -67,40 +73,18 @@ Select this POM’s level – Digital Prison Services
                   </div>
                 </div>
               </td>
-            <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role"><a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">Hamilton, Christopher</a><br>G4198UW
-                <span class="date highlight" style="margin-top: 5px;">Cat 2 / Level 1 Mappa</span>
+            <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role"><a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">{{pipnames.case}}</a><br>{{pipnames.number}}
+                <span class="date highlight" style="margin-top: 5px;">{{pipnames.mappa}}</span>
                 <span class="secondary highlight"></span>
             </td>
-            <td class="govuk-table__cell">Prison POM</td>
-            <td class="govuk-table__cell">Responsible</td>
-            <td class="govuk-table__cell">H3-AG-012</td>
-            <td class="govuk-table__cell" data-sort-value="1">CRD: 04 Dec 2025</td>
-            <td class="govuk-table__cell">B</td>
-            <td class="govuk-table__cell">Returning to this prison</td>
+            <td class="govuk-table__cell">{{pipnames.recommendation}}</td>
+            <td class="govuk-table__cell">{{pipnames.role}}</td>
+            <td class="govuk-table__cell">{{pipnames.location}}</td>
+            <td class="govuk-table__cell">{{pipnames.date}}</td>
+            <td class="govuk-table__cell">{{pipnames.tier}}</td>
+            <td class="govuk-table__cell">{{pipnames.additionalinfo}}</td>
           </tr>
-
-
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" type="checkbox">
-                    <label class="govuk-label govuk-checkboxes__label" for="selectcase">
-                    </label>
-                  </div>
-                </div>
-              </td>
-            <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role"><a class="govuk-link govuk-link--no-visited-state" href="#">Hamilton, Christopher</a><br>G4198UW
-            </td>
-            <td class="govuk-table__cell">Prison POM</td>
-            <td class="govuk-table__cell">Responsible</td>
-            <td class="govuk-table__cell">H3-AG-012</td>
-            <td class="govuk-table__cell" data-sort-value="1">CRD: 04 Dec 2025</td>
-            <td class="govuk-table__cell">B</td>
-            <td class="govuk-table__cell">Returning to this prison</td>
-          </tr>
-
-
+          {% endfor %}
 
 
         </tbody>
@@ -108,8 +92,11 @@ Select this POM’s level – Digital Prison Services
       
 
 
-
+    {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+    <form action="./confirm-allocation" method="post">
+    {% else %}
     <form action="./override-probationPOM" method="post">
+    {% endif %}
 
       <div class="govuk-button-group">
         <button type="submit" class="govuk-button" data-module="govuk-button">
