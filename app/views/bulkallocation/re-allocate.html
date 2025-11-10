@@ -2,7 +2,7 @@
 
 
 {% block pageTitle %}
- – Digital Prison Services
+Reallocate this POM's cases – Digital Prison Services
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,13 +16,72 @@
   
     
     <h1 class="govuk-heading-l govuk-!-margin-top-6">
-      Reallocate 72 cases
+      Reallocate 30 cases
     </h1>
 
-    <p class="govuk-body">As Sarah Bailey is no longer at this prison, you must reallocate their cases.</br>
+    <p class="govuk-body">As Sarah Bailey has left or will be absent for a while, you must reallocate their cases.</br>
       You can do this now or later. </p>
 
+              <h3 class="govuk-heading-m govuk-!-margin-top-8">Allocations summary for Sarah Bailey</h3>
+        
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Last case allocated
+            </dt>
+            <dd class="govuk-summary-list__value">
+              15 Aug 2025
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Allocations in last 7 days
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Releases in next 4 weeks
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3
+            </dd>
+          </div>
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Responsible cases
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      15
+                    </dd>
+                  </div>
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Supporting cases
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      15
+                    </dd>
+  
+                  </div>
+
+
+
+                </dl>
+      
 
     <form action="/reallocate" method="post">
 
@@ -30,11 +89,11 @@
         <div class="govuk-button-group" style="margin-top: 30px;">
 
           <button type="submit" class="govuk-button" data-module="govuk-button" name="BulkAllocateCases" value="now">
-            Reallocate now
+            Continue
           </button>
 
           <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkAllocateCases" value="later">
-            Reallocate later 
+            Reallocate cases later 
           </button>
 
         </div>
