@@ -535,12 +535,15 @@ Select this POM’s level – Digital Prison Services
             </td>
           </tr>
 
+          {% if data['BulkAllocateCases'] == 'later' %}
           <tr class="govuk-table__row recommended_pom_row_0">
             <td aria-label="POMname" class="govuk-table__cell">Sarah Bailey</td>
-            <td aria-label="LastCaseAllocated" class="govuk-table__cell">6 November 2025</td>
-            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">72</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">10 November 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">71</td>
             <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../bulkallocation/select-pom">Reallocate cases</a></td>
           </tr>
+          {% else %}
+          {% endif %}
 
         </tbody>
 
