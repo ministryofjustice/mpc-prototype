@@ -33,7 +33,7 @@ Confirm allocation
       <div class="moj-page-header-actions govuk-!-margin-top-6">
   
         <div class="moj-page-header-actions__title">
-          <h1 class="govuk-heading-l">Confirm reallocation of 10 cases</h1></br>
+          <h1 class="govuk-heading-l">Confirm reallocation of 34 cases</h1></br>
           <span class="govuk-caption-l">Reallocating to: probation POM Hakim Reeves</span>
         </div>
   
@@ -65,36 +65,65 @@ Confirm allocation
 
   <div class="govuk-inset-text" style="margin-top:40px ;">
     
+          <p><strong>Currently allocated to Carlos Serrano</strong></p>
+          {% set counter = 0 %}
+            {% for pipnames in data['pipnames'] %}
+              {% if counter < 14 %}
+                <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
+                  <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                </ul>
+                {% set counter = counter + 1 %}
+              {% else %}
+                
+              {% endif %}
+            {% endfor %}
 
-        <p>Currently allocated to Carlos Serrano</p>
-        <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px;">
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-        </ul></br>
+          <p style="margin-top: 40px;"><strong>Currently allocated to Amelia Hussain</strong></p>
+          {% set counter = 0 %}
+            {% for pipnames in data['pipnames'] %}
+              {% if counter < 4 %}
+                <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
+                  <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                </ul>
+                {% set counter = counter + 1 %}
+              {% else %}
+                
+              {% endif %}
+            {% endfor %}
+
+
+          <p style="margin-top: 40px;"><strong>Currently allocated to Isla McKenzie</strong></p>
+          {% set counter = 0 %}
+            {% for pipnames in data['pipnames'] %}
+              {% if counter < 8 %}
+                <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
+                  <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                </ul>
+                {% set counter = counter + 1 %}
+              {% else %}
+                
+              {% endif %}
+            {% endfor %}
+
+
+
+        <p style="margin-top: 40px;"><strong>Currently allocated to Oliver Smith</strong></p>
+        {% set counter = 0 %}
+            {% for pipnames in data['pipnames'] %}
+              {% if counter < 8 %}
+                <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
+                  <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                </ul>
+                {% set counter = counter + 1 %}
+              {% else %}
+                
+              {% endif %}
+            {% endfor %}
+
+
         
-        <p>Currently allocated to Amelia Hussain</p>
-        <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px;">
-          <li>Hamilton, Christopher (G4198UW)</li>
-        </ul></br>
-
-        <p>Currently allocated to Isla McKenzie</p>
-        <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px;">
-          <li>Hamilton, Christopher (G4198UW)</li>
-        </ul></br>
-
-        <p>Currently allocated to Oliver Smith</p>
-        <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px;">
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-          <li>Hamilton, Christopher (G4198UW)</li>
-        </ul></br>
-      
-
   
-    <h2 class="govuk-heading-s">Add a note to the email</h2>
+    <h2 class="govuk-heading-s" style="margin-top: 40px;">Add a note to the email</h2>
 
     <textarea class="govuk-textarea" id="allocation-note" name="allocation-note" rows="9" aria-describedby="allocation-note-hint"></textarea>
     

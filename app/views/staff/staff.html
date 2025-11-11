@@ -129,7 +129,23 @@ Select this POM’s level – Digital Prison Services
         </thead>
         <tbody class="govuk-table__body">
 
-          {% if data.BulkAllocate=="no" %}
+          {% if data.BulkCasesAllocated=="Hakim" %}
+          <tr class="govuk-table__row recommended_pom_row_3">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview">Hakim Reeves</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:30%"><p style="govuk-colour("white")">10<p></div>
+                <div class="workforce-progress-bar tier_b" style="width:40%">14</div>
+                <div class="workforce-progress-bar tier_c" style="width:20%"><p style="govuk-colour("white")">8<p></div>
+                <div class="workforce-progress-bar tier_d" style="width:10%">2</div>
+                <!--<div class="workforce-progress-bar tier_other" style="width:0%"></div>-->
+              
+        <!--</td><td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">10</td>-->
+              <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="0">34</td>
+          </tr>
+          {% elseif data.BulkAllocate=="no" %}
           <tr class="govuk-table__row recommended_pom_row_3">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview">Hakim Reeves</a></td>
             <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
@@ -137,10 +153,10 @@ Select this POM’s level – Digital Prison Services
 
             <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
               <div class="workforce-progress-bar tier_a" style="width:0%"><p style="govuk-colour("white")">0<p></div>
-              <div class="workforce-progress-bar tier_b" style="width:0%"></div>
-              <div class="workforce-progress-bar tier_c" style="width:0%"><p style="govuk-colour("white")">0<p></div>
-              <div class="workforce-progress-bar tier_d" style="width:0%"></div>
-              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+                <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+                <div class="workforce-progress-bar tier_c" style="width:0%"><p style="govuk-colour("white")">0<p></div>
+                <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+                <!--<div class="workforce-progress-bar tier_other" style="width:0%"></div>-->
         <!--</td><td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">10</td>-->
                 <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="0">0</td>
           </tr>
@@ -159,7 +175,7 @@ Select this POM’s level – Digital Prison Services
               <div class="workforce-progress-bar tier_b" style="width:55%">8</div>
               <div class="workforce-progress-bar tier_c" style="width:5%"><p style="govuk-colour("white")">1<p></div>
               <div class="workforce-progress-bar tier_d" style="width:0%"></div>
-              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+              <!--<div class="workforce-progress-bar tier_other" style="width:0%"></div>-->
             <!-- </div></td>
               <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">10</td> -->
                 <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="14">71</td>
@@ -175,7 +191,7 @@ Select this POM’s level – Digital Prison Services
               <div class="workforce-progress-bar tier_b" style="width:30%">12</div>
               <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">4<p></div>
               <div class="workforce-progress-bar tier_d" style="width:0%"></div>
-              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+              <!--<div class="workforce-progress-bar tier_other" style="width:0%"></div>-->
             <!-- </div></td>
             <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">8</td> -->
             <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="40">40</td>

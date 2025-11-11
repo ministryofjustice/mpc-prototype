@@ -26,7 +26,8 @@ Cases reallocated – Digital Prison Services
   <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-panel govuk-panel--confirmation">
+
+        <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-top-6">
           <h1 class="govuk-panel__title">
             Cases reallocated
           </h1>
@@ -35,7 +36,7 @@ Cases reallocated – Digital Prison Services
         
         <h2 class="govuk-heading-m">Reallocation details</h2>
         <p class="govuk-body">
-          You have reallocated 20 cases to probation POM Hakim Reeves. 
+          You have reallocated 34 cases to probation POM Hakim Reeves. 
         </p>
 
 
@@ -49,15 +50,78 @@ Cases reallocated – Digital Prison Services
             </span>
           </summary>
           <div class="govuk-details__text">
-           
+
+            <p><strong>Currently allocated to Carlos Serrano</strong></p>
+            {% set counter = 0 %}
+              {% for pipnames in data['pipnames'] %}
+                {% if counter < 14 %}
+                  <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
+                    <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                  </ul>
+                  {% set counter = counter + 1 %}
+                {% else %}
+                  
+                {% endif %}
+              {% endfor %}
+  
+            <p style="margin-top: 40px;"><strong>Currently allocated to Amelia Hussain</strong></p>
+            {% set counter = 0 %}
+              {% for pipnames in data['pipnames'] %}
+                {% if counter < 4 %}
+                  <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
+                    <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                  </ul>
+                  {% set counter = counter + 1 %}
+                {% else %}
+                  
+                {% endif %}
+              {% endfor %}
+  
+  
+            <p style="margin-top: 40px;"><strong>Currently allocated to Isla McKenzie</strong></p>
+            {% set counter = 0 %}
+              {% for pipnames in data['pipnames'] %}
+                {% if counter < 8 %}
+                  <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
+                    <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                  </ul>
+                  {% set counter = counter + 1 %}
+                {% else %}
+                  
+                {% endif %}
+              {% endfor %}
+  
+  
+  
+          <p style="margin-top: 40px;"><strong>Currently allocated to Oliver Smith</strong></p>
+          {% set counter = 0 %}
+              {% for pipnames in data['pipnames'] %}
+                {% if counter < 8 %}
+                  <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
+                    <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                  </ul>
+                  {% set counter = counter + 1 %}
+                {% else %}
+                  
+                {% endif %}
+              {% endfor %}
+
+            <p class="govuk-body" style="margin-top: 40px; margin-bottom: 40px;">Additional notes: Welcome back Hakim, here are all your original cases. Please get in touch with Carlos, Amelia, Isla and Oliver for handovers.</p>
+
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Copy this information
+            </button>
+
+    
+
           </div>
         </details>
 
-        <form action="/confirmationbulk" method="post" novalidate>
+        <form action="../../staff/staff" method="post" novalidate>
 
           <div class="govuk-button-group" style="margin-top: 25px;">
 
-            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkCasesAllocated" value="StaffPage">
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkCasesAllocated" value="Hakim">
               Back to staff list
             </button>
           </div>
