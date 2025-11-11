@@ -49,7 +49,7 @@ Select this POM’s level – Digital Prison Services
         <caption class="govuk-table__caption"></caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Select case</th>
+            <th scope="col" class="govuk-table__header" style="width: 20px;">Select case</th>
             <th scope="col" class="govuk-table__header" aria-sort="none">Case</th>
             <th scope="col" class="govuk-table__header" aria-sort="none">Recommended POM type</th>
             <th scope="col" class="govuk-table__header" aria-sort="none">POM role needed</th>
@@ -87,8 +87,20 @@ Select this POM’s level – Digital Prison Services
           {% endfor %}
 
 
+
         </tbody>
       </table>
+
+
+
+      
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" type="checkbox">
+            <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (71)</strong></label>
+          </div>
+        </div>
+
       
 
 
@@ -98,7 +110,7 @@ Select this POM’s level – Digital Prison Services
     <form action="./override-probationPOM" method="post">
     {% endif %}
 
-      <div class="govuk-button-group">
+      <div class="govuk-button-group" style="margin-top: 40px;">
         <button type="submit" class="govuk-button" data-module="govuk-button">
           Continue
         </button>

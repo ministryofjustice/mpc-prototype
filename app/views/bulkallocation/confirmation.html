@@ -31,8 +31,6 @@ Cases reallocated – Digital Prison Services
           <h1 class="govuk-panel__title">
             Cases reallocated
           </h1>
-          <div class="govuk-panel__body">
-          </div>
         </div>
         
         
@@ -63,6 +61,8 @@ Cases reallocated – Digital Prison Services
           </summary>
           <div class="govuk-details__text">
            
+            {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+
             {% set counter = 0 %}
             {% for pipnames in data['pipnames'] %}
               {% if counter < 10 %}
@@ -75,7 +75,33 @@ Cases reallocated – Digital Prison Services
               {% endif %}
             {% endfor %}
 
+            <p class="govuk-body" style="margin-top: 40px; margin-bottom: 40px;">Additional notes: While Binit is on sick leave please have an eye on these cases.</p>
 
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Copy this information
+            </button>
+
+            {% else %}
+
+            {% set counter = 0 %}
+            {% for pipnames in data['pipnames'] %}
+              {% if counter < 20 %}
+                <ul class="govuk-list govuk-list--bullet">
+                  <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                </ul>
+                {% set counter = counter + 1 %}
+              {% else %}
+                
+              {% endif %}
+            {% endfor %}
+
+            <p class="govuk-body" style="margin-top: 40px; margin-bottom: 40px;">Additional notes: While Sarah is on sick leave please have an eye on these cases.</p>
+
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Copy this information
+            </button>
+
+            {% endif %}
 
           </div>
         </details>

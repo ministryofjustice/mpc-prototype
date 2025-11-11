@@ -54,7 +54,9 @@ Select this POM’s level – Digital Prison Services
     <ul class="govuk-tabs__list">
       <li class="govuk-tabs__list-item">
         <a class="govuk-tabs__tab" href="#active-probation-staff">
-          {% if data.POMadded=="yes" %}
+          {% if data.BulkCasesAllocated=="StaffPage" %}
+          Active probation POMs (3)
+          {% elseif data.POMadded=="yes" %}
           {% if data.TypePOM=="ProbationPOM" %}
           Active probation POMs (5)
           {% else %}
@@ -80,7 +82,11 @@ Select this POM’s level – Digital Prison Services
       </li>
       <li class="govuk-tabs__list-item">
         <a class="govuk-tabs__tab" href="#inactive-staff">
+          {% if data.BulkAllocate=="no" %}
+          Inactive staff (1)
+          {% else %}
           Inactive staff (2)
+          {% endif %}
         </a>
       </li>
       <li class="govuk-tabs__list-item">
@@ -123,6 +129,26 @@ Select this POM’s level – Digital Prison Services
         </thead>
         <tbody class="govuk-table__body">
 
+          {% if data.BulkAllocate=="no" %}
+          <tr class="govuk-table__row recommended_pom_row_3">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview">Hakim Reeves</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"><p style="govuk-colour("white")">0<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_c" style="width:0%"><p style="govuk-colour("white")">0<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+        <!--</td><td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">10</td>-->
+                <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="0">0</td>
+          </tr>
+          {% endif %}
+
+
+          {% if data.BulkCasesAllocated=="StaffPage" %}
+          {% else %}
           <tr class="govuk-table__row recommended_pom_row_3">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview.html">Sarah Bailey</a></td>
             <td aria-label="Working pattern" class="govuk-table__cell">Part time – 4 days per week</td>
@@ -136,8 +162,9 @@ Select this POM’s level – Digital Prison Services
               <div class="workforce-progress-bar tier_other" style="width:0%"></div>
             <!-- </div></td>
               <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">10</td> -->
-                <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="14">14</td>
+                <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="14">71</td>
           </tr>
+          {% endif %}
 
           <tr class="govuk-table__row recommended_pom_row_0">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Sylvie Barker</a></td>
@@ -453,7 +480,7 @@ Select this POM’s level – Digital Prison Services
     <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="inactive-staff">
 
       <h2 class="govuk-heading-l">Inactive staff</h2>
-      <table class="govuk-table responsive app-table--zebra">
+      <table class="govuk-table">
         
         <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -465,12 +492,15 @@ Select this POM’s level – Digital Prison Services
 
         <tbody class="govuk-table__body">
 
+          {% if data.BulkAllocate=="no" %}
+          {% else %}
           <tr class="govuk-table__row recommended_pom_row_0">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="staff-pom-overview?pom=hakim">Hakim Reeves</a>
             </td>
             <td aria-label="POM type" class="govuk-table__cell ">Prison POM</td>
             <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">0</td>
           </tr>
+          {% endif %}
 
           <tr class="govuk-table__row recommended_pom_row_0">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Yasmeen Essa</a>
@@ -535,7 +565,14 @@ Select this POM’s level – Digital Prison Services
             </td>
           </tr>
 
-          {% if data['BulkAllocateCases'] == 'later' %}
+          {% if data.BulkCasesAllocated=="StaffPage" %}
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Sarah Bailey</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">10 November 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">51</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../bulkallocation/select-pom">Reallocate cases</a></td>
+          </tr>
+          {% elseif data['BulkAllocateCases'] == 'later' %}
           <tr class="govuk-table__row recommended_pom_row_0">
             <td aria-label="POMname" class="govuk-table__cell">Sarah Bailey</td>
             <td aria-label="LastCaseAllocated" class="govuk-table__cell">10 November 2025</td>

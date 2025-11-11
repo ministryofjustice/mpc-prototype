@@ -40,16 +40,27 @@ Allocate a POM – Digital Prison Services
 {% set textHtmlReason %}
 {{ govukInput({
   id: "other-reason",
-  name: "Enter your reason for this decision",
-  type: "tel",
-  autocomplete: "tel",
+  name: "Enter reason",
   classes: "govuk-fieldset__legend--s govuk-input govuk-input--width-30",
   label: {
-    text: "Enter your reason for this decision"
+    text: "Enter reason"
   }
 }) }}
 {% endset -%}
 <!--end set dynamic checkbox hide/show text-->
+
+{% set AssessedReason %}
+{{ govukInput({
+  id: "assessed-reason",
+  name: "Enter reason",
+  classes: "govuk-fieldset__legend--s govuk-input govuk-input--width-30",
+  label: {
+    text: "Enter reason"
+  }
+}) }}
+{% endset -%}
+<!--end set dynamic checkbox hide/show text-->
+
 </div>
 
 <div class="moj-page-header-actions__title" style="margin-bottom: 40px;">
@@ -82,22 +93,16 @@ Allocate a POM – Digital Prison Services
     value: "assessed",
     text: "Assessed as not suitable for a prison POM",
     conditional: {
-      html: emailHtml
+      html: AssessedReason
     }
   },
   {
     value: "availability",
-    text: "No available prison POMs",
-    conditional: {
-      html: phoneHtml
-    }
+    text: "No available prison POMs"
   },
   {
     value: "history",
-    text: "Jessica King has worked with Christopher Hamilton before",
-    conditional: {
-      html: phoneHtml
-    }
+    text: "Jessica King has worked with Christopher Hamilton before"
   },
   {
     value: "history",

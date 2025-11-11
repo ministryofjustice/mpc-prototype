@@ -81,7 +81,8 @@ Confirm allocation
   <div class="govuk-inset-text" style="margin-top:40px ;">
     
 
-      
+{% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+
 {% set counter = 0 %}
 {% for pipnames in data['pipnames'] %}
   {% if counter < 10 %}
@@ -93,6 +94,22 @@ Confirm allocation
     
   {% endif %}
 {% endfor %}
+
+{% else %}
+
+{% set counter = 0 %}
+{% for pipnames in data['pipnames'] %}
+  {% if counter < 20 %}
+    <ul class="govuk-list govuk-list--bullet">
+      <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+    </ul>
+    {% set counter = counter + 1 %}
+  {% else %}
+    
+  {% endif %}
+{% endfor %}
+
+{% endif %}
 
 
     
