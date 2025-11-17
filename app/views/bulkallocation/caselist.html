@@ -97,7 +97,11 @@ Select this POM’s level – Digital Prison Services
         <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" type="checkbox">
+            {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+            <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (51)</strong></label>
+            {% else %}
             <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (71)</strong></label>
+            {% endif %}
           </div>
         </div>
 

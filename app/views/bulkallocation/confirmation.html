@@ -37,7 +37,7 @@ Cases reallocated – Digital Prison Services
         <h2 class="govuk-heading-m govuk-!-margin-top-6">Reallocation details</h2>
         <p class="govuk-body">
           {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
-          You have reallocated 10 cases from probation POM Sarah Bailey to probation POM Binit Hindocha. 
+          You have reallocated 51 cases from probation POM Sarah Bailey to probation POM Binit Hindocha. 
           {% else %}
           You have reallocated 20 cases from probation POM Sarah Bailey to probation POM Jessica King. 
           {% endif %}
@@ -65,7 +65,7 @@ Cases reallocated – Digital Prison Services
 
             {% set counter = 0 %}
             {% for pipnames in data['pipnames'] %}
-              {% if counter < 10 %}
+              {% if counter < 51 %}
                 <ul class="govuk-list govuk-list--bullet">
                   <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
                 </ul>
@@ -75,11 +75,6 @@ Cases reallocated – Digital Prison Services
               {% endif %}
             {% endfor %}
 
-            <p class="govuk-body" style="margin-top: 40px; margin-bottom: 40px;">Additional notes: While Binit is on sick leave please have an eye on these cases.</p>
-
-            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Copy this information
-            </button>
 
             {% else %}
 
@@ -95,37 +90,50 @@ Cases reallocated – Digital Prison Services
               {% endif %}
             {% endfor %}
 
-            <p class="govuk-body" style="margin-top: 40px; margin-bottom: 40px;">Additional notes: While Sarah is on sick leave please have an eye on these cases.</p>
+            {% endif %}
+
+            <p class="govuk-body" style="margin-top: 40px; margin-bottom: 40px;">Additional notes: Since Sarah left our team please take over these cases. We can discuss the details next week.</p>
 
             <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
               Copy this information
             </button>
 
-            {% endif %}
+            
 
           </div>
         </details>
         
       
+        {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+        @TOM, no more cases, POM removed
 
+        {% else %}
         <h2 class="govuk-heading-m">What next</h2>
-        <p class="govuk-body">Sarah Bailey has
-          {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
-          41 cases
-          {% else %}
-          51 cases
-          {% endif %}
-          left to reallocate.</p>
+        <p class="govuk-body">Sarah Bailey has 51 casesleft to reallocate.</p>
+        {% endif %}
 
+        {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+        <form action="../staff/staff" method="post" novalidate>
+        {% else %}
         <form action="/confirmationbulk" method="post" novalidate>
+        {% endif %}
 
           <div class="govuk-button-group" style="margin-top: 25px;">
+            {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+            {% else %}
             <button type="submit" class="govuk-button" data-module="govuk-button" name="BulkCasesAllocated" value="MoreBulkAllocations">
               Reallocate cases now
             </button>
-            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkCasesAllocated" value="StaffPage">
+            {% endif %}
+            {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkCasesAllocated" value="Done">
               Back to staff list
             </button>
+            {% else %}
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkCasesAllocated" value="CasesLeftLater">
+              Back to staff list
+            </button>
+            {% endif %}
           </div>
 
         </form>
