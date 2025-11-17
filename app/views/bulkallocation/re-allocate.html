@@ -16,12 +16,29 @@ Reallocate this POM's cases – Digital Prison Services
   
     
     <h1 class="govuk-heading-l govuk-!-margin-top-6">
+      {% if data['pom'] == 'yasmeen' %}
+      Reallocate 10 cases
+      {% else %}
       Reallocate 71 cases
+      {% endif %}
     </h1>
 
-    <p class="govuk-body">As Sarah Bailey will be away from work, you can reallocate their cases if you need to.</br>
+    <p class="govuk-body">As
+      {% if data['pom'] == 'yasmeen' %}
+      Yasmeen Essa
+      {% else %}
+      Sarah Bailey
+      {% endif %}
+       has left or will be absent for a while, you must reallocate their cases.</br>
+      You can do this now or later.</p>
 
-              <h3 class="govuk-heading-m govuk-!-margin-top-8">Allocations summary for Sarah Bailey</h3>
+              <h3 class="govuk-heading-m govuk-!-margin-top-8">Allocations summary for
+                {% if data['pom'] == 'yasmeen' %}
+                Yasmeen Essa
+                {% else %}
+                Sarah Bailey
+                {% endif %}
+              </h3>
         
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
@@ -31,7 +48,11 @@ Reallocate this POM's cases – Digital Prison Services
               Last case allocated
             </dt>
             <dd class="govuk-summary-list__value">
+              {% if data['pom'] == 'yasmeen' %}
+              23 Feb 2025
+              {% else %}
               10 Nov 2025
+              {% endif %}
             </dd>
             <dd class="govuk-summary-list__actions">
             </dd>
@@ -43,7 +64,11 @@ Reallocate this POM's cases – Digital Prison Services
               Allocations in last 7 days
             </dt>
             <dd class="govuk-summary-list__value">
+              {% if data['pom'] == 'yasmeen' %}
+              0
+              {% else %}
               2
+              {% endif %}
             </dd>
           </div>
 
@@ -53,7 +78,11 @@ Reallocate this POM's cases – Digital Prison Services
               Releases in next 4 weeks
             </dt>
             <dd class="govuk-summary-list__value">
+              {% if data['pom'] == 'yasmeen' %}
+              0
+              {% else %}
               3
+              {% endif %}
             </dd>
           </div>
 
@@ -62,7 +91,11 @@ Reallocate this POM's cases – Digital Prison Services
                       Responsible cases
                     </dt>
                     <dd class="govuk-summary-list__value">
+                      {% if data['pom'] == 'yasmeen' %}
+                      10
+                      {% else %}
                       33
+                      {% endif %}
                     </dd>
                   </div>
 
@@ -72,7 +105,11 @@ Reallocate this POM's cases – Digital Prison Services
                       Supporting cases
                     </dt>
                     <dd class="govuk-summary-list__value">
+                      {% if data['pom'] == 'yasmeen' %}
+                      0
+                      {% else %}
                       38
+                      {% endif %}
                     </dd>
   
                   </div>
@@ -81,27 +118,57 @@ Reallocate this POM's cases – Digital Prison Services
 
                 </dl>
       
+                {% if data['pom'] == 'yasmeen' %}
+                <button type="submit" class="govuk-button" data-module="govuk-button" name="BulkAllocateCases" value="nowYasmeen">
+                  Continue
+                </button>
+                {% endif %}
 
-    <form action="/reallocate" method="post">
+    
+    
+    
 
-      
-        <div class="govuk-button-group" style="margin-top: 30px;">
 
-          <button type="submit" class="govuk-button" data-module="govuk-button" name="BulkAllocateCases" value="now">
-            Continue
-          </button>
+    {% if data['pom'] == 'yasmeen' %}
+    
+    <div class="govuk-button-group" style="margin-top: 30px;">
 
-          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkAllocateCases" value="later">
-            Skip this
-          </button>
+    <button type="submit" class="govuk-button" data-module="govuk-button" name="BulkAllocateCases" value="nowYasmeen">
+      Continue
+    </button>
 
-        </div>
-        
+    <form action="../staff/staff#inactive-staff" method="post">
+
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkAllocateCases" value="laterYasmeen">
+      Reallocate cases later 
+    </button>
+
+    </div>
 
     </form>
+    
 
+    {% if data['pom'] == 'sarah' %}
+    <form action="/reallocate" method="post">
+      
+      <div class="govuk-button-group" style="margin-top: 30px;">
 
+        <button type="submit" class="govuk-button" data-module="govuk-button" name="BulkAllocateCases" value="now">
+          Continue
+        </button>
+
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkAllocateCases" value="later">
+          Reallocate cases later 
+        </button>
+
+      </div>
+      
+    </form>
+    
+    {% endif %}
+
+    
 
   </div>
 </div>
-{% endblock %}
+{% endblock %

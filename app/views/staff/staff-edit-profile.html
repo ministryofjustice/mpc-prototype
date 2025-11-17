@@ -21,7 +21,9 @@ Select this POM’s level – Digital Prison Services
     </h1>
 
     <h2 class="govuk-heading-l govuk-!-margin-top-6 govuk-!-margin-bottom-8">
-      {% if data['pom'] == 'alexis' %}
+      {% if data['pom'] == 'yasmeen' %}
+      Yasmeen Essa
+      {% elseif data['pom'] == 'alexis' %}
       Alexis Clarke
       {% elseif data['pom'] == 'hakim' %} 
       Hakim Reeves
@@ -31,7 +33,9 @@ Select this POM’s level – Digital Prison Services
     </h2>
 
 
-    {% if data['pom'] == 'alexis' %}
+    {% if data['pom'] == 'yasmeen' %}
+    <form action="../bulkallocation/re-allocate?pom=yasmeen" method="post">
+    {% elseif data['pom'] == 'alexis' %}
     <form action="../staff/staff" method="post">
     <input type="hidden" name="pom" value="NoCasesRemoved">
     {% elseif data['pom'] == 'hakim' %}
@@ -64,7 +68,11 @@ Select this POM’s level – Digital Prison Services
                 </label>
               </div>
               <div class="govuk-radios__item">
+                {% if data['pom'] == 'sarah' %} 
                 <input class="govuk-radios__input" id="workpatternDays-2" name="workpatternDays" type="radio" value="80" checked>
+                {% else %} 
+                <input class="govuk-radios__input" id="workpatternDays-2" name="workpatternDays" type="radio" value="80">
+                {% endif %} 
                 <label class="govuk-label govuk-radios__label" for="workpatternDays-2">
                   4 days 
                 </label>
@@ -88,7 +96,11 @@ Select this POM’s level – Digital Prison Services
                 </label>
               </div>
               <div class="govuk-radios__item">
+                {% if data['pom'] == 'yasmeen' %}
+                <input class="govuk-radios__input" id="workpatternDays-6" name="workpatternDays" type="radio" value="40" checked>
+                {% else %}
                 <input class="govuk-radios__input" id="workpatternDays-6" name="workpatternDays" type="radio" value="40">
+                {% endif %}
                 <label class="govuk-label govuk-radios__label" for="workpatternDays-6">
                   2 days 
                 </label>
@@ -119,7 +131,8 @@ Select this POM’s level – Digital Prison Services
     
         <!--END set dynamic radio hide/show text-->
 
-        {% if data['pom'] == 'sarah' %} 
+        
+        {% if data['pom'] == 'sarah' or data['pom'] == 'yasmeen' %} 
 
      
         {{ govukRadios({
@@ -209,7 +222,7 @@ Select this POM’s level – Digital Prison Services
         <fieldset class="govuk-fieldset">
                             
           <!--STATUS START-->
-          {% if data['pom'] == 'alexis' %}
+          {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' %}
 
 
           {{ govukRadios({
