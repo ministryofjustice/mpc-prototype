@@ -21,7 +21,9 @@ Select this POM’s level – Digital Prison Services
     </h1>
 
     <h2 class="govuk-heading-l govuk-!-margin-top-6 govuk-!-margin-bottom-8">
-      {% if data['pom'] == 'hakim' %} 
+      {% if data['pom'] == 'alexis' %}
+      Alexis Clarke
+      {% elseif data['pom'] == 'hakim' %} 
       Hakim Reeves
       {% else %} 
       Sarah Bailey
@@ -29,7 +31,10 @@ Select this POM’s level – Digital Prison Services
     </h2>
 
 
-    {% if data['pom'] == 'hakim' %}
+    {% if data['pom'] == 'alexis' %}
+    <form action="../staff/staff" method="post">
+    <input type="hidden" name="pom" value="NoCasesRemoved">
+    {% elseif data['pom'] == 'hakim' %}
     <form action="../bulkallocation/allocate-back/caselist" method="post">
     {% else %}
     <form action="/editstaffprofile" method="post">
@@ -114,7 +119,46 @@ Select this POM’s level – Digital Prison Services
     
         <!--END set dynamic radio hide/show text-->
 
-        {% if data['pom'] == 'hakim' %} 
+        {% if data['pom'] == 'sarah' %} 
+
+     
+        {{ govukRadios({
+          idPrefix: "workingpatternPOM",
+          name: "workingpatternPOM",
+          fieldset: {
+            legend: {
+              text: "Select working pattern ",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: ""
+          },
+          items: [
+    
+    
+            {
+              value: "fulltime",
+              text: "Full time"
+            },
+    
+    
+            {
+              value: "parttime",
+              text: "Part time",
+              checked: "true",
+              conditional: {
+                html: DetailsParttime
+              }
+            }
+           
+          ]
+        }) }}
+
+
+        {% else %} 
+
 
         {{ govukRadios({
           idPrefix: "workingpatternPOM",
@@ -149,43 +193,6 @@ Select this POM’s level – Digital Prison Services
            
           ]
         }) }}
-
-
-        {% else %} 
-               
-        {{ govukRadios({
-          idPrefix: "workingpatternPOM",
-          name: "workingpatternPOM",
-          fieldset: {
-            legend: {
-              text: "Select working pattern ",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--m"
-            }
-          },
-          hint: {
-            text: ""
-          },
-          items: [
-    
-    
-            {
-              value: "fulltime",
-              text: "Full time"
-            },
-    
-    
-            {
-              value: "parttime",
-              text: "Part time",
-              checked: "true",
-              conditional: {
-                html: DetailsParttime
-              }
-            }
-           
-          ]
-        }) }}
           
      
         {% endif %} 
@@ -202,7 +209,58 @@ Select this POM’s level – Digital Prison Services
         <fieldset class="govuk-fieldset">
                             
           <!--STATUS START-->
-          {% if data['pom'] == 'hakim' %}
+          {% if data['pom'] == 'alexis' %}
+
+
+          {{ govukRadios({
+            idPrefix: "statusPOM",
+            name: "statusPOM",
+            fieldset: {
+              legend: {
+                text: "Select status",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            hint: {
+              text: ""
+            },
+            items: [
+      
+      
+              {
+                value: "active",
+                text: "Available for new cases"
+              },
+              {
+                value: "unavailable",
+                text: "Unavailable for new cases ",
+                hint: {
+                  text: "For example, because they are too busy.
+                  Choosing this will remove them from the list of POMs you can allocate to."
+                },
+                checked: "true"
+              },
+              {
+                value: "inactive",
+                text: "Inactive",
+                hint: {
+                  text: "For example, because they are away from work for a while.  Setting to inactive will temporarily remove this person from the list of POMs you can allocate to and mean you will need to reallocate their cases. "
+                }
+              },
+              {
+                value: "delete",
+                text: "No longer at HMP Wandsworth",
+                hint: {
+                  text: "This will permanently remove this person from the service. You will need to reallocate their cases. "
+                }
+              }
+             
+            ]
+          }) }}
+
+
+          {% elseif data['pom'] == 'hakim' %}
 
           {{ govukRadios({
             idPrefix: "statusPOM",
