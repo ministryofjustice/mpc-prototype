@@ -70,15 +70,15 @@ Select this POM’s level – Digital Prison Services
       <li class="govuk-tabs__list-item">
         <a class="govuk-tabs__tab" href="#active-probation-staff">
           {% if data.BulkCasesAllocated=="StaffPage" %}
-          Available probation POMs (3)
+          Active probation POMs (3)
           {% elseif data.POMadded=="yes" %}
           {% if data.TypePOM=="ProbationPOM" %}
-          Available probation POMs (5)
+          Active probation POMs (5)
           {% else %}
-          Available probation POMs (4)
+          Active probation POMs (4)
           {% endif %}
           {% else %}
-          Available probation POMs (4)
+          Active probation POMs (4)
           {% endif %}
         </a>
       </li>
@@ -86,12 +86,12 @@ Select this POM’s level – Digital Prison Services
         <a class="govuk-tabs__tab" href="#active-prison-staff">
           {% if data.POMadded=="yes" %}
           {% if data.TypePOM=="PrisonPOM" %}
-          Available prison POMs (9)
+          Active prison POMs (9)
           {% else %}
-          Available prison POMs (8)
+          Active prison POMs (8)
           {% endif %}
           {% else %}
-          Available prison POMs (8)
+          Active prison POMs (8)
           {% endif %}
         </a>
       </li>
@@ -115,7 +115,7 @@ Select this POM’s level – Digital Prison Services
     
     <div class="govuk-tabs__panel" id="active-probation-staff">
 
-        <h2 class="govuk-heading-l">Available probation POMs</h2>
+        <h2 class="govuk-heading-l">Active probation POMs</h2>
 
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
@@ -325,7 +325,7 @@ Select this POM’s level – Digital Prison Services
 
     <div class="govuk-tabs__panel" id="active-prison-staff">
 
-      <h2 class="govuk-heading-l">Available prison POMs</h2>
+      <h2 class="govuk-heading-l">Active prison POMs</h2>
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
