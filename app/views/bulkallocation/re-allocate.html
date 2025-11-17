@@ -118,14 +118,7 @@ Reallocate this POM's cases – Digital Prison Services
 
                 </dl>
       
-                {% if data['pom'] == 'yasmeen' %}
-                <button type="submit" class="govuk-button" data-module="govuk-button" name="BulkAllocateCases" value="nowYasmeen">
-                  Continue
-                </button>
-                {% endif %}
-
-    
-    
+  
     
 
 
@@ -139,7 +132,7 @@ Reallocate this POM's cases – Digital Prison Services
 
     <form action="../staff/staff#inactive-staff" method="post">
 
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkAllocateCases" value="laterYasmeen">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkAllocateCases" value="laterYasmeen" style="margin-top: -12px;">
       Reallocate cases later 
     </button>
 
@@ -148,7 +141,7 @@ Reallocate this POM's cases – Digital Prison Services
     </form>
     
 
-    {% if data['pom'] == 'sarah' %}
+    {% elseif data['pom'] == 'sarah' %}
     <form action="/reallocate" method="post">
       
       <div class="govuk-button-group" style="margin-top: 30px;">
@@ -171,4 +164,4 @@ Reallocate this POM's cases – Digital Prison Services
 
   </div>
 </div>
-{% endblock %
+{% endblock %}
