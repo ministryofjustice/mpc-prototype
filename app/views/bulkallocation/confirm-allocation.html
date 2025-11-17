@@ -34,10 +34,10 @@ Confirm allocation
   
         <div class="moj-page-header-actions__title">
         {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
-          <h1 class="govuk-heading-l">Confirm reallocation of 10 cases</h1></br>
+          <h1 class="govuk-heading-l">Confirm reallocation of 51 cases</h1></br>
           <span class="govuk-caption-l">Reallocating from: probation POM Sarah Bailey</span>
           <span class="govuk-caption-l">Reallocating to: probation POM Binit Hindocha</span>
-          <span class="govuk-caption-l">Cases remaining: 41</span>
+          <span class="govuk-caption-l">Cases remaining: 0</span>
         {% else %}
           <h1 class="govuk-heading-l">Confirm reallocation of 20 cases</h1></br>
           <span class="govuk-caption-l">Reallocating from: probation POM Sarah Bailey</span>
@@ -85,7 +85,7 @@ Confirm allocation
 
 {% set counter = 0 %}
 {% for pipnames in data['pipnames'] %}
-  {% if counter < 10 %}
+  {% if counter < 51 %}
     <ul class="govuk-list govuk-list--bullet">
       <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
     </ul>

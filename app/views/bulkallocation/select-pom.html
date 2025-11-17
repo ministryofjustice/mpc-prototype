@@ -30,8 +30,18 @@ Allocate a POM – Digital Prison Services
   
       <div class="moj-page-header-actions__title">
         <h1 class="govuk-heading-l">Choose a POM to reallocate cases to</h1></br>
-        <span class="govuk-caption-l">Reallocating from: probation POM Sarah Bailey</span>
-        {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+        <span class="govuk-caption-l">Reallocating from:
+          {% if data['pom'] == 'mateo' %}
+          prison POM Mateo Rossi
+          {% else %}
+          probation POM Sarah Bailey
+          {% endif %}
+        </span>
+       
+
+        {% if data['pom'] == 'mateo' %}
+        <span class="govuk-caption-l">Cases remaining: 65</span>
+        {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
         <span class="govuk-caption-l">Cases remaining: 51</span>
         {% else %}
         <span class="govuk-caption-l">Cases remaining: 71</span>
