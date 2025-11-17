@@ -6,7 +6,7 @@ Select this POM’s level – Digital Prison Services
 {% endblock %}
 
 {% block beforeContent %}
-<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom:0">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom: 40px;">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,8 +14,6 @@ Select this POM’s level – Digital Prison Services
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-
-    
     <h1 class="govuk-heading-xl govuk-!-margin-top-6">
       Edit profile
     </h1>
@@ -36,10 +34,11 @@ Select this POM’s level – Digital Prison Services
     {% if data['pom'] == 'yasmeen' %}
     <form action="../bulkallocation/re-allocate?pom=yasmeen" method="post">
     {% elseif data['pom'] == 'alexis' %}
-    <form action="../staff/staff" method="post">
-    <input type="hidden" name="pom" value="NoCasesRemoved">
+    <form action="./staff-are-you-sure?pom=alexis" method="post">
     {% elseif data['pom'] == 'hakim' %}
     <form action="../bulkallocation/allocate-back/caselist" method="post">
+    {% elseif data['pom'] == 'sarah' %}
+    <form action="./staff-are-you-sure?pom=sarah" method="post">
     {% else %}
     <form action="/editstaffprofile" method="post">
     {% endif %}
