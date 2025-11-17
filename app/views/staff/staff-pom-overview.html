@@ -97,7 +97,7 @@ Sarah Bailey
           <li class="moj-sub-navigation__item">
             {% if data['pom'] == 'yasmeen' %}
             <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="#">Caseload (10)</a>
-            {% elseif data['pom'] == 'alexis' %} 
+            {% elseif data['pom'] == 'alexis' or data['pom'] == 'hakim' %} 
             <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="#">Caseload (0)</a>
             {% else %} 
             <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-caseload">Caseload (71)</a>
@@ -105,7 +105,7 @@ Sarah Bailey
           </li>
 
           <li class="moj-sub-navigation__item">
-            {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' %} 
+            {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' or data['pom'] == 'hakim' %} 
             <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="#">Handover cases (0)</a>
             {% else %} 
             <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-handover">Handover cases (4)</a>
@@ -113,7 +113,7 @@ Sarah Bailey
           </li>
     
           <li class="moj-sub-navigation__item">
-            {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' %} 
+            {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' or data['pom'] == 'hakim' %} 
             <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="#">Parole cases (0)</a>
             {% else %}
             <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-parole">Parole cases (8)</a>
@@ -145,7 +145,7 @@ Sarah Bailey
                   {% if data['pom'] == 'yasmeen' %}
                   <a href="#" class="govuk-link--no-visited-state"><span class="card__heading">10</span>
                   <p>total cases</p></a>
-                  {% elseif data['pom'] == 'alexis' %} 
+                  {% elseif data['pom'] == 'alexis' or data['pom'] == 'hakim' %} 
                   <a href="#" class="govuk-link--no-visited-state"><span class="card__heading">0</span>
                   <p>total cases</p></a>
                   {% else %} 
@@ -157,7 +157,7 @@ Sarah Bailey
         
               <div class="govuk-grid-column-one-third" style="width: 264px;">
                 <div class="card card-total">
-                  {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' %} 
+                  {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' or data['pom'] == 'hakim' %} 
                   <a href="#" class="govuk-link--no-visited-state"><span class="card__heading">0</span>
                   <p>handovers in progress</p></a>
                   {% else %} 
@@ -169,7 +169,7 @@ Sarah Bailey
         
               <div class="govuk-grid-column-one-third" style="width: 264px;">
                 <div class="card card-total">
-                  {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' %} 
+                  {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' or data['pom'] == 'hakim' %} 
                   <a href="#" class="govuk-link--no-visited-state"><span class="card__heading">0</span>
                   <p>parole cases</p></a>
                   {% else %}
@@ -197,7 +197,7 @@ Sarah Bailey
             <dd class="govuk-summary-list__value">
               {% if data['pom'] == 'yasmeen' %}
               23 Feb 2025
-              {% elseif data['pom'] == 'alexis' %}
+              {% elseif data['pom'] == 'alexis' or data['pom'] == 'hakim' %}
               5 Oct 2025
               {% else %}
               10 Nov 2025
@@ -213,7 +213,7 @@ Sarah Bailey
               Allocations in last 7 days
             </dt>
             <dd class="govuk-summary-list__value">
-              {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' %}
+              {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' or data['pom'] == 'hakim' %}
               0
               {% else %}
               2
@@ -230,7 +230,7 @@ Sarah Bailey
               Releases in next 4 weeks
             </dt>
             <dd class="govuk-summary-list__value">
-              {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' %}
+              {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' or data['pom'] == 'hakim' %}
               0
               {% else %}
               3
@@ -275,7 +275,8 @@ Sarah Bailey
                     <dd class="govuk-summary-list__value">
                       {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' %}
                       Unavailable for new cases
-
+                      {% elseif data['pom'] == 'hakim' %} 
+                      Inactive
                       {% elseif data.statusPOM=="active" %}
                       Available for new cases	
                       {% elseif data.statusPOM=="unavailable" %}
@@ -329,7 +330,7 @@ Sarah Bailey
               <li><span class="caseload-swatch tier_other"></span>Tier N/A: 0</li>
             </ul>
 
-            {% elseif data['pom'] == 'alexis' %}
+            {% elseif data['pom'] == 'alexis' or data['pom'] == 'hakim' %}
             <ul class="govuk-list">
               <li><span class="caseload-swatch tier_a"></span>Tier A: 0</li>
               <li><span class="caseload-swatch tier_b"></span>Tier B: 0</li>
@@ -372,7 +373,7 @@ Sarah Bailey
               <li><span class="caseload-swatch tier_other"></span>Co-working: 0</li>
             </ul>
 
-            {% elseif data['pom'] == 'alexis' %}
+            {% elseif data['pom'] == 'alexis' or data['pom'] == 'hakim' %}
             <ul class="govuk-list">
               <li><span class="caseload-swatch tier_a"></span>Responsible: 0</li>
               <li><span class="caseload-swatch tier_d"></span>Supporting: 0</li>
