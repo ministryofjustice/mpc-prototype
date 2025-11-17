@@ -148,7 +148,8 @@ Reallocate this POM's cases – Digital Prison Services
     </form>
     
 
-    {% if data['pom'] == 'sarah' %}
+    {% elseif data['pom'] == 'sarah' %}
+
     <form action="/reallocate" method="post">
       
       <div class="govuk-button-group" style="margin-top: 30px;">
@@ -171,4 +172,4 @@ Reallocate this POM's cases – Digital Prison Services
 
   </div>
 </div>
-{% endblock %
+{% endblock %}
