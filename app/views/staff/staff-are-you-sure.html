@@ -1,0 +1,71 @@
+{% extends "includes/layouts/main.html" %}
+
+
+{% block pageTitle %}
+Select this POM’s level – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom: 40px;">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    {% if data['pom'] == 'alexis' %}
+    <form action="../staff/staff" method="post">
+    <input type="hidden" name="pom" value="NoCasesRemoved">
+    {% else %}
+    <form action="../bulkallocation/re-allocate" method="post">
+    {% endif %}
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Are you sure you want to remove
+              {% if data['pom'] == 'alexis' %}
+              Alexis Clarke
+              {% else %}
+              Sarah Bailey
+              {% endif %} from this service?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="createLicence" name="createLicence" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="createLicence">
+                Yes
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="createLicence-2" name="createLicence" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="createLicence-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </div>
+
+    </form>
+
+
+    
+
+  </div>
+</div>
+{% endblock %}
