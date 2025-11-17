@@ -547,9 +547,10 @@ Select this POM’s level – Digital Prison Services
         
         <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th class="govuk-table__header govuk-!-width-one-half" scope="col">POM</th>
+          <th class="govuk-table__header" scope="col">POM</th>
           <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">POM type</th>
-          <th class="govuk-table__header govuk-!-width-one-quarter govuk-table__header--numeric" scope="col">Total cases</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Total cases</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Action</th>
         </tr>
         </thead>
 
@@ -557,20 +558,28 @@ Select this POM’s level – Digital Prison Services
 
           {% if data.BulkAllocate=="no" %}
           {% else %}
-          <tr class="govuk-table__row recommended_pom_row_0">
+          <tr class="govuk-table__row">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="staff-pom-overview?pom=hakim">Hakim Reeves</a>
             </td>
             <td aria-label="POM type" class="govuk-table__cell ">Prison POM</td>
-            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">0</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">0</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"></td>
           </tr>
           {% endif %}
 
+          <tr class="govuk-table__row">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Rachelle Rigal</a></td>
+            <td aria-label="POM type" class="govuk-table__cell ">Probation POM</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">5</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Reallocate cases</a></td>
+          </tr>
+
           {% if data.BulkAllocateCases=="laterYasmeen" %}
-          <tr class="govuk-table__row recommended_pom_row_0">
-            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Yasmeen Essa</a>
-            </td>
+          <tr class="govuk-table__row">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Yasmeen Essa</a></td>
             <td aria-label="POM type" class="govuk-table__cell ">Prison POM</td>
-            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">10</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">10</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Reallocate cases</a></td>
           </tr>
           {% else %}
           {% endif %}
