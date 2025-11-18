@@ -34,10 +34,17 @@ Confirm reallocation – Digital Prison Services
   
         <div class="moj-page-header-actions__title">
         {% if data['pom'] == 'yasmeen' %}
+          {% if data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
+          <h1 class="govuk-heading-l">Confirm reallocation of 4 cases</h1>
+          <span class="govuk-caption-l">Reallocating from: prison POM Yasmeen Essa</span>
+          <span class="govuk-caption-l">Reallocating to: prison POM Eve Upshaw</span>
+          <span class="govuk-caption-l">Cases remaining: 0</span>
+          {% else %}
           <h1 class="govuk-heading-l">Confirm reallocation of 6 cases</h1>
           <span class="govuk-caption-l">Reallocating from: prison POM Yasmeen Essa</span>
           <span class="govuk-caption-l">Reallocating to: prison POM Carlos Santos</span>
           <span class="govuk-caption-l">Cases remaining: 4</span>
+          {% endif %}
         {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
           <h1 class="govuk-heading-l">Confirm reallocation of 51 cases</h1>
           <span class="govuk-caption-l">Reallocating from: probation POM Sarah Bailey</span>
@@ -72,7 +79,11 @@ Confirm reallocation – Digital Prison Services
 
 <p>We will send the information below to
   {% if data['pom'] == 'yasmeen' %}
-  <strong>carlos.santos@justice.gov.uk</strong>
+    {% if data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
+    <strong>eve.upshaw@justice.gov.uk</strong>
+    {% else %}
+    <strong>carlos.santos@justice.gov.uk</strong>
+    {% endif %}
   {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
   <strong>binit.hindocha@justice.gov.uk</strong>
   {% else %}
@@ -88,19 +99,37 @@ Confirm reallocation – Digital Prison Services
   <div class="govuk-inset-text" style="margin-top:40px ;">
 
 {% if data['pom'] == 'yasmeen' %}
+  {% if data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
 
-
-{% set counter = 0 %}
-{% for pipnames in data['pipnames'] %}
-  {% if counter < 6 %}
-    <ul class="govuk-list govuk-list--bullet">
-      <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
-    </ul>
-    {% set counter = counter + 1 %}
-  {% else %}
+    {% set counter = 0 %}
+    {% for pipnames in data['pipnames'] %}
+    {% if counter < 4 %}
+      <ul class="govuk-list govuk-list--bullet">
+        <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+      </ul>
+      {% set counter = counter + 1 %}
+    {% else %}
     
+    {% endif %}
+    {% endfor %}
+
+
+  {% else %}
+
+
+    {% set counter = 0 %}
+    {% for pipnames in data['pipnames'] %}
+      {% if counter < 6 %}
+        <ul class="govuk-list govuk-list--bullet">
+          <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+        </ul>
+        {% set counter = counter + 1 %}
+      {% else %}
+        
+      {% endif %}
+    {% endfor %}
+
   {% endif %}
-{% endfor %}
 
 
 {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
