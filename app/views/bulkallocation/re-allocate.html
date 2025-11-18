@@ -23,14 +23,14 @@ Reallocate this POM's cases – Digital Prison Services
       {% endif %}
     </h1>
 
-    <p class="govuk-body">As
+    <p class="govuk-body">
       {% if data['pom'] == 'yasmeen' %}
-      Yasmeen Essa
+      As Yasmeen Essa will be away from work, you can reallocate their cases or skip this if their cases do not need to be reallocated.<br>
+      You can also reallocate their cases later.
       {% else %}
-      Sarah Bailey
+     As Sarah Bailey is no longer at HMP Wandsworth, you must reallocate their cases.<br/>
+      You can do this now or later.
       {% endif %}
-       has left or will be absent for a while, you must reallocate their cases.</br>
-      You can do this now or later.</p>
 
               <h3 class="govuk-heading-m govuk-!-margin-top-8">Allocations summary for
                 {% if data['pom'] == 'yasmeen' %}
@@ -133,7 +133,7 @@ Reallocate this POM's cases – Digital Prison Services
     <form action="../staff/staff#inactive-staff" method="post">
 
     <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkAllocateCases" value="laterYasmeen" style="margin-top: -12px;">
-      Reallocate cases later 
+      Skip this
     </button>
 
     </div>
