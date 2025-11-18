@@ -36,7 +36,9 @@ Cases reallocated – Digital Prison Services
         
         <h2 class="govuk-heading-m govuk-!-margin-top-6">Reallocation details</h2>
         <p class="govuk-body">
-          {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+          {% if data['pom'] == 'yasmeen' %}
+          You have reallocated 6 cases from prison POM Yasmeen Essa to prison POM Carlos Santos. 
+          {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
           You have reallocated 51 cases from probation POM Sarah Bailey to probation POM Binit Hindocha. 
           {% else %}
           You have reallocated 20 cases from probation POM Sarah Bailey to probation POM Jessica King. 
@@ -46,7 +48,9 @@ Cases reallocated – Digital Prison Services
 
         <h2 class="govuk-heading-m">Update sent</h2>
         <p class="govuk-body">We have emailed
-          {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+          {% if data['pom'] == 'yasmeen' %}
+          Carlos Santos
+          {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
           Binit Hindocha
           {% else %}
           Jessica King
@@ -60,8 +64,25 @@ Cases reallocated – Digital Prison Services
             </span>
           </summary>
           <div class="govuk-details__text">
+
+            {% if data['pom'] == 'yasmeen' %}
+
+
+            {% set counter = 0 %}
+            {% for pipnames in data['pipnames'] %}
+              {% if counter < 6 %}
+                <ul class="govuk-list govuk-list--bullet">
+                  <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                </ul>
+                {% set counter = counter + 1 %}
+              {% else %}
+                
+              {% endif %}
+            {% endfor %}
+
            
-            {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+            {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
+
 
             {% set counter = 0 %}
             {% for pipnames in data['pipnames'] %}
@@ -92,7 +113,12 @@ Cases reallocated – Digital Prison Services
 
             {% endif %}
 
-            <p class="govuk-body" style="margin-top: 40px; margin-bottom: 40px;">Additional notes: Since Sarah left our team please take over these cases. We can discuss the details next week.</p>
+            <p class="govuk-body" style="margin-top: 40px; margin-bottom: 40px;">Additional notes:
+              {% if data['pom'] == 'yasmeen' %}
+              Since Yasmeen will be away for a while please take over these cases. We can discuss the details next week.</p>
+              {% else %}
+              Since Sarah left our team please take over these cases. We can discuss the details next week.</p>
+              {% endif %}
 
             <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
               Copy this information
@@ -103,17 +129,20 @@ Cases reallocated – Digital Prison Services
           </div>
         </details>
         
-      
-        {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+        {% if data['pom'] == 'yasmeen' %}
+        <h2 class="govuk-heading-m">What next</h2>
+        <p class="govuk-body">Yasmeen Essa has 4 cases left to reallocate if needed.</p>
+        {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
         <h2 class="govuk-heading-m">What next</h2>
         <p class="govuk-body">Sarah Bailey has no more cases and has been removed from this service.</p>
-
         {% else %}
         <h2 class="govuk-heading-m">What next</h2>
         <p class="govuk-body">Sarah Bailey has 51 cases left to reallocate.</p>
         {% endif %}
 
-        {% if data.BulkCasesAllocated=="MoreBulkAllocations" %}
+        {% if data['pom'] == 'yasmeen' %}
+        <form action="/confirmationbulkAFW" method="post" novalidate>
+        {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
         <form action="../staff/staff" method="post" novalidate>
         {% else %}
         <form action="/confirmationbulk" method="post" novalidate>

@@ -123,16 +123,16 @@ Reallocate this POM's cases – Digital Prison Services
 
 
     {% if data['pom'] == 'yasmeen' %}
+
+    <form action="/reallocateAFW" method="post">
     
     <div class="govuk-button-group" style="margin-top: 30px;">
 
-    <button type="submit" class="govuk-button" data-module="govuk-button" name="BulkAllocateCases" value="nowYasmeen">
+    <button type="submit" class="govuk-button" data-module="govuk-button" name="BulkAllocateCasesAFW" value="now">
       Continue
     </button>
 
-    <form action="../staff/staff#inactive-staff" method="post">
-
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkAllocateCases" value="laterYasmeen" style="margin-top: -12px;">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="BulkAllocateCasesAFW" value="later" style="margin-top: -12px;">
       Skip this
     </button>
 

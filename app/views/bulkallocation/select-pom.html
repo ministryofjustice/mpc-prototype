@@ -148,7 +148,6 @@ Choose a POM to reallocate cases to – Digital Prison Services
 
 
       <tr class="govuk-table__row recommended_pom_row_13">
-      
         <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="McCann" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Katy McCann</a></td>
        <td aria-label="POM name" class="govuk-table__cell">Probation POM</td>
         
@@ -663,8 +662,11 @@ Choose a POM to reallocate cases to – Digital Prison Services
 
 
       <tr class="govuk-table__row recommended_pom_row_8">
-        
+        {% if data['pom'] == 'yasmeen' %}
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="McCann" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="./caselist?pom=yasmeen">Carlos Santos</a></td>
+        {% else %}
         <td aria-label="POM name" class="govuk-table__cell" data-sort-value="Santos" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Carlos Santos</a></td>
+        {% endif %}
 
         <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">Prison POM</td>
 

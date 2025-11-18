@@ -59,7 +59,7 @@ router.post('/editstaffprofile', function (req, res) {
 });
 
 
-//Bulk allocation now or later
+//Bulk allocation now or later if a POM left the prison
 router.post('/reallocate', function (req, res) {
   var BulkAllocateCases = req.session.data['BulkAllocateCases']
   // Check whether the variable matches a condition
@@ -70,6 +70,21 @@ router.post('/reallocate', function (req, res) {
   } else {
     // Send user to staff page
     res.redirect('/staff/staff#attention-needed')
+  }
+});
+
+
+//Bulk allocation now or later if a POM is away from work
+router.post('/reallocateAFW', function (req, res) {
+  var BulkAllocateCasesAFW = req.session.data['BulkAllocateCasesAFW']
+  // Check whether the variable matches a condition
+  if (BulkAllocateCasesAFW == "now"){
+   
+   // Send user to bulk allocation flow
+    res.redirect('/bulkallocation/select-pom?pom=yasmeen')
+  } else {
+    // Send user to staff page
+    res.redirect('/staff/staff#inactive-staff')
   }
 });
 
@@ -85,6 +100,20 @@ router.post('/confirmationbulk', function (req, res) {
   } else {
     // Send user to staff page
     res.redirect('/staff/staff#attention-needed')
+  }
+});
+
+//Away from Work - Confirmation page: Next steps
+router.post('/confirmationbulkAFW', function (req, res) {
+  var BulkCasesAllocatedAFW = req.session.data['BulkCasesAllocatedAFW']
+  // Check whether the variable matches a condition
+  if (BulkCasesAllocatedAFW == "MoreBulkAllocations"){
+   
+   // Send user to cases for bulk allocation
+    res.redirect('/bulkallocation/select-pom?pom=yasmeen')
+  } else {
+    // Send user to staff page
+    res.redirect('/staff/staff#inactive-staff')
   }
 });
 
