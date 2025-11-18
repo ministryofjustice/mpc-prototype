@@ -42,7 +42,12 @@ Choose a POM to reallocate cases to – Digital Prison Services
        
 
         {% if data['pom'] == 'yasmeen' %}
+        {% if data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
+        <span class="govuk-caption-l">Cases remaining: 4</span>
+        {% else %}
         <span class="govuk-caption-l">Cases remaining: 10</span>
+        {% endif %}
+
         {% elseif data['pom'] == 'mateo' %}
         <span class="govuk-caption-l">Cases remaining: 65</span>
         {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
@@ -53,6 +58,8 @@ Choose a POM to reallocate cases to – Digital Prison Services
       </div>
 
     </div>
+
+   
 
       <div class="govuk-inset-text">
         <p>You can reallocate cases to a single POM in bulk and then repeat until no cases remain.</p>
@@ -696,7 +703,7 @@ Choose a POM to reallocate cases to – Digital Prison Services
 
       <tr class="govuk-table__row recommended_pom_row_9">
         
-        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Upshaw" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Eve Upshaw</a></td>
+        <td aria-label="POM name" class="govuk-table__cell"  data-sort-value="Upshaw" style="width: 250px;"><a class="govuk-link govuk-link--no-visited-state" href="./caselist?pom=yasmeen">Eve Upshaw</a></td>
 
         <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">Prison POM</td>
 
