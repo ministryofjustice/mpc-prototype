@@ -288,7 +288,9 @@ Sarah Bailey
                       {% endif %}
                     </dd>
                     <dd class="govuk-summary-list__actions">
-                      {% if data['pom'] == 'alexis' %}
+                      {% if data['pom'] == 'yasmeen' %}
+                      <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile?pom=yasmeen">Change<span class="govuk-visually-hidden">status</span></a>
+                      {% elseif data['pom'] == 'alexis' %}
                       <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile?pom=alexis">Change<span class="govuk-visually-hidden">status</span></a>
                       {% elseif data['pom'] == 'hakim' %}
                       <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile?pom=hakim">Change<span class="govuk-visually-hidden">status</span></a>
