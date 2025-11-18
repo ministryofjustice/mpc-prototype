@@ -80,11 +80,65 @@ Choose cases to reallocate – Digital Prison Services
 
           {% if data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
 
-          Show 4 cases
+            {% for pipnames in data.pipnames %}
+            {% if loop.index <= 4 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="selectcase"></label>
+                    </div>
+                  </div>
+                </td>
+          
+                <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">
+                  <a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">{{ pipnames.case }}</a><br>
+                  {{ pipnames.number }}
+                  <span class="date highlight" style="margin-top: 5px;">{{ pipnames.mappa }}</span>
+                  <span class="secondary highlight"></span>
+                </td>
+          
+                <td class="govuk-table__cell">{{ pipnames.recommendation }}</td>
+                <td class="govuk-table__cell">{{ pipnames.role }}</td>
+                <td class="govuk-table__cell">{{ pipnames.location }}</td>
+                <td class="govuk-table__cell">{{ pipnames.date }}</td>
+                <td class="govuk-table__cell">{{ pipnames.tier }}</td>
+                <td class="govuk-table__cell">{{ pipnames.additionalinfo }}</td>
+              </tr>
+            {% endif %}
+          {% endfor %}
 
           {% else %}
 
-          Show 10 cases
+            {% for pipnames in data.pipnames %}
+            {% if loop.index <= 10 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="selectcase"></label>
+                    </div>
+                  </div>
+                </td>
+          
+                <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">
+                  <a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">{{ pipnames.case }}</a><br>
+                  {{ pipnames.number }}
+                  <span class="date highlight" style="margin-top: 5px;">{{ pipnames.mappa }}</span>
+                  <span class="secondary highlight"></span>
+                </td>
+          
+                <td class="govuk-table__cell">{{ pipnames.recommendation }}</td>
+                <td class="govuk-table__cell">{{ pipnames.role }}</td>
+                <td class="govuk-table__cell">{{ pipnames.location }}</td>
+                <td class="govuk-table__cell">{{ pipnames.date }}</td>
+                <td class="govuk-table__cell">{{ pipnames.tier }}</td>
+                <td class="govuk-table__cell">{{ pipnames.additionalinfo }}</td>
+              </tr>
+            {% endif %}
+          {% endfor %}
 
           {% endif %}
 
