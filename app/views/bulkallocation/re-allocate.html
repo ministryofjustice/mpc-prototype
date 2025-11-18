@@ -23,14 +23,14 @@ Reallocate this POM's cases – Digital Prison Services
       {% endif %}
     </h1>
 
-    <p class="govuk-body">As
-      {% if data['pom'] == 'yasmeen' %}
-      Yasmeen Essa
-      {% else %}
-      Sarah Bailey
-      {% endif %}
-       has left or will be absent for a while, you must reallocate their cases.</br>
+    {% if data['pom'] == 'yasmeen' %}
+    <p class="govuk-body">As Yasmeen Essa has left or will be absent for a while, you must reallocate their cases.</br>
+      You can do this now or later.</p>  
+    {% else %}
+    <p class="govuk-body">As Sarah Bailey has left or will be absent for a while, you must reallocate their cases.</br>
       You can do this now or later.</p>
+    {% endif %}
+       
 
               <h3 class="govuk-heading-m govuk-!-margin-top-8">Allocations summary for
                 {% if data['pom'] == 'yasmeen' %}
