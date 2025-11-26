@@ -27,7 +27,7 @@ Choose cases to reallocate – Digital Prison Services
 
         {% if data['pom'] == 'yasmeen' %}
 
-        {% if data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
+        {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
         <span class="govuk-caption-l">Reallocating to: prison POM Eve Upshaw</span>
         <span class="govuk-caption-l">Cases remaining: 4</span>
         {% else %}
@@ -78,7 +78,7 @@ Choose cases to reallocate – Digital Prison Services
 
           {% if data['pom'] == 'yasmeen' %}
 
-          {% if data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
+          {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
 
             {% for pipnames in data.pipnames %}
             {% if loop.index <= 4 %}
@@ -180,7 +180,7 @@ Choose cases to reallocate – Digital Prison Services
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" type="checkbox">
             {% if data['pom'] == 'yasmeen' %}
-              {% if data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
+            {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
               <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (4)</strong></label>
               {% else %}
               <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (10)</strong></label>

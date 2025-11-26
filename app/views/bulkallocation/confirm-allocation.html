@@ -34,7 +34,7 @@ Confirm reallocation – Digital Prison Services
   
         <div class="moj-page-header-actions__title">
         {% if data['pom'] == 'yasmeen' %}
-          {% if data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
+        {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
           <h1 class="govuk-heading-l">Confirm reallocation of 4 cases</h1>
           <span class="govuk-caption-l">Reallocating from: prison POM Yasmeen Essa</span>
           <span class="govuk-caption-l">Reallocating to: prison POM Eve Upshaw</span>
@@ -79,7 +79,7 @@ Confirm reallocation – Digital Prison Services
 
 <p>We will send the information below to
   {% if data['pom'] == 'yasmeen' %}
-    {% if data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
+  {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
     <strong>eve.upshaw@justice.gov.uk</strong>
     {% else %}
     <strong>carlos.santos@justice.gov.uk</strong>
@@ -99,7 +99,7 @@ Confirm reallocation – Digital Prison Services
   <div class="govuk-inset-text" style="margin-top:40px ;">
 
 {% if data['pom'] == 'yasmeen' %}
-  {% if data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
+{% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
 
     {% set counter = 0 %}
     {% for pipnames in data['pipnames'] %}

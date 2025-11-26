@@ -42,7 +42,7 @@ Choose a POM to reallocate cases to – Digital Prison Services
        
 
         {% if data['pom'] == 'yasmeen' %}
-        {% if data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
+        {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
         <span class="govuk-caption-l">Cases remaining: 4</span>
         {% else %}
         <span class="govuk-caption-l">Cases remaining: 10</span>
