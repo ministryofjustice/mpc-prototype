@@ -8,7 +8,9 @@
     "location": "C-1-233",
     "date": "CRD: 21 Nov 2025",
     "tier": "D",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Giovanni George",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Abiola, Bruno",
@@ -19,7 +21,9 @@
     "location": "D-2-283",
     "date": "CRD: 5 Mar 2026",
     "tier": "D",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Bruno Abiola",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Lima, Li Wei",
@@ -30,7 +34,9 @@
     "location": "B-1-030",
     "date": "CRD: 22 Mar 2026",
     "tier": "A",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Li Wei Lima",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Walker, Darnell",
@@ -41,7 +47,9 @@
     "location": "A-3-196",
     "date": "CRD: 27 Apr 2026",
     "tier": "D",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Darnell Walker",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Lewis, Hugo",
@@ -52,7 +60,9 @@
     "location": "B-2-022",
     "date": "CRD: 23 May 2026",
     "tier": "C",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Hugo Lewis",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Lopez, Abdi",
@@ -63,7 +73,9 @@
     "location": "B-3-121",
     "date": "CRD: 12 Jul 2026",
     "tier": "D",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Abdi Lopez",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Park, Yusuf",
@@ -74,7 +86,9 @@
     "location": "A-1-105",
     "date": "CRD: 22 Aug 2026",
     "tier": "D",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Yusuf Park",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Garcia, Malik",
@@ -85,7 +99,9 @@
     "location": "B-2-013",
     "date": "CRD: 1 Sep 2026",
     "tier": "C",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Malik Garcia",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Ibrahim, Antonio",
@@ -96,7 +112,9 @@
     "location": "B-3-235",
     "date": "CRD: 28 Sep 2026",
     "tier": "C",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Antonio Ibrahim",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Ahmed, Imran",
@@ -107,7 +125,9 @@
     "location": "B-2-182",
     "date": "CRD: 7 Jan 2027",
     "tier": "C",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Imran Ahmed",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Delgado, Olu",
@@ -118,7 +138,9 @@
     "location": "B-3-091",
     "date": "CRD: 31 Jan 2027",
     "tier": "C",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Olu Delgado",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Farah, Seung",
@@ -129,7 +151,9 @@
     "location": "D-1-034",
     "date": "CRD: 7 Feb 2027",
     "tier": "B",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Seung Farah",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Jansen, Malik",
@@ -140,7 +164,9 @@
     "location": "A-2-171",
     "date": "CRD: 19 Mar 2027",
     "tier": "C",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Malik Jansen",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Zhang, Bilal",
@@ -151,7 +177,9 @@
     "location": "A-4-284",
     "date": "CRD: 10 Apr 2027",
     "tier": "C",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Bilal Zhang",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Green, Andre",
@@ -162,7 +190,9 @@
     "location": "A-1-180",
     "date": "CRD: 4 May 2027",
     "tier": "D",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Andre Green",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Huang, Tinashe",
@@ -173,7 +203,9 @@
     "location": "D-1-037",
     "date": "CRD: 29 Jul 2027",
     "tier": "A",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Tinashe Huang",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Ibrahim, Ivan",
@@ -184,7 +216,9 @@
     "location": "B-2-201",
     "date": "CRD: 7 Sep 2027",
     "tier": "A",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Ivan Ibrahim",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Baker, Antonio",
@@ -195,7 +229,9 @@
     "location": "D-2-131",
     "date": "CRD: 11 Sep 2027",
     "tier": "A",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Antonio Baker",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Nguyen, Juan",
@@ -206,7 +242,9 @@
     "location": "D-4-184",
     "date": "CRD: 10 Dec 2027",
     "tier": "C",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Juan Nguyen",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Cruz, Sean",
@@ -217,7 +255,9 @@
     "location": "D-4-041",
     "date": "CRD: 11 Mar 2028",
     "tier": "D",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Sean Cruz",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Qureshi, Yusuf",
@@ -228,7 +268,9 @@
     "location": "D-3-043",
     "date": "CRD: 28 Mar 2028",
     "tier": "A",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Yusuf Qureshi",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Khalil, Wei",
@@ -239,7 +281,9 @@
     "location": "C-2-259",
     "date": "CRD: 1 Apr 2028",
     "tier": "A",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Wei Khalil",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Edwards, Sean",
@@ -250,7 +294,9 @@
     "location": "B-3-258",
     "date": "CRD: 10 Apr 2028",
     "tier": "C",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Sean Edwards",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Yilmaz, Hugo",
@@ -261,7 +307,9 @@
     "location": "A-1-160",
     "date": "CRD: 10 May 2028",
     "tier": "D",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Hugo Yilmaz",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Evans, Pedro",
@@ -272,7 +320,9 @@
     "location": "C-3-126",
     "date": "CRD: 16 May 2028",
     "tier": "B",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Pedro Evans",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Young, Diego",
@@ -283,7 +333,9 @@
     "location": "A-2-161",
     "date": "CRD: 3 Jun 2028",
     "tier": "C",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Diego Young",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Qureshi, Huy",
@@ -294,7 +346,9 @@
     "location": "C-2-039",
     "date": "CRD: 28 Jul 2028",
     "tier": "A",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Huy Qureshi",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Lima, Corey",
@@ -305,7 +359,9 @@
     "location": "D-4-214",
     "date": "CRD: 10 Aug 2028",
     "tier": "D",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Corey Lima",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Delgado, Omar",
@@ -316,7 +372,9 @@
     "location": "D-3-065",
     "date": "CRD: 29 Aug 2028",
     "tier": "A",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Omar Delgado",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Ahmed, Juan",
@@ -327,7 +385,9 @@
     "location": "D-1-295",
     "date": "CRD: 31 Aug 2028",
     "tier": "B",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Juan Ahmed",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Young, Usman",
@@ -338,7 +398,9 @@
     "location": "B-3-246",
     "date": "CRD: 3 Sep 2028",
     "tier": "B",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Usman Young",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Uddin, Abdi",
@@ -349,7 +411,9 @@
     "location": "D-4-280",
     "date": "CRD: 9 Sep 2028",
     "tier": "A",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Abdi Uddin",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Qureshi, Diego",
@@ -360,7 +424,9 @@
     "location": "D-3-225",
     "date": "CRD: 13 Sep 2028",
     "tier": "C",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Diego Qureshi",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Davis, Tariq",
@@ -371,7 +437,9 @@
     "location": "D-2-035",
     "date": "CRD: 15 Oct 2028",
     "tier": "D",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Tariq Davis",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Moyo, Diego",
@@ -382,7 +450,9 @@
     "location": "D-1-209",
     "date": "CRD: 5 Nov 2028",
     "tier": "A",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Diego Moyo",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Park, Corey",
@@ -393,7 +463,9 @@
     "location": "A-2-269",
     "date": "CRD: 5 Nov 2028",
     "tier": "D",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Corey Park",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Johnson, Corey",
@@ -404,7 +476,9 @@
     "location": "B-4-204",
     "date": "CRD: 24 Nov 2028",
     "tier": "B",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Corey Johnson",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Navarro, Kwame",
@@ -415,7 +489,9 @@
     "location": "D-2-277",
     "date": "CRD: 25 Nov 2028",
     "tier": "D",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Kwame Navarro",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Khan, Darnell",
@@ -426,7 +502,9 @@
     "location": "A-1-126",
     "date": "CRD: 12 Feb 2029",
     "tier": "C",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Darnell Khan",
+    "rolelowercase": "supporting"
   },
   {
     "case": "White, Thabo",
@@ -437,7 +515,9 @@
     "location": "A-1-293",
     "date": "CRD: 23 Feb 2029",
     "tier": "B",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Thabo White",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Ibrahim, Simon",
@@ -448,7 +528,9 @@
     "location": "C-4-077",
     "date": "CRD: 27 Mar 2029",
     "tier": "C",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Simon Ibrahim",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Thomas, Sean",
@@ -459,7 +541,9 @@
     "location": "B-4-288",
     "date": "CRD: 7 Apr 2029",
     "tier": "C",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Sean Thomas",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Vang, Kwame",
@@ -470,7 +554,9 @@
     "location": "A-3-269",
     "date": "CRD: 4 May 2029",
     "tier": "C",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Kwame Vang",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Garcia, Gabriel",
@@ -481,7 +567,9 @@
     "location": "C-4-291",
     "date": "CRD: 31 Jul 2029",
     "tier": "C",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Gabriel Garcia",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Davis, Chinedu",
@@ -492,7 +580,9 @@
     "location": "A-1-232",
     "date": "CRD: 30 Sep 2029",
     "tier": "B",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Chinedu Davis",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Lima, Antonio",
@@ -503,7 +593,9 @@
     "location": "A-1-230",
     "date": "CRD: 5 Nov 2029",
     "tier": "D",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Antonio Lima",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Edwards, Bilal",
@@ -514,7 +606,9 @@
     "location": "C-2-199",
     "date": "CRD: 9 Nov 2029",
     "tier": "C",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Bilal Edwards",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Fernandes, Malik",
@@ -525,7 +619,9 @@
     "location": "B-2-128",
     "date": "CRD: 2 Mar 2030",
     "tier": "C",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Malik Fernandes",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Abiola, Li Wei",
@@ -536,7 +632,9 @@
     "location": "A-3-162",
     "date": "CRD: 31 Mar 2030",
     "tier": "D",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Li Wei Abiola",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Young, Seung",
@@ -547,7 +645,9 @@
     "location": "C-3-270",
     "date": "CRD: 10 May 2030",
     "tier": "C",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Seung Young",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Henry, Darnell",
@@ -558,7 +658,9 @@
     "location": "A-2-095",
     "date": "CRD: 6 Jun 2030",
     "tier": "A",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Darnell Henry",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Ibrahim, Bruno",
@@ -569,7 +671,9 @@
     "location": "B-1-133",
     "date": "CRD: 6 Jun 2030",
     "tier": "C",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Bruno Ibrahim",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Flores, Reece",
@@ -580,7 +684,9 @@
     "location": "A-3-016",
     "date": "CRD: 1 Aug 2030",
     "tier": "D",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Reece Flores",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Ncube, Tariq",
@@ -591,7 +697,9 @@
     "location": "B-4-240",
     "date": "CRD: 2 Nov 2030",
     "tier": "A",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Tariq Ncube",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Davis, Andre",
@@ -602,7 +710,9 @@
     "location": "B-4-122",
     "date": "CRD: 28 Nov 2030",
     "tier": "B",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Andre Davis",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Khalil, Kwame",
@@ -613,7 +723,9 @@
     "location": "B-1-152",
     "date": "CRD: 5 Dec 2030",
     "tier": "C",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Kwame Khalil",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Cruz, Nikolai",
@@ -624,7 +736,9 @@
     "location": "C-4-274",
     "date": "CRD: 8 Dec 2030",
     "tier": "C",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Nikolai Cruz",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Okafor, Usman",
@@ -635,7 +749,9 @@
     "location": "C-4-090",
     "date": "CRD: 17 Dec 2030",
     "tier": "C",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Usman Okafor",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Choi, Darnell",
@@ -646,7 +762,9 @@
     "location": "B-4-174",
     "date": "CRD: 1 Feb 2031",
     "tier": "C",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Darnell Choi",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Jansen, Carlos",
@@ -657,7 +775,9 @@
     "location": "D-4-091",
     "date": "CRD: 13 Mar 2031",
     "tier": "C",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Carlos Jansen",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Usman, Nikolai",
@@ -668,7 +788,9 @@
     "location": "B-3-233",
     "date": "CRD: 27 Apr 2031",
     "tier": "B",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Nikolai Usman",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Johnson, Rafael",
@@ -679,7 +801,9 @@
     "location": "B-3-268",
     "date": "CRD: 9 May 2031",
     "tier": "B",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Rafael Johnson",
+    "rolelowercase": "responsible"
   },
   {
     "case": "Fernandes, Seung",
@@ -690,7 +814,9 @@
     "location": "A-4-299",
     "date": "CRD: 26 Sep 2031",
     "tier": "B",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Seung Fernandes",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Khan, Huy",
@@ -701,7 +827,9 @@
     "location": "D-2-145",
     "date": "CRD: 16 Oct 2031",
     "tier": "B",
-    "additionalinfo": "New to custody"
+    "additionalinfo": "New to custody",
+    "caseordered": "Huy Khan",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Uddin, Caleb",
@@ -712,7 +840,9 @@
     "location": "A-1-086",
     "date": "CRD: 28 Dec 2031",
     "tier": "D",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Caleb Uddin",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Williams, Thabo",
@@ -723,7 +853,9 @@
     "location": "C-1-064",
     "date": "CRD: 29 Jan 2032",
     "tier": "A",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Thabo Williams",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Cruz, Kwabena",
@@ -734,7 +866,9 @@
     "location": "C-2-136",
     "date": "CRD: 2 Mar 2032",
     "tier": "D",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Kwabena Cruz",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Zaman, Li Wei",
@@ -745,7 +879,9 @@
     "location": "B-4-068",
     "date": "CRD: 13 Mar 2032",
     "tier": "B",
-    "additionalinfo": "Recall"
+    "additionalinfo": "Recall",
+    "caseordered": "Li Wei Zaman",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Khalil, Ming",
@@ -756,7 +892,9 @@
     "location": "B-3-065",
     "date": "CRD: 12 May 2032",
     "tier": "B",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Ming Khalil",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Ortiz, Wei",
@@ -767,7 +905,9 @@
     "location": "B-1-164",
     "date": "CRD: 9 Aug 2032",
     "tier": "B",
-    "additionalinfo": "Returning to this prison"
+    "additionalinfo": "Returning to this prison",
+    "caseordered": "Wei Ortiz",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Qureshi, Seung",
@@ -778,7 +918,9 @@
     "location": "D-4-099",
     "date": "CRD: 10 Oct 2032",
     "tier": "B",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Seung Qureshi",
+    "rolelowercase": "supporting"
   },
   {
     "case": "Henry, Diego",
@@ -789,6 +931,8 @@
     "location": "A-3-273",
     "date": "CRD: 20 Dec 2032",
     "tier": "D",
-    "additionalinfo": "New to this prison"
+    "additionalinfo": "New to this prison",
+    "caseordered": "Diego Henry",
+    "rolelowercase": "supporting"
   }
 ]

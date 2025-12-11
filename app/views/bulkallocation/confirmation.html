@@ -61,7 +61,7 @@ Cases reallocated – Digital Prison Services
           {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
           Binit Hindocha
           {% else %}
-          Jessica King
+          Sarah Bailey and Jessica King
           {% endif %}
           about the new allocations.</p>
         
@@ -81,7 +81,7 @@ Cases reallocated – Digital Prison Services
                 {% for pipnames in data['pipnames'] %}
                   {% if counter < 4 %}
                     <ul class="govuk-list govuk-list--bullet">
-                      <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                      <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
                     </ul>
                     {% set counter = counter + 1 %}
                   {% else %}
@@ -95,7 +95,7 @@ Cases reallocated – Digital Prison Services
                 {% for pipnames in data['pipnames'] %}
                   {% if counter < 6 %}
                     <ul class="govuk-list govuk-list--bullet">
-                      <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                      <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
                     </ul>
                     {% set counter = counter + 1 %}
                   {% else %}
@@ -128,7 +128,7 @@ Cases reallocated – Digital Prison Services
             {% for pipnames in data['pipnames'] %}
               {% if counter < 20 %}
                 <ul class="govuk-list govuk-list--bullet">
-                  <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                  <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
                 </ul>
                 {% set counter = counter + 1 %}
               {% else %}

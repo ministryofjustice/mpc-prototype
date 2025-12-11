@@ -77,7 +77,7 @@ Confirm reallocation – Digital Prison Services
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<p>We will send the information below to
+<p>We will email
   {% if data['pom'] == 'yasmeen' %}
   {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
     <strong>eve.upshaw@justice.gov.uk</strong>
@@ -87,7 +87,7 @@ Confirm reallocation – Digital Prison Services
   {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
   <strong>binit.hindocha@justice.gov.uk</strong>
   {% else %}
-  <strong>jessica.king@justice.gov.uk</strong>
+  <strong>sarah.bailey@justice.gov.uk</strong> and <strong>jessica.king@justice.gov.uk</strong> about the reallocation and include the information below.
   {% endif %}
 </p>
 
@@ -105,7 +105,7 @@ Confirm reallocation – Digital Prison Services
     {% for pipnames in data['pipnames'] %}
     {% if counter < 4 %}
       <ul class="govuk-list govuk-list--bullet">
-        <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+        <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
       </ul>
       {% set counter = counter + 1 %}
     {% else %}
@@ -121,8 +121,7 @@ Confirm reallocation – Digital Prison Services
     {% for pipnames in data['pipnames'] %}
       {% if counter < 6 %}
         <ul class="govuk-list govuk-list--bullet">
-          <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
-        </ul>
+          <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>        </ul>
         {% set counter = counter + 1 %}
       {% else %}
         
@@ -139,8 +138,7 @@ Confirm reallocation – Digital Prison Services
 {% for pipnames in data['pipnames'] %}
   {% if counter < 51 %}
     <ul class="govuk-list govuk-list--bullet">
-      <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
-    </ul>
+     <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>    </ul>
     {% set counter = counter + 1 %}
   {% else %}
     
@@ -155,7 +153,7 @@ Confirm reallocation – Digital Prison Services
 {% for pipnames in data['pipnames'] %}
   {% if counter < 20 %}
     <ul class="govuk-list govuk-list--bullet">
-      <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+      <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
     </ul>
     {% set counter = counter + 1 %}
   {% else %}
