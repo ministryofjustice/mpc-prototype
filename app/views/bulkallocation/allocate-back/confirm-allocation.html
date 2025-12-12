@@ -56,7 +56,7 @@ Confirm allocation
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<p>We will send the information below to <strong>hakim.reeves@justice.gov.uk</strong></p>
+<p>We will send details of these cases to <strong>hakim.reeves@justice.gov.uk</strong> and the currently allocated POMs.</p>
 
 
 
@@ -70,7 +70,7 @@ Confirm allocation
             {% for pipnames in data['pipnames'] %}
               {% if counter < 14 %}
                 <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
-                  <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                  <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
                 </ul>
                 {% set counter = counter + 1 %}
               {% else %}
@@ -83,7 +83,7 @@ Confirm allocation
             {% for pipnames in data['pipnames'] %}
               {% if counter < 4 %}
                 <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
-                  <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                  <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
                 </ul>
                 {% set counter = counter + 1 %}
               {% else %}
@@ -97,7 +97,7 @@ Confirm allocation
             {% for pipnames in data['pipnames'] %}
               {% if counter < 8 %}
                 <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
-                  <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                  <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
                 </ul>
                 {% set counter = counter + 1 %}
               {% else %}
@@ -112,7 +112,7 @@ Confirm allocation
             {% for pipnames in data['pipnames'] %}
               {% if counter < 8 %}
                 <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
-                  <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                  <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
                 </ul>
                 {% set counter = counter + 1 %}
               {% else %}

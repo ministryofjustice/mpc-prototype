@@ -77,17 +77,17 @@ Confirm reallocation – Digital Prison Services
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<p>We will email
+<p>We will send details of these cases to
   {% if data['pom'] == 'yasmeen' %}
   {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
-    <strong>eve.upshaw@justice.gov.uk</strong>
+    <strong>yasmeen.essa@justice.gov.uk</strong> and <strong>eve.upshaw@justice.gov.uk</strong>
     {% else %}
-    <strong>carlos.santos@justice.gov.uk</strong>
+    <strong>yasmeen.essa@justice.gov.uk</strong> and <strong>carlos.santos@justice.gov.uk</strong>
     {% endif %}
   {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
-  <strong>binit.hindocha@justice.gov.uk</strong>
+  <strong>sarah.bailey@justice.gov.uk</strong> and <strong>binit.hindocha@justice.gov.uk</strong>
   {% else %}
-  <strong>sarah.bailey@justice.gov.uk</strong> and <strong>jessica.king@justice.gov.uk</strong> about the reallocation and include the information below.
+  <strong>sarah.bailey@justice.gov.uk</strong> and <strong>jessica.king@justice.gov.uk</strong>
   {% endif %}
 </p>
 

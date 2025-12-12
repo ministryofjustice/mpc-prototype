@@ -41,7 +41,7 @@ Cases reallocated – Digital Prison Services
 
 
         <h2 class="govuk-heading-m">Update sent</h2>
-        <p class="govuk-body">We have emailed Hakim about the new allocations and also notified the previously allocated POMs.</p>
+        <p class="govuk-body">We have emailed Hakim Reeves about the new allocations and also notified the previously allocated POMs.</p>
         
         <details class="govuk-details">
           <summary class="govuk-details__summary">
@@ -56,7 +56,7 @@ Cases reallocated – Digital Prison Services
               {% for pipnames in data['pipnames'] %}
                 {% if counter < 14 %}
                   <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
-                    <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                    <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
                   </ul>
                   {% set counter = counter + 1 %}
                 {% else %}
@@ -69,7 +69,7 @@ Cases reallocated – Digital Prison Services
               {% for pipnames in data['pipnames'] %}
                 {% if counter < 4 %}
                   <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
-                    <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                    <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
                   </ul>
                   {% set counter = counter + 1 %}
                 {% else %}
@@ -83,7 +83,7 @@ Cases reallocated – Digital Prison Services
               {% for pipnames in data['pipnames'] %}
                 {% if counter < 8 %}
                   <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
-                    <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                    <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
                   </ul>
                   {% set counter = counter + 1 %}
                 {% else %}
@@ -98,7 +98,7 @@ Cases reallocated – Digital Prison Services
               {% for pipnames in data['pipnames'] %}
                 {% if counter < 8 %}
                   <ul class="govuk-list govuk-list--bullet" style="margin-top: -10px">
-                    <li style="margin-bottom: -10px;">{{ pipnames.case }} ({{ pipnames.number }})</li>
+                    <li style="margin-bottom: -10px;">{{ pipnames.caseordered }} ({{ pipnames.number }}) – {{ pipnames.rolelowercase }}</li>
                   </ul>
                   {% set counter = counter + 1 %}
                 {% else %}
