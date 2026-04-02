@@ -160,26 +160,24 @@ Cases to update – Digital Prison Services
 
           
     
-    
+          {% if data['MissingCaseDetails'] == 'save' %}
+          {% else %}
           <tr class="govuk-table__row">
     
-            <td class="govuk-table__cell">
-              Allen, William  <br> <span class="govuk-hint govuk-!-margin-bottom-0"> G2911GD </span></td>
+            <td class="govuk-table__cell">Allen, William<br>
+              <span class="govuk-hint govuk-!-margin-bottom-0">G2911GD</span>
+            </td>
 
-              
-    
-              <td class="govuk-table__cell" data-sort-value="10">ARD:</br>21 Sept 2025</td>
+            <td class="govuk-table__cell" data-sort-value="10">ARD:</br>21 Sept 2025</td>
 
-    
-            
             <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2</td>
 
-              <td aria-label="action" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Add missing details</a></td>
-    
-              
+            <td aria-label="action" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../add-missing-details/case-all-details-missing">Add missing details</a></td>
     
           </tr>
+          {% endif %}
     
+
           <tr class="govuk-table__row">
     
             <td class="govuk-table__cell">
@@ -193,7 +191,7 @@ Cases to update – Digital Prison Services
 
             <td class="govuk-table__cell govuk-table__cell" data-sort-value="2">2</td>
     
-              <td aria-label="action" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Add missing details</a></td>
+              <td aria-label="action" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../add-missing-details/case-rosh-missing">Add missing details</a></td>
     
              
 

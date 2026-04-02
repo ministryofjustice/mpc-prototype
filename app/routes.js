@@ -25,6 +25,26 @@ router.post('/confirmation', function (req, res) {
   });
 
 
+//Allocations - Missing details
+
+
+//Case page to add missing details
+router.post('/casemissingdetails', function (req, res) {
+    var MissingCaseDetails = req.session.data['MissingCaseDetails']
+    // Check whether the variable matches a condition
+    if (MissingCaseDetails == "save"){
+     
+     // Send user to make allocations page
+      res.redirect('/allocations/final/add-missing-details')
+    } else {
+      // Send user to onboarding POM search
+      res.redirect('/allocations/final/step1-review-case-jack-smith')
+    }
+  });
+
+
+
+
 
 
 //Bulk allocation
