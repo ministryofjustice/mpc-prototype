@@ -1,0 +1,192 @@
+{% extends "layout-mens-homd.html" %}
+
+
+{% block pageTitle %}
+Confirm allocation
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+    
+    <div class="moj-page-header-actions">
+      <div class="moj-page-header-actions__title govuk-!-margin-top-6">
+        <h1 class="govuk-heading-l">Case information for William Allen</h1></br>
+        <span class="govuk-caption-l">Prison number: G2911GD</span>
+        <span class="govuk-caption-l">Date of birth: 22 Feb 1980 ([age])</span>
+      </div>
+    </div>
+
+
+    <p class="govuk-body">You can find this information in NDelius.</p>
+
+
+<form action="/casemissingdetails" method="post" >
+
+
+<div class="govuk-form-group">
+
+
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        What tier has the prisoner been assigned to?
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="tier" name="tier" type="radio" value="A">
+        <label class="govuk-label govuk-radios__label" for="tier">
+          A
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="tier-2" name="tier" type="radio" value="B">
+        <label class="govuk-label govuk-radios__label" for="tier-2">
+          B
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="tier-3" name="tier" type="radio" value="C">
+        <label class="govuk-label govuk-radios__label" for="tier-3">
+          C
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="tier-4" name="tier" type="radio" value="D">
+        <label class="govuk-label govuk-radios__label" for="tier-4">
+          D
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="tier-5" name="tier" type="radio" value="E">
+        <label class="govuk-label govuk-radios__label" for="tier-5">
+          E
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="tier-6" name="tier" type="radio" value="F">
+        <label class="govuk-label govuk-radios__label" for="tier-6">
+          F
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="tier-7" name="tier" type="radio" value="G">
+        <label class="govuk-label govuk-radios__label" for="tier-7">
+          G
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+
+
+  <fieldset class="govuk-fieldset govuk-!-margin-top-9">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        What risk of serious harm should be assigned to the prisoner?
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="rosh" name="rosh" type="radio" value="veryhigh">
+        <label class="govuk-label govuk-radios__label" for="rosh">
+          Very high
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="rosh-2" name="rosh" type="radio" value="high">
+        <label class="govuk-label govuk-radios__label" for="rosh-2">
+          High
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="rosh-3" name="rosh" type="radio" value="medium">
+        <label class="govuk-label govuk-radios__label" for="rosh-3">
+          Medium
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="rosh-4" name="rosh" type="radio" value="low">
+        <label class="govuk-label govuk-radios__label" for="rosh-4">
+          Low
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+
+
+  <fieldset class="govuk-fieldset govuk-!-margin-top-9">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        What case allocation decision has been made for his prisoner?
+      </h1>
+    </legend>
+    <div id="changedName-hint" class="govuk-hint">
+      You can find this on NDelius by opening someone's most recent event and then choosing case allocation from the menu on the left. This determines what kind of handover this prisoner needs.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="handover" name="handover" type="radio" value="enhanced">
+        <label class="govuk-label govuk-radios__label" for="handover">
+          Retained/Enhanced Resourcing
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="handover" name="handover" type="radio" value="standard">
+        <label class="govuk-label govuk-radios__label" for="handover">
+          Allocated/Enhanced Resourcing
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+
+</div>
+
+
+
+
+
+      <div class="govuk-button-group govuk-!-margin-top-9">
+        <button type="submit" class="govuk-button" data-module="govuk-button" name="MissingCaseDetails" value="save">
+          Save
+        </button>
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="MissingCaseDetails" vale="saveandallocate">
+          Save and allocate
+        </button>
+      </div>
+
+
+</form>
+
+
+
+
+
+
+  
+    </div>
+  </div>
+{% endblock %}
