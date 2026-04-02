@@ -14,6 +14,12 @@ $govuk-new-link-styles: true;
 $govuk-assets-path: '/govuk/assets/';
 
 // Patterns that aren't in Frontend
+@import "risk/mappa-widget";
+@import "risk/rosh-widget";
+
+
+
+// Patterns that aren't in Frontend
 @import "patterns/related-items";
 @import "patterns/task-list";
 @import "patterns/step-by-step-header";

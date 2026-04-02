@@ -1,6 +1,7 @@
 {% extends "layout-mens-homd.html" %}
 
 
+
 {% block pageTitle %}
 Review case details – Digital Prison Services
 {% endblock %}
@@ -15,11 +16,7 @@ Review case details – Digital Prison Services
 
 
 {% block beforeContent %}
-
-
-<div class="govuk-!-margin-bottom-3"></div>
-
-<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom:0">Back</a>
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
 
 
@@ -31,14 +28,13 @@ Review case details – Digital Prison Services
     <div class="govuk-grid-column-two-thirds">
       
     
-    <div class="moj-page-header-actions">
+    <div class="moj-page-header-actions govuk-!-margin-top-6">
   
       <div class="moj-page-header-actions__title">
         {% if data['MissingCaseDetails'] == 'saveandallocate' %}
-        <h1 class="govuk-heading-l">Review Allen's case</h1></br>
-        <span class="govuk-caption-l">Prison number: G4198UW</span>
-        <!--<span class="govuk-caption-l">CRN: A165856</span>-->
-        <span class="govuk-caption-l">Date of birth: 01 Oct 1985 (36)</span>
+        <h1 class="govuk-heading-l">Review William Allen's case</h1></br>
+        <span class="govuk-caption-l">Prison number: G2911GD</span>
+        <span class="govuk-caption-l">Date of birth: 22 Feb 1980 ([age])</span>
         {% else %}
         <h1 class="govuk-heading-l">Review Jack Smith's case</h1></br>
         <span class="govuk-caption-l">Prison number: G4198UW</span>
@@ -48,40 +44,15 @@ Review case details – Digital Prison Services
       </div>
     
       <div class="moj-page-header-actions__actions">
-    
-        
-    
-        <button class="govuk-button" data-module="govuk-button">
-          Choose POM
-        </button>
-    
-  
+        <button class="govuk-button" data-module="govuk-button">Choose POM</button>
       </div>
     
     </div>
     
   
-  
-    <!--<strong class="govuk-tag govuk-tag--red" style="margin-right: 5px;">
-    High complexity
-  </strong>
-  
-    <strong class="govuk-tag govuk-tag--blue govuk-!-margin-bottom-7">
-    Determinate
-    </strong>-->
-  
   </div>
   </div>
   
-<!--
-
-<div class="govuk-grid-column-one-third">
-      <ul class="govuk-list">
-        <li>
-          <a class="govuk-link govuk-link--no-visited-state" href="#">View case on DPS (new NOMIS)</a>
-        </li>
-      </ul>
-    </div>-->
 
 
       <!-- <div class="govuk-grid-row"> -->
@@ -120,9 +91,7 @@ Review case details – Digital Prison Services
           
           <p  style="margin-bottom: -40px; margin-top:-5px">
             
-    <strong class="govuk-tag govuk-tag--blue govuk-!-margin-bottom-7">
-    Determinate
-    </strong>
+    <strong class="govuk-tag govuk-tag--blue govuk-!-margin-bottom-7">Determinate</strong>
   
       </p>
 
@@ -494,9 +463,10 @@ Review case details – Digital Prison Services
 
 
 
-  <button class="govuk-button" data-module="govuk-button">
-    Choose POM
-  </button>
+  <button class="govuk-button" data-module="govuk-button">Choose POM</button>
+
+
+  </form>
   
 
 </div>
@@ -526,23 +496,61 @@ Review case details – Digital Prison Services
 
 <div class="govuk-grid-column-one-third">
 
-  <aside class="app-related-items" role="complementary">
-
+  
     <!--MAPPA start-->
-    <img src="/public/images/risk/Mappa_date.png" style="width:380px; margin-top: 10px" alt="MAPPA">
+    {% from "components/mappa-widget/macro.njk" import mappaWidget %}
+
+    {{ mappaWidget({
+        level: "CAT 2/LEVEL 1",
+        lastUpdated: "10th October 2021"
+    }) }}
+
 
     <!--MAPPA end-->
 
 
     <!--RoSH start-->
-    <img src="/public/images/risk/Rosh_High.png" style="width:380px; margin-top: 30px;" alt="RoSH">
+
+
+    <!--RoSH completed-->
+    {% from "components/rosh-widget/macro.njk" import roshWidget %}
+
+
+    {{ roshWidget({
+        hasBeenCompleted: true,
+        overallRisk: "MEDIUM",
+        lastUpdated: "7 Mar 2026 on OASys",
+        riskInCommunity: {
+          "Children": "LOW",
+          "Public": "MEDIUM",
+          "Known Adult": "MEDIUM",
+          "Staff": "MEDIUM"
+        } 
+    }) 
+  
+  
+  }}
+
+    <!--RoSH not completed-->
+    {% from "components/rosh-widget/macro.njk" import roshWidget %}
+
+    {{ roshWidget({
+      hasBeenCompleted: false
+    }) }}
+
+
+    <!--RoSH not known-->
+    {% from "components/rosh-widget/macro.njk" import roshWidget %}
+
+    {{ roshWidget(null) }}
 
     <!--RoSH end-->
 
+    
+  
 
 
-
-
+    
 
     <!--Alerts start-->
     <h3 class="govuk-heading-m">Active alerts</h3>
@@ -564,11 +572,6 @@ Review case details – Digital Prison Services
 
 
 
-
-
-
-
 </div>
 </div>
-</form>
 {% endblock %}
