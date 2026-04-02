@@ -1,0 +1,79 @@
+{% extends "layout-mens-homd.html" %}
+
+
+
+{% block pageTitle %}
+Review case details – Digital Prison Services
+{% endblock %}
+
+{% block bodyStart %}
+
+{% block keyDetails %}
+{% endblock %}
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+<div class="govuk-grid-column-one-third">
+
+  
+    <!--RoSH start-->
+
+
+    <!--RoSH completed-->
+    {% from "components/rosh-widget/macro.njk" import roshWidget %}
+
+
+    {{ roshWidget({
+        hasBeenCompleted: true,
+        overallRisk: "MEDIUM",
+        lastUpdated: "7 Mar 2026 on OASys",
+        riskInCommunity: {
+          "Children": "LOW",
+          "Public": "MEDIUM",
+          "Known Adult": "MEDIUM",
+          "Staff": "MEDIUM"
+        } 
+    }) 
+  
+  
+  }}
+
+    <!--RoSH not completed-->
+    {% from "components/rosh-widget/macro.njk" import roshWidget %}
+
+    {{ roshWidget({
+      hasBeenCompleted: false
+    }) }}
+
+
+    <!--RoSH not known-->
+    {% from "components/rosh-widget/macro.njk" import roshWidget %}
+
+    {{ roshWidget(null) }}
+
+    <!--RoSH end-->
+
+    
+  
+
+
+    
+
+  
+
+
+</div>
+</div>
+</main>
+{% endblock %}
