@@ -18,11 +18,52 @@ Sarah Bailey
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-full-width">
 
-    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">
-      <span class="govuk-caption-xl">Probation Officer POM</span>
+     <div class="moj-page-header-actions">
+      <div class="moj-page-header-actions__title">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-4">
+          <span class="govuk-caption-xl">
+            {% if data['pom'] == 'yasmeen' %} 
+            Prison POM
+            {% else %} 
+            Probation POM
+            {% endif %} 
+          </span>
+          {% if data['pom'] == 'yasmeen' %} 
+          Yasmeen Essa
+          {% elseif data['pom'] == 'alexis' %} 
+          Alexis Clarke
+          {% elseif data['pom'] == 'hakim' %} 
+          Hakim Reeves
+          {% else %} 
+          Sarah Bailey
+          {% endif %} 
+        </h1>
+      </div>
+    
+      <div class="moj-page-header-actions__actions govuk-!-margin-top-7">
+        <div class="moj-button-group moj-button-group--inline">
+    
+          {% if data['pom'] == 'yasmeen' %}
+          <form action="staff-edit-profile?pom=yasmeen#bulkallocation" method="post">
+          {% elseif data['pom'] == 'alexis' %}
+          <form action="staff-edit-profile?pom=alexis#bulkallocation" method="post">
+          {% elseif data['pom'] == 'hakim' %} 
+          <form action="staff-edit-profile?pom=hakim#bulkallocation" method="post">
+          {% else %} 
+          <form action="staff-edit-profile?pom=sarah#bulkallocation" method="post">
+          {% endif %} 
 
-      Sarah Bailey
-    </h1>
+
+          <button type="submit" class="govuk-button govuk-button" data-module="govuk-button">
+            Bulk allocate?
+          </button>
+
+        </form>
+    
+        </div>
+      </div>
+    
+    </div>
 
     <nav class="moj-sub-navigation" aria-label="Sub navigation">
 
