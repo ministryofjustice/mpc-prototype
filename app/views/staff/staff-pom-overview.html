@@ -58,19 +58,20 @@ Sarah Bailey
         <div class="moj-button-group moj-button-group--inline">
     
           {% if data['pom'] == 'yasmeen' %}
-          <form action="staff-edit-profile?pom=yasmeen" method="post">
+          <form action="staff-edit-profile?pom=yasmeen#bulkallocation" method="post">
           {% elseif data['pom'] == 'alexis' %}
-          <form action="staff-edit-profile?pom=alexis" method="post">
+          <form action="staff-edit-profile?pom=alexis#bulkallocation" method="post">
           {% elseif data['pom'] == 'hakim' %} 
-          <form action="staff-edit-profile?pom=hakim" method="post">
+          <form action="staff-edit-profile?pom=hakim#bulkallocation" method="post">
           {% else %} 
-          <form action="staff-edit-profile?pom=sarah" method="post">
+          <form action="staff-edit-profile?pom=sarah#bulkallocation" method="post">
           {% endif %} 
 
 
-          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Edit profile
+          <button type="submit" class="govuk-button govuk-button" data-module="govuk-button">
+            Bulk allocate?
           </button>
+
         </form>
     
         </div>
