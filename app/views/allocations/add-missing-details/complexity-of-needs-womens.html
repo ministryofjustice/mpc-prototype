@@ -31,7 +31,7 @@ Confirm allocation
     
     <div class="moj-page-header-actions">
       <div class="moj-page-header-actions__title govuk-!-margin-top-6">
-        <h1 class="govuk-heading-l">Add missing details for Lila Jones</h1></br>
+        <h1 class="govuk-heading-l">Add complexity of need level for Lila Jones</h1></br>
         <span class="govuk-caption-l">Prison number: G2911GD</span>
         <span class="govuk-caption-l">Date of birth: 22 Feb 1980 ([age])</span>
       </div>
@@ -43,23 +43,19 @@ Confirm allocation
 
 <form action="./case-all-details-missing-womens" method="post" >
 
+  <p class="govuk-body" style="margin-top: -20px;">
+
+      Go to NOMIS MIS reporting and open the folder 085 – OASys & BCS. Select Female Complexity Report. 
+
+      If no level is recorded, complete a manual assessment using this <a class="govuk-link" href="#">assessment form</a>.</br> 
+      You can find more information in this <a class="govuk-link" href="#">guidance</a>. 
+       
+  </p>
+
 
 <div class="govuk-form-group">
 
-
-  <fieldset class="govuk-fieldset govuk-!-margin-top-9">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-      <h1 class="govuk-fieldset__heading">
-        What is this person’s complexity of need level?
-      </h1>
-    </legend>
-    <div id="changedName-hint" class="govuk-hint">
-      
-      Find this in NOMIS by going to NOMIS MIS reporting. Then open the folder 085 – OASys & BCS and select Female Complexity Report.
- 
-      If no level has been recorded, complete a manual assessment using this <a class="govuk-link" href="#">assessment form</a>. Find more information in this <a class="govuk-link" href="#">guidance</a>.
-
-    </div>
+  <fieldset class="govuk-fieldset govuk-!-margin-top-2">
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="complexity" name="complexity" type="radio" value="high">
@@ -88,7 +84,7 @@ Confirm allocation
 
 
 
-      <div class="govuk-button-group govuk-!-margin-top-9">
+      <div class="govuk-button-group govuk-!-margin-top-6">
         <button type="submit" class="govuk-button" data-module="govuk-button">
           Update
         </button>
