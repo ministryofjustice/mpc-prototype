@@ -1,0 +1,75 @@
+{% extends "includes/layouts/main.html" %}
+
+{% block pageTitle %}
+Sarah Bailey
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="./staff" class="govuk-back-link govuk-body" style="margin-left: -10px;">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width"></div>
+        
+        
+        
+        
+        
+        
+          <div class="govuk-grid-column-one-third govuk-!-margin-top-4">
+            <h3 class="govuk-heading-m">
+              Case mix by tier
+            </h3>
+        
+            <div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:12.5%"><p style="govuk-colour("white")">12</p></div>
+              <div class="workforce-progress-bar tier_b" style="width:12.5%"><p>16</p></div>
+              <div class="workforce-progress-bar tier_c" style="width:12.5%"><p style="govuk-colour("white")">12</p></div>
+              <div class="workforce-progress-bar tier_d" style="width:12.5%"><p style="govuk-colour("white")">12</p></div>
+              <div class="workforce-progress-bar tier_d" style="width:12.5%"><p style="govuk-colour("white")">12</p></div>
+              <div class="workforce-progress-bar tier_d" style="width:12.5%"><p style="govuk-colour("white")">12</p></div>
+              <div class="workforce-progress-bar tier_d" style="width:12.5%"><p style="govuk-colour("white")">12</p></div>
+              <div class="workforce-progress-bar tier_other" style="width:12.5%"><p style="govuk-colour("white")">12</p></div>
+            </div>
+        
+            <ul class="govuk-list">
+              <li><span class="caseload-swatch tier_a"></span>Tier A: 13 (Colour: #xxxx)</li>
+              <li><span class="caseload-swatch tier_b"></span>Tier B: 16 (Colour: #xxxx)</li>
+              <li><span class="caseload-swatch tier_c"></span>Tier C: 25 (Colour: #xxxx)</li>
+              <li><span class="caseload-swatch tier_d"></span>Tier D: 17 (Colour: #xxxx)</li>
+              <li><span class="caseload-swatch tier_d"></span>Tier E: 17 (Colour: #xxxx)</li>
+              <li><span class="caseload-swatch tier_d"></span>Tier F: 17 (Colour: #xxxx)</li>
+              <li><span class="caseload-swatch tier_d"></span>Tier G: 17 (Colour: #xxxx)</li>
+              <li><span class="caseload-swatch tier_other"></span>Tier N/A: 3 (Colour: #xxxx)</li>
+            </ul>
+            
+        
+        
+            <!--<h3 class="govuk-heading-m govuk-!-margin-top-6">Case mix by POM role</h3>
+
+            <div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:100%"><p style="govuk-colour("white")">10</p></div>
+              <div class="workforce-progress-bar tier_d" style="width:0%"><p>0</p></div>
+            </div>
+        
+            <ul class="govuk-list">
+              <li><span class="caseload-swatch tier_a"></span>Responsible: 10</li>
+              <li><span class="caseload-swatch tier_d"></span>Supporting: 0</li>
+              <li><span class="caseload-swatch tier_other"></span>Co-working: 0</li>
+            </ul>-->
+
+        
+          </div>
+        </div>
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}
