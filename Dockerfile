@@ -1,4 +1,4 @@
-FROM node:16.14-bullseye-slim
+FROM node:24-bullseye-slim
 
 ENV NODE_ENV=production
 
@@ -7,9 +7,10 @@ RUN addgroup --gid 1017 --system appgroup \
 
 WORKDIR /app
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y make python3
+RUN apt-get update \
+  && apt-get upgrade -y \
+  && apt-get install -y make python3 \
+  && rm -rf /var/lib/apt/lists/*
 
 COPY . .
 
