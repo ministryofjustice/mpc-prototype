@@ -1,4 +1,4 @@
-FROM node:16.14-bullseye-slim
+FROM node:24-bullseye-slim
 
 ENV NODE_ENV=production
 
@@ -9,7 +9,8 @@ WORKDIR /app
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y make python3
+    apt-get install -y make python3 && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY . .
 
