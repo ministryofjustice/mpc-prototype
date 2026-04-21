@@ -4,10 +4,10 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    ignore:
-          - dependency-name: "follow-redirects"
+    ignore: []
     cooldown:
       default-days: 7
+
     labels:
       - "dependencies"
       - "security"
