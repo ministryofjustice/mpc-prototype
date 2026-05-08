@@ -35,7 +35,14 @@ Are you sure you want to remove this POM from the service? – Digital Prison Se
             </h1>
           </legend>
 
+          {% if data['pom'] !== 'alexis' %}
+
+          <div class="govuk-hint govuk-!-margin-top-2 govuk-!-margin-bottom-5">If you choose yes, you will have the option to reallocate their cases in bulk.</div>
+
+          {% endif %}
+
           <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="createLicence" name="createLicence" type="radio" value="yes">
               <label class="govuk-label govuk-radios__label" for="createLicence">

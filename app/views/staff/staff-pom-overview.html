@@ -67,10 +67,14 @@ Sarah Bailey
           <form action="staff-edit-profile?pom=sarah#bulkallocation" method="post">
           {% endif %} 
 
+          {% if data['pom'] !== 'alexis' %}
 
           <button type="submit" class="govuk-button govuk-button" data-module="govuk-button">
-            Bulk allocate?
+            Reallocate cases in bulk
           </button>
+
+          {% endif %}
+
 
         </form>
     
