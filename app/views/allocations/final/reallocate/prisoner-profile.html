@@ -47,18 +47,32 @@ $('#search').hideseek({
 <div class="govuk-grid-row govuk-grid-column-two-thirds">
 
   <div class="govuk-grid-column-full">
-    <h1 class="govuk-heading-l govuk-!-margin-top-3">Simon Riley</br></h1>
+    <h1 class="govuk-heading-l govuk-!-margin-top-3">
+      {% if data['prisoner'] == 'noah' %} 
+      Noah Roche
+      {% else %} 
+      Simon Riley
+      {% endif %} 
+    </br></h1>
     <p><span class="moj-badge moj-badge--blue" style="margin-right: 5px;">Determinate</span><span class="moj-badge moj-badge--grey">Parole eligible</span></p>
   </div>
 
 <div class="govuk-grid-row govuk-grid-column-full">
 
   <div class="govuk-grid-column-one-quarter">
-    <p>Prisoner number</br><strong>A2407UH</strong></p>
+    <p>Prisoner number</br><strong>
+      {% if data['prisoner'] == 'noah' %} 
+      R4O7S8H
+      {% else %} 
+      A2407UH
+      {% endif %} 
+    </strong></p>
   </div>
 
   <div class="govuk-grid-column-one-quarter">
-    <p>CRN number</br><strong>N/A</strong></p>
+    <p>CRN number</br>
+      <strong>N/A</strong>
+    </p>
   </div>
 
   <div class="govuk-grid-column-one-quarter">
@@ -78,7 +92,12 @@ $('#search').hideseek({
   </div>
 
   <div class="govuk-grid-column-one-quarter">
-    <p>Tier calculation</br><strong>B</strong></p>
+    <p>Tier calculation</br><strong>
+      {% if data['prisoner'] == 'noah' %} 
+      B
+      {% else %} 
+      A
+      {% endif %}</strong></p>
   </div>
 
 </div>
@@ -87,7 +106,7 @@ $('#search').hideseek({
 <div class="govuk-grid-row govuk-grid-column-full">
 
   <div class="govuk-grid-column-one-quarter">
-    <a class="govuk-link--no-visited-state" href="#">View case on DPS</a>
+    <p><a class="govuk-link--no-visited-state" href="#">View case on DPS</a></p>
   </div>
 
 </div>
@@ -217,7 +236,7 @@ $('#search').hideseek({
     <tr class="govuk-table__row">
       <td class="govuk-table__cell govuk-!-width-one-third">POM</td>
       <td class="govuk-table__cell govuk-!-width-one-third">Jessica King</td>
-      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/reallocate/step1-review-case-simon-riley">Reallocate</a></td>
+      <td class="govuk-table__cell govuk-!-width-one-third"><a class="govuk-link govuk-link--no-visited-state" href="/allocations/final/reallocate/step1-review-case-simon-riley?prisoner=noah">Reallocate</a></td>
     </tr>
 
     <tr class="govuk-table__row">

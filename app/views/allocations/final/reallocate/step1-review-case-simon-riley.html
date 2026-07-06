@@ -30,10 +30,16 @@ Review case details – Digital Prison Services
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-    <div class="moj-page-header-actions">
+    <div class="moj-page-header-actions govuk-!-margin-top-6">
   
       <div class="moj-page-header-actions__title">
-        <h1 class="govuk-heading-l">Review Simon Riley's case</h1></br>
+        <h1 class="govuk-heading-l">Review
+          {% if data['prisoner'] == 'noah' %}
+          Noah Roche's
+          {% else %} 
+          Simon Riley's
+          {% endif %} 
+          case</h1></br>
         <span class="govuk-caption-l" style="margin-bottom: 10px;">Currently allocated to Jessica King</span>
         <span class="govuk-caption-l">Prison number: AE1234BX</span>
         <!--<span class="govuk-caption-l">CRN: A165856</span>-->
@@ -443,34 +449,64 @@ Review case details – Digital Prison Services
 
 <div class="govuk-grid-column-one-third">
 
-  <aside class="app-related-items" role="complementary">
+  
+    <!--MAPPA start-->
+    {% from "components/mappa-widget/macro.njk" import mappaWidget %}
 
-    <h3 class="govuk-heading-m">
-            Active alerts
-          </h3>
+    {{ mappaWidget({
+        level: "CAT 2/LEVEL 1",
+        lastUpdated: "10th October 2021"
+    }) }}
 
+
+    <!--MAPPA end-->
+
+
+    <!--RoSH start-->
+
+
+    <!--RoSH completed-->
+    {% from "components/rosh-widget/macro.njk" import roshWidget %}
+
+
+    {{ roshWidget({
+        hasBeenCompleted: true,
+        overallRisk: "MEDIUM",
+        lastUpdated: "7 Mar 2026 on OASys",
+        riskInCommunity: {
+          "Children": "LOW",
+          "Public": "MEDIUM",
+          "Known Adult": "MEDIUM",
+          "Staff": "MEDIUM"
+        } 
+    }) 
+  
+  
+  }}
+
+    
+
+    <!--RoSH end-->
+
+    
+  
+
+
+    
+
+    <!--Alerts start-->
+    <h3 class="govuk-heading-m">Active alerts</h3>
 
           <p>
-            <ul class="govuk-list">
-              <p class="govuk-body">None</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Racist</li>
+              <li>Risk to LGBT</li>
+              <li>TACT</li>
             </ul>  
           </p>
           
-         
-
-  <p  class="govuk-!-margin-bottom-6">
-    <a class="govuk-link govuk-link--no-visited-state" href="https://digital-dev.prison.service.justice.gov.uk/prisoner/G4227GV/alerts"target="_blank">View more alerts information</a>
-  </p>
-
-
-
-
-
-<img src="/public/images/risk/Rosh_Low.png" style="width:380px; margin-top: 10px;" alt="RoSH">
-
-
-
-
+    <p class="govuk-!-margin-bottom-6"><a class="govuk-link govuk-link--no-visited-state" href="https://digital-dev.prison.service.justice.gov.uk/prisoner/G4227GV/alerts"target="_blank">View more alerts information</a></p>
+    <!--Alerts end-->
 
 
 </div>
