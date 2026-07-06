@@ -327,11 +327,14 @@ Compare POMs – Digital Prison Services
 
 
 
-
-
-
+    {% if data['prisoner'] == 'noah' %}
+    <form method="post" action="../../global/override-probationPOM">
+    {% else %}
     <form method="post" action="/allocations/final/reallocate/step3-confirm-allocation-simon-riley">
-  
+    {% endif %}
+
+
+    
 
     <button class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
       Allocate
