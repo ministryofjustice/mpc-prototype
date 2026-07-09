@@ -28,6 +28,7 @@ Allocate a POM – Digital Prison Services
 <form method="post" action="/allocations/final/reallocate/step2b-select-pom-simon-riley">
 
   <div class="govuk-grid-row">
+    
     <div class="govuk-grid-column-two-thirds">
       
     
@@ -47,33 +48,50 @@ Allocate a POM – Digital Prison Services
       </div>
     </div>
   
-    </div>
-  </div>
+   
 
-  
-  
+
   
       <div class="govuk-!-margin-top-6"></div>
       <h2 class="govuk-heading-m">
         {% if data['prisoner'] == 'noah' %}
-        TBC
+        No POM type recommendation
         {% else %}
         Prison POM recommended
         {% endif %}
       </h2>
 
 
+      {% if data['prisoner'] == 'noah' %}
+
+        <p>
+          We cannot recommend which POM type should be allocated to work with this person because they have no ROSH on NDelius. 
+          
+
+
+          <div class="govuk-inset-text" style="margin-top: -5px;">
+        <p>
+                    Check their risk on NDelius and OASys and then allocate to the appropriate POM. You will be asked to record a reason for selecting the POM type you choose.
+        </p>
+      </div>
+          
+
+        </p>
+  
+
+
+ 
+      {% else %} 
+
       <div class="govuk-inset-text">
         <p>
-          {% if data['prisoner'] == 'noah' %}
-          TBC
-          {% else %} 
           Simon needs a responsible POM because there is more than 12 weeks</br>
           between their sentence start date and home detention curfew eligibility date.</br>
           They are tier D, so we recommend allocating a prison POM.
-          {% endif %}
         </p>
       </div>
+
+      {% endif %}
 
 <!--
       <div class="govuk-warning-text">
@@ -94,7 +112,12 @@ Allocate a POM – Digital Prison Services
 -->
 
 
-<h2 class="govuk-heading-m govuk-!-margin-top-8">
+
+ </div>
+  </div>
+
+
+<h2 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">
   Choose a POM
 
 </h2>
