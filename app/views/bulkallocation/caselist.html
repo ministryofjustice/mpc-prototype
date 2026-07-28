@@ -57,16 +57,31 @@ Choose cases to reallocate – Digital Prison Services
   <div class="govuk-grid-column-full">
   
     
-   
+           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-bottom: 10px;">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" type="checkbox">
+            {% if data['pom'] == 'yasmeen' %}
+            {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
+              <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (4)</strong></label>
+              {% else %}
+              <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (10)</strong></label>
+              {% endif %}
+            {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
+            <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (51)</strong></label>
+            {% else %}
+            <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (71)</strong></label>
+            {% endif %}
+          </div>
+        </div>
 
 
       <table class="govuk-table" data-module="moj-sortable-table">
         <caption class="govuk-table__caption"></caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header" style="width: 20px;">Select case</th>
+            <th scope="col" class="govuk-table__header"></th>
             <th scope="col" class="govuk-table__header" aria-sort="none">Case</th>
-            <th scope="col" class="govuk-table__header" aria-sort="none">Recommended POM type</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 60px;">Recommended POM type</th>
             <th scope="col" class="govuk-table__header" aria-sort="none">POM role needed</th>
             <th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
             <th scope="col" class="govuk-table__header" aria-sort="ascending">Earliest release date</th>
@@ -95,8 +110,8 @@ Choose cases to reallocate – Digital Prison Services
                 <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">
                   <a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">{{ pipnames.case }}</a><br>
                   {{ pipnames.number }}
-                  <span class="date highlight" style="margin-top: 5px;">{{ pipnames.mappa }}</span>
-                  <span class="secondary highlight"></span>
+                  <!--<span class="date highlight" style="margin-top: 5px;">{{ pipnames.mappa }}</span>
+                  <span class="secondary highlight"></span>-->
                 </td>
           
                 <td class="govuk-table__cell">{{ pipnames.recommendation }}</td>
@@ -126,8 +141,8 @@ Choose cases to reallocate – Digital Prison Services
                 <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">
                   <a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">{{ pipnames.case }}</a><br>
                   {{ pipnames.number }}
-                  <span class="date highlight" style="margin-top: 5px;">{{ pipnames.mappa }}</span>
-                  <span class="secondary highlight"></span>
+                  <!--<span class="date highlight" style="margin-top: 5px;">{{ pipnames.mappa }}</span>
+                  <span class="secondary highlight"></span>-->
                 </td>
           
                 <td class="govuk-table__cell">{{ pipnames.recommendation }}</td>
@@ -156,8 +171,8 @@ Choose cases to reallocate – Digital Prison Services
                 </div>
               </td>
             <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role"><a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">{{pipnames.case}}</a><br>{{pipnames.number}}
-                <span class="date highlight" style="margin-top: 5px;">{{pipnames.mappa}}</span>
-                <span class="secondary highlight"></span>
+                <!--<span class="date highlight" style="margin-top: 5px;">{{pipnames.mappa}}</span>
+                <span class="secondary highlight"></span>-->
             </td>
             <td class="govuk-table__cell">{{pipnames.recommendation}}</td>
             <td class="govuk-table__cell">{{pipnames.role}}</td>
