@@ -1,0 +1,264 @@
+{% extends "includes/layouts/main.html" %}
+
+
+{% block pageTitle %}
+Choose cases to reallocate – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom:0">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-error-summary" data-module="govuk-error-summary" style="margin-top: 60px;">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#">Enter your full name</a>
+        </li>
+        <li>
+          <a href="#">The date your passport was issued must be in the past</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <div class="moj-page-header-actions govuk-!-margin-top-6">
+  
+      <div class="moj-page-header-actions__title">
+        <h1 class="govuk-heading-l">Choose cases to reallocate</h1></br>
+        {% if data['pom'] == 'yasmeen' %}
+        <span class="govuk-caption-l">Reallocating from: prison POM Yasmeen Essa</span>
+        {% else %}
+        <span class="govuk-caption-l">Reallocating from: probation POM Sarah Bailey</span>
+        {% endif %}
+
+        {% if data['pom'] == 'yasmeen' %}
+
+        {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
+        <span class="govuk-caption-l">Reallocating to: prison POM Eve Upshaw</span>
+        <span class="govuk-caption-l">Cases remaining: 4</span>
+        {% else %}
+        <span class="govuk-caption-l">Reallocating to: prison POM Carlos Santos</span>
+        <span class="govuk-caption-l">Cases remaining: 10</span>
+        {% endif %}
+
+        {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
+        <span class="govuk-caption-l">Reallocating to: probation POM Binit Hindocha</span>
+        <span class="govuk-caption-l">Cases remaining: 51</span>
+        {% else %}
+        <span class="govuk-caption-l">Reallocating to: probation POM Jessica King</span>
+        <span class="govuk-caption-l">Cases remaining: 71</span>
+        {% endif %}
+      </div>
+      
+    </div>
+
+   
+
+ <div class="govuk-form-group govuk-form-group--error">
+          <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Choose a case
+    </p>
+           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-bottom: 10px;">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" type="checkbox">
+            {% if data['pom'] == 'yasmeen' %}
+            {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
+              <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (4)</strong></label>
+              {% else %}
+              <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (10)</strong></label>
+              {% endif %}
+            {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
+            <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (51)</strong></label>
+            {% else %}
+            <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (71)</strong></label>
+            {% endif %}
+          </div>
+        </div>
+        </div>
+
+
+
+
+
+
+  </div>
+</div>
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  
+      
+      <table class="govuk-table" data-module="moj-sortable-table">
+        <caption class="govuk-table__caption"></caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header"></th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Case</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none" style="width: 60px;">Recommended POM type</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">POM role needed</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Location</th>
+            <th scope="col" class="govuk-table__header" aria-sort="ascending">Earliest release date</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Tier</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Additional information</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          {% if data['pom'] == 'yasmeen' %}
+
+          {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
+
+            {% for pipnames in data.pipnames %}
+            {% if loop.index <= 4 %}
+
+            
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="selectcase"></label>
+                    </div>
+                  </div>
+                </td>
+    
+          
+                <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">
+                  <a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">{{ pipnames.case }}</a><br>
+                  {{ pipnames.number }}
+                  <!--<span class="date highlight" style="margin-top: 5px;">{{ pipnames.mappa }}</span>
+                  <span class="secondary highlight"></span>-->
+                </td>
+          
+                <td class="govuk-table__cell">{{ pipnames.recommendation }}</td>
+                <td class="govuk-table__cell">{{ pipnames.role }}</td>
+                <td class="govuk-table__cell">{{ pipnames.location }}</td>
+                <td class="govuk-table__cell">{{ pipnames.date }}</td>
+                <td class="govuk-table__cell">{{ pipnames.tier }}</td>
+                <td class="govuk-table__cell">{{ pipnames.additionalinfo }}</td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+
+          {% else %}
+
+            {% for pipnames in data.pipnames %}
+            {% if loop.index <= 10 %}
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="selectcase"></label>
+                    </div>
+                  </div>
+                </td>
+          
+                <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">
+                  <a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">{{ pipnames.case }}</a><br>
+                  {{ pipnames.number }}
+                  <!--<span class="date highlight" style="margin-top: 5px;">{{ pipnames.mappa }}</span>
+                  <span class="secondary highlight"></span>-->
+                </td>
+          
+                <td class="govuk-table__cell">{{ pipnames.recommendation }}</td>
+                <td class="govuk-table__cell">{{ pipnames.role }}</td>
+                <td class="govuk-table__cell">{{ pipnames.location }}</td>
+                <td class="govuk-table__cell">{{ pipnames.date }}</td>
+                <td class="govuk-table__cell">{{ pipnames.tier }}</td>
+                <td class="govuk-table__cell">{{ pipnames.additionalinfo }}</td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+
+          {% endif %}
+
+          {% else %}
+
+          {% for pipnames in data ['pipnames'] %}
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" type="checkbox">
+                    <label class="govuk-label govuk-checkboxes__label" for="selectcase">
+                    </label>
+                  </div>
+                </div>
+              </td>
+            <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role"><a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">{{pipnames.case}}</a><br>{{pipnames.number}}
+                <!--<span class="date highlight" style="margin-top: 5px;">{{pipnames.mappa}}</span>
+                <span class="secondary highlight"></span>-->
+            </td>
+            <td class="govuk-table__cell">{{pipnames.recommendation}}</td>
+            <td class="govuk-table__cell">{{pipnames.role}}</td>
+            <td class="govuk-table__cell">{{pipnames.location}}</td>
+            <td class="govuk-table__cell">{{pipnames.date}}</td>
+            <td class="govuk-table__cell">{{pipnames.tier}}</td>
+            <td class="govuk-table__cell">{{pipnames.additionalinfo}}</td>
+          </tr>
+          {% endfor %}
+
+          {% endif %}
+
+        </tbody>
+      </table>
+
+
+
+      
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" type="checkbox">
+            {% if data['pom'] == 'yasmeen' %}
+            {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
+              <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (4)</strong></label>
+              {% else %}
+              <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (10)</strong></label>
+              {% endif %}
+            {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
+            <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (51)</strong></label>
+            {% else %}
+            <label class="govuk-label govuk-checkboxes__label" for="selectcase" style="margin-left: 10px;"><strong>Select all cases (71)</strong></label>
+            {% endif %}
+          </div>
+        </div>
+
+      
+
+    {% if data['pom'] == 'yasmeen' %}
+    <form action="./confirm-allocation?pom=yasmeen" method="post">
+    {% elseif data.BulkCasesAllocated=="MoreBulkAllocations" %}
+    <form action="./confirm-allocation" method="post">
+    {% else %}
+    <form action="./override-probationPOM" method="post">
+    {% endif %}
+
+      <div class="govuk-button-group" style="margin-top: 40px;">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+
+    </form>
+
+
+
+  </div>
+</div>
+{% endblock %}
