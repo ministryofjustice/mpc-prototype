@@ -15,6 +15,25 @@ Choose cases to reallocate – Digital Prison Services
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    {% if data['edgecase'] == 'yes' %}
+    {% elif data['validation'] == 'yes' %}
+    <div class="govuk-error-summary" data-module="govuk-error-summary" style="margin-top: 60px;">
+    <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#">Select at least one case to reallocate</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% else %}
+{% endif %}
+
     <div class="moj-page-header-actions govuk-!-margin-top-6">
   
       <div class="moj-page-header-actions__title">
@@ -91,7 +110,116 @@ Choose cases to reallocate – Digital Prison Services
         </thead>
         <tbody class="govuk-table__body">
 
-          {% if data['pom'] == 'yasmeen' %}
+          {% if data['edgecase'] == 'yes' %}
+
+
+          <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="selectcase"></label>
+                    </div>
+                  </div>
+                </td>
+
+              <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">
+                <a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">Khalil, Wei</a><br>
+                G54092
+              </td>
+
+              <td class="govuk-table__cell govuk-table__cell due-date">
+                <span class="date overdue">No POM type recommendation</span>
+                <span class="secondary overdue">Missing ROSH</span>
+              </td>
+
+                <td class="govuk-table__cell">Responsible</td>
+                <td class="govuk-table__cell">C-2-259</td>
+                <td class="govuk-table__cell">CRD: 1 Apr 2028</td>
+                <td class="govuk-table__cell">A</td>
+                <td class="govuk-table__cell">New to this prison</td>
+            </tr>
+
+          <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="selectcase" type="checkbox" disabled>
+                <label class="govuk-label govuk-checkboxes__label" for="selectcase"></label>
+              </div>
+            </div>
+          </td>
+
+          <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">
+                  <a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">Flores, Reece</a><br>
+                  G79827
+                </td>
+          
+              <td class="govuk-table__cell govuk-table__cell due-date">
+                <span class="date disabled">Prison POM</span>
+                <span class="secondary disabled">[POM name] already allocated as co-working POM</span>
+              </td>
+
+                <td class="govuk-table__cell">Responsible</td>
+                <td class="govuk-table__cell">A-3-016</td>
+                <td class="govuk-table__cell">CRD: 1 Aug 2030</td>
+                <td class="govuk-table__cell">D</td>
+                <td class="govuk-table__cell">New to custody</td>
+            </tr>
+
+
+            <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="selectcase"></label>
+                    </div>
+                  </div>
+                </td>
+
+          <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">
+                  <a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">Choi, Darnell</a><br>
+                 G10053
+                </td>
+          
+                <td class="govuk-table__cell">Prison POM	Resp</td>
+                <td class="govuk-table__cell">Responsible</td>
+                <td class="govuk-table__cell">B-4-174</td>
+                <td class="govuk-table__cell">CRD: 1 Feb 2031</td>
+                <td class="govuk-table__cell">C</td>
+                <td class="govuk-table__cell">New to custody</td>
+            </tr>
+
+            <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" style="margin-left: 20px; margin-top: -8px;">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label" for="selectcase"></label>
+                    </div>
+                  </div>
+                </td>
+
+          <td aria-label="POM role" class="govuk-table__cell due-date" data-sort-value="POM role">
+                  <a class="govuk-link govuk-link--no-visited-state" href="../prisoner/profile">Garcia, Malik</a><br>
+                  G18392
+                </td>
+          
+                <td class="govuk-table__cell">Prison POM</td>
+                <td class="govuk-table__cell">Supporting</td>
+                <td class="govuk-table__cell">B-2-013</td>
+                <td class="govuk-table__cell">CRD: 1 Sep 2026</td>
+                <td class="govuk-table__cell">C</td>
+                <td class="govuk-table__cell">Returning to this prison</td>
+            </tr>
+          
+
+          {% elif data['pom'] == 'yasmeen' %}
 
           {% if (data.BulkCasesAllocatedAFW=="CasesLeftLater") or (data.BulkCasesAllocatedAFW=="MoreBulkAllocations") %}
 

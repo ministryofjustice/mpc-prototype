@@ -1180,6 +1180,12 @@ a.morelink:visited {
     padding-left: 5px;
   }
 
+  .disabled {
+    border-left: 5px solid #858686;
+    font-weight: bold;
+    padding-left: 5px;
+  }
+
   .secondary {
     color: govuk-colour('black');
     font-size: 16px;
