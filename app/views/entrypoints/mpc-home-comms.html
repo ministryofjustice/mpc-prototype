@@ -190,7 +190,7 @@ Make allocations – Digital Prison Services
      <li class="govuk-grid-column-one-third card-group__item">
        <div class="card card--clickable" data-test="secure-move">
            <h2 class="govuk-heading-m card__heading">
-             <a class="govuk-link card__link govuk-link--no-visited-state" href="#">View all POMs</a><!--<span class="moj-badge moj-badge--red" style="margin-left: 10px;">New</span>--></h2>
+             <a class="govuk-link card__link govuk-link--no-visited-state" href="#">View all POMs</a>{% if data['banner'] == 'bulkreallocation' %}<span class="moj-badge moj-badge--red" style="margin-left: 10px;">New</span>{% endif %}</h2>
                <p class="govuk-body card__description">See what POMs are working on and change their availability.</p>
        </div>
      </li>
@@ -199,7 +199,7 @@ Make allocations – Digital Prison Services
      <li class="govuk-grid-column-one-third card-group__item">
       <div class="card card--clickable" data-test="secure-move">
           <h2 class="govuk-heading-m card__heading">
-            <a class="govuk-link card__link govuk-link--no-visited-state" href="../add-pom/find-staff-member.html">Add a POM</a></h2>
+            <a class="govuk-link card__link govuk-link--no-visited-state" href="../add-pom/find-staff-member.html">Add a POM</a>{% if data['banner'] == 'addapom' %}<span class="moj-badge moj-badge--red" style="margin-left: 10px;">New</span>{% endif %}</h2>
               <p class="govuk-body card__description">Add a POM so you can allocate to them.</p>
       </div>
     </li>
