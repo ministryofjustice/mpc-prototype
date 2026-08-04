@@ -19,9 +19,19 @@ Make allocations – Digital Prison Services
     </svg>
   </div>
   <div class="moj-alert__content">
-    <h2 class="moj-alert__heading">What's new
-    </h2>New POMs can now be set up quickly and easily in this service by people who allocate cases.</br>
+    
+    {% if data['banner'] == 'bulkreallocation' %}
+    <h2 class="moj-alert__heading">What's new</h2>
+    From 10 August 2026, you can use this service to reallocate multiple cases at the same time when POMs stop working at the prison either permanently or temporarily.
+    <a class="govuk-link" href="https://justiceuk.sharepoint.com/:u:/r/sites/prisons-digital/SitePages/Manage%20POM%20Cases%20-%20What%27s%20New.aspx?d=w3e7bbfc4a10843b28ee3ffe0435c9bb7&csf=1&web=1&e=Sbtwib" target="_blank">Find out how it works in this video on SharePoint</a>
+
+    {% elif data['banner'] == 'addapom' %}
+    <h2 class="moj-alert__heading">What's new</h2>
+    New POMs can now be set up quickly and easily in this service by people who allocate cases.</br>
     Local system administrators (LSAs) no longer need to do this in NOMIS.
+
+    {% endif %}
+
   </div>
 
   <div class="moj-alert__action">
