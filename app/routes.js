@@ -45,6 +45,26 @@ router.post('/casemissingdetails', function (req, res) {
 
 
 
+  //Allocations - Change of circumstances
+
+//Case page to add missing details
+router.post('/changeofcircumstances', function (req, res) {
+    var changeofcircumstancesreallocation = req.session.data['changeofcircumstancesreallocation']
+    // Check whether the variable matches a condition
+    if (changeofcircumstancesreallocation == "yes"){
+     
+     // Send user to make allocations page
+      res.redirect('/allocations/final/reallocate/step1-review-case-simon-riley')
+    } else {
+      // Send user to onboarding POM search
+      res.redirect('/allocations/global/override-prisonPOM')
+    }
+  });
+
+
+
+
+
 
 
 //Bulk allocation
