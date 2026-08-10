@@ -26,6 +26,8 @@ Allocate a POM – Digital Prison Services
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+{% if data['prisoner'] == 'john' %}
+<form action="changeofcircumstancesoverride" method="post">
 {% if data['prisoner'] == 'noah' %} 
 <form action="../reallocate/step3-confirm-allocation-simon-riley" method="post">
 {% else %} 
@@ -67,7 +69,13 @@ Allocate a POM – Digital Prison Services
 </div>
 
 <div class="moj-page-header-actions__title" style="margin-bottom: 40px;">
-  <h1 class="govuk-heading-l">Why are you allocating a prison POM to Christopher Hamilton (G4198UW)?</h1>
+  <h1 class="govuk-heading-l">Why are you allocating a prison POM to
+    {% if data['prisoner'] == 'john' %}  
+    John Hunt (AE1234BD)
+    {% else %} 
+    Christopher Hamilton (G4198UW)
+    {% endif %} 
+    ?</h1>
   <!--<span class="govuk-caption-l" style="margin-top: 10px;">Reallocating from: prison POM Sarah Bailey</span>
   <span class="govuk-caption-l">Reallocating to: prison POM Jessica King</span>-->
 </div>
