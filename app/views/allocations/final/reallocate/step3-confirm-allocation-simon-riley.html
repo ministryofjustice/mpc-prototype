@@ -22,7 +22,11 @@ Confirm allocation
 
 {% block content %}
 
+{% if data['prisoner'] == 'benjamin' or data['prisoner'] == 'john' %}
+<form method="post" action="../change-of-circumstances">
+{% else %}
 <form method="post" action="/allocations/final/reallocate/step4-success-msg-simon-riley">
+{% endif %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -190,9 +194,15 @@ Confirm allocation
 
 
 
+{% if data['prisoner'] == 'benjamin' or data['prisoner'] == 'john' %}
+<button class="govuk-button govuk-!-margin-top-2" data-module="govuk-button" style="margin-right: 15px;" name="confirmreallocation" value="yes">
+  Complete allocation
+</button>
+{% else %}
 <button class="govuk-button govuk-!-margin-top-2" data-module="govuk-button" style="margin-right: 15px;">
   Complete allocation
 </button>
+{% endif %}
 
 
 
