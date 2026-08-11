@@ -15,10 +15,33 @@ Cases to update – Digital Prison Services
 {% block content %}
 
 
+{% if data['confirmallocation'] == 'yes' %}
+
+<div role="region" class="moj-alert moj-alert--success" aria-label="success: Upload successful" data-module="moj-alert" style="margin-top: 40px;">
+  <div>
+    <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+      <path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+    </svg>
+  </div>
+  <div class="moj-alert__content">
+    Confirmation 
+    {% if data['prisoner'] == 'benjamin' %}
+    Benjamin Enuku
+    {% elif data['prisoner'] == 'john' %}
+    John Hunt
+    {% endif %}
+  </div>
+  <div class="moj-alert__action">
+    <button class="moj-alert__dismiss" hidden>Dismiss</button>
+  </div>
+</div>
+
+{% else %}
+{% endif %}
     
 
 
-<h1 class="govuk-heading-xl">
+<h1 class="govuk-heading-xl govuk-!-margin-top-8">
   Allocations
 </h1>
 
@@ -74,7 +97,7 @@ Cases to update – Digital Prison Services
     </li>
 
     <li class="moj-sub-navigation__item">
-      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./change-of-circumstances.html" aria-current="page">TBD: Change of circumstances<span id="notifications" class="moj-notification-badge" style="margin-left: 10px;">44</span></a>
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./change-of-circumstances.html" aria-current="page">TBD: Change of circumstances<span id="notifications" class="moj-notification-badge" style="margin-left: 10px;">51</span></a>
     </li>
 
   </ul>
@@ -93,27 +116,45 @@ Cases to update – Digital Prison Services
       <p>Content? Significant changes which will impact POM recommendation</p>
 
 
-      <nav class="moj-pagination govuk-!-padding-bottom-4" id="pagination-label">
-
-        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
-
-        <ul class="moj-pagination__list">
-       <!-- <li class="moj-pagination__item  moj-pagination__item--prev">
-          <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
-        </li>
-
-
-        <li class="moj-pagination__item moj-pagination__item--active">1</li>
-
-
-        <li class="moj-pagination__item  moj-pagination__item--next">
-          <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
-        </li>-->
-        </ul>
-        <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
-      </nav>
-
-
+  <nav class="govuk-pagination" aria-label="Pagination" style="margin-top: 60px;">
+  <div class="govuk-pagination__prev">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+      </svg>
+      <span class="govuk-pagination__link-title">
+        Previous<span class="govuk-visually-hidden"> page</span>
+      </span>
+    </a>
+  </div>
+  <ul class="govuk-pagination__list">
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+        1
+      </a>
+    </li>
+    <li class="govuk-pagination__item govuk-pagination__item--current">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+        2
+      </a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+        3
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-pagination__next">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+      <span class="govuk-pagination__link-title">
+        Next<span class="govuk-visually-hidden"> page</span>
+      </span>
+      <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+      </svg>
+    </a>
+  </div>
+</nav>
 
 
 
@@ -124,7 +165,7 @@ Cases to update – Digital Prison Services
           <tr class="govuk-table__row">
   
             <th scope="col" class="govuk-table__header" aria-sort="none">TBD: Case</th>
-            <th scope="col" class="govuk-table__header" aria-sort="ascending">TBD: Working days since change</th>
+            <th scope="col" class="govuk-table__header" aria-sort="descending">TBD: Working days since change</th>
             <th scope="col" class="govuk-table__header" aria-sort="none">TBD: Type of change</th>
 
           </tr>
@@ -133,10 +174,11 @@ Cases to update – Digital Prison Services
         <tbody class="govuk-table__body">
           
 
-
+          {% if data['prisoner'] == 'john' and data['confirmallocation'] == 'yes' %}
+          {% else %}
           <tr class="govuk-table__row">
   
-            <td class="govuk-table__cell" data-sort-value="Riley">
+            <td class="govuk-table__cell">
               <a href="./change-of-circumstances-review?prisoner=john" class="govuk-link govuk-link--no-visited-state">Hunt, John</a><br>
               <span class="govuk-hint govuk-!-margin-bottom-0">AE1234BD</span>
             </td>
@@ -150,6 +192,26 @@ Cases to update – Digital Prison Services
             </td>
 
           </tr>
+          {% endif %}
+
+
+          {% if data['prisoner'] == 'benjamin' and data['confirmallocation'] == 'yes' %}
+          {% else %}
+           <tr class="govuk-table__row">
+  
+            <td class="govuk-table__cell">
+              <a href="./change-of-circumstances-review?prisoner=benjamin" class="govuk-link govuk-link--no-visited-state">Enuku, Benjamin</a><br>
+              <span class="govuk-hint govuk-!-margin-bottom-0">G2911GD</span>
+            </td>
+    
+            <td class="govuk-table__cell govuk-table__cell" data-sort-value="8">8</td>
+
+            <td class="govuk-table__cell govuk-table__cell">
+              <span class="moj-badge moj-badge--red">Handover date</span>
+            </td>
+
+          </tr>
+          {% endif %}
 
 
   
@@ -163,25 +225,45 @@ Cases to update – Digital Prison Services
         
 
 
-        <nav class="moj-pagination govuk-!-padding-bottom-4" id="pagination-label">
-
-          <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
-  
-          <ul class="moj-pagination__list">
-         <!-- <li class="moj-pagination__item  moj-pagination__item--prev">
-            <a class="moj-pagination__link" href="">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
-          </li>
-  
-  
-          <li class="moj-pagination__item moj-pagination__item--active">1</li>
-  
-  
-          <li class="moj-pagination__item  moj-pagination__item--next">
-            <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
-          </li>-->
-          </ul>
-          <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
-        </nav>
+       <nav class="govuk-pagination" aria-label="Pagination" style="margin-top: 40px;">
+  <div class="govuk-pagination__prev">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+      </svg>
+      <span class="govuk-pagination__link-title">
+        Previous<span class="govuk-visually-hidden"> page</span>
+      </span>
+    </a>
+  </div>
+  <ul class="govuk-pagination__list">
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+        1
+      </a>
+    </li>
+    <li class="govuk-pagination__item govuk-pagination__item--current">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+        2
+      </a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+        3
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-pagination__next">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+      <span class="govuk-pagination__link-title">
+        Next<span class="govuk-visually-hidden"> page</span>
+      </span>
+      <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+      </svg>
+    </a>
+  </div>
+</nav>
   
   
 

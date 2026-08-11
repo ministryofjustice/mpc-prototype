@@ -29,14 +29,20 @@ Review case details – Digital Prison Services
     <div class="moj-page-header-actions govuk-!-margin-top-6">
   
       <div class="moj-page-header-actions__title">
-        <h1 class="govuk-heading-l">Changes to John Hunt's case</h1></br>
+        <h1 class="govuk-heading-l">Changes to
+          {% if data['prisoner'] == 'benjamin' %}
+          Benjamin Enuku's
+          {% elif data['prisoner'] == 'john' %}
+          John Hunt's
+          {% endif %}
+          case</h1></br>
         <span class="govuk-caption-l">Prison number: AE1234BD</span>
         <span class="govuk-caption-l">Date of birth: 22 Feb 1980 ([age])</span>
       </div>
     
     </div>
 
-
+{% if data['prisoner'] == 'john' %}
   <div class="govuk-summary-card" style="margin-top: 40px;">
   <div class="govuk-summary-card__title-wrapper">
     <h2 class="govuk-summary-card__title">
@@ -88,6 +94,10 @@ Review case details – Digital Prison Services
     </dl>
   </div>
 </div>
+{% else %}
+{% endif %}
+
+{% if data['prisoner'] == 'john' %}
 <div class="govuk-summary-card">
   <div class="govuk-summary-card__title-wrapper">
     <h2 class="govuk-summary-card__title">
@@ -139,6 +149,10 @@ Review case details – Digital Prison Services
     </dl>
   </div>
 </div>
+{% else %}
+{% endif %}
+
+
 <div class="govuk-summary-card">
   <div class="govuk-summary-card__title-wrapper">
     <h2 class="govuk-summary-card__title">
@@ -202,14 +216,30 @@ Review case details – Digital Prison Services
       </h2>
 
 
+      {% if data['prisoner'] == 'benjamin' %}
+
+      <h2 class="govuk-heading-m">
+        TBC: Handover title?
+      </h2>
+
+
+      <div class="govuk-inset-text">
+        <p>New copy</p>
+      </div>
+
+      {% else %}
       <h2 class="govuk-heading-m">
         Probation POM recommended
       </h2>
 
 
       <div class="govuk-inset-text">
-        <p>The ROSH for John has been recorded as high in either NDelius or this service, <br>so we recommend allocating to a <strong>probation POM</strong>.</br></p>
+        <p>As John is high RoSH, we recommend allocating to a <strong>probation POM.</strong></p>
       </div>
+      {% endif %}
+
+
+
 
 
       <div class="govuk-summary-card">
