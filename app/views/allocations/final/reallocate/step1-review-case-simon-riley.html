@@ -34,7 +34,11 @@ Review case details – Digital Prison Services
   
       <div class="moj-page-header-actions__title">
         <h1 class="govuk-heading-l">Review
-          {% if data['prisoner'] == 'noah' %}
+          {% if data['prisoner'] == 'benjamin' %}
+          Benjamin Enuku's
+          {% elif data['prisoner'] == 'john' %}
+          John Hunt's
+          {% elif data['prisoner'] == 'noah' %}
           Noah Roche's
           {% else %} 
           Simon Riley's

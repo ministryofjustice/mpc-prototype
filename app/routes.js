@@ -47,7 +47,7 @@ router.post('/casemissingdetails', function (req, res) {
 
   //Allocations - Change of circumstances
 
-//Case page to add missing details
+//Reallocate the case or keep the current allocation
 router.post('/changeofcircumstances', function (req, res) {
     var changeofcircumstancesreallocation = req.session.data['changeofcircumstancesreallocation']
     // Check whether the variable matches a condition
@@ -58,6 +58,20 @@ router.post('/changeofcircumstances', function (req, res) {
     } else {
       // Send user to onboarding POM search
       res.redirect('/allocations/global/override-prisonPOM')
+    }
+  });
+
+//Keep the current allocation or allocate to someone else
+router.post('/changeofcircumstancesoverride', function (req, res) {
+    var confirmallocation = req.session.data['confirmallocation']
+    // Check whether the variable matches a condition
+    if (confirmallocation == "yes"){
+     
+     // Send user to make allocations page
+      res.redirect('/allocations/final/change-of-circumstances')
+    } else {
+      // Send user to onboarding POM search
+      res.redirect('/allocations/final/reallocate/step1-review-case-simon-riley')
     }
   });
 

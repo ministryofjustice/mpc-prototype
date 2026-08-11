@@ -26,9 +26,9 @@ Allocate a POM – Digital Prison Services
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-{% if data['prisoner'] == 'john' %}
-<form action="changeofcircumstancesoverride" method="post">
-{% if data['prisoner'] == 'noah' %} 
+{% if data['prisoner'] == 'benjamin' or data['prisoner'] == 'john' %}
+<form action="/changeofcircumstancesoverride" method="post">
+{% elif data['prisoner'] == 'noah' %} 
 <form action="../reallocate/step3-confirm-allocation-simon-riley" method="post">
 {% else %} 
 <form action="./confirm-allocation" method="post">
@@ -70,7 +70,9 @@ Allocate a POM – Digital Prison Services
 
 <div class="moj-page-header-actions__title" style="margin-bottom: 40px;">
   <h1 class="govuk-heading-l">Why are you allocating a prison POM to
-    {% if data['prisoner'] == 'john' %}  
+    {% if data['prisoner'] == 'benjamin' %}
+    Benjamin Enuku (G2911GD)     
+    {% elif data['prisoner'] == 'john' %}  
     John Hunt (AE1234BD)
     {% else %} 
     Christopher Hamilton (G4198UW)
@@ -132,6 +134,18 @@ Allocate a POM – Digital Prison Services
 
 
 
+
+
+{% if data['prisoner'] == 'benjamin' or data['prisoner'] == 'john' %}
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button" name="confirmallocation" value="yes">
+    Continue
+  </button>
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="confirmallocation" value="no">
+    Allocate to someone else
+  </button>
+</div>
+{% else %}
 <div class="govuk-button-group">
   <button type="submit" class="govuk-button" data-module="govuk-button">
     Continue
@@ -140,6 +154,7 @@ Allocate a POM – Digital Prison Services
     Allocate to someone else
   </button>
 </div>
+{% endif %}
 
 
 </form>
