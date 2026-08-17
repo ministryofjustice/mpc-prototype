@@ -37,7 +37,7 @@ Review case details – Digital Prison Services
           {% endif %}
           </h1></br>
         <span class="govuk-caption-l">Prison number: AE1234BD</span>
-        <span class="govuk-caption-l">Date of birth: 22 Feb 1980 ([age])</span>
+        <span class="govuk-caption-l">Date of birth: 22 February 1980 ([age])</span>
       </div>
     
     </div>
@@ -46,7 +46,7 @@ Review case details – Digital Prison Services
   <div class="govuk-summary-card" style="margin-top: 40px;">
   <div class="govuk-summary-card__title-wrapper">
     <h2 class="govuk-summary-card__title">
-      Change of tier
+      Tier change
     </h2>
   </div>
   <div class="govuk-summary-card__content">
@@ -63,7 +63,7 @@ Review case details – Digital Prison Services
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Source of change
+          Where the change happened
         </dt>
         <dd class="govuk-summary-list__value">
           NDelius
@@ -101,7 +101,7 @@ Review case details – Digital Prison Services
 <div class="govuk-summary-card">
   <div class="govuk-summary-card__title-wrapper">
     <h2 class="govuk-summary-card__title">
-      Change of risk of serious harm
+      ROSH change
     </h2>
   </div>
   <div class="govuk-summary-card__content">
@@ -118,7 +118,7 @@ Review case details – Digital Prison Services
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Source of change
+          Where the change happened
         </dt>
         <dd class="govuk-summary-list__value">
           NDelius
@@ -156,10 +156,12 @@ Review case details – Digital Prison Services
 <div class="govuk-summary-card">
   <div class="govuk-summary-card__title-wrapper">
     <h2 class="govuk-summary-card__title">
-      Change of handover date
+      Change to date when COM becomes responsible
     </h2>
   </div>
   <div class="govuk-summary-card__content">
+
+    <p>A COM will now take responsibility for this person later so they no longer need a prison POM in a supporting role.</p>
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -173,10 +175,10 @@ Review case details – Digital Prison Services
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Source of change
+          Where the change happened
         </dt>
         <dd class="govuk-summary-list__value">
-          MPC
+          POM cases service
         </dd>
         <dd class="govuk-summary-list__actions">
         </dd>
@@ -212,19 +214,21 @@ Review case details – Digital Prison Services
 
 
     <h2 class="govuk-heading-l" style="margin-top: 80px;">
-        Decision
+        Do you want to reallocate to a different type of POM?
       </h2>
 
 
       {% if data['prisoner'] == 'benjamin' %}
 
+      <p></p>
+
       <h2 class="govuk-heading-m">
-        TBC: Handover title?
+        Probation POM recommended
       </h2>
 
 
       <div class="govuk-inset-text">
-        <p>New copy</p>
+        <p>Benjamin has a high ROSH, so we recommend allocating to a <strong>probation POM</strong>.</p>
       </div>
 
       {% else %}
@@ -234,7 +238,7 @@ Review case details – Digital Prison Services
 
 
       <div class="govuk-inset-text">
-        <p>As John is high RoSH, we recommend allocating to a <strong>probation POM.</strong></p>
+        <p>As John has a high ROSH, we recommend allocating to a <strong>probation POM</strong>.</p>
       </div>
       {% endif %}
 
@@ -262,7 +266,7 @@ Review case details – Digital Prison Services
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Current POM role
+          Current POM type
         </dt>
         <dd class="govuk-summary-list__value">
           Prison POM
