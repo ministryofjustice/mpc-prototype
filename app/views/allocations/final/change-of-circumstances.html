@@ -36,6 +36,7 @@ Cases to update – Digital Prison Services
   </div>
 </div>
 
+
 {% elif data['confirmreallocation'] == 'yes' %}
 
 <div role="region" class="moj-alert moj-alert--success" aria-label="success: Upload successful" data-module="moj-alert" style="margin-top: 40px;">
@@ -118,7 +119,13 @@ Cases to update – Digital Prison Services
     </li>
 
     <li class="moj-sub-navigation__item">
-      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./change-of-circumstances.html" aria-current="page">Review allocations<span id="notifications" class="moj-notification-badge" style="margin-left: 10px;">51</span></a>
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./change-of-circumstances.html" aria-current="page">Review allocations<span id="notifications" class="moj-notification-badge" style="margin-left: 10px;">
+        {% if data['confirmallocation'] == 'yes' or data['confirmreallocation'] == 'yes' %}
+        50
+        {% else %}
+        51
+        {% endif %}
+      </span></a>
     </li>
 
   </ul>
@@ -205,7 +212,7 @@ Cases to update – Digital Prison Services
               <span class="govuk-hint govuk-!-margin-bottom-0">AE1234BD</span>
             </td>
     
-            <td class="govuk-table__cell govuk-table__cell" data-sort-value="11">11</td>
+            <td class="govuk-table__cell govuk-table__cell" data-sort-value="11">30</td>
 
             <td class="govuk-table__cell govuk-table__cell">
               <span class="moj-badge moj-badge--red">Tier</span>
@@ -227,7 +234,7 @@ Cases to update – Digital Prison Services
               <span class="govuk-hint govuk-!-margin-bottom-0">G2911GD</span>
             </td>
     
-            <td class="govuk-table__cell govuk-table__cell" data-sort-value="8">8</td>
+            <td class="govuk-table__cell govuk-table__cell" data-sort-value="8">29</td>
 
             <td class="govuk-table__cell govuk-table__cell">
               <span class="moj-badge moj-badge--red">Handover date</span>
@@ -235,6 +242,37 @@ Cases to update – Digital Prison Services
 
           </tr>
           {% endif %}
+
+
+
+
+        {% for diffcircumstances in data['pipchangeofcircumstances'] %}    
+        <tr class="govuk-table__row">
+  
+            <td class="govuk-table__cell">
+              <a href="./change-of-circumstances-review?prisoner=benjamin" class="govuk-link govuk-link--no-visited-state">{{ diffcircumstances.case }}</a><br>
+              <span class="govuk-hint govuk-!-margin-bottom-0">{{ diffcircumstances.number }}</span>
+            </td>
+    
+            <td class="govuk-table__cell govuk-table__cell" data-sort-value="8">{{ diffcircumstances.workingdays }}</td>
+
+            <td class="govuk-table__cell govuk-table__cell">
+              {% if diffcircumstances.typeofchangeone %}
+               <span class="moj-badge moj-badge--red">{{ diffcircumstances.typeofchangeone }}</span>
+              {% endif %}
+
+              {% if diffcircumstances.typeofchangetwo %}
+                <span class="moj-badge moj-badge--red">{{ diffcircumstances.typeofchangetwo }}</span>
+              {% endif %}
+
+              {% if diffcircumstances.typeofchangethree %}
+                <span class="moj-badge moj-badge--red">{{ diffcircumstances.typeofchangethree }}</span>
+              {% endif %}
+            </td>
+
+          </tr>
+        {% endfor %}
+    
 
 
   
