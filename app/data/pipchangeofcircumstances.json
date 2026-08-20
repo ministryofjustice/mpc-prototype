@@ -1,0 +1,330 @@
+[
+  {
+    "case": "George, Giovanni",
+    "number": "G25157",
+    "workingdays": 28,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh"
+  },
+  {
+    "case": "Abiola, Bruno",
+    "number": "G97670",
+    "workingdays": 26,
+    "typeofchangeone": "Handover date"
+  },
+  {
+    "case": "Lima, Li Wei",
+    "number": "G80702",
+    "workingdays": 26,
+    "typeofchangeone": "Handover date"
+  },
+  {
+    "case": "Walker, Darnell",
+    "number": "G29410",
+    "workingdays": 25,
+    "typeofchangeone": "Tier"
+  },
+  {
+    "case": "Lewis, Hugo",
+    "number": "G98184",
+    "workingdays": 25,
+    "typeofchangeone": "Tier"
+  },
+  {
+    "case": "Lopez, Abdi",
+    "number": "G82845",
+    "workingdays": 24,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh",
+    "typeofchangethree": "Handover date"
+  },
+  {
+    "case": "Park, Yusuf",
+    "number": "G16572",
+    "workingdays": 24,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh",
+    "typeofchangethree": "Handover date"
+  },
+  {
+    "case": "Garcia, Malik",
+    "number": "G18392",
+    "workingdays": 23,
+    "typeofchangeone": "Handover date"
+  },
+  {
+    "case": "Ibrahim, Antonio",
+    "number": "G93579",
+    "workingdays": 23,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Handover date"
+  },
+  {
+    "case": "Ahmed, Imran",
+    "number": "G65392",
+    "workingdays": 22,
+    "typeofchangeone": "Rosh",
+    "typeofchangetwo": "Handover date"
+  },
+  {
+    "case": "Delgado, Olu",
+    "number": "G33509",
+    "workingdays": 22,
+    "typeofchangeone": "Rosh",
+    "typeofchangetwo": "Handover date"
+  },
+  {
+    "case": "Farah, Seung",
+    "number": "G57447",
+    "workingdays": 22,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh",
+    "typeofchangethree": "Handover date"
+  },
+  {
+    "case": "Jansen, Malik",
+    "number": "G50189",
+    "workingdays": 22,
+    "typeofchangeone": "Tier"
+  },
+  {
+    "case": "Zhang, Bilal",
+    "number": "G57052",
+    "workingdays": 21,
+    "typeofchangeone": "Handover date"
+  },
+  {
+    "case": "Green, Andre",
+    "number": "G93136",
+    "workingdays": 21,
+    "typeofchangeone": "Handover date"
+  },
+  {
+    "case": "Huang, Tinashe",
+    "number": "G24953",
+    "workingdays": 21,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh"
+  },
+  {
+    "case": "Ibrahim, Ivan",
+    "number": "G33416",
+    "workingdays": 20,
+    "typeofchangeone": "Rosh"
+  },
+  {
+    "case": "Baker, Antonio",
+    "number": "G97416",
+    "workingdays": 20,
+    "typeofchangeone": "Rosh"
+  },
+  {
+    "case": "Nguyen, Juan",
+    "number": "G11607",
+    "workingdays": 19,
+    "typeofchangeone": "Rosh"
+  },
+  {
+    "case": "Cruz, Sean",
+    "number": "G64377",
+    "workingdays": 19,
+    "typeofchangeone": "Handover date"
+  },
+  {
+    "case": "Qureshi, Yusuf",
+    "number": "G40021",
+    "workingdays": 19,
+    "typeofchangeone": "Rosh"
+  },
+  {
+    "case": "Khalil, Wei",
+    "number": "G54092",
+    "workingdays": 19,
+    "typeofchangeone": "Tier"
+  },
+  {
+    "case": "Edwards, Sean",
+    "number": "G14117",
+    "workingdays": 19,
+    "typeofchangeone": "Handover date"
+  },
+  {
+    "case": "Yilmaz, Hugo",
+    "number": "G72402",
+    "workingdays": 18,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh",
+    "typeofchangethree": "Handover date"
+  },
+  {
+    "case": "Evans, Pedro",
+    "number": "G39154",
+    "workingdays": 18,
+    "typeofchangeone": "Handover date"
+  },
+  {
+    "case": "Young, Diego",
+    "number": "G73464",
+    "workingdays": 17,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Handover date"
+  },
+  {
+    "case": "Qureshi, Huy",
+    "number": "G12552",
+    "workingdays": 17,
+    "typeofchangeone": "Rosh"
+  },
+  {
+    "case": "Lima, Corey",
+    "number": "G69692",
+    "workingdays": 17,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh",
+    "typeofchangethree": "Handover date"
+  },
+  {
+    "case": "Delgado, Omar",
+    "number": "G17100",
+    "workingdays": 17,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh"
+  },
+  {
+    "case": "Ahmed, Juan",
+    "number": "G65724",
+    "workingdays": 16,
+    "typeofchangeone": "Tier"
+  },
+  {
+    "case": "Young, Usman",
+    "number": "G68800",
+    "workingdays": 16,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh"
+  },
+  {
+    "case": "Uddin, Abdi",
+    "number": "G88172",
+    "workingdays": 15,
+    "typeofchangeone": "Handover date"
+  },
+  {
+    "case": "Qureshi, Diego",
+    "number": "G69598",
+    "workingdays": 14,
+    "typeofchangeone": "Tier"
+  },
+  {
+    "case": "Davis, Tariq",
+    "number": "G94246",
+    "workingdays": 14,
+    "typeofchangeone": "Tier"
+  },
+  {
+    "case": "Moyo, Diego",
+    "number": "G62565",
+    "workingdays": 14,
+    "typeofchangeone": "Rosh",
+    "typeofchangetwo": "Handover date"
+  },
+  {
+    "case": "Park, Corey",
+    "number": "G11220",
+    "workingdays": 14,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh",
+    "typeofchangethree": "Handover date"
+  },
+  {
+    "case": "Johnson, Corey",
+    "number": "G89840",
+    "workingdays": 14,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh",
+    "typeofchangethree": "Handover date"
+  },
+  {
+    "case": "Navarro, Kwame",
+    "number": "G57472",
+    "workingdays": 14,
+    "typeofchangeone": "Tier"
+  },
+  {
+    "case": "Khan, Darnell",
+    "number": "G48427",
+    "workingdays": 13,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh",
+    "typeofchangethree": "Handover date"
+  },
+  {
+    "case": "White, Thabo",
+    "number": "G11854",
+    "workingdays": 13,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh"
+  },
+  {
+    "case": "Ibrahim, Simon",
+    "number": "G97782",
+    "workingdays": 13,
+    "typeofchangeone": "Rosh",
+    "typeofchangetwo": "Handover date"
+  },
+  {
+    "case": "Thomas, Sean",
+    "number": "G42018",
+    "workingdays": 11,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh",
+    "typeofchangethree": "Handover date"
+  },
+  {
+    "case": "Vang, Kwame",
+    "number": "G19171",
+    "workingdays": 11,
+    "typeofchangeone": "Tier"
+  },
+  {
+    "case": "Garcia, Gabriel",
+    "number": "G97026",
+    "workingdays": 10,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Rosh"
+  },
+  {
+    "case": "Davis, Chinedu",
+    "number": "G44237",
+    "workingdays": 8,
+    "typeofchangeone": "Rosh",
+    "typeofchangetwo": "Handover date"
+  },
+  {
+    "case": "Lima, Antonio",
+    "number": "G71993",
+    "workingdays": 7,
+    "typeofchangeone": "Tier"
+  },
+  {
+    "case": "Edwards, Bilal",
+    "number": "G59823",
+    "workingdays": 3,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Handover date"
+  },
+  {
+    "case": "Fernandes, Malik",
+    "number": "G54020",
+    "workingdays": 3,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Handover date"
+  },
+  {
+    "case": "Abiola, Li Wei",
+    "number": "G85456",
+    "workingdays": 2,
+    "typeofchangeone": "Tier",
+    "typeofchangetwo": "Handover date"
+  }
+]
