@@ -15,7 +15,7 @@
     "@govuk-prototype-kit/common-templates": "3.0.0",
     "@ministryofjustice/frontend": "^9.0.0",
     "govuk-frontend": "^6.3.0",
-    "govuk-prototype-kit": "^13.20.2"
+    "govuk-prototype-kit": "^13.20.3"
   },
   "devDependencies": {
     "audit-ci": "7.1.0",
