@@ -12,6 +12,7 @@ Make allocations – Digital Prison Services
 
 {% block content %}
 
+{% if data['banner'] == 'bulkreallocation' or data['banner'] == 'addapom' %}
 <div role="region" class="moj-alert moj-alert--information moj-alert--with-heading" aria-label="information: The finance section has moved" data-module="moj-alert" style="margin-top: 30px">
   <div>
     <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
@@ -38,6 +39,8 @@ Make allocations – Digital Prison Services
     <button class="moj-alert__dismiss" hidden>Dismiss</button>
   </div>
 </div>
+{% else %}
+{% endif %}
 
 
 
@@ -121,6 +124,7 @@ Make allocations – Digital Prison Services
                 <p class="govuk-body card__description">Missing details need to be added to 7 cases before they can be allocated to POMs.</p>
         </div>
       </li>
+
         
 
     </ul>
@@ -133,6 +137,14 @@ Make allocations – Digital Prison Services
 
   <div class="govuk-width-container">
     <ul class="govuk-grid-row card-group">
+
+        <li class="govuk-grid-column-one-third card-group__item">
+        <div class="card card--clickable" data-test="secure-move">
+            <h2 class="govuk-heading-m card__heading">
+              <a class="govuk-link card__link govuk-link--no-visited-state" href="../allocations/final/change-of-circumstances">Review allocations</a></h2>
+                <p class="govuk-body card__description">TBD</p>
+        </div>
+      </li>
 
       <li class="govuk-grid-column-one-third card-group__item">
         <div class="card card--clickable" data-test="secure-move">
