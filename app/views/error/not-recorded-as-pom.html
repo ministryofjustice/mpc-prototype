@@ -2,7 +2,7 @@
 
 
 {% block pageTitle %}
-POM inactive error
+There is a problem with this person's account
 {% endblock %}
 
 {% block beforeContent %}
@@ -18,37 +18,24 @@ POM inactive error
   <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl govuk-!-margin-bottom-4 govuk-!-margin-top-6">Check this POM is still active</h1>
-
-
-        <p class="govuk-body govuk-!-margin-bottom-6">
-          This person is no longer recorded as a POM in NOMIS or Digital Prison Services.
+        <h1 class="govuk-heading-l govuk-!-margin-top-6">There is a problem with this person's account</h1>
+        <p class="govuk-body">
+          This person's account may not be set up correctly or they may no longer have access to this service.
         </p>
 
-
-
-        <h2 class="govuk-heading-m">If they are still managing cases</h2>
-
-        <p class="govuk-body">Check that:</p>
-
+        <h2 class="govuk-heading-m">What you need to do</h2>
       
-        <ul class="govuk-body">
-          <li> they have the right role in Digital Prison Services by <a class="govuk-link govuk-link--no-visited-state" href="https://allocation-manager-staging.apps.live-1.cloud-platform.service.justice.gov.uk/help_step2">following these instructions</a>
-          </li></br>
-          <li> their NOMIS account is active and the correct roles are assigned to them – to do this, <a class="govuk-link govuk-link--no-visited-state" href="https://allocation-manager-staging.apps.live-1.cloud-platform.service.justice.gov.uk/help_step3">use these instructions</a>
-          </li>
-        </ul>  
+          <h3 class="govuk-heading-s">Check their access roles</h3>
+          <p class="govuk-body">Ask a local systems administrator to confirm the user has been given the Allocations - POM role on Digital Prison Services.</p>
+  
+          <h3 class="govuk-heading-s">Ensure they have been added to this service</h3>
+          <p class="govuk-body">Go to the <a href="#">Manage staff section</a> to see if this person is listed as either a prison POM or a probation POM. If not, <a href="#">add them as a POM</a>.
+            
+          <h3 class="govuk-heading-s">Check the Attention needed tab</h3>
+          <p class="govuk-body">If they are listed on the Attention needed tab of the <a href="#">Manage staff section</a>, you must reallocate their cases so they can be removed from this service.</a>
 
-
-
-
-        <h2 class="govuk-heading-m">If they have left or will be absent for a while</h2>
-
-        <p class="govuk-body govuk-!-margin-bottom-6">Remove them from their cases by <a href="#" class="govuk-link govuk-link--no-visited-state">changing their status to inactive</a>. You can then allocate their cases to another POM.</p>
-
-        
-
-        
+          <h3 class="govuk-heading-s">Change their status</h3>
+          <p class="govuk-body">If this person has left the prison either permanently or temporarily, select their name in the <a href="#">Manage staff section</a> and then select edit profile to change their status.</p>
 
       </div>
     </div>
