@@ -14,6 +14,7 @@ RUN apt-get update && \
 
 COPY . .
 
+RUN npm install -g npm@12
 RUN npm install
 
 RUN chown -R appuser:appgroup /app
