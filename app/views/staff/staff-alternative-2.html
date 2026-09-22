@@ -1,0 +1,971 @@
+{% extends "includes/layouts/main.html" %}
+
+
+{% block pageTitle %}
+Manage your staff – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link govuk-!-margin-bottom-8">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {% if (data.pom=="NoCasesRemoved") %}
+    <div role="region" class="moj-alert moj-alert--success" aria-label="success: Upload successful" data-module="moj-alert">
+      <div>
+        <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+          <path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+        </svg>
+      </div>
+      <div class="moj-alert__content">
+        Alexis Clarke successfully removed from this service
+      </div>
+      <div class="moj-alert__action">
+        <button class="moj-alert__dismiss" hidden>Dismiss</button>
+      </div>
+    </div>
+    {% else %}
+    {% endif %}
+
+    <div class="moj-page-header-actions">
+      <div class="moj-page-header-actions__title">
+        <h1 class="govuk-heading-xl">Manage your staff</h1>
+      </div>
+    
+      <form action="../add-pom/find-staff-member" method="post">
+
+      <div class="moj-page-header-actions__actions">
+        <div class="moj-button-group moj-button-group--inline">
+    
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Add a POM
+          </button>
+    
+        </div>
+      </div>
+
+      </form>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#active-probation-staff">
+          {% if data.BulkCasesAllocated=="StaffPage" %}
+          Probation POMs (3)
+          {% elseif data.POMadded=="yes" %}
+          {% if data.TypePOM=="ProbationPOM" %}
+          Probation POMs (5)
+          {% else %}
+          Probation POMs (4)
+          {% endif %}
+          {% else %}
+          Probation POMs (4)
+          {% endif %}
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#active-prison-staff">
+          {% if data.POMadded=="yes" %}
+          {% if data.TypePOM=="PrisonPOM" %}
+          Prison POMs (9)
+          {% else %}
+          Prison POMs (8)
+          {% endif %}
+          {% else %}
+          Prison POMs (8)
+          {% endif %}
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#inactive-staff">
+          {% if data.BulkAllocate=="no" %}
+          Away from work (1)
+          {% else %}
+          Away from work (2)
+          {% endif %}
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#attention-needed">
+          Attention needed</a><span id="notifications" class="moj-notification-badge" style="margin-left: 10px;">
+            {% if data.BulkCasesAllocated=="Done" %}
+            3
+            {% else %}
+            4
+            {% endif %}
+          </span>
+      </li>
+    </ul>
+
+
+    
+    
+         <div class="govuk-tabs__panel" id="active-probation-staff">
+
+        <h2 class="govuk-heading-l">Probation POMs</h2>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+        <p style="margin-bottom: 40px;">Change someone’s status by selecting their name below. For example, if they will be away from work for a while, leave the prison or are too busy for new allocations.</p>
+
+        </div>
+        </div>
+
+        <!--<h3 class="govuk-heading-m">Case mix by tier</h3>
+        <img style="width:50%" class="govuk-!-margin-bottom-5" src="/public/images/case-mix-key.png" alt="case mix key"/>-->
+
+
+
+      <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">POM</th>
+      <th class="govuk-table__header" scope="col">Status</th>
+      <th class="govuk-table__header" scope="col" style="text-align: left;">High<br>complexity<br>cases</th>
+      <th class="govuk-table__header" scope="col" style="text-align: left;">Tier A</th>
+      <th class="govuk-table__header" scope="col" style="text-align: left;">Tier B</th>
+      <th class="govuk-table__header" scope="col" style="text-align: left;">Tier C</th>
+      <th class="govuk-table__header" scope="col" style="text-align: left;">Tier D</th>
+      <th class="govuk-table__header" scope="col" style="text-align: left;">Tier E</th>
+      <th class="govuk-table__header" scope="col" style="text-align: left;">Tier F</th>
+      <th class="govuk-table__header" scope="col" style="text-align: left;">Tier G</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Total cases</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+
+<!-- ALEX MORGAN -->
+<tr class="govuk-table__row recommended_pom_row_1">
+
+  <td aria-label="POM name" class="govuk-table__cell">
+    <div style="margin-top: 10px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Alex Morgan</a><br>
+    <span>Full time</span></div>
+  </td>
+
+  <td aria-label="Status" class="govuk-table__cell">
+    <div style="margin-top: 35px;">Available</div>
+  </td>
+
+  <td aria-label="High complexity cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 22px;">80</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier A cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_a" style="display: block; float: none; width: 100%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">50</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier B cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_b" style="display: block; float: none; width: 60%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">30</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier C cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_c" style="display: block; float: none; width: 10%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">5</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier D cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_d" style="display: block; float: none; width: 6%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">3</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier E cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_e" style="display: block; float: none; width: 4%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">2</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier F cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 25px;">0</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier G cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 25px;">0</span>
+    </div>
+  </td>
+
+  <td aria-label="Total cases"
+      class="govuk-table__cell govuk-!-font-weight-bold"
+      data-sort-value="90"
+      style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: center; margin-top: 25px;">90</span>
+    </div>
+  </td>
+
+</tr>
+
+<!-- DANIEL FOSTER -->
+<tr class="govuk-table__row recommended_pom_row_2">
+
+  <td aria-label="POM name" class="govuk-table__cell">
+    <div style="margin-top: 10px;"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview-alternative.html">Daniel Foster</a><br>
+    <span>Full time</span></div>
+  </td>
+
+  <td aria-label="Status" class="govuk-table__cell">
+  <div style="margin-top: 35px;">Available</div>
+  </td>
+
+  <td aria-label="High complexity cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 25px;">34</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier A cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_a" style="display: block; float: none; width: 24%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">12</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier B cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_b" style="display: block; float: none; width: 44%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">22</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier C cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 25px;">0</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier D cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_d" style="display: block; float: none; width: 56%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">28</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier E cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_e" style="display: block; float: none; width: 16%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">8</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier F cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_f" style="display: block; float: none; width: 10%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">5</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier G cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_g" style="display: block; float: none; width: 50%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">25</span>
+    </div>
+  </td>
+
+  <td aria-label="Total cases"
+      class="govuk-table__cell govuk-!-font-weight-bold"
+      data-sort-value="100"
+      style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: center; margin-top: 25px;">100</span>
+    </div>
+  </td>
+
+</tr>
+
+<!-- ELENA WRIGHT -->
+<tr class="govuk-table__row recommended_pom_row_3">
+
+  <td aria-label="POM name" class="govuk-table__cell">
+    <div style="margin-top: 10px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Elena Wright</a><br>
+    <span>Part time – 3 days</span></div>
+  </td>
+
+  <td aria-label="Status" class="govuk-table__cell">
+    <div style="margin-top: 35px;">Available</div>
+  </td>
+
+  <td aria-label="High complexity cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 22px;">7</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier A cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_a" style="display: block; float: none; width: 4%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">2</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier B cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_b" style="display: block; float: none; width: 10%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">5</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier C cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_c" style="display: block; float: none; width: 2%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">1</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier D cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_d" style="display: block; float: none; width: 8%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">4</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier E cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 25px;">0</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier F cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_f" style="display: block; float: none; width: 6%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">3</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier G cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_g" style="display: block; float: none; width: 10%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">5</span>
+    </div>
+  </td>
+
+  <td aria-label="Total cases"
+      class="govuk-table__cell govuk-!-font-weight-bold"
+      data-sort-value="20"
+      style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: center; margin-top: 25px;">20</span>
+    </div>
+  </td>
+
+</tr>
+
+<!-- JAMES GORDON -->
+<tr class="govuk-table__row recommended_pom_row_4">
+
+  <td aria-label="POM name" class="govuk-table__cell">
+    <div style="margin-top: 10px;"><a class="govuk-link govuk-link--no-visited-state" href="#">James Gordon</a><br>
+    <span>Full time</span></div>
+  </td>
+
+  <td aria-label="Status" class="govuk-table__cell">
+    <div style="margin-top: 35px;">Unavailable</div>
+  </td>
+
+  <td aria-label="High complexity cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 22px;">15</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier A cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_a" style="display: block; float: none; width: 30%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">15</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier B cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_b" style="display: block; float: none; width: 24%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">12</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier C cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 25px;">0</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier D cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_d" style="display: block; float: none; width: 40%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">20</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier E cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_e" style="display: block; float: none; width: 36%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">18</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier F cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_f" style="display: block; float: none; width: 30%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">15</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier G cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_g" style="display: block; float: none; width: 40%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">20</span>
+    </div>
+  </td>
+
+  <td aria-label="Total cases"
+      class="govuk-table__cell govuk-!-font-weight-bold"
+      data-sort-value="100"
+      style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: center; margin-top: 25px;">100</span>
+    </div>
+  </td>
+
+</tr>
+
+<!-- MAYA PATEL -->
+<tr class="govuk-table__row recommended_pom_row_5">
+
+  <td aria-label="POM name" class="govuk-table__cell">
+    <div style="margin-top: 10px;"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview-alternative.html">Maya Patel</a><br>
+    <span>Full time</span></div>
+  </td>
+
+  <td aria-label="Status" class="govuk-table__cell">
+    <div style="margin-top: 35px;">Available</div>
+  </td>
+
+  <td aria-label="High complexity cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 22px;">13</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier A cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_a" style="display: block; float: none; width: 10%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">5</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier B cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_b" style="display: block; float: none; width: 16%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">8</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier C cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_c" style="display: block; float: none; width: 24%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">12</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier D cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_d" style="display: block; float: none; width: 40%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">20</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier E cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_e" style="display: block; float: none; width: 30%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">15</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier F cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_f" style="display: block; float: none; width: 20%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">10</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier G cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_g" style="display: block; float: none; width: 4%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">2</span>
+    </div>
+  </td>
+
+  <td aria-label="Total cases"
+      class="govuk-table__cell govuk-!-font-weight-bold"
+      data-sort-value="72"
+      style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: center; margin-top: 25px;">72</span>
+    </div>
+  </td>
+
+</tr>
+
+<!-- PRIYA SHAH -->
+<tr class="govuk-table__row recommended_pom_row_6">
+
+  <td aria-label="POM name" class="govuk-table__cell">
+    <div style="margin-top: 10px;"><a class="govuk-link govuk-link--no-visited-state" href="#">Priya Shah</a><br>
+    <span>Full time</span></div>
+  </td>
+
+  <td aria-label="Status" class="govuk-table__cell">
+    <div style="margin-top: 35px;">Available</div>
+  </td>
+
+  <td aria-label="High complexity cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 25px;">3</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier A cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 25px;">0</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier B cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_b" style="display: block; float: none; width: 6%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">3</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier C cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_c" style="display: block; float: none; width: 14%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">7</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier D cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_d" style="display: block; float: none; width: 20%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">10</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier E cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_e" style="display: block; float: none; width: 24%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">12</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier F cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_f" style="display: block; float: none; width: 30%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">15</span>
+    </div>
+  </td>
+
+  <td aria-label="Tier G cases" class="govuk-table__cell" style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div class="workforce-progress-bar tier_g" style="display: block; float: none; width: 36%; height: 12px; margin: 0;"></div>
+      <span style="display: block; clear: both; text-align: left; margin-top: 5px;">18</span>
+    </div>
+  </td>
+
+  <td aria-label="Total cases"
+      class="govuk-table__cell govuk-!-font-weight-bold"
+      data-sort-value="65"
+      style="text-align: left;">
+    <div class="workforce-progress-container" style="display: block; text-align: left;">
+      <div style="display: block; height: 12px; width: 100%; background-color: #ffffff;"></div>
+      <span style="display: block; clear: both; text-align: center; margin-top: 25px;">65</span>
+    </div>
+  </td>
+
+</tr>
+  </tbody>
+</table>
+
+      
+
+
+      
+
+
+    </div>
+
+
+
+
+    <div class="govuk-tabs__panel" id="active-prison-staff">
+
+      <h2 class="govuk-heading-l">Prison POMs</h2>
+
+      <h3 class="govuk-heading-m">Case mix by tier</h3>
+        <img style="width:50%" class="govuk-!-margin-bottom-5" src="/public/images/case-mix-key.png" alt="case mix key"/>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">POM</th>
+          <th class="govuk-table__header" scope="col">Working pattern</th>
+          <th class="govuk-table__header" scope="col">Status</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Case mix by tier</th>
+          <!-- <th class="govuk-table__header govuk-table__header--numeric" scope="col">High<br>complexity<br>cases</th> -->
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">Total cases</th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row recommended_pom_row_0">
+          <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Annie Bradley</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_c" style="width:40%"><p style="govuk-colour("white")">15<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:60%">23</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="38">38</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_6">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Malcolm Casimir</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time – 3 days per week</td>
+            <td aria-label="status" class="govuk-table__cell">Unavailable</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:0%">2</div>
+              <div class="workforce-progress-bar tier_c" style="width:80%"><p style="govuk-colour("white")">20<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:20%">5</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="25">25</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_1">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Geoff Colum</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:10%">4</div>
+              <div class="workforce-progress-bar tier_c" style="width:60%"><p style="govuk-colour("white")">23<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:30%">12</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="39">39</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_2">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Matthew Hanson</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_c" style="width:80%"><p style="govuk-colour("white")">32<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:15%">6</div>
+              <div class="workforce-progress-bar tier_other" style="width:5%">2</div>
+            </div></td>
+            <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">1</td> -->
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="40">40</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_3">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Sophie Hill</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_c" style="width:75%"><p style="govuk-colour("white")">32<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:25%">10</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="42">42</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_4">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Helen James</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:10%">4</div>
+              <div class="workforce-progress-bar tier_c" style="width:50%"><p style="govuk-colour("white")">22<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:40%">18</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="44">44</td>
+          </tr>
+
+
+
+          <tr class="govuk-table__row recommended_pom_row_5">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Jim Roantree</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_c" style="width:30%"><p style="govuk-colour("white")">15<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:70%">36</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="51">51</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_6">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Carlos Santos</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time – 4 days per week</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_b" style="width:5%">2</div>
+              <div class="workforce-progress-bar tier_c" style="width:55%"><p style="govuk-colour("white")">20<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:40%">14</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+
+              
+
+            </div></td>
+            <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+            <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="36">36</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview?pom=yasmeen">Yasmeen Essa</a></td>
+              <td aria-label="Working pattern" class="govuk-table__cell">Part time – 2 days per week</td>
+              <td aria-label="status" class="govuk-table__cell">Unavailable</td>
+              <td aria-label="case mix" class="govuk-table__cell"><div class="workforce-progress-container">
+                <div class="workforce-progress-bar tier_a" style="width:0%"></div>
+                <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+                <div class="workforce-progress-bar tier_c" style="width:20%"><p style="govuk-colour("white")">2<p></div>
+                <div class="workforce-progress-bar tier_d" style="width:80%">8</div>
+                <!--<div class="workforce-progress-bar tier_other" style="width:0%"></div>-->
+              </td>
+              <!--<td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td>-->
+              <td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="10">10</td>
+            </tr>
+
+
+        </tbody>
+      </table>
+
+
+    </div>
+
+
+
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="inactive-staff">
+
+      <h2 class="govuk-heading-l">Away from work</h2>
+      <table class="govuk-table">
+        
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">POM</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">POM type</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Total cases</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Action</th>
+        </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+          {% if data.BulkAllocate=="no" %}
+          {% else %}
+          <tr class="govuk-table__row">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="staff-pom-overview?pom=hakim">Hakim Reeves</a>
+            </td>
+            <td aria-label="POM type" class="govuk-table__cell ">Prison POM</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">0</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"></td>
+          </tr>
+          {% endif %}
+
+          <tr class="govuk-table__row">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Rachelle Rigal</a></td>
+            <td aria-label="POM type" class="govuk-table__cell ">Probation POM</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">5</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Reallocate cases</a></td>
+          </tr>
+
+          {% if data.BulkCasesAllocatedAFW=="Done" %}
+          <tr class="govuk-table__row">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Yasmeen Essa</a></td>
+            <td aria-label="POM type" class="govuk-table__cell ">Prison POM</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">0</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"></td>
+          </tr>
+          {% elseif data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
+          <tr class="govuk-table__row">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Yasmeen Essa</a></td>
+            <td aria-label="POM type" class="govuk-table__cell ">Prison POM</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">4</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../bulkallocation/select-pom?pom=yasmeen">Reallocate cases</a></td>
+          </tr>
+          {% elseif data.BulkAllocateCasesAFW=="later" %}
+          <tr class="govuk-table__row">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Yasmeen Essa</a></td>
+            <td aria-label="POM type" class="govuk-table__cell ">Prison POM</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">10</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../bulkallocation/select-pom?pom=yasmeen">Reallocate cases</a></td>
+          </tr>
+          {% else %}
+          {% endif %}
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="attention-needed">
+
+      <h2 class="govuk-heading-l">Attention needed </h2>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body">These staff members' cases need reallocating so they can be removed from this service.</br></p>
+        </div>
+      </div>
+
+      <table class="govuk-table">
+        
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">POM</th>
+          <th class="govuk-table__header" scope="col">Last case allocated</th>
+          <th class="govuk-table__header" scope="col">Total cases</th>
+          <th class="govuk-table__header" scope="col">Action</th>
+        </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Amina El-Sayed</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">1 September 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">84</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./remove-pom">Reallocate cases</a></td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Hiroshi Tanaka</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">20 August 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">90</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./remove-pom">Reallocate cases</a></td>
+          </tr>
+
+          <tr id="second-row" class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Mateo Rossi</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">7 August 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell">
+
+              <a class="govuk-link--no-visited-state" href="../bulkallocation/remove-pom?pom=mateo">Reallocate cases</a>
+
+            </td>
+          </tr>
+
+          {% if data.BulkCasesAllocated=="Done" %}
+          {% elseif data.BulkCasesAllocated=="CasesLeftLater" %}
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Sarah Bailey</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">10 November 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">51</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../bulkallocation/select-pom?BulkCasesAllocated=MoreBulkAllocations">Reallocate cases</a></td>
+          </tr>
+          {% elseif data['BulkAllocateCases'] == 'later' %}
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Sarah Bailey</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">10 November 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">71</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../bulkallocation/select-pom">Reallocate cases</a></td>
+          </tr>
+          {% else %}
+          {% endif %}
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+
+
+
+  </div>
+    
+
+
+  </div>
+</div>
+
+
+{% endblock %}
