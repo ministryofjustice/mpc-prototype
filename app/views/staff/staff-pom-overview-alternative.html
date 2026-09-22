@@ -1,0 +1,513 @@
+{% extends "includes/layouts/main.html" %}
+
+{% block pageTitle %}
+Sarah Bailey
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="./staff" class="govuk-back-link govuk-body" style="margin-left: -10px;">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+
+    {% if (data.statusPOM=="active") or (data.statusPOM=="unavailable") %}
+    <div role="region" class="moj-alert moj-alert--success" aria-label="success: Upload successful" data-module="moj-alert" style="margin-top: 20px;">
+      <div>
+        <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+          <path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+        </svg>
+      </div>
+      <div class="moj-alert__content">Profile updated for Sarah Bailey</div>
+      <div class="moj-alert__action">
+        <button class="moj-alert__dismiss" hidden>Dismiss</button>
+      </div>
+    </div>
+    {% else %}
+    {% endif %}
+
+
+    <div class="moj-page-header-actions">
+      <div class="moj-page-header-actions__title">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-4">
+          <span class="govuk-caption-xl">
+            {% if data['pom'] == 'yasmeen' %} 
+            Prison POM
+            {% else %} 
+            Probation POM
+            {% endif %} 
+          </span>
+          {% if data['pom'] == 'yasmeen' %} 
+          Yasmeen Essa
+          {% elseif data['pom'] == 'alexis' %} 
+          Alexis Clarke
+          {% elseif data['pom'] == 'hakim' %} 
+          Hakim Reeves
+          {% else %} 
+          Daniel Foster
+          {% endif %} 
+        </h1>
+      </div>
+    
+      <div class="moj-page-header-actions__actions govuk-!-margin-top-7">
+        <div class="moj-button-group moj-button-group--inline">
+    
+          {% if data['pom'] == 'yasmeen' %}
+          <form action="staff-edit-profile?pom=yasmeen#bulkallocation" method="post">
+          {% elseif data['pom'] == 'alexis' %}
+          <form action="staff-edit-profile?pom=alexis#bulkallocation" method="post">
+          {% elseif data['pom'] == 'hakim' %} 
+          <form action="staff-edit-profile?pom=hakim#bulkallocation" method="post">
+          {% else %} 
+          <form action="staff-edit-profile?pom=sarah#bulkallocation" method="post">
+          {% endif %} 
+
+          {% if data['pom'] !== 'alexis' %}
+
+          <button type="submit" class="govuk-button govuk-button" data-module="govuk-button">
+            Edit profile
+          </button>
+
+          {% endif %}
+
+
+        </form>
+    
+        </div>
+      </div>
+    
+    </div>
+
+
+    
+
+    <div class="govuk-grid-row">
+
+
+      <div class="govuk-grid-column-full">
+      <nav class="moj-sub-navigation" aria-label="Sub navigation">
+    
+        <ul class="moj-sub-navigation__list">
+    
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" aria-current="page">Overview</a>
+          </li>
+    
+    
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-caseload">Caseload (100)</a>
+          </li>
+
+          <li class="moj-sub-navigation__item">
+            {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' or data['pom'] == 'hakim' %} 
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="#">Handover cases (0)</a>
+            {% else %} 
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-handover">Handover cases (4)</a>
+            {% endif %} 
+          </li>
+    
+          <li class="moj-sub-navigation__item">
+            {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' or data['pom'] == 'hakim' %} 
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="#">Parole cases (0)</a>
+            {% else %}
+            <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./staff-pom-parole">Parole cases (8)</a>
+            {% endif %} 
+          </li>
+    
+        </ul>
+    
+    </nav>
+    </div>
+    </div>
+    
+    
+    
+      <h2 class="govuk-heading-l">
+        Overview
+      </h2>
+      
+    
+      <div class="govuk-grid-column-two-thirds" style="margin-left: -15px;">
+    
+    
+        <h3 class="govuk-heading-m govuk-!-margin-top-2">
+          Current workload</h3>
+      
+        <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third" style="width: 264px;">
+                <div class="card card-total">
+                  <a href="./staff-pom-caseload.html" class="govuk-link--no-visited-state"><span class="card__heading">100</span>
+                  <p>total cases</p></a>
+                </div>
+              </div>
+        
+              <div class="govuk-grid-column-one-third" style="width: 264px;">
+                <div class="card card-total">
+                  {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' or data['pom'] == 'hakim' %} 
+                  <a href="#" class="govuk-link--no-visited-state"><span class="card__heading">0</span>
+                  <p>handovers in progress</p></a>
+                  {% else %} 
+                  <a href="#" class="govuk-link--no-visited-state"><span class="card__heading">4</span>
+                  <p>handovers in progress</p></a>
+                  {% endif %} 
+                </div>
+              </div>
+        
+              <div class="govuk-grid-column-one-third" style="width: 264px;">
+                <div class="card card-total">
+                  {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' or data['pom'] == 'hakim' %} 
+                  <a href="#" class="govuk-link--no-visited-state"><span class="card__heading">0</span>
+                  <p>parole cases</p></a>
+                  {% else %}
+                  <a href="./staff-pom-parole.html" class="govuk-link--no-visited-state"><span class="card__heading">8</span>
+                  <p>parole cases</p></a>
+                  {% endif %}
+                </div>
+              </div>
+        
+              
+            </div>
+        
+        
+        
+        
+        <h3 class="govuk-heading-m govuk-!-margin-top-8">Allocations summary</h3>
+        
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Last case allocated
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {% if data['pom'] == 'yasmeen' %}
+              23 Feb 2025
+              {% elseif data['pom'] == 'alexis' or data['pom'] == 'hakim' %}
+              5 Oct 2025
+              {% else %}
+              10 Nov 2025
+              {% endif %}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Allocations in last 7 days
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' or data['pom'] == 'hakim' %}
+              0
+              {% else %}
+              2
+              {% endif %}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-caseload#past-week">View</a>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Releases in next 4 weeks
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' or data['pom'] == 'hakim' %}
+              0
+              {% else %}
+              3
+              {% endif %}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-caseload#past-month">View</a>
+            </dd>
+          </div>
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Working pattern
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {% if data['pom'] == 'yasmeen' %}
+                      Part time – 2 days per week
+                      {% elseif data['pom'] == 'sarah' %}
+                      Part time – 4 days per week
+                      {% else %}
+                      Full time
+                      {% endif %}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      {% if data['pom'] == 'yasmeen' %}
+                      <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile?pom=yasmeen">Change<span class="govuk-visually-hidden">working pattern</span></a>
+                      {% elseif data['pom'] == 'alexis' %}
+                      <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile?pom=alexis">Change<span class="govuk-visually-hidden">working pattern</span></a>
+                      {% elseif data['pom'] == 'hakim' %}
+                      <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile?pom=hakim">Change<span class="govuk-visually-hidden">working pattern</span></a>
+                      {% else %}
+                      <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile?pom=sarah">Change<span class="govuk-visually-hidden">working pattern</span></a>
+                      {% endif %}
+                    </dd>
+                  </div>
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Status
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {% if data['pom'] == 'alexis' or data['pom'] == 'yasmeen' %}
+                      Unavailable for new cases
+                      {% elseif data['pom'] == 'hakim' %} 
+                      Away from work
+                      {% elseif data.statusPOM=="active" %}
+                      Available for new cases	
+                      {% elseif data.statusPOM=="unavailable" %}
+                      Unavailable for new cases
+                      {% elseif data.statusPOM=="inactive" %}
+                      Away from work
+                      {% else %}
+                      Available for new cases
+                      {% endif %}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      {% if data['pom'] == 'yasmeen' %}
+                      <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile?pom=yasmeen">Change<span class="govuk-visually-hidden">status</span></a>
+                      {% elseif data['pom'] == 'alexis' %}
+                      <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile?pom=alexis">Change<span class="govuk-visually-hidden">status</span></a>
+                      {% elseif data['pom'] == 'hakim' %}
+                      <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile?pom=hakim">Change<span class="govuk-visually-hidden">status</span></a>
+                      {% else %}
+                      <a class="govuk-link govuk-link--no-visited-state" href="./staff-edit-profile?pom=sarah">Change<span class="govuk-visually-hidden">status</span></a>
+                      {% endif %}
+                    </dd>
+                  </div>
+
+
+
+                </dl>
+        
+        </div>
+        
+        
+        
+        
+        
+        
+          <div class="govuk-grid-column-one-third govuk-!-margin-top-4">
+            
+
+            <!--NEW BAR DIAGRAM START-->
+            <h3 class="govuk-heading-m">
+              Case mix by tier
+            </h3>
+
+<p class="govuk-body-m govuk-!-margin-bottom-1">
+  Tier A
+</p>
+
+<div class="workforce-progress-container"
+     style="background-color: transparent; display: flex; align-items: center; height: auto; margin-bottom: 15px; padding: 0;">
+
+  <div class="workforce-progress-bar tier_a"
+       style="width: 20%; height: 5px; margin: 0;">
+  </div>
+
+  <span class="govuk-body-m govuk-!-margin-bottom-0"
+        style="margin-left: auto; padding-left: 2px; text-align: right; width: 30px;">
+    12
+  </span>
+</div>
+
+
+<p class="govuk-body-m govuk-!-margin-bottom-1">
+  Tier B
+</p>
+
+<div class="workforce-progress-container"
+     style="background-color: transparent; display: flex; align-items: center; height: auto; margin-bottom: 15px; padding: 0;">
+
+  <div class="workforce-progress-bar tier_b"
+       style="width: 36.7%; height: 5px; margin: 0;">
+  </div>
+
+  <span class="govuk-body-m govuk-!-margin-bottom-0"
+        style="margin-left: auto; padding-left: 2px; text-align: right; width: 30px;">
+    22
+  </span>
+</div>
+
+
+<p class="govuk-body-m govuk-!-margin-bottom-1">
+  Tier C
+</p>
+
+<div class="workforce-progress-container"
+     style="background-color: transparent; display: flex; align-items: center; height: auto; margin-bottom: 15px; padding: 0;">
+
+  <span class="govuk-body-m govuk-!-margin-bottom-0"
+        style="margin-left: auto; padding-left: 2px; text-align: right; width: 30px;">
+    0
+  </span>
+</div>
+
+
+<p class="govuk-body-m govuk-!-margin-bottom-1">
+  Tier D
+</p>
+
+<div class="workforce-progress-container"
+     style="background-color: transparent; display: flex; align-items: center; height: auto; margin-bottom: 15px; padding: 0;">
+
+  <div class="workforce-progress-bar tier_d"
+       style="width: 46.7%; height: 5px; margin: 0;">
+  </div>
+
+  <span class="govuk-body-m govuk-!-margin-bottom-0"
+        style="margin-left: auto; padding-left: 2px; text-align: right; width: 30px;">
+    28
+  </span>
+</div>
+
+
+<p class="govuk-body-m govuk-!-margin-bottom-1">
+  Tier E
+</p>
+
+<div class="workforce-progress-container"
+     style="background-color: transparent; display: flex; align-items: center; height: auto; margin-bottom: 15px; padding: 0;">
+
+  <div class="workforce-progress-bar tier_e"
+       style="width: 13.3%; height: 5px; margin: 0;">
+  </div>
+
+  <span class="govuk-body-m govuk-!-margin-bottom-0"
+        style="margin-left: auto; padding-left: 2px; text-align: right; width: 30px;">
+    8
+  </span>
+</div>
+
+
+<p class="govuk-body-m govuk-!-margin-bottom-1">
+  Tier F
+</p>
+
+<div class="workforce-progress-container"
+     style="background-color: transparent; display: flex; align-items: center; height: auto; margin-bottom: 15px; padding: 0;">
+
+  <div class="workforce-progress-bar tier_f"
+       style="width: 8.3%; height: 5px; margin: 0;">
+  </div>
+
+  <span class="govuk-body-m govuk-!-margin-bottom-0"
+        style="margin-left: auto; padding-left: 2px; text-align: right; width: 30px;">
+    5
+  </span>
+</div>
+
+
+<p class="govuk-body-m govuk-!-margin-bottom-1">
+  Tier G
+</p>
+
+<div class="workforce-progress-container"
+     style="background-color: transparent; display: flex; align-items: center; height: auto; margin-bottom: 15px; padding: 0;">
+
+  <div class="workforce-progress-bar tier_g"
+       style="width: 41.7%; height: 5px; margin: 0;">
+  </div>
+
+  <span class="govuk-body-m govuk-!-margin-bottom-0"
+        style="margin-left: auto; padding-left: 2px; text-align: right; width: 30px;">
+    25
+  </span>
+</div>
+
+
+
+<!--NEW BAR DIAGRAM END-->        
+        
+            <h3 class="govuk-heading-m govuk-!-margin-top-6">
+              Case mix by POM role
+            </h3>
+
+  
+           <!--NEW BAR DIAGRAM START-->
+
+
+
+<p class="govuk-body-m govuk-!-margin-bottom-1">
+  Responsible
+</p>
+
+<div class="workforce-progress-container"
+     style="background-color: transparent; display: flex; align-items: center; height: auto; margin-bottom: 15px; padding: 0;">
+
+  <div class="workforce-progress-bar bar_responsible"
+       style="width: 91.7%; height: 5px; margin: 0;">
+  </div>
+
+  <span class="govuk-body-m govuk-!-margin-bottom-0"
+        style="margin-left: auto; padding-left: 2px; text-align: right; width: 30px;">
+    55
+  </span>
+</div>
+
+
+<p class="govuk-body-m govuk-!-margin-bottom-1">
+  Supporting
+</p>
+
+<div class="workforce-progress-container"
+     style="background-color: transparent; display: flex; align-items: center; height: auto; margin-bottom: 15px; padding: 0;">
+
+  <div class="workforce-progress-bar bar_supporting"
+       style="width: 58.3%; height: 5px; margin: 0;">
+  </div>
+
+  <span class="govuk-body-m govuk-!-margin-bottom-0"
+        style="margin-left: auto; padding-left: 2px; text-align: right; width: 30px;">
+    35
+  </span>
+</div>
+
+
+<p class="govuk-body-m govuk-!-margin-bottom-1">
+  Co-working
+</p>
+
+<div class="workforce-progress-container"
+     style="background-color: transparent; display: flex; align-items: center; height: auto; margin-bottom: 15px; padding: 0;">
+
+  <div class="workforce-progress-bar bar_coworking"
+       style="width: 16.7%; height: 5px; margin: 0;">
+  </div>
+
+  <span class="govuk-body-m govuk-!-margin-bottom-0"
+        style="margin-left: auto; padding-left: 2px; text-align: right; width: 30px;">
+    10
+  </span>
+</div>
+
+           <!--NEW BAR DIAGRAM END-->
+
+
+        
+          </div>
+        </div>
+
+</div>
+
+  </div>
+
+
+
+{% endblock %}

@@ -72,15 +72,15 @@ Manage your staff – Digital Prison Services
       <li class="govuk-tabs__list-item">
         <a class="govuk-tabs__tab" href="#active-probation-staff">
           {% if data.BulkCasesAllocated=="StaffPage" %}
-          Probation POMs (3)
+          Active probation POMs (3)
           {% elseif data.POMadded=="yes" %}
           {% if data.TypePOM=="ProbationPOM" %}
-          Probation POMs (5)
+          Active probation POMs (5)
           {% else %}
-          Probation POMs (4)
+          Active probation POMs (4)
           {% endif %}
           {% else %}
-          Probation POMs (4)
+          Active probation POMs (4)
           {% endif %}
         </a>
       </li>
@@ -88,12 +88,12 @@ Manage your staff – Digital Prison Services
         <a class="govuk-tabs__tab" href="#active-prison-staff">
           {% if data.POMadded=="yes" %}
           {% if data.TypePOM=="PrisonPOM" %}
-          Prison POMs (9)
+          Active prison POMs (9)
           {% else %}
-          Prison POMs (8)
+          Active prison POMs (8)
           {% endif %}
           {% else %}
-          Prison POMs (8)
+          Active prison POMs (8)
           {% endif %}
         </a>
       </li>
@@ -123,18 +123,10 @@ Manage your staff – Digital Prison Services
     
     <div class="govuk-tabs__panel" id="active-probation-staff">
 
-        <h2 class="govuk-heading-l">Probation POMs</h2>
+        <h2 class="govuk-heading-l">Active probation POMs</h2>
 
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-
-        <p>Change someone’s status by selecting their name below. For example, if they will be away from work for a while, leave the prison or are too busy for new allocations.</p>
-
-        </div>
-        </div>
-
-        <!--<h3 class="govuk-heading-m">Case mix by tier</h3>
-        <img style="width:50%" class="govuk-!-margin-bottom-5" src="/public/images/case-mix-key.png" alt="case mix key"/>-->
+        <h3 class="govuk-heading-m">Case mix by tier</h3>
+        <img style="width:50%" class="govuk-!-margin-bottom-5" src="/public/images/case-mix-key.png" alt="case mix key"/>
 
 
 
@@ -142,7 +134,8 @@ Manage your staff – Digital Prison Services
         <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th class="govuk-table__header" scope="col">POM</th>
-          <th class="govuk-table__header" scope="col">Working pattern / Status</th>
+          <th class="govuk-table__header" scope="col">Working pattern</th>
+          <th class="govuk-table__header" scope="col">Status</th>
           <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Case mix by tier</th>
           <!-- <th class="govuk-table__header govuk-table__header--numeric" scope="col">High<br>complexity<br>cases</th> -->
           <th class="govuk-table__header govuk-table__header--numeric" scope="col">Total cases</th>
@@ -155,10 +148,8 @@ Manage your staff – Digital Prison Services
           {% else %}
           <tr class="govuk-table__row recommended_pom_row_3">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview?pom=alexis">Alexis Clarke</a></td>
-            <td aria-label="Working pattern" class="govuk-table__cell">
-              Full time</br>
-              Unavailable
-          </td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Unavailable</td>
 
             <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
               <div class="workforce-progress-bar tier_a" style="width:0%"><p style="govuk-colour("white")"><p></div>
@@ -175,10 +166,8 @@ Manage your staff – Digital Prison Services
           {% if data.BulkCasesAllocated=="Hakim" %}
           <tr class="govuk-table__row recommended_pom_row_3">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview">Hakim Reeves</a></td>
-            <td aria-label="Working pattern" class="govuk-table__cell">
-              Full time</br>
-              Available
-            </td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
 
             <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
               <div class="workforce-progress-bar tier_a" style="width:30%"><p style="govuk-colour("white")">10<p></div>
@@ -193,10 +182,8 @@ Manage your staff – Digital Prison Services
           {% elseif data.BulkAllocate=="no" %}
           <tr class="govuk-table__row recommended_pom_row_3">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview">Hakim Reeves</a></td>
-            <td aria-label="Working pattern" class="govuk-table__cell">
-              Full time</br>
-              Available
-            </td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
 
             <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
               <div class="workforce-progress-bar tier_a" style="width:0%"><p style="govuk-colour("white")">0<p></div>
@@ -215,10 +202,8 @@ Manage your staff – Digital Prison Services
           {% else %}
           <tr class="govuk-table__row recommended_pom_row_3">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview?pom=sarah">Sarah Bailey</a></td>
-            <td aria-label="Working pattern" class="govuk-table__cell">
-            Part time – 4 days per week</br>
-            Available
-          </td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time – 4 days per week</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
 
             <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
               <div class="workforce-progress-bar tier_a" style="width:15%"><p style="govuk-colour("white")">13<p></div>
@@ -234,12 +219,8 @@ Manage your staff – Digital Prison Services
 
           <tr class="govuk-table__row recommended_pom_row_0">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Sylvie Barker</a></td>
-            <td aria-label="Working pattern" class="govuk-table__cell">
-              Full time</br>
-              Available
-            </td>
-
-
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
             <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
               <div class="workforce-progress-bar tier_a" style="width:60%"><p style="govuk-colour("white")">24<p></div>
               <div class="workforce-progress-bar tier_b" style="width:30%">12</div>
@@ -253,12 +234,8 @@ Manage your staff – Digital Prison Services
 
           <tr class="govuk-table__row recommended_pom_row_2">
             <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Stephen Dicks</a></td>
-            <td aria-label="Working pattern" class="govuk-table__cell">
-              Part time – 0.5 day per week</br>
-              Available
-            </td>
-
-
+            <td aria-label="Working pattern" class="govuk-table__cell">Part time – 0.5 day per week</td>
+            <td aria-label="status" class="govuk-table__cell">Available</td>
             <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
               <div class="workforce-progress-bar tier_a" style="width:50%"><p style="govuk-colour("white")">18<p></div>
               <div class="workforce-progress-bar tier_b" style="width:30%">11</div>
@@ -298,11 +275,9 @@ Manage your staff – Digital Prison Services
                 {% elseif data.workpatternDays=="10" %}
                 0.5 day per week
                 {% endif %}
-              {% endif %}</br>
-            Available
+              {% endif %}
             </td>
-
-
+            <td aria-label="status" class="govuk-table__cell">Available</td>
             <td aria-label="case mix" class="govuk-table__cell ">
               <!--<div class="workforce-progress-container">
               <div class="workforce-progress-bar tier_a" style="width:50%"><p style="govuk-colour("white")">18<p></div>
@@ -321,52 +296,18 @@ Manage your staff – Digital Prison Services
 
 
           <tr class="govuk-table__row recommended_pom_row_5">
-            <td aria-label="POM name" class="govuk-table__cell" style="width: 20%;"><a class="govuk-link govuk-link--no-visited-state" href="#">James Gordon</a></td>
-            <td aria-label="Working pattern" class="govuk-table__cell" style="width: 30%;">
-              Full time</br>
-              Unavailable
-            </td>
-
-
-            <td aria-label="case mix" class="govuk-table__cell" style="width: 45%;">
-              <div class="workforce-progress-container">
-                <div class="workforce-progress-bar tier_a" style="width:14%; height: 60px;">
-                  <p style="govuk-colour("white")">11</br>
-                    Tier A
-                  <p>
-                  </div>
-                <div class="workforce-progress-bar tier_b" style="width:14%; height: 60px;">
-                  22</br>
-                  Tier B
-                </div>
-                <div class="workforce-progress-bar tier_c" style="width:14%; height: 60px;">
-                  <p style="govuk-colour("white")">
-                    33</br>
-                    Tier C
-                    <p>
-                  </div>
-                <div class="workforce-progress-bar tier_d" style="width:14%; height: 60px;">
-                  44</br>
-                  Tier D
-                </div>
-                <div class="workforce-progress-bar tier_other" style="width:14%; height: 60px;">
-                  55</br>
-                  Tier E
-                </div>
-                <div class="workforce-progress-bar tier_other" style="width:14%; height: 60px;">
-                  66</br>
-                  Tier F
-                </div>
-                <div class="workforce-progress-bar tier_other" style="width:14%; height: 60px;">
-                  77</br>
-                  Tier G
-                </div>
-                <!--<div class="workforce-progress-bar tier_other" style="width:0%"></div>-->
-              </div>
-            </td>
-
-              <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">15</td>
-              <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="27" style="width: 5%;">27</td>
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">James Gordon</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">Full time</td>
+            <td aria-label="status" class="govuk-table__cell">Unavailable</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:45%"><p style="govuk-colour("white")">12<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:45%">12</div>
+              <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">3<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">15</td> -->
+              <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="27">27</td>
           </tr>
 
 
@@ -386,7 +327,7 @@ Manage your staff – Digital Prison Services
 
     <div class="govuk-tabs__panel" id="active-prison-staff">
 
-      <h2 class="govuk-heading-l">Prison POMs</h2>
+      <h2 class="govuk-heading-l">Active prison POMs</h2>
 
       <h3 class="govuk-heading-m">Case mix by tier</h3>
         <img style="width:50%" class="govuk-!-margin-bottom-5" src="/public/images/case-mix-key.png" alt="case mix key"/>

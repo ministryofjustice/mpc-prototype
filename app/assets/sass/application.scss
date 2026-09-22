@@ -863,46 +863,65 @@ a.morelink:visited {
   display: block;
 }
 
-.tier-a {
-  background-color: govuk-colour('bright-purple');
-}
-
-.tier-b {
-  background-color: govuk-colour('purple');
-}
-
-.tier-c {
-  background-color: govuk-colour('dark-blue');
-}
-
-.tier-d {
-  background-color: govuk-colour('blue');
-}
-
-.tier-other {
-  background-color: govuk-colour('light-blue');
-}
 
 
 .tier_a {
-  background-color: govuk-colour('dark-blue');
+  background-color: #ca357c; // Magenta
 }
 
 .tier_b {
-  background-color: govuk-colour('light-blue');
+  background-color: #f47738; // Orange
 }
 
 .tier_c {
-  background-color: govuk-colour('pink');
+  background-color: #54319f; // Purple
 }
 
 .tier_d {
+  background-color: #1d70b8; // Blue
+}
+
+.tier_e {
+  background-color: #158187; // Teal
+}
+
+.tier_f {
+  background-color: #7f65b7; // Purple tint 25%
+}
+
+.tier_g {
+  background-color: #5694ca; // Blue tint 25%
+}
+
+
+.tier-a {
+  background-color: govuk-colour('dark-blue');
+}
+
+.tier-b {
+  background-color: govuk-colour('light-blue');
+}
+
+.tier-c {
+  background-color: govuk-colour('pink');
+}
+
+.tier-d {
   background-color: govuk-colour('light-pink');
 }
 
-.tier_other {
-  background-color: govuk-colour('mid-grey');
+.bar_responsible {
+  background-color: #806f00;
 }
+
+.bar_supporting {
+  background-color: #99704a;
+}
+
+.bar_coworking {
+  background-color: #ccb8a5;
+}
+
 
 
 .caseload-swatch {
@@ -917,7 +936,7 @@ a.morelink:visited {
 
 
 .workforce-progress-container {
-  background-color: govuk-colour('white');
+  background-color: transparent;
   height: 40px;
   margin-bottom: 30px;
   width: 100%;
@@ -927,7 +946,7 @@ a.morelink:visited {
   border-right: solid;
   border-left: solid;
   border-top: transparent;
-  border-color: govuk-colour('white');
+  border-color: transparent;
   border-right: 3px;
   float: left;
   height: 30px;
