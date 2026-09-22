@@ -1,0 +1,589 @@
+{% extends "includes/layouts/main.html" %}
+
+
+{% block pageTitle %}
+Manage your staff – Digital Prison Services
+{% endblock %}
+
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link govuk-!-margin-bottom-8">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {% if (data.pom=="NoCasesRemoved") %}
+    <div role="region" class="moj-alert moj-alert--success" aria-label="success: Upload successful" data-module="moj-alert">
+      <div>
+        <svg class="moj-alert__icon" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" height="30" width="30">
+          <path d="M11.2869 24.6726L2.00415 15.3899L4.62189 12.7722L11.2869 19.4186L25.3781 5.32739L27.9958 7.96369L11.2869 24.6726Z" fill="currentColor" />
+        </svg>
+      </div>
+      <div class="moj-alert__content">
+        Alexis Clarke successfully removed from this service
+      </div>
+      <div class="moj-alert__action">
+        <button class="moj-alert__dismiss" hidden>Dismiss</button>
+      </div>
+    </div>
+    {% else %}
+    {% endif %}
+
+    <div class="moj-page-header-actions">
+      <div class="moj-page-header-actions__title">
+        <h1 class="govuk-heading-xl">Manage your staff</h1>
+      </div>
+    
+      <form action="../add-pom/find-staff-member" method="post">
+
+      <div class="moj-page-header-actions__actions">
+        <div class="moj-button-group moj-button-group--inline">
+    
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Add a POM
+          </button>
+    
+        </div>
+      </div>
+
+      </form>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#active-probation-staff">
+          {% if data.BulkCasesAllocated=="StaffPage" %}
+          Probation POMs (3)
+          {% elseif data.POMadded=="yes" %}
+          {% if data.TypePOM=="ProbationPOM" %}
+          Probation POMs (5)
+          {% else %}
+          Probation POMs (4)
+          {% endif %}
+          {% else %}
+          Probation POMs (4)
+          {% endif %}
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#active-prison-staff">
+          {% if data.POMadded=="yes" %}
+          {% if data.TypePOM=="PrisonPOM" %}
+          Prison POMs (9)
+          {% else %}
+          Prison POMs (8)
+          {% endif %}
+          {% else %}
+          Prison POMs (8)
+          {% endif %}
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#inactive-staff">
+          {% if data.BulkAllocate=="no" %}
+          Away from work (1)
+          {% else %}
+          Away from work (2)
+          {% endif %}
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#attention-needed">
+          Attention needed</a><span id="notifications" class="moj-notification-badge" style="margin-left: 10px;">
+            {% if data.BulkCasesAllocated=="Done" %}
+            3
+            {% else %}
+            4
+            {% endif %}
+          </span>
+      </li>
+    </ul>
+
+
+    
+    
+    <div class="govuk-tabs__panel" id="active-probation-staff">
+
+        <h2 class="govuk-heading-l">Probation POMs</h2>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+        <p>Change someone’s status by selecting their name below. For example, if they will be away from work for a while, leave the prison or are too busy for new allocations.</p>
+
+        </div>
+        </div>
+
+        <!--<h3 class="govuk-heading-m">Case mix by tier</h3>
+        <img style="width:50%" class="govuk-!-margin-bottom-5" src="/public/images/case-mix-key.png" alt="case mix key"/>-->
+
+
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">POM</th>
+          <th class="govuk-table__header" scope="col">Working pattern / Status</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Case mix by tier</th>
+          <!-- <th class="govuk-table__header govuk-table__header--numeric" scope="col">High<br>complexity<br>cases</th> -->
+          <th class="govuk-table__header govuk-table__header--numeric" scope="col">Total cases</th>
+
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          {% if (data.pom=="NoCasesRemoved") %}
+          {% else %}
+          <tr class="govuk-table__row recommended_pom_row_3">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview?pom=alexis">Alexis Clarke</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">
+              Full time</br>
+              Unavailable
+          </td>
+
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"><p style="govuk-colour("white")"><p></div>
+              <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+              <div class="workforce-progress-bar tier_c" style="width:0%"><p style="govuk-colour("white")"><p></div>
+              <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+              <!--<div class="workforce-progress-bar tier_other" style="width:0%"></div>-->
+            </td>
+            <!--<td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">10</td>-->
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">0</td>
+          </tr>
+          {% endif %}
+
+          {% if data.BulkCasesAllocated=="Hakim" %}
+          <tr class="govuk-table__row recommended_pom_row_3">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview">Hakim Reeves</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">
+              Full time</br>
+              Available
+            </td>
+
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:30%"><p style="govuk-colour("white")">10<p></div>
+                <div class="workforce-progress-bar tier_b" style="width:40%">14</div>
+                <div class="workforce-progress-bar tier_c" style="width:20%"><p style="govuk-colour("white")">8<p></div>
+                <div class="workforce-progress-bar tier_d" style="width:10%">2</div>
+                <!--<div class="workforce-progress-bar tier_other" style="width:0%"></div>-->
+              
+        <!--</td><td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">10</td>-->
+              <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="0">34</td>
+          </tr>
+          {% elseif data.BulkAllocate=="no" %}
+          <tr class="govuk-table__row recommended_pom_row_3">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview">Hakim Reeves</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">
+              Full time</br>
+              Available
+            </td>
+
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:0%"><p style="govuk-colour("white")">0<p></div>
+                <div class="workforce-progress-bar tier_b" style="width:0%"></div>
+                <div class="workforce-progress-bar tier_c" style="width:0%"><p style="govuk-colour("white")">0<p></div>
+                <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+                <!--<div class="workforce-progress-bar tier_other" style="width:0%"></div>-->
+        <!--</td><td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">10</td>-->
+                <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="0">0</td>
+          </tr>
+          {% endif %}
+
+
+          {% if data.BulkCasesAllocated=="Done" %}
+          {% elseif data.BulkCasesAllocated=="CasesLeftLater" %}
+          {% else %}
+          <tr class="govuk-table__row recommended_pom_row_3">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./staff-pom-overview?pom=sarah">Sarah Bailey</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">
+            Part time – 4 days per week</br>
+            Available
+          </td>
+
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:15%"><p style="govuk-colour("white")">13<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:20%">16</div>
+              <div class="workforce-progress-bar tier_c" style="width:45%"><p style="govuk-colour("white")">25<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:20%">17</div>
+              <!--<div class="workforce-progress-bar tier_other" style="width:0%"></div>-->
+            </td>
+            <!--<td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">10</td>-->
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="71">71</td>
+          </tr>
+          {% endif %}
+
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Sylvie Barker</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">
+              Full time</br>
+              Available
+            </td>
+
+
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:60%"><p style="govuk-colour("white")">24<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:30%">12</div>
+              <div class="workforce-progress-bar tier_c" style="width:10%"><p style="govuk-colour("white")">4<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:0%"></div>
+              <!--<div class="workforce-progress-bar tier_other" style="width:0%"></div>-->
+            <!-- </div></td>
+            <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">8</td> -->
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="40">40</td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_2">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Stephen Dicks</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">
+              Part time – 0.5 day per week</br>
+              Available
+            </td>
+
+
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:50%"><p style="govuk-colour("white")">18<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:30%">11</div>
+              <div class="workforce-progress-bar tier_c" style="width:15%"><p style="govuk-colour("white")">5<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:5%">1</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div></td>
+            <!-- <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric">15</td> -->
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="35">35</td>
+          </tr>
+
+          {% if data.POMadded=="yes" %}
+          {% if data.TypePOM=="ProbationPOM" %}
+          <tr class="govuk-table__row recommended_pom_row_2">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Aamir Khan</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell">
+              {% if data.workingpatternPOM=="fulltime" %}
+              Full time
+              {% else %}
+              Part time – 
+                {% if data.workpatternDays=="90" %}
+                4.5 days per week
+                {% elseif data.workpatternDays=="80" %}
+                4 days per week
+                {% elseif data.workpatternDays=="70" %}
+                3.5 days per week
+                {% elseif data.workpatternDays=="60" %}
+                3 days per week
+                {% elseif data.workpatternDays=="50" %}
+                2.5 days per week
+                {% elseif data.workpatternDays=="40" %}
+                2 days per week
+                {% elseif data.workpatternDays=="30" %}
+                1.5 days per week
+                {% elseif data.workpatternDays=="20" %}
+                1 day per week
+                {% elseif data.workpatternDays=="10" %}
+                0.5 day per week
+                {% endif %}
+              {% endif %}</br>
+            Available
+            </td>
+
+
+            <td aria-label="case mix" class="govuk-table__cell ">
+              <!--<div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier_a" style="width:50%"><p style="govuk-colour("white")">18<p></div>
+              <div class="workforce-progress-bar tier_b" style="width:30%">11</div>
+              <div class="workforce-progress-bar tier_c" style="width:15%"><p style="govuk-colour("white")">5<p></div>
+              <div class="workforce-progress-bar tier_d" style="width:5%">1</div>
+              <div class="workforce-progress-bar tier_other" style="width:0%"></div>
+            </div>--></td>
+            <!-- <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric">15</td> -->
+            <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="0">0</td>
+          </tr>
+          {% else %}
+          {% endif %}
+          {% endif %}
+
+
+
+          <tr class="govuk-table__row recommended_pom_row_5">
+            <td aria-label="POM name" class="govuk-table__cell" style="width: 20%;"><a class="govuk-link govuk-link--no-visited-state" href="#">James Gordon</a></td>
+            <td aria-label="Working pattern" class="govuk-table__cell" style="width: 30%;">
+              Full time</br>
+              Unavailable
+            </td>
+
+
+            <td aria-label="case mix" class="govuk-table__cell" style="width: 45%;">
+              <div class="workforce-progress-container">
+                <div class="workforce-progress-bar tier_a" style="width:14%; height: 60px;">
+                  <p style="govuk-colour("white")">11</br>
+                    Tier A
+                  <p>
+                  </div>
+                <div class="workforce-progress-bar tier_b" style="width:14%; height: 60px;">
+                  22</br>
+                  Tier B
+                </div>
+                <div class="workforce-progress-bar tier_c" style="width:14%; height: 60px;">
+                  <p style="govuk-colour("white")">
+                    33</br>
+                    Tier C
+                    <p>
+                  </div>
+                <div class="workforce-progress-bar tier_d" style="width:14%; height: 60px;">
+                  44</br>
+                  Tier D
+                </div>
+                <div class="workforce-progress-bar tier_other" style="width:14%; height: 60px;">
+                  55</br>
+                  Tier E
+                </div>
+                <div class="workforce-progress-bar tier_other" style="width:14%; height: 60px;">
+                  66</br>
+                  Tier F
+                </div>
+                <div class="workforce-progress-bar tier_other" style="width:14%; height: 60px;">
+                  77</br>
+                  Tier G
+                </div>
+                <!--<div class="workforce-progress-bar tier_other" style="width:0%"></div>-->
+              </div>
+            </td>
+
+              <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">15</td>
+              <td aria-label="Total" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="27" style="width: 5%;">27</td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+      
+
+
+      
+
+
+    </div>
+
+
+
+
+    <div class="govuk-tabs__panel" id="active-prison-staff">
+
+      <h2 class="govuk-heading-l">Prison POMs</h2>
+
+      <h3 class="govuk-heading-m">Case mix by tier</h3>
+        <img style="width:50%" class="govuk-!-margin-bottom-5" src="/public/images/case-mix-key.png" alt="case mix key"/>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col" style="width: 20%;">POM</th>
+          <th class="govuk-table__header" scope="col" style="width: 20%;">Status</th>
+          <th class="govuk-table__header" scope="col">Case mix by tier</th>
+          <!-- <th class="govuk-table__header govuk-table__header--numeric" scope="col">High<br>complexity<br>cases</th> -->
+          <!--<th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">Total cases</th>-->
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row recommended_pom_row_0">
+          <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Annie Bradley</a></br>
+          Full time</td>
+
+            <td aria-label="status" class="govuk-table__cell">Available</td>
+            <td aria-label="case mix" class="govuk-table__cell "><div class="workforce-progress-container">
+              <div class="workforce-progress-bar tier-a" style="width:10%"><p style="govuk-colour("white")">15</p></div>
+              <div class="workforce-progress-bar tier-b" style="width:10%">15</div>
+              <div class="workforce-progress-bar tier-c" style="width:10%"><p style="govuk-colour("white")">15</p></div>
+              <div class="workforce-progress-bar tier-d" style="width:10%">15</div>
+              <div class="workforce-progress-bar tier-e" style="width:10%">15</div>
+              <div class="workforce-progress-bar tier-f" style="width:10%"><p style="govuk-colour("white")">15</p></div>
+              <div class="workforce-progress-bar tier-g" style="width:10%">15</div>
+              
+            </div></td>
+            <!-- <td aria-label="complexity" class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+            <!--<td aria-label="Total prison" class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold" data-sort-value="38">38</td>-->
+          </tr>
+
+         
+
+     
+
+   
+
+        </tbody>
+      </table>
+
+
+    </div>
+
+
+
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="inactive-staff">
+
+      <h2 class="govuk-heading-l">Away from work</h2>
+      <table class="govuk-table">
+        
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">POM</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">POM type</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Total cases</th>
+          <th class="govuk-table__header govuk-!-width-one-quarter" scope="col">Action</th>
+        </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+          {% if data.BulkAllocate=="no" %}
+          {% else %}
+          <tr class="govuk-table__row">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="staff-pom-overview?pom=hakim">Hakim Reeves</a>
+            </td>
+            <td aria-label="POM type" class="govuk-table__cell ">Prison POM</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">0</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"></td>
+          </tr>
+          {% endif %}
+
+          <tr class="govuk-table__row">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Rachelle Rigal</a></td>
+            <td aria-label="POM type" class="govuk-table__cell ">Probation POM</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">5</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Reallocate cases</a></td>
+          </tr>
+
+          {% if data.BulkCasesAllocatedAFW=="Done" %}
+          <tr class="govuk-table__row">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Yasmeen Essa</a></td>
+            <td aria-label="POM type" class="govuk-table__cell ">Prison POM</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">0</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"></td>
+          </tr>
+          {% elseif data.BulkCasesAllocatedAFW=="CasesLeftLater" %}
+          <tr class="govuk-table__row">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Yasmeen Essa</a></td>
+            <td aria-label="POM type" class="govuk-table__cell ">Prison POM</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">4</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../bulkallocation/select-pom?pom=yasmeen">Reallocate cases</a></td>
+          </tr>
+          {% elseif data.BulkAllocateCasesAFW=="later" %}
+          <tr class="govuk-table__row">
+            <td aria-label="POM name" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Yasmeen Essa</a></td>
+            <td aria-label="POM type" class="govuk-table__cell ">Prison POM</td>
+            <td aria-label="Total" class="govuk-table__cell govuk-!-font-weight-bold">10</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../bulkallocation/select-pom?pom=yasmeen">Reallocate cases</a></td>
+          </tr>
+          {% else %}
+          {% endif %}
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="attention-needed">
+
+      <h2 class="govuk-heading-l">Attention needed </h2>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body">These staff members' cases need reallocating so they can be removed from this service.</br></p>
+        </div>
+      </div>
+
+      <table class="govuk-table">
+        
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">POM</th>
+          <th class="govuk-table__header" scope="col">Last case allocated</th>
+          <th class="govuk-table__header" scope="col">Total cases</th>
+          <th class="govuk-table__header" scope="col">Action</th>
+        </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Amina El-Sayed</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">1 September 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">84</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./remove-pom">Reallocate cases</a></td>
+          </tr>
+
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Hiroshi Tanaka</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">20 August 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">90</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="./remove-pom">Reallocate cases</a></td>
+          </tr>
+
+          <tr id="second-row" class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Mateo Rossi</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">7 August 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">65</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell">
+
+              <a class="govuk-link--no-visited-state" href="../bulkallocation/remove-pom?pom=mateo">Reallocate cases</a>
+
+            </td>
+          </tr>
+
+          {% if data.BulkCasesAllocated=="Done" %}
+          {% elseif data.BulkCasesAllocated=="CasesLeftLater" %}
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Sarah Bailey</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">10 November 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">51</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../bulkallocation/select-pom?BulkCasesAllocated=MoreBulkAllocations">Reallocate cases</a></td>
+          </tr>
+          {% elseif data['BulkAllocateCases'] == 'later' %}
+          <tr class="govuk-table__row recommended_pom_row_0">
+            <td aria-label="POMname" class="govuk-table__cell">Sarah Bailey</td>
+            <td aria-label="LastCaseAllocated" class="govuk-table__cell">10 November 2025</td>
+            <td aria-label="TotalCases" class="govuk-table__cell govuk-!-font-weight-bold">71</td>
+            <td aria-label="RemovePOM" class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../bulkallocation/select-pom">Reallocate cases</a></td>
+          </tr>
+          {% else %}
+          {% endif %}
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+
+
+
+  </div>
+    
+
+
+  </div>
+</div>
+
+
+{% endblock %}
