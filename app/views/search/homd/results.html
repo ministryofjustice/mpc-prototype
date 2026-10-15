@@ -14,7 +14,7 @@ Search results – Digital Prison Services
 <script>
 $('#search').hideseek({
     highlight: true,
-    min_chars: 3,
+    min_chars: 4,
     nodata: "No results found",
     hidden_mode: true,
     ignore: '.ignore'
@@ -38,7 +38,7 @@ $('#search').hideseek({
 
 
   <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
-    3 results for Jones
+    4 results for Jones
   </h1>
 
 
@@ -60,7 +60,7 @@ $('#search').hideseek({
               <!--Enter a name or prison number to search all allocations in this prison-->
             </div>
       
-            <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+            <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint" value="Jones">
           </div>
       
           <button class="govuk-button moj-search__button " data-module="govuk-button">
@@ -92,28 +92,6 @@ $('#search').hideseek({
 
 
 
-  <nav class="moj-pagination" id="pagination-label">
-
-    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
-  
-    <ul class="moj-pagination__list" style="padding-top: 15px; margin-bottom: -15px;">
-      <li class="moj-pagination__item  moj-pagination__item--prev">
-        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
-      </li>
-  
-      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a>--></li>
-  
-      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
-  
-      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"><!--3--></a></li>
-  
-      <li class="moj-pagination__item  moj-pagination__item--next">
-        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
-      </li>
-    </ul>
-    <p class="moj-pagination__results" style="padding-top: 15px; margin-bottom: -15px;">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
-  </nav>
-  
 
 
   <table class="govuk-table govuk-!-margin-top-6">
@@ -130,33 +108,43 @@ $('#search').hideseek({
     <tbody class="govuk-table__body">
 
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell" data-sort-value="Jones"><a class="govuk-link--no-visited-state" href="#">Jones, Dalton</a><br> <span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
+        <td class="govuk-table__cell" data-sort-value="Jones">Jones, Dalton<br> <span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
         <td class="govuk-table__cell" data-sort-value="Smith">Gemma Smith</td>
         <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
         <td class="govuk-table__cell" data-sort-value="A-7-038">A-7-038</td>
         <td class="govuk-table__cell" data-sort-value="2021.12.11">HDCED:</br>11 Dec 2021</td>
         <td class="govuk-table__cell" data-sort-value="D">D</td>
-        <td class="govuk-table__cell" data-sort-value="View"><a class="govuk-link govuk-link--no-visited-state" href="#"></a></td>
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="">Action to see???</a></td>
       </tr>
 
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell" data-sort-value="Jones"><a class="govuk-link--no-visited-state" href="#">Jones, Derick</a><br> <span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
+        <td class="govuk-table__cell" data-sort-value="Jones">Jones, Derick<br> <span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
         <td class="govuk-table__cell" data-sort-value="Hill">None allocated</td>
-        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+        <td class="govuk-table__cell" data-sort-value="Responsible">None allocated</td>
         <td class="govuk-table__cell" data-sort-value="C-8-066">C-8-066</td>
         <td class="govuk-table__cell" data-sort-value="2022.01.17">TED: </br>17 Jan 2022</td>
         <td class="govuk-table__cell" data-sort-value="B">No tier found</td>
-        <td class="govuk-table__cell" data-sort-value="View"><a class="govuk-link govuk-link--no-visited-state" href="#">Add missing details</a></td>
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../../allocations/add-missing-details/case-all-details-missing.html">Add missing details</a></td>
       </tr>
 
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell" data-sort-value="Jones"><a class="govuk-link--no-visited-state" href="#">Jones, Jack</a><br><span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
+        <td class="govuk-table__cell" data-sort-value="Jones">Jones, Jack<br><span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
         <td class="govuk-table__cell" data-sort-value="Colum">None allocated</td>
         <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
         <td class="govuk-table__cell" data-sort-value="B-3-099">B-3-099</td>
         <td class="govuk-table__cell" data-sort-value="2022.04.23">CRD:</br>23 Apr 2022</td>
         <td class="govuk-table__cell" data-sort-value="A">A</td>
-        <td class="govuk-table__cell" data-sort-value="View"><a class="govuk-link govuk-link--no-visited-state" href="#">Allocate</a></td>
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../../allocations/final/step1-review-case-jack-smith.html">Allocate???</a></td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" data-sort-value="Jones">Jones, Noah<br><span class="govuk-hint govuk-!-margin-bottom-0">G2407UH</span></td>
+        <td class="govuk-table__cell" data-sort-value="Colum">Gemma Smith</td>
+        <td class="govuk-table__cell" data-sort-value="Responsible">Responsible</td>
+        <td class="govuk-table__cell" data-sort-value="B-3-099">D-8-034</td>
+        <td class="govuk-table__cell" data-sort-value="2022.04.23">CRD:</br>19 May 2026</td>
+        <td class="govuk-table__cell" data-sort-value="A">C</td>
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="../../allocations/final/change-of-circumstances-review">Review allocation???</a></td>
       </tr>
       
     </tbody>
@@ -165,29 +153,7 @@ $('#search').hideseek({
 
 
 
-  <nav class="moj-pagination" id="pagination-label">
-
-    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
   
-    <ul class="moj-pagination__list">
-      <li class="moj-pagination__item  moj-pagination__item--prev">
-        <!--<a class="moj-pagination__link" href="" style="margin-left: -20px;">Previous<span class="govuk-visually-hidden"> set of pages</span></a>-->
-      </li>
-  
-      <li class="moj-pagination__item"><!--<a class="moj-pagination__link" href="/page=1">1</a>--></li>
-  
-      <li class="moj-pagination__item moj-pagination__item--active"><!--2--></li>
-  
-      <li class="moj-pagination__item"><a class="moj-pagination__link" href="/page=3"><!--3--></a></li>
-  
-      <li class="moj-pagination__item  moj-pagination__item--next">
-        <!--<a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>-->
-      </li>
-    </ul>
-    <p class="moj-pagination__results">Showing <b>1</b> to <b>3</b> of <b>3</b> results</p>
-  </nav>
-
-
 
 
 
