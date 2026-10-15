@@ -52,6 +52,38 @@ Cases to update – Digital Prison Services
     John Hunt 
     {% endif %}
     reallocated to Annie Bradley
+
+      <details class="govuk-details" style="margin-bottom: 5px; margin-top: 10px;">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+         You can copy information about this allocation to paste into an email to someone else
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        Name:</br>
+        Prison number:</br>
+        Allocating from:
+          {% if data['prisoner'] == 'benjamin' %}
+          Benjamin Enuku
+          {% elif data['prisoner'] == 'john' %}
+          John Hunt 
+          {% endif %}</br>
+        Allocating to: Annie Bradley</br>
+        POM role:</br></br>
+
+        Active alerts:</br></br>
+
+        Last OASys completed:</br>
+        COM responsible:</br></br>
+
+        LDU:</br>
+        LDU email:</br>
+        COM:</br>
+        COM email:</br>
+        Additional notes:
+      </div>
+    </details>
+
   </div>
   <div class="moj-alert__action">
     <button class="moj-alert__dismiss" hidden>Dismiss</button>
@@ -119,11 +151,16 @@ Cases to update – Digital Prison Services
     </li>
 
     <li class="moj-sub-navigation__item">
-      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./change-of-circumstances.html" aria-current="page">Review allocations<span id="notifications" class="moj-notification-badge" style="margin-left: 10px;">
-        {% if data['confirmallocation'] == 'yes' or data['confirmreallocation'] == 'yes' %}
-        50
+      <a class="moj-sub-navigation__link govuk-link--no-visited-state" href="./change-of-circumstances.html" aria-current="page">Review allocations
+        {% if data['state'] == 'empty' %}
+          (0)
         {% else %}
-        51
+          <span id="notifications" class="moj-notification-badge" style="margin-left: 10px;">
+          {% if data['confirmallocation'] == 'yes' or data['confirmreallocation'] == 'yes' %}
+          50
+          {% else %}
+          51
+          {% endif %}
         {% endif %}
       </span></a>
     </li>
@@ -140,6 +177,10 @@ Cases to update – Digital Prison Services
       <h1 class="govuk-heading-l">
         Review allocations
       </h1>
+
+       {% if data['state'] == 'empty' %}
+        <p>Empty state copy</p>
+       {% else %}
 
       <p>Select someone’s name to decide if they need to be reallocated following a change to their tier, ROSH or handover date.</p>
 
@@ -327,7 +368,7 @@ Cases to update – Digital Prison Services
 </nav>
   
   
-
+{% endif %}
 
 
 
