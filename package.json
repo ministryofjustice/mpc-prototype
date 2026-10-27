@@ -14,12 +14,12 @@
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "3.0.0",
     "@ministryofjustice/frontend": "^10.0.1",
-    "govuk-frontend": "^6.4.0",
+    "govuk-frontend": "^6.6.0",
     "govuk-prototype-kit": "^13.20.3"
   },
   "devDependencies": {
     "audit-ci": "7.1.0",
-    "npm-check-updates": "23.0.2"
+    "npm-check-updates": "23.1.1"
   },
   "allowScripts": {
     "fsevents@2.3.3": true,
